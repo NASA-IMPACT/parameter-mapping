@@ -1,0 +1,158 @@
+<Collection>
+	<ShortName>smsub</ShortName>
+	<VersionId>1</VersionId>
+	<InsertTime>2010-09-16T00:00:00.000Z</InsertTime>
+	<LastUpdate>2014-05-24T11:25:40.000Z</LastUpdate>
+	<LongName>SEDIMENT ANALYSIS NETWORK FOR DECISION SUPPORT (SANDS) MODIS GULF SUBSETTED</LongName>
+	<DataSetId>SEDIMENT ANALYSIS NETWORK FOR DECISION SUPPORT (SANDS) MODIS GULF SUBSETTED V1</DataSetId>
+	<Description>Sediment Analysis Network for Decision Support (SANDS) MODIS Gulf Subsetted -- The Sediment Analysis Network for Decision Support (SANDS) analyzes GeoTIFF images to determine sediment redistribution after a hurricane on the Gulf coast and then creates a product based on the analysis. This dataset consists of daytime images for Terra and Aqua MODIS Reflectance bands 8-16 for H10V6 and H10V5 for each storm, subsetted to 31-27N latitude and 90-84.25W longitude (Gulf of Mexico coastline in Alabama and portions of Florida). These are seasonal data for storms.</Description>
+	<Orderable>false</Orderable>
+	<Visible>true</Visible>
+	<ProcessingLevelId>1B</ProcessingLevelId>
+	<ArchiveCenter>GHRC</ArchiveCenter>
+	<CitationForExternalPublication>He, Yubin.  2010. Sediment Analysis Network for Decision Support (SANDS) MODIS Gulf Subsetted [indicate subset used]. Data set available online [http://ghrc.nsstc.nasa.gov/] from the NASA EOSDIS Global Hydrology Resource Center Distributed Active Archive Center Huntsville, Alabama, U.S.A. doi: http://dx.doi.org/10.5067/SANDS/MODIS/DATA102</CitationForExternalPublication>
+	<Price>0.0</Price>
+	<SpatialKeywords>
+		<Keyword>GULF OF MEXICO COAST</Keyword>
+	</SpatialKeywords>
+	<TemporalKeywords>
+		<Keyword>5 MINUTE</Keyword>
+	</TemporalKeywords>
+	<Temporal>
+		<RangeDateTime>
+			<BeginningDateTime>2000-09-11T16:00:00.000Z</BeginningDateTime>
+			<EndingDateTime>2008-09-09T19:55:00.000Z</EndingDateTime>
+		</RangeDateTime>
+	</Temporal>
+	<Contacts>
+		<Contact>
+			<Role>GHRC USER SERVICES</Role>
+			<OrganizationAddresses/>
+			<OrganizationPhones/>
+			<OrganizationEmails>
+				<Email>ghrc-dmg@itsc.uah.edu</Email>
+			</OrganizationEmails>
+			<ContactPersons/>
+		</Contact>
+	</Contacts>
+	<ScienceKeywords>
+		<ScienceKeyword>
+			<CategoryKeyword>EARTH SCIENCE</CategoryKeyword>
+			<TopicKeyword>LAND SURFACE</TopicKeyword>
+			<TermKeyword>EROSION/SEDIMENTATION</TermKeyword>
+			<VariableLevel1Keyword>
+				<Value>SEDIMENTS</Value>
+			</VariableLevel1Keyword>
+		</ScienceKeyword>
+		<ScienceKeyword>
+			<CategoryKeyword>EARTH SCIENCE</CategoryKeyword>
+			<TopicKeyword>OCEANS</TopicKeyword>
+			<TermKeyword>COASTAL PROCESSES</TermKeyword>
+			<VariableLevel1Keyword>
+				<Value>SEDIMENT TRANSPORT</Value>
+			</VariableLevel1Keyword>
+		</ScienceKeyword>
+		<ScienceKeyword>
+			<CategoryKeyword>EARTH SCIENCE</CategoryKeyword>
+			<TopicKeyword>OCEANS</TopicKeyword>
+			<TermKeyword>COASTAL PROCESSES</TermKeyword>
+			<VariableLevel1Keyword>
+				<Value>SEDIMENTATION</Value>
+			</VariableLevel1Keyword>
+		</ScienceKeyword>
+	</ScienceKeywords>
+	<Platforms>
+		<Platform>
+			<ShortName>AQUA</ShortName>
+			<LongName>AQUA</LongName>
+			<Type>SATELLITE</Type>
+			<Characteristics/>
+			<Instruments>
+				<Instrument>
+					<ShortName>MODIS</ShortName>
+					<Characteristics/>
+					<Sensors>
+						<Sensor>
+							<ShortName>MODIS</ShortName>
+							<Characteristics/>
+						</Sensor>
+					</Sensors>
+					<OperationModes/>
+				</Instrument>
+			</Instruments>
+		</Platform>
+		<Platform>
+			<ShortName>TERRA</ShortName>
+			<LongName>TERRA</LongName>
+			<Type>SATELLITE</Type>
+			<Characteristics/>
+			<Instruments>
+				<Instrument>
+					<ShortName>MODIS</ShortName>
+					<Characteristics/>
+					<Sensors>
+						<Sensor>
+							<ShortName>MODIS</ShortName>
+							<Characteristics/>
+						</Sensor>
+					</Sensors>
+					<OperationModes/>
+				</Instrument>
+			</Instruments>
+		</Platform>
+	</Platforms>
+	<AdditionalAttributes/>
+	<CSDTDescriptions/>
+	<CollectionAssociations/>
+	<Campaigns>
+		<Campaign>
+			<ShortName>SANDS</ShortName>
+		</Campaign>
+	</Campaigns>
+	<AlgorithmPackages/>
+	<TwoDCoordinateSystems/>
+	<OnlineAccessURLs>
+		<OnlineAccessURL>
+			<URL>ftp://ghrc.nsstc.nasa.gov/pub/data/SANDS/MODIS/HDF-EOS-Subset/</URL>
+			<URLDescription/>
+			<MimeType/>
+		</OnlineAccessURL>
+	</OnlineAccessURLs>
+	<OnlineResources>
+		<OnlineResource>
+			<URL>http://sands.itsc.uah.edu/</URL>
+			<Description/>
+			<Type>Homepage</Type>
+		</OnlineResource>
+		<OnlineResource>
+			<URL>http://dx.doi.org/10.5067/SANDS/MODIS/DATA102</URL>
+			<Description/>
+			<Type>DOI</Type>
+		</OnlineResource>
+		<OnlineResource>
+			<URL>http://ghrc.nsstc.nasa.gov/uso/citation.html</URL>
+			<Description/>
+			<Type>Citing GHRC Data</Type>
+		</OnlineResource>
+	</OnlineResources>
+	<AssociatedDIFs>
+		<DIF>
+			<EntryId>smsub</EntryId>
+		</DIF>
+	</AssociatedDIFs>
+	<Spatial>
+		<SpatialCoverageType>Horizontal</SpatialCoverageType>
+		<HorizontalSpatialDomain>
+			<Geometry>
+				<CoordinateSystem>CARTESIAN</CoordinateSystem>
+				<BoundingRectangle>
+					<WestBoundingCoordinate>-90</WestBoundingCoordinate>
+					<NorthBoundingCoordinate>31</NorthBoundingCoordinate>
+					<EastBoundingCoordinate>-84.25</EastBoundingCoordinate>
+					<SouthBoundingCoordinate>27</SouthBoundingCoordinate>
+				</BoundingRectangle>
+			</Geometry>
+		</HorizontalSpatialDomain>
+		<GranuleSpatialRepresentation>CARTESIAN</GranuleSpatialRepresentation>
+	</Spatial>
+</Collection>

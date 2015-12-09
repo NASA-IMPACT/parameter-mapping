@@ -1,0 +1,151 @@
+ATMOSPHERE->AIR QUALITY->CARBON MONOXIDE
+   score:1 variablename:latAIRS|
+   score:1 variablename:lonAIRS|
+   score:1 variablename:TAirStd|
+   score:1 variablename:TAirStd_QC|
+   score:1 variablename:TAirStdErr|
+   score:1 variablename:TSurfAir|
+   score:1 variablename:TSurfAir_QC|
+   score:1 variablename:TSurfAirErr|
+   score:1 variablename:TAirMWOnlyStd|
+   score:1 variablename:TAirMWOnlyStd_QC|
+ATMOSPHERE->AIR QUALITY->TROPOSPHERIC OZONE 
+   score:1 variablename:latAIRS|
+   score:1 variablename:lonAIRS|
+   score:1 variablename:TAirStd|
+   score:1 variablename:TAirStd_QC|
+   score:1 variablename:TAirStdErr|
+   score:1 variablename:TSurfAir|
+   score:1 variablename:TSurfAir_QC|
+   score:1 variablename:TSurfAirErr|
+   score:1 variablename:totO3Std|
+   score:1 variablename:totO3Std_QC|
+   score:1 variablename:totO3StdErr|
+   score:1 variablename:O3VMRStd|
+   score:1 variablename:O3VMRStd_QC|
+   score:1 variablename:O3VMRStdErr|
+   score:1 variablename:O3VMRLevStd|
+   score:1 variablename:O3VMRLevStd_QC|
+   score:1 variablename:O3VMRLevStdErr|
+   score:1 variablename:num_O3_Func|
+   score:1 variablename:O3_verticality|
+   score:1 variablename:O3_dof|
+   score:1 variablename:TAirMWOnlyStd|
+   score:1 variablename:TAirMWOnlyStd_QC|
+ATMOSPHERE->ALTITUDE->GEOPOTENTIAL HEIGHT 
+   score:1 variablename:GP_Height|
+   score:1 variablename:GP_Height_QC|
+   score:1 variablename:GP_Height_MWOnly|
+   score:1 variablename:GP_Height_MWOnly_QC|
+ATMOSPHERE->ALTITUDE->TROPOPAUSE 
+   score:1 variablename:PTropopause|
+   score:1 variablename:PTropopause_QC|
+   score:1 variablename:T_Tropopause|
+   score:1 variablename:T_Tropopause_QC|
+   score:1 variablename:GP_Tropopause|
+   score:1 variablename:GP_Tropopause_QC|
+ATMOSPHERE->ATMOSPHERIC TEMPERATURE->SURFACE AIR TEMPERATURE 
+   score:1 variablename:latAIRS|
+   score:1 variablename:lonAIRS|
+   score:1 variablename:TAirStd|
+   score:1 variablename:TAirStd_QC|
+   score:1 variablename:TAirStdErr|
+   score:1 variablename:TSurfAir|
+   score:1 variablename:TSurfAir_QC|
+   score:1 variablename:TSurfAirErr|
+   score:1 variablename:Temp_dof|
+   score:1 variablename:GP_Surface|
+   score:1 variablename:GP_Surface_QC|
+   score:1 variablename:TAirMWOnlyStd|
+   score:1 variablename:TAirMWOnlyStd_QC|
+ATMOSPHERE->ATMOSPHERIC TEMPERATURE->TEMPERATURE PROFILES 
+   score:1 variablename:Temp_dof|
+ATMOSPHERE->ATMOSPHERIC WATER VAPOR->PRECIPITABLE WATER 
+ATMOSPHERE->ATMOSPHERIC WATER VAPOR->WATER VAPOR PROFILES 
+ATMOSPHERE->ATMOSPHERIC RADIATION->OUTGOING LONGWAVE RADIATION 
+LAND SURFACE->LAND TEMPERATURE->SKIN TEMPERATURE 
+   score:1 variablename:landFrac|
+   score:1 variablename:landFrac_err|
+   score:1 variablename:Temp_dof|
+   score:1 variablename:GP_Surface|
+   score:1 variablename:GP_Surface_QC|
+LAND SURFACE->SURFACE RADIATIVE PROPERTIES->EMISSIVITY 
+   score:1 variablename:landFrac|
+   score:1 variablename:landFrac_err|
+   score:1 variablename:GP_Surface|
+   score:1 variablename:GP_Surface_QC|
+OCEANS->OCEAN TEMPERATURE->SEA SURFACE TEMPERATURE 
+   score:1 variablename:Temp_dof|
+   score:1 variablename:GP_Surface|
+   score:1 variablename:GP_Surface_QC|
+SPECTRAL/ENGINEERING->INFRARED WAVELENGTHS->BRIGHTNESS TEMPERATURE 
+   score:1 variablename:Temp_dof|
+SPECTRAL/ENGINEERING->MICROWAVE->BRIGHTNESS TEMPERATURE 
+   score:1 variablename:Temp_dof|
+ATMOSPHERE->ATMOSPHERIC CHEMISTRY->CARBON AND HYDROCARBON COMPOUNDS->METHANE 
+ATMOSPHERE->ATMOSPHERIC CHEMISTRY->SULFUR COMPOUNDS->SULFUR DIOXIDE 
+ATMOSPHERE->CLOUDS->CLOUD PROPERTIES->CLOUD FRACTION 
+   score:1 variablename:CldFrcTot|
+   score:1 variablename:CldFrcTot_QC|
+   score:1 variablename:CldFrcStd|
+   score:1 variablename:CldFrcStd_QC|
+   score:1 variablename:CldFrcStdErr|
+   score:1 variablename:PCldTop|
+   score:1 variablename:PCldTop_QC|
+   score:1 variablename:PCldTopErr|
+   score:1 variablename:TCldTop|
+   score:1 variablename:TCldTop_QC|
+   score:1 variablename:TCldTopErr|
+   score:1 variablename:nCld|
+   score:1 variablename:totCldH2OStd|
+   score:1 variablename:totCldH2OStd_QC|
+   score:1 variablename:totCldH2OStdErr|
+ATMOSPHERE->CLOUDS->CLOUD PROPERTIES->CLOUD FREQUENCY 
+   score:1 variablename:CldFrcTot|
+   score:1 variablename:CldFrcTot_QC|
+   score:1 variablename:CldFrcStd|
+   score:1 variablename:CldFrcStd_QC|
+   score:1 variablename:CldFrcStdErr|
+   score:1 variablename:PCldTop|
+   score:1 variablename:PCldTop_QC|
+   score:1 variablename:PCldTopErr|
+   score:1 variablename:TCldTop|
+   score:1 variablename:TCldTop_QC|
+   score:1 variablename:TCldTopErr|
+   score:1 variablename:nCld|
+   score:1 variablename:totCldH2OStd|
+   score:1 variablename:totCldH2OStd_QC|
+   score:1 variablename:totCldH2OStdErr|
+ATMOSPHERE->CLOUDS->CLOUD PROPERTIES->CLOUD TOP PRESSURE 
+   score:2 variablename:PCldTop|
+   score:2 variablename:PCldTop_QC|
+   score:2 variablename:PCldTopErr|
+   score:2 variablename:TCldTop|
+   score:2 variablename:TCldTop_QC|
+   score:2 variablename:TCldTopErr|
+   score:1 variablename:CldFrcTot|
+   score:1 variablename:CldFrcTot_QC|
+   score:1 variablename:CldFrcStd|
+   score:1 variablename:CldFrcStd_QC|
+   score:1 variablename:CldFrcStdErr|
+   score:1 variablename:nCld|
+   score:1 variablename:totCldH2OStd|
+   score:1 variablename:totCldH2OStd_QC|
+   score:1 variablename:totCldH2OStdErr|
+ATMOSPHERE->CLOUDS->CLOUD PROPERTIES->CLOUD TOP TEMPERATURE
+   score:2 variablename:PCldTop|
+   score:2 variablename:PCldTop_QC|
+   score:2 variablename:PCldTopErr|
+   score:2 variablename:TCldTop|
+   score:2 variablename:TCldTop_QC|
+   score:2 variablename:TCldTopErr|
+   score:1 variablename:Temp_dof|
+   score:1 variablename:CldFrcTot|
+   score:1 variablename:CldFrcTot_QC|
+   score:1 variablename:CldFrcStd|
+   score:1 variablename:CldFrcStd_QC|
+   score:1 variablename:CldFrcStdErr|
+   score:1 variablename:nCld|
+   score:1 variablename:totCldH2OStd|
+   score:1 variablename:totCldH2OStd_QC|
+   score:1 variablename:totCldH2OStdErr|
