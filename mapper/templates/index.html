@@ -22,27 +22,14 @@
 			<div class="row">
 				<div class="col-sm-5 col-sm-offset-1" id="keyword-variable-boxes">
 					<div class="row" id="keyword-box">
-						<h3>Keywords</h3>
-						<h1>Mapping</h1>
-						<br>
-						<form role="form" method="POST" action="/">
-							<div class="form-group">
-								<input type="text" name="url" class="form-control" id="url-box" placeholder="Enter URL..." style="max-width: 300px;">
-							</div>
-							<button type="submit" class="btn btn-default">Submit</button>
-						</form>
-						<br>
-						<div class="div-list-group">
-							<ul class="list-group" id="variable-list">
-								{% for variable in variables %}
-									<li class="list-group-item">{{ variable }}</li>
+						<h2>Keywords</h2>
+						<div class="div-list-group" style="height:500px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px;">
+							<ul class="list-group" id="keyword-list">
+								{% for keyword in keywords %}
+									<li class="list-group-item">{{ keyword }}</li>
 								{% endfor %}
 							</ul>
 							<!-- <a href="#" class="list-group-item active">JPT</a> -->
-							<!-- <a href="#" class="list-group-item">arko jpt</a>
-							<a href="#" class="list-group-item">aa</a>
-							<a href="#" class="list-group-item">dddd</a>
-							<a href="#" class="list-group-item">lakd</a> -->
 						</div>
 						{% for error in errors %}
 							<h4>{{ error }}</h4>
@@ -50,11 +37,9 @@
 						<br>
 					</div>
 					<div class="row" id="variable-box">
-						<h2>row 2 of colum 1 </h2>
-						<br>
-						<h3>Variables</h3>
-						<div class="div-list-group">
-							<ul class="list-group">
+						<h2>Variables</h2>
+						<div class="div-list-group" style="height:500px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px;">
+							<ul class="list-group" id="variable-list">
 								{% for variable in variables %}
 									<li class="list-group-item">{{ variable }}</li>
 								{% endfor %}
@@ -68,16 +53,19 @@
 						<br>
 						<form role="form" action="/" method="POST" enctype="multipart/form-data" >
 							<div class="form-group">
-								<input type="text" name="url" class="form-control" id="url-box" placeholder="Enter URL..." style="max-width: 300px;">
+								<input type="text" name="url" class="form-control" id="url-box" placeholder="Enter URL..." style="max-width: 100;">
 							</div>
 							<button type="submit" class="btn btn-default">Submit</button>
 						</form>
 						<br>
-
 						<form action="/upload" class="dropzone" id="file-dropzone">
 							<input type="file" name="files" style="display: none">
 						</form>
 						<br>
+						<form id="form-button-map" action="/mapping">
+							<button type="submit" class="btn btn-default btn-block" style="display: none" id="map-button" >MAP</button>
+						</form>
+
 					</div>
 					<div class="row" id="mapping">
 						<h3>Mappings</h3>
