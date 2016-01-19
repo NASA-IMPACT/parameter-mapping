@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}Maps for collection{% endblock %}
+
+{% block head %}
+	{{ super() }}
+{% endblock %}
+
+{% block content %}
+
+	<h1>Maps</h1>
+	<h2 align="center"> {{maps['name']}}</h2>
+	<div class="row">
+		<div class="col-sm-5 col-sm-offset-1" id="kv-maps">
+			<div class="row" id="kv-maps-box">
+				<h2>Keyword Map</h2>
+
+				<a href="/_edit_keyword_map/{{ maps['name'] }}" class="list-group-item">{{ maps['name'] }} EDIT</a><br>
+				<div class="div-list-group" style="height:500px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px;" name="div-test">
+				{% for k, vs in maps['kv'].iteritems() %}
+					<h5>{{k}} <span class="badge">{{vs|length}}</span></h5>
+					{% set outerLoopIndex = loop.index %}
+					<ul class="list-group" id="kvk-{{outerLoopIndex}}">
+						{% for v in vs%}
+							<li class="list-group-item" id="kvk-innerlist-{{outerLoopIndex}}-{{loop.index}}">
+								{{ v }}
+							</li>
+						{% endfor %}
+					</ul>
+				{% endfor %}
+				</div>
+
+
+
+			</div>
+		</div>
+
+		<div class="col-sm-5 col-sm-offset-1" id="kv-maps">
+			<div class="row" id="kv-maps-box">
+				<h2>Variable Map</h2>
+
+				<a href="/_edit_variable_map/{{ maps['name'] }}" class="list-group-item">{{ maps['name'] }} EDIT</a><br>
+				<div class="div-list-group" style="height:500px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px;" name="div-test">
+				{% for v, ks in maps['vk'].iteritems() %}
+					<h5>{{v}} <span class="badge">{{ks|length}}</span></h5>
+					{% set outerLoopIndex = loop.index %}
+					<ul class="list-group" id="vkv-{{outerLoopIndex}}">
+						{% for k in ks%}
+							<li class="list-group-item" id="vkv-innerlist-{{outerLoopIndex}}-{{loop.index}}">
+								{{ k }}
+							</li>
+						{% endfor %}
+					</ul>
+				{% endfor %}
+				</div>
+
+
+
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+{% endblock %}

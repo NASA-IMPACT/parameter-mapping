@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}Maps for collection{% endblock %}
+
+{% block head %}
+	{{ super() }}
+{% endblock %}
+
+{% block content %}
+
+	<h1>Maps</h1>
+	<h2 align="center"> {{maps['name']}}</h2>
+	{% for mk, mv in maps.iteritems() %}
+		<h4>{{mk}}</h4>
+		<h4>{{mv}}</h4>
+	{% endfor %}
+	<div id="select-option" style="visibility:hidden">
+		<select id="just_list_of_variables">
+			{% for variable in variables %}
+    		<option>{{variable}}</option>
+    		{% endfor %}
+		</select>
+	</div>
+	<div class="row">
+		<div class="col-sm-5 col-sm-offset-1" id="kv-maps">
+			<div class="row" id="kv-maps-box">
+				<h2>Keyword Map</h2>
+
+				<form method="POST" action="/_update_keyword_map/{{ maps['name'] }}" id="update_keyword_map">
+
+				<div class="div-list-group" style="height:500px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px;" name="div-test">
+					{% for k, vs in maps['kv'].iteritems() %}
+						<h5>{{k}} </h5> <!-- <span class="badge">{{vs|length}}</span> -->
+						{% set outerLoopIndex = loop.index %}
+
+						<!-- <select id="just_list_of_variables" name="kvkEdit-{{outerLoopIndex}}">
+							{% for variable in variables %}
+				    		<option>{{variable}}</option>
+				    		{% endfor %}
+						</select> -->
+
+						<ul class="list-group" id="kvkEdit-{{outerLoopIndex}}">
+						<input type="button" id="kvaddButtonEdit-{{outerLoopIndex}}-{{k}}" value="Add" />
+							{% for v in vs%}
+								<li class="list-group-item" id="kvk-innerlistEdit-{{outerLoopIndex}}-{{loop.index}}">
+									<select name="kvkEdit-{{outerLoopIndex}}-{{k}}">
+										{% for variable in variables %}
+										{% if v == variable %}
+							    		<option selected>{{variable}}</option>
+							    		{% else %}
+							    		<option >{{variable}}</option>
+							    		{% endif %}
+							    		{% endfor %}
+									</select> <!-- {{ v }} -->
+									<input type="button" id="kvremoveButtonEdit-{{outerLoopIndex}}-{{loop.index}}" value="Remove" />
+								</li>
+							{% endfor %}
+						</ul>
+					{% endfor %}
+				</div>
+				<input type="submit" value="save">
+				</form>
+
+
+
+			</div>
+		</div>
+	</div>
+
+		<br>
+
+
+{% endblock %}

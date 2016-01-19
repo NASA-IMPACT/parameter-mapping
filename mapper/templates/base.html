@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+		{% block head %}
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" media="screen"> -->
+			<!-- Latest compiled and minified CSS -->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+			<!-- Optional theme -->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+			<link rel="stylesheet" href="{{ url_for('static', filename='css/lib/dropzone/dropzone.css') }}" crossorigin="anonymous">
+			<style>
+			.container {
+			max-width: 1000px;
+			}
+			</style>
+			<title>{% block title %}{% endblock %} - Mapping</title>
+		{% endblock %}
+	</head>
+	<body>
+		<div id="content" class="container">
+		<a href="/">HOME</a>
+			{% block content %}
+			{% endblock %}
+
+			<br><br>
+
+		<div id="footer">
+			{% block footer %}
+				&copy; Copyright 2015 by <a href="#">ITSC</a>.
+			{% endblock %}
+		</div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"crossorigin="anonymous"></script>
+		<script type="text/javascript"  src="{{ url_for('static', filename='js/lib/dropzone/dropzone.js') }}" crossorigin="anonymous"> </script>
+		<script src="{{ url_for('static', filename='js/mapper.js') }}"></script>
+
+	</body>
+</html>

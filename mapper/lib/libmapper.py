@@ -3,7 +3,7 @@
 # @Author: ritesh
 # @Date:   2015-12-10 11:14:18
 # @Last Modified by:   ritesh
-# @Last Modified time: 2015-12-21 14:03:50
+# @Last Modified time: 2015-12-21 15:11:11
 
 """ Library file for handling the uploaded hdf file
 	Also works with the url
@@ -24,8 +24,11 @@ def start_mapping(upload_result, url=False):
 
 		"Extracting starts here"
 		# open the hdf file for reading
-		hdf = SD.SD(file_path)
-		print hdf
+		hdf = SD.SD(file_path, SD.SDC.READ)
+		print hdf.datasets()
+		print dir(hdf)
+		print hdf.info()
+		print dir(hdf.attr())
 		# f = h5py.File(file_path, 'r')
 		# print f.keys()
 

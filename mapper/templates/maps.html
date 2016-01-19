@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}Maps for collection{% endblock %}
+
+{% block head %}
+	{{ super() }}
+{% endblock %}
+
+{% block content %}
+
+	<h1>Maps</h1>
+	<h2 align="center"> {{maps['name']}}</h2>
+	<!-- <div class="row"><h2 align="center"> {{maps['name']}}</h2>
+
+	{% for mk, mv in maps.iteritems() %}
+		<h4>{{mk}}</h4>
+		<h4>{{mv}}</h4>
+	{% endfor %}
+	</div> -->
+
+	<div class="row">
+		<div class="col-sm-5 col-sm-offset-1" id="kv-maps">
+			<div class="row" id="kv-maps-box">
+				<h2>Keyword Map</h2>
+				<form role="form" action="/save_keyword_map/" method="POST" enctype="multipart/form-data" >
+					<!-- <input type="text" name="url" class="form-control" id="url-box" placeholder="Enter URL..." style="max-width: 100;">
+					<input type="">
+					<button type="submit" class="btn btn-default">Submit</button> -->
+					<br>
+
+					<div class="div-list-group" style="height:500px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px;" name="div-test">
+					{% for k, vs in maps['kv'].iteritems() %}
+						<h5>{{k}} <span class="badge">{{vs|length}}</span></h5>
+						{% set outerLoopIndex = loop.index %}
+						<ul class="list-group" id="kvk-{{outerLoopIndex}}">
+						<select>
+							{% for variable in variables %}
+				    		<option>{{variable}}</option>
+				    		{% endfor %}
+						</select>
+						<input type="button" id="kvaddButton-{{outerLoopIndex}}" value="Add" />
+							{% for v in vs%}
+								<li class="list-group-item" id="kvk-innerlist-{{outerLoopIndex}}-{{loop.index}}">
+									{{ v }}
+									<input type="button" id="kvremoveButton-{{outerLoopIndex}}-{{loop.index}}" value="Remove" />
+								</li>
+							{% endfor %}
+						</ul>
+					{% endfor %}
+					</div>
+
+				</form>
+
+				<br>
+
+			</div>
+		</div>
+		<div class="col-sm-5 col-sm-offset-1" id="vk-maps">
+			<div class="row" id="vk-maps-box">
+				<h2>Variable Map</h2>
+				<div class="div-list-group" style="height:500px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px;">
+					{% for v, ks in maps['vk'].iteritems() %}
+						<h5>{{v}} <span class="badge">{{ks|length}}</span></h5>
+						{% set outerLoopIndex = loop.index %}
+						<ul class="list-group" id="vkv-{{outerLoopIndex}}">
+						<select>
+							{% for keyword in keywords %}
+				    		<option>{{keyword}}</option>
+				    		{% endfor %}
+						</select>
+						<input type="button" id="vkaddButton-{{outerLoopIndex}}" value="Add" />
+							{% for k in ks%}
+								<li class="list-group-item" id="vkv-innerlist-{{outerLoopIndex}}-{{loop.index}}">
+									{{ k }}
+									<input type="button" id="vkremoveButton-{{outerLoopIndex}}-{{loop.index}}" value="Remove" />
+								</li>
+							{% endfor %}
+						</ul>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<br>
+	<!-- <div class="row">
+		{% for keyword in keywords %}
+		<h4>{{keyword}}</h4>
+		{% endfor %}
+
+		<br>
+	</div> -->
+
+
+{% endblock %}

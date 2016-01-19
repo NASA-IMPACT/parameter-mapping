@@ -3,15 +3,15 @@
 # @Author: ritesh
 # @Date:   2015-11-25 10:53:58
 # @Last Modified by:   ritesh
-# @Last Modified time: 2015-12-21 12:06:32
+# @Last Modified time: 2016-01-14 22:26:22
 
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, redirect, url_for
 from werkzeug import secure_filename
 import os
 import json
 import time
 
-from lib import libmapper, airs
+from lib import libmapper, airs, libmongo
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 app = Flask(__name__)
@@ -25,7 +25,7 @@ lookup = airs.Lookup(airs.AIRS_MAP)
 
 final_map = None
 uploaded_result = None
-
+collections = None
 
 def allowed_file(filename):
     return '.' in filename and \
@@ -66,9 +66,141 @@ def add_numbers():
     mapped = lookup.get_value(korv) if is_keyword else lookup.get_key(korv)
     return jsonify(result=mapped)
 
+@app.route('/_show_map/<collection_name>', methods=['GET', 'POST'])
+def show_map(collection_name):
+    errors = []
+    results = {"four": 4}
+    print collection_name
+    # collection_name = request.args.get('collection_name', 'ritesh', type=str)
+    print "Collection clicked in the list is : ", collection_name
+    db = libmongo.get_db()
+    keywords = db.ks.find_one({"dataset_id": collection_name}).get("keyword_list")
+    variables = db.vs.find_one({"name": collection_name}).get("variable_list")
+    maps = db.ms.find_one({"name": collection_name})
+    print keywords, variables, maps
+
+    return render_template('maps.html', errors=errors, results=results, variables=variables, keywords=keywords, maps=maps, collections=collections)
+
+
+@app.route('/save_keyword_map/', methods=['POST'])
+def save_keyword_map():
+    data = request.data
+    print "Obtained data from map form: ", data
+    print request.args
+    print request.form
+    print request.values
+    return redirect(url_for("index"))
+
+@app.route('/_show_keyword_map/<collection_name>', methods=['GET', 'POST'])
+def show_keyword_map(collection_name):
+    errors = []
+    results = {"four": 4}
+    print collection_name
+    # collection_name = request.args.get('collection_name', 'ritesh', type=str)
+    print "Collection clicked in the list iddds : ", collection_name
+    db = libmongo.get_db()
+    keywords = db.ks.find_one({"dataset_id": collection_name}).get("keyword_list")
+    variables = db.vs.find_one({"name": collection_name}).get("variable_list")
+    maps = db.ms.find_one({"name": collection_name})
+    print keywords, variables, maps
+
+    return render_template('show_keyword_map.html', errors=errors, results=results, variables=variables, keywords=keywords, maps=maps, collections=collections)
+
+
+@app.route('/_edit_keyword_map/<collection_name>', methods=['GET', 'POST'])
+def edit_keyword_map(collection_name):
+    errors = []
+    results = {"four": 4}
+    print collection_name
+    # collection_name = request.args.get('collection_name', 'ritesh', type=str)
+    print "Collection clicked in the list iddds : ", collection_name
+    db = libmongo.get_db()
+    keywords = db.ks.find_one({"dataset_id": collection_name}).get("keyword_list")
+    variables = db.vs.find_one({"name": collection_name}).get("variable_list")
+    maps = db.ms.find_one({"name": collection_name})
+    print keywords, variables, maps
+
+    return render_template('edit_keyword_map.html', errors=errors, results=results, variables=variables, keywords=keywords, maps=maps, collections=collections)
+
+
+@app.route('/_edit_variable_map/<collection_name>', methods=['GET', 'POST'])
+def edit_variable_map(collection_name):
+    errors = []
+    results = {"four": 4}
+    print collection_name
+    # collection_name = request.args.get('collection_name', 'ritesh', type=str)
+    print "Collection clicked in the list iddds : ", collection_name
+    db = libmongo.get_db()
+    keywords = db.ks.find_one({"dataset_id": collection_name}).get("keyword_list")
+    variables = db.vs.find_one({"name": collection_name}).get("variable_list")
+    maps = db.ms.find_one({"name": collection_name})
+    print keywords, variables, maps
+
+    return render_template('edit_variable_map.html', errors=errors, results=results, variables=variables, keywords=keywords, maps=maps, collections=collections)
+
+
+@app.route('/_update_keyword_map/<collection_name>', methods=['GET', 'POST'])
+def update_keyword_map(collection_name):
+    errors = []
+    results = {"four": 4}
+    print collection_name
+    TO_UPDATE = {}
+    if request.method == 'POST':
+        print "here is the update thing "
+        for keyword in request.form.keys():
+            variables = request.form.getlist(keyword)
+            variables = list(set(variables))
+            key = keyword.split("-", 2)[-1]
+            TO_UPDATE[key] = variables
+        print "things to update is :", TO_UPDATE
+        # print list(request.form.keys())
+        # print request.form.getlist('kvkEdit-1')
+        # print request.form
+
+    # collection_name = request.args.get('collection_name', 'ritesh', type=str)
+    print "Collection clicked in the list iddds : ", collection_name
+    db = libmongo.get_db()
+    query = {"name": collection_name}
+    update = {"$set": {"kv": TO_UPDATE}}
+    result = db.ms.update_one(query, update)
+    if result.matched_count == 1:
+        print "Successful update"
+    # keywords = db.ks.find_one({"dataset_id": collection_name}).get("keyword_list")
+    # variables = db.vs.find_one({"name": collection_name}).get("variable_list")
+    # maps = db.ms.find_one({"name": collection_name})
+    # print keywords, variables, maps
+    return redirect(url_for("show_keyword_map", collection_name=collection_name))
+    # return render_template('edit_keyword_map.html', errors=errors, results=results, variables=variables, keywords=keywords, maps=maps, collections=collections)
+
+@app.route('/_update_variable_map/<collection_name>', methods=['GET', 'POST'])
+def update_variable_map(collection_name):
+    errors = []
+    results = {"four": 4}
+    print collection_name
+    TO_UPDATE = {}
+    if request.method == 'POST':
+        print "here is the update thing  for variable"
+        for variable in request.form.keys():
+            keywords = request.form.getlist(variable)
+            keywords = list(set(keywords))
+            key = variable.split("-", 2)[-1]
+            TO_UPDATE[key] = keywords
+        print "things to update is :", TO_UPDATE
+
+    print "Collection clicked in the list iddds : ", collection_name
+    db = libmongo.get_db()
+    query = {"name": collection_name}
+    update = {"$set": {"vk": TO_UPDATE}}
+    result = db.ms.update_one(query, update)
+    if result.matched_count == 1:
+        print "Successful  variable map update"
+    return redirect(url_for("show_keyword_map", collection_name=collection_name))
+    # return render_template('edit_keyword_map.html', errors=errors, results=results, variables=variables, keywords=keywords, maps=maps, collections=collections)
+
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
+    global collections
     errors = []
     results = {"narr": 4}
     # variables = ["these", "are", "dynamic", "variables", "for", "testing"]
@@ -92,7 +224,12 @@ def index():
             print results
     print results
     print variables
-    return render_template('index.html', errors=errors, results=results, variables=variables, keywords=keywords)
+    try:
+        db = libmongo.get_db()
+        collections = db.ms.find()
+    except Exception, e:
+        print "Db exception error"
+    return render_template('index.html', errors=errors, results=results, variables=variables, keywords=keywords, collections=collections)
 
 
 @app.route('/upload', methods=['GET', 'POST'])

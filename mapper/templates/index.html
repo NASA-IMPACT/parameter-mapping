@@ -20,33 +20,49 @@
 		<div class="container">
 			<div class="row"><h2 align="center"> K-V Mapping this is</h2> </div>
 			<div class="row">
+
 				<div class="col-sm-5 col-sm-offset-1" id="keyword-variable-boxes">
+					<div class="row" id="collection-box">
+					<h2>Collections</h2>
+						<div class="div-list-group" style="height:500px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px;">
+							<ul class="list-group" id="collection-list">
+								{% for collection in collections %}
+									<!-- <li class="list-group-item">{{ collection.name }}</li> -->
+									<!-- <a href="/_show_map/{{ collection.name }}" class="list-group-item">{{ collection.name }}</a> -->
+									<a href="/_show_keyword_map/{{ collection.name }}" class="list-group-item">{{ collection.name }}</a>
+								{% endfor %}
+							</ul>
+						</div>
+					</div>
+
 					<div class="row" id="keyword-box">
-						<h2>Keywords</h2>
+						<!-- <h2>Keywords</h2>
 						<div class="div-list-group" style="height:500px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px;">
 							<ul class="list-group" id="keyword-list">
 								{% for keyword in keywords %}
 									<li class="list-group-item">{{ keyword }}</li>
 								{% endfor %}
-							</ul>
+							</ul> -->
 							<!-- <a href="#" class="list-group-item active">JPT</a> -->
-						</div>
+						<!-- </div>
 						{% for error in errors %}
 							<h4>{{ error }}</h4>
 						{% endfor %}
-						<br>
+						<br> -->
 					</div>
+
 					<div class="row" id="variable-box">
-						<h2>Variables</h2>
+						<!-- <h2>Variables</h2>
 						<div class="div-list-group" style="height:500px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px;">
 							<ul class="list-group" id="variable-list">
 								{% for variable in variables %}
 									<li class="list-group-item">{{ variable }}</li>
 								{% endfor %}
 							</ul>
-						</div>
+						</div> -->
 					</div>
 				</div>
+
 				<div class="col-sm-5 col-sm-offset-1">
 					<div class="row" id="user-panel" style="border: 0px; border-style: ridge groove inset">
 						<h3>Users Panel</h3>
