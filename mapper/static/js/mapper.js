@@ -2,12 +2,12 @@
 * @Author: ritesh
 * @Date:   2015-12-01 14:59:30
 * @Last Modified by:   ritesh
-* @Last Modified time: 2016-01-12 15:17:18
+* @Last Modified time: 2016-01-21 00:48:20
 */
 
 
 $( document ).ready(function() {
-	console.log("This is test log for js");
+	console.log("This is test log for jss");
 
 	// Onclick li of ul
 	// $('#collection-list').on('click', 'li', function(event) {
@@ -76,8 +76,9 @@ $( document ).ready(function() {
 		while ($("#vkv-innerlistEdit-"+num+"-"+count).length != 0) { count += 1;}
 		var newID = 'vkv-innerlistEdit-'+num+'-'+count;
 		var nameAttr = 'vkvEdit-' + num + '-' + keyword;
-		$('div#select-option select#just_list_of_variables').attr('name', nameAttr);
-		var selectOption = $('div#select-option').html();
+		$('div#select-option-'+num+' select#just_list_of_variables').attr('name', nameAttr);
+		var selectOption = $('div#select-option-'+num).html();
+		console.log(selectOption);
 		// $selectOption.attr('style', 'visilibility:visible');
 		var removeButtonHtml = '<input type="button" id="vkremoveButtonEdit-'+num+'-'+count+'" value="Remove" />';
 		var appendLi = '<li class="list-group-item" id="'+newID+'">'+selectOption+count+removeButtonHtml+'</li>';
@@ -98,9 +99,10 @@ $( document ).ready(function() {
 		while ($("#kvk-innerlistEdit-"+num+"-"+count).length != 0) { count += 1;}
 		var newID = 'kvk-innerlistEdit-'+num+'-'+count;
 		var nameAttr = 'kvkEdit-' + num + '-' + keyword;
-		$('div#select-option select#just_list_of_variables').attr('name', nameAttr);
-		var selectOption = $('div#select-option').html();
-		// $selectOption.attr('style', 'visilibility:visible');
+		$('div#select-option-'+num+' select#just_list_of_variables').attr('name', nameAttr);
+		var selectOption = $('div#select-option-'+num).html();
+		console.log(selectOption);
+		// // $selectOption.attr('style', 'visilibility:visible');
 		var removeButtonHtml = '<input type="button" id="kvremoveButtonEdit-'+num+'-'+count+'" value="Remove" />';
 		var appendLi = '<li class="list-group-item" id="'+newID+'">'+selectOption+count+removeButtonHtml+'</li>';
 		$('#kvkEdit-'+num).append(appendLi);
@@ -125,6 +127,7 @@ $( document ).ready(function() {
 
 	$(document).on("click", '[id^=vkaddButton]' , function() {
     	// $(this).parent().remove();
+    	console.log("Inside vkaddButton");
     	var id = event.target.id;
 		var num = id.split("-", 2)[1]
 		var count = $('#vkv-'+num+ ' li').length + 1;
@@ -135,6 +138,7 @@ $( document ).ready(function() {
 		var appendLi = '<li class="list-group-item" id="'+newID+'">'+selectedVal+count+removeButtonHtml+'</li>';
 		$('#vkv-'+num).append(appendLi);
    	});
+
    	$(document).on("click", '[id^=vkremoveButton]' , function() {
     	var id = event.target.id;
 		var [button, num, inum] = id.split("-", 3)

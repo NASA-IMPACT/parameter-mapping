@@ -17,13 +17,13 @@
 
 				<a href="/_edit_keyword_map/{{ maps['name'] }}" class="list-group-item">{{ maps['name'] }} EDIT</a><br>
 				<div class="div-list-group" style="height:500px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px;" name="div-test">
-				{% for k, vs in maps['kv'].iteritems() %}
-					<h5>{{k}} <span class="badge">{{vs|length}}</span></h5>
+				{% for k, vs in sorted_maps['kv'].iteritems() %}
+					<h5>{{k}} <span class="badge">{{vs['mapped']|length}}</span></h5>
 					{% set outerLoopIndex = loop.index %}
 					<ul class="list-group" id="kvk-{{outerLoopIndex}}">
-						{% for v in vs%}
+						{% for v, i in vs['mapped'] %}
 							<li class="list-group-item" id="kvk-innerlist-{{outerLoopIndex}}-{{loop.index}}">
-								{{ v }}
+								{{ v }} --> {{ i }}
 							</li>
 						{% endfor %}
 					</ul>
@@ -41,13 +41,13 @@
 
 				<a href="/_edit_variable_map/{{ maps['name'] }}" class="list-group-item">{{ maps['name'] }} EDIT</a><br>
 				<div class="div-list-group" style="height:500px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px;" name="div-test">
-				{% for v, ks in maps['vk'].iteritems() %}
-					<h5>{{v}} <span class="badge">{{ks|length}}</span></h5>
+				{% for v, ks in sorted_maps['vk'].iteritems() %}
+					<h5>{{v}} <span class="badge">{{ks['mapped']|length}}</span></h5>
 					{% set outerLoopIndex = loop.index %}
 					<ul class="list-group" id="vkv-{{outerLoopIndex}}">
-						{% for k in ks%}
+						{% for k, i in ks['mapped'] %}
 							<li class="list-group-item" id="vkv-innerlist-{{outerLoopIndex}}-{{loop.index}}">
-								{{ k }}
+								{{ k }} --> {{ i }}
 							</li>
 						{% endfor %}
 					</ul>

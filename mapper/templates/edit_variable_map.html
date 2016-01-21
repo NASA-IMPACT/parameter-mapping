@@ -29,20 +29,28 @@
 				<form method="POST" action="/_update_variable_map/{{ maps['name'] }}" id="update_variable_map">
 
 				<div class="div-list-group" style="height:500px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px;" name="div-test">
-					{% for v, ks in maps['vk'].iteritems() %}
+					{% for v, ks in sorted_maps['vk'].iteritems() %}
 						<h5>{{v}} </h5>
 						{% set outerLoopIndex = loop.index %}
 
+						<div id="select-option-{{outerLoopIndex}}" style="visibility:hidden">
+							<select id="just_list_of_variables">
+								{% for keyword, i in ks['ranked'] %}
+					    		<option value="{{keyword}}-->{{i}}">{{keyword}} --> {{i}}</option>
+					    		{% endfor %}
+							</select>
+						</div>
+
 						<ul class="list-group" id="vkvEdit-{{outerLoopIndex}}">
 						<input type="button" id="vkaddButtonEdit-{{outerLoopIndex}}-{{v}}" value="Add" />
-							{% for k in ks%}
+							{% for k, i in ks['mapped'] %}
 								<li class="list-group-item" id="vkv-innerlistEdit-{{outerLoopIndex}}-{{loop.index}}">
 									<select name="vkvEdit-{{outerLoopIndex}}-{{v}}">
 										{% for keyword in keywords %}
 										{% if k == keyword %}
-							    		<option selected>{{keyword}}</option>
+							    		<option value="{{keyword}}-->{{i}}" selected>{{keyword}} --> {{i}}</option>
 							    		{% else %}
-							    		<option >{{keyword}}</option>
+							    		<option value="{{keyword}}-->{{i}}">{{keyword}} --> {{i}}</option>
 							    		{% endif %}
 							    		{% endfor %}
 									</select> <!-- {{ v }} -->
@@ -52,6 +60,7 @@
 						</ul>
 					{% endfor %}
 				</div>
+
 				<input type="submit" value="save">
 				</form>
 

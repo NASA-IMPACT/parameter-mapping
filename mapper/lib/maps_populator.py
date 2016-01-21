@@ -3,7 +3,7 @@
 # @Author: ritesh
 # @Date:   2016-01-14 10:35:45
 # @Last Modified by:   ritesh
-# @Last Modified time: 2016-01-19 13:42:57
+# @Last Modified time: 2016-01-20 10:05:51
 
 """From the list of keyword in ks db collection
 	and list of variable in vs db collection
@@ -39,24 +39,66 @@ def diff(a, b):
 	b = set(b)
 	return [aa for aa in a if aa not in b]
 
+def kv_generator(keywords, variables):
+	kv = dict()
+	for keyword in keywords:
+		kvd = dict()
+		mapped = dict()
+		ranked = dict()
+		keyword_parts = set(split_into_lemmas(keyword))
+		for variable in variables:
+			variable_parts = set(split_into_lemmas(variable))
+			print keyword, keyword_parts, variable_parts
+			rank = len(keyword_parts & variable_parts)
+			if rank <= 0:
+				ranked[variable.replace(".", "_")] = rank
+			else:
+				mapped[variable.replace(".", "_")] = rank
+		kvd["mapped"] = mapped
+		kvd["ranked"] = ranked
+		kv[keyword.replace(".", "_")] = kvd
+	return kv
+
+def vk_generator(variables, keywords):
+	print "In vk generator"
+	vk = dict()
+	for variable in variables:
+		vkd = dict()
+		mapped = dict()
+		ranked = dict()
+		variable_parts = set(split_into_lemmas(variable))
+		for keyword in keywords:
+			keyword_parts = set(split_into_lemmas(keyword))
+			print variable, variable_parts, keyword_parts
+			rank = len(keyword_parts & variable_parts)
+			if rank <= 0:
+				ranked[keyword.replace(".", "_")] = rank
+			else:
+				mapped[keyword.replace(".", "_")] = rank
+		vkd["mapped"] = mapped
+		vkd["ranked"] = ranked
+		vk[variable.replace(".", "_")] = vkd
+	return vk
+
 # def kv_generator(keywords, variables):
 # 	kv = dict()
 # 	for keyword in keywords:
-# 		kvd = dict()
+# 		kvl = list()
 # 		keyword_parts = set(split_into_lemmas(keyword))
 # 		for variable in variables:
 # 			variable_parts = set(split_into_lemmas(variable))
 # 			print keyword, keyword_parts, variable_parts
 # 			rank = len(keyword_parts & variable_parts)
-# 			kvd[variable.replace(".", "_")] = rank
-# 		kv[keyword.replace(".", "_")] = kvd
+# 			if rank >= 1:
+# 				kvl.append(variable)
+# 		kv[keyword.replace(".", "_")] = kvl
 # 	return kv
 
 # def vk_generator(variables, keywords):
 # 	print "In vk generator"
 # 	vk = dict()
 # 	for variable in variables:
-# 		vkd = dict()
+# 		vkl = list()
 # 		variable_parts = set(split_into_lemmas(variable))
 # 		for keyword in keywords:
 # 			keyword_parts = set(split_into_lemmas(keyword))
@@ -64,38 +106,8 @@ def diff(a, b):
 # 			rank = len(keyword_parts & variable_parts)
 # 			if rank >= 1:
 # 				vkl.append(keyword)
-# 			vkd[keyword.replace(".", "_")] = rank
-# 		vk[variable.replace(".", "_")] = vkd
+# 		vk[variable.replace(".", "_")] = vkl
 # 	return vk
-
-def kv_generator(keywords, variables):
-	kv = dict()
-	for keyword in keywords:
-		kvl = list()
-		keyword_parts = set(split_into_lemmas(keyword))
-		for variable in variables:
-			variable_parts = set(split_into_lemmas(variable))
-			print keyword, keyword_parts, variable_parts
-			rank = len(keyword_parts & variable_parts)
-			if rank >= 1:
-				kvl.append(variable)
-		kv[keyword.replace(".", "_")] = kvl
-	return kv
-
-def vk_generator(variables, keywords):
-	print "In vk generator"
-	vk = dict()
-	for variable in variables:
-		vkl = list()
-		variable_parts = set(split_into_lemmas(variable))
-		for keyword in keywords:
-			keyword_parts = set(split_into_lemmas(keyword))
-			print variable, variable_parts, keyword_parts
-			rank = len(keyword_parts & variable_parts)
-			if rank >= 1:
-				vkl.append(keyword)
-		vk[variable.replace(".", "_")] = vkl
-	return vk
 
 
 def doc_generator(variables, keywords):
@@ -151,7 +163,7 @@ def main():
 	print "diff in coll_ks and coll_vs", diff(colls_in_ks, colls_in_vs)
 	super_colls = colls_in_ks if len(set(colls_in_ks)) >= len(set(colls_in_vs)) else colls_in_vs
 	to_map_colls = diff(super_colls, colls_in_ms)
-	# populate(to_map_colls)
+	populate(to_map_colls)
 
 
 if __name__ == '__main__':
