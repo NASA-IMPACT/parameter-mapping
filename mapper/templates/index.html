@@ -18,7 +18,7 @@
 	</head>
 	<body>
 		<div class="container">
-			<div class="row"><h2 align="center"> K-V Mapping this is</h2> </div>
+			<div class="row"><h2 align="center"> Science Keyword Mapping</h2> </div>
 			<div class="row">
 
 				<div class="col-sm-5 col-sm-offset-1" id="keyword-variable-boxes">
@@ -29,7 +29,7 @@
 								{% for collection in collections %}
 									<!-- <li class="list-group-item">{{ collection.name }}</li> -->
 									<!-- <a href="/_show_map/{{ collection.name }}" class="list-group-item">{{ collection.name }}</a> -->
-									<a href="/_show_keyword_map/{{ collection.name }}" class="list-group-item">{{ collection.name }}</a>
+									<a href="/_show_keyword_map/{{ collection.unique_name }}" class="list-group-item">{{ collection.unique_name }}</a>
 								{% endfor %}
 							</ul>
 						</div>
@@ -84,8 +84,8 @@
 
 					</div>
 					<div class="row" id="mapping">
-						<h3>Mappings</h3>
 						{% if results %}
+						<h3>Mappings</h3>
 							<h2>Results</h2>
 							<br>
 							<div id="results">

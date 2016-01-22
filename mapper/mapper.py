@@ -3,7 +3,7 @@
 # @Author: ritesh
 # @Date:   2015-11-25 10:53:58
 # @Last Modified by:   ritesh
-# @Last Modified time: 2016-01-21 00:04:02
+# @Last Modified time: 2016-01-22 12:20:09
 
 from flask import Flask, render_template, request, jsonify, redirect, url_for
 from werkzeug import secure_filename
@@ -96,9 +96,9 @@ def show_map(collection_name):
     # collection_name = request.args.get('collection_name', 'ritesh', type=str)
     print "Collection clicked in the list is : ", collection_name
     db = libmongo.get_db()
-    keywords = db.ks.find_one({"dataset_id": collection_name}).get("keyword_list")
-    variables = db.vs.find_one({"name": collection_name}).get("variable_list")
-    maps = db.ms.find_one({"name": collection_name})
+    keywords = db.ks.find_one({"unique_name": collection_name}).get("keyword_list")
+    variables = db.vs.find_one({"unique_name": collection_name}).get("variable_list")
+    maps = db.ms.find_one({"unique_name": collection_name})
     print keywords, variables, maps
 
     return render_template('maps.html', errors=errors, results=results, variables=variables, keywords=keywords, maps=maps, collections=collections)
@@ -115,22 +115,23 @@ def save_keyword_map():
 
 @app.route('/_show_keyword_map/<collection_name>', methods=['GET', 'POST'])
 def show_keyword_map(collection_name):
+    print "Show Map Page"
     errors = []
     results = {"four": 4}
     print collection_name
     # collection_name = request.args.get('collection_name', 'ritesh', type=str)
     print "Collection clicked in the list iddds : ", collection_name
     db = libmongo.get_db()
-    keywords = db.ks.find_one({"dataset_id": collection_name}).get("keyword_list")
-    variables = db.vs.find_one({"name": collection_name}).get("variable_list")
-    maps = db.ms.find_one({"name": collection_name})
-    print keywords, variables, maps
+    keywords = db.ks.find_one({"unique_name": collection_name}).get("keyword_list")
+    variables = db.vs.find_one({"unique_name": collection_name}).get("variable_list")
+    maps = db.ms.find_one({"unique_name": collection_name})
+    # print keywords, variables, maps
     sorted_maps = dict()
-    sorted_maps["name"] = collection_name
+    sorted_maps["unique_name"] = collection_name
     sorted_maps["kv"] = get_sorted_kv_map(maps)
     sorted_maps["vk"] = get_sorted_vk_map(maps)
 
-    print sorted_maps
+    # print sorted_maps
 
     return render_template('show_keyword_map.html', errors=errors, results=results, variables=variables, \
         keywords=keywords, maps=maps, collections=collections, \
@@ -145,13 +146,13 @@ def edit_keyword_map(collection_name):
     # collection_name = request.args.get('collection_name', 'ritesh', type=str)
     print "Collection clicked in the list iddds : ", collection_name
     db = libmongo.get_db()
-    keywords = db.ks.find_one({"dataset_id": collection_name}).get("keyword_list")
-    variables = db.vs.find_one({"name": collection_name}).get("variable_list")
-    maps = db.ms.find_one({"name": collection_name})
+    keywords = db.ks.find_one({"unique_name": collection_name}).get("keyword_list")
+    variables = db.vs.find_one({"unique_name": collection_name}).get("variable_list")
+    maps = db.ms.find_one({"unique_name": collection_name})
     print keywords, variables, maps
 
     sorted_maps = dict()
-    sorted_maps["name"] = collection_name
+    sorted_maps["unique_name"] = collection_name
     sorted_maps["kv"] = get_sorted_kv_map(maps)
     sorted_maps["vk"] = get_sorted_vk_map(maps)
 
@@ -168,13 +169,13 @@ def edit_variable_map(collection_name):
     # collection_name = request.args.get('collection_name', 'ritesh', type=str)
     print "Collection clicked in the list iddds : ", collection_name
     db = libmongo.get_db()
-    keywords = db.ks.find_one({"dataset_id": collection_name}).get("keyword_list")
-    variables = db.vs.find_one({"name": collection_name}).get("variable_list")
-    maps = db.ms.find_one({"name": collection_name})
+    keywords = db.ks.find_one({"unique_name": collection_name}).get("keyword_list")
+    variables = db.vs.find_one({"unique_name": collection_name}).get("variable_list")
+    maps = db.ms.find_one({"unique_name": collection_name})
     print keywords, variables, maps
 
     sorted_maps = dict()
-    sorted_maps["name"] = collection_name
+    sorted_maps["unique_name"] = collection_name
     sorted_maps["kv"] = get_sorted_kv_map(maps)
     sorted_maps["vk"] = get_sorted_vk_map(maps)
 
@@ -192,15 +193,18 @@ def update_keyword_map(collection_name):
     if request.method == 'POST':
         print "here is the update thing "
         print list(request.form.keys())
+        # print request.form
         db = libmongo.get_db()
-        col_map = db.ms.find_one({"name": collection_name})
-        print col_map
+        col_map = db.ms.find_one({"unique_name": collection_name})
+        kvs = col_map.get("kv")
+        # print col_map
         for keyword in request.form.keys():
             variables = request.form.getlist(keyword)
             variables = list(set(variables))
             key = keyword.split("-", 2)[-1]
-            old_mapped_kv = col_map.get("kv").get(key).get("mapped")
-            old_ranked_kv = col_map.get("kv").get(key).get("ranked")
+            old_mapped_kv = kvs.get(key).get("mapped")
+            old_ranked_kv = kvs.get(key).get("ranked")
+
             old_mapped_kv_set = set(old_mapped_kv.keys())
             old_ranked_kv_set = set(old_ranked_kv.keys())
             new_mapped_kv_set = set()
@@ -215,23 +219,24 @@ def update_keyword_map(collection_name):
             removed_from_mapped = old_mapped_kv_set.difference(new_mapped_kv_set)
 
             for am_key in added_to_mapped:
-                del old_ranked_kv[am_key]       #remove from ranked
+                # del old_ranked_kv[am_key]       #remove from ranked; add to mapped
+                old_mapped_kv[am_key] = old_ranked_kv.pop(am_key)
             for ar_key in removed_from_mapped:
-                old_ranked_kv[ar_key] = old_mapped_kv[ar_key]   #populate ranked map / add to ranked
-
-            TO_UPDATE[key] = {"mapped" : mapped_d, "ranked": old_ranked_kv}
-        print "things to update is :", TO_UPDATE
+                old_ranked_kv[ar_key] = old_mapped_kv.pop(ar_key)   #populate ranked map / add to ranked
+            kvs[key] = {"mapped" : old_mapped_kv, "ranked": old_ranked_kv}
+            # TO_UPDATE[key] = {"mapped" : old_mapped_kv, "ranked": old_ranked_kv}
+        # print "things to update is :", kvs
 
     print "Collection clicked in the list iddds : ", collection_name
 
-    query = {"name": collection_name}
-    update = {"$set": {"kv": TO_UPDATE}}
+    query = {"unique_name": collection_name}
+    update = {"$set": {"kv": kvs}}
     result = db.ms.update_one(query, update)
     if result.matched_count == 1:
         print "Successful update"
-    # keywords = db.ks.find_one({"dataset_id": collection_name}).get("keyword_list")
-    # variables = db.vs.find_one({"name": collection_name}).get("variable_list")
-    # maps = db.ms.find_one({"name": collection_name})
+    # keywords = db.ks.find_one({"unique_name": collection_name}).get("keyword_list")
+    # variables = db.vs.find_one({"unique_name": collection_name}).get("variable_list")
+    # maps = db.ms.find_one({"unique_name": collection_name})
     # print keywords, variables, maps
     return redirect(url_for("show_keyword_map", collection_name=collection_name))
     # return render_template('edit_keyword_map.html', errors=errors, results=results, variables=variables, keywords=keywords, maps=maps, collections=collections)
@@ -244,15 +249,17 @@ def update_variable_map(collection_name):
     TO_UPDATE = {}
     if request.method == 'POST':
         print "here is the update thing  for variable"
+        print list(request.form.keys())
         db = libmongo.get_db()
-        col_map = db.ms.find_one({"name": collection_name})
+        col_map = db.ms.find_one({"unique_name": collection_name})
+        vks = col_map.get("vk")
         for variable in request.form.keys():
             keywords = request.form.getlist(variable)
             keywords = list(set(keywords))
             key = variable.split("-", 2)[-1]
 
-            old_mapped_vk = col_map.get("vk").get(key).get("mapped")
-            old_ranked_vk = col_map.get("vk").get(key).get("ranked")
+            old_mapped_vk = vks.get(key).get("mapped")
+            old_ranked_vk = vks.get(key).get("ranked")
             old_mapped_vk_set = set(old_mapped_vk.keys())
             old_ranked_vk_set = set(old_ranked_vk.keys())
             new_mapped_vk_set = set()
@@ -268,18 +275,19 @@ def update_variable_map(collection_name):
             removed_from_mapped = old_mapped_vk_set.difference(new_mapped_vk_set)
 
             for am_key in added_to_mapped:
-                del old_ranked_vk[am_key]       #remove from ranked
+                # del old_ranked_vk[am_key]       #remove from ranked
+                old_mapped_vk[am_key] = old_ranked_vk.pop(am_key)
             for ar_key in removed_from_mapped:
-                old_ranked_vk[ar_key] = old_mapped_vk[ar_key]   #populate ranked map / add to ranked
+                old_ranked_vk[ar_key] = old_mapped_vk.pop(ar_key)   #populate ranked map / add to ranked
 
-            TO_UPDATE[key] = {"mapped" : mapped_d, "ranked": old_ranked_kv}
+            vks[key] = {"mapped" : old_mapped_vk, "ranked": old_ranked_vk}
 
         print "things to update is :", TO_UPDATE
 
     print "Collection clicked in the list iddds : ", collection_name
 
-    query = {"name": collection_name}
-    update = {"$set": {"vk": TO_UPDATE}}
+    query = {"unique_name": collection_name}
+    update = {"$set": {"vk": vks}}
     result = db.ms.update_one(query, update)
     if result.matched_count == 1:
         print "Successful  variable map update"
@@ -291,7 +299,7 @@ def update_variable_map(collection_name):
 def index():
     global collections
     errors = []
-    results = {"narr": 4}
+    results = {}
     # variables = ["these", "are", "dynamic", "variables", "for", "testing"]
     # keywords = ["these", "are", "dynamic", "keywords", "for", "testing"]
     if request.method == "POST":

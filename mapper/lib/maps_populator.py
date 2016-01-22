@@ -3,7 +3,7 @@
 # @Author: ritesh
 # @Date:   2016-01-14 10:35:45
 # @Last Modified by:   ritesh
-# @Last Modified time: 2016-01-20 10:05:51
+# @Last Modified time: 2016-01-21 15:12:34
 
 """From the list of keyword in ks db collection
 	and list of variable in vs db collection
@@ -124,12 +124,15 @@ def doc_generator(variables, keywords):
 def populate(to_map_colls):
 	for coll in to_map_colls:
 		print "Updating %s Collection" %(coll)
-		variables = db.vs.find_one({"name": coll}, {"variable_list":1, "_id": 0})["variable_list"]
-		keywords = db.ks.find_one({"dataset_id": coll}, {"keyword_list":1, "_id": 0})["keyword_list"]
+		ks_find = db.ks.find_one({"unique_name": coll}, {"keyword_list":1, "dataset_id": 1, "_id": 0})
+		vs_find = db.vs.find_one({"unique_name": coll}, {"variable_list":1, "dataset_id": 1, "_id": 0})
+		variables = vs_find["variable_list"]
+		keywords = ks_find["keyword_list"]
+		dataset_id = ks_find["dataset_id"]
 		print variables
 		print keywords
 		kv, vk = doc_generator(variables, keywords)
-		doc = {"name": coll, "kv": kv, "vk": vk}
+		doc = {"unique_name": coll, "kv": kv, "vk": vk, "dataset_id": dataset_id}
 		result = db.ms.insert_one(doc)
 		if result:
 			print "Successfully Inserted '%s' collection maps" %(coll)
@@ -152,9 +155,9 @@ def temp_sanitize_names():
 
 
 def main():
-	colls_in_ks = [k["dataset_id"] for k in db.ks.find({}, {"dataset_id":1, "_id": 0})]
-	colls_in_vs = [v["name"] for v in db.vs.find({}, {"name":1, "_id": 0})]
-	colls_in_ms = [m["name"] for m in db.ms.find({}, {"name":1, "_id": 0})]
+	colls_in_ks = [k["unique_name"] for k in db.ks.find({}, {"unique_name":1, "_id": 0})]
+	colls_in_vs = [v["unique_name"] for v in db.vs.find({}, {"unique_name":1, "_id": 0})]
+	colls_in_ms = [m["unique_name"] for m in db.ms.find({}, {"unique_name":1, "_id": 0})]
 
 	print colls_in_ks
 	print colls_in_vs

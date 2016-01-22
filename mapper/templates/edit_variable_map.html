@@ -8,41 +8,41 @@
 
 {% block content %}
 
-	<h1>Maps</h1>
-	<h2 align="center"> {{maps['name']}}</h2>
-	{% for mk, mv in maps.iteritems() %}
+	<h2 align="center">Edit Maps</h2>
+	<h3 align="center"> {{maps.unique_name}}</h3>
+	<!-- {% for mk, mv in maps.iteritems() %}
 		<h4>{{mk}}</h4>
 		<h4>{{mv}}</h4>
-	{% endfor %}
-	<div id="select-option" style="visibility:hidden">
+	{% endfor %} -->
+
+	<!-- For generating hidden select options -->
+	{% for v, ks in sorted_maps['vk'].iteritems() %}
+	{% set outerLoopIndex = loop.index %}
+	<div id="select-option-{{outerLoopIndex}}" style="visibility:hidden; display:none">
 		<select id="just_list_of_variables">
-			{% for keyword in keywords %}
-    		<option>{{keyword}}</option>
+			{% for keyword, i in ks['ranked'] %}
+    		<option value="{{keyword}}-->{{i}}">{{keyword}} --> {{i}}</option>
     		{% endfor %}
 		</select>
 	</div>
-	<div class="row">
-		<div class="col-sm-5 col-sm-offset-1" id="kv-maps">
-			<div class="row" id="kv-maps-box">
-				<h2>Editing Variable Map</h2>
+	{% endfor %}
 
-				<form method="POST" action="/_update_variable_map/{{ maps['name'] }}" id="update_variable_map">
+	<div class="row">
+		<!-- <div class="col-sm-5 col-sm-offset-1" id="kv-maps"> -->
+			<div class="row" id="kv-maps-box">
+				<h3>Editing Variable Map</h3>
+
+				<form method="POST" action="/_update_variable_map/{{ maps.unique_name }}" id="update_variable_map">
 
 				<div class="div-list-group" style="height:500px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px;" name="div-test">
 					{% for v, ks in sorted_maps['vk'].iteritems() %}
-						<h5>{{v}} </h5>
+
 						{% set outerLoopIndex = loop.index %}
 
-						<div id="select-option-{{outerLoopIndex}}" style="visibility:hidden">
-							<select id="just_list_of_variables">
-								{% for keyword, i in ks['ranked'] %}
-					    		<option value="{{keyword}}-->{{i}}">{{keyword}} --> {{i}}</option>
-					    		{% endfor %}
-							</select>
-						</div>
-
 						<ul class="list-group" id="vkvEdit-{{outerLoopIndex}}">
-						<input type="button" id="vkaddButtonEdit-{{outerLoopIndex}}-{{v}}" value="Add" />
+						<br>
+						<strong> {{v}} </strong>
+						<input type="button" id="vkaddButtonEdit-{{outerLoopIndex}}-{{v}}" value="Add New Keyword" type="button" class="btn btn-info" align="right" />
 							{% for k, i in ks['mapped'] %}
 								<li class="list-group-item" id="vkv-innerlistEdit-{{outerLoopIndex}}-{{loop.index}}">
 									<select name="vkvEdit-{{outerLoopIndex}}-{{v}}">
@@ -60,14 +60,14 @@
 						</ul>
 					{% endfor %}
 				</div>
-
-				<input type="submit" value="save">
+				<br>
+				<input type="submit" value="save" class="btn btn-success">
 				</form>
 
 
 
 			</div>
-		</div>
+		<!-- </div> -->
 	</div>
 
 		<br>
