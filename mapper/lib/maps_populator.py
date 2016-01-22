@@ -3,7 +3,7 @@
 # @Author: ritesh
 # @Date:   2016-01-14 10:35:45
 # @Last Modified by:   ritesh
-# @Last Modified time: 2016-01-21 15:12:34
+# @Last Modified time: 2016-01-22 16:10:52
 
 """From the list of keyword in ks db collection
 	and list of variable in vs db collection
@@ -172,5 +172,4 @@ def main():
 if __name__ == '__main__':
 	main()
 	# temp_sanitize_names()
-
 

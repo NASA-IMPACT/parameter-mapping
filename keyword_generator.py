@@ -3,7 +3,7 @@
 # @Author: ritesh
 # @Date:   2015-12-16 10:42:47
 # @Last Modified by:   ritesh
-# @Last Modified time: 2015-12-17 15:12:08
+# @Last Modified time: 2016-01-21 14:42:01
 
 import json
 # from pymongo import MongoClient
@@ -17,6 +17,10 @@ tree = ET.parse("./xiang-docs/datasets.echo10.xml")
 # 	client = MongoClient('localhost', 27017)
 # 	db = client.mapper
 # 	return db
+
+def sanitize(name):
+	return name.replace("/", "_").replace(".", "_")
+
 
 def main():
 	root = tree.getroot()
@@ -40,6 +44,7 @@ def main():
 		name_keywords_dict["long_name"] = long_name
 		name_keywords_dict["dataset_id"] = dataset_id
 		name_keywords_dict["short_name"] = short_name
+		name_keywords_dict["unique_name"] = sanitize(dataset_id)
 
 		keyword_list = list()
 		if science_keywords is not None:
@@ -49,7 +54,7 @@ def main():
 				term = keyword.find('TermKeyword').text
 				variables = keyword.findall(".//Value")
 				for variable in variables:
-					keyword_list.append("%s->%s->%s" %(topic.replace(" ", ""), term.replace(" ", ""), variable.text.replace(" ", "")))
+					keyword_list.append("%s->%s->%s" %(topic.replace(" ", "_"), term.replace(" ", "_"), variable.text.replace(" ", "_")))
 					# print category, topic, term, variable.text
 			name_keywords_dict["keyword_list"] = keyword_list
 			f.write(json.dumps(name_keywords_dict) + "\n")
