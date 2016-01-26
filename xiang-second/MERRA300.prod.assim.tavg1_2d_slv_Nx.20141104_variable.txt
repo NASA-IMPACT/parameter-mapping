@@ -1,0 +1,41 @@
+StructMetadata.0|
+CoreMetadata.0|
+_HDFEOS_CRS;|
+SLP|Sea level pressure
+PS|Time averaged surface pressure
+U850|Eastward wind at 850 hPa
+U500|Eastward wind at 500 hPa
+U250|Eastward wind at 250 hPa
+V850|Northward wind at 850 hPa
+V500|Northward wind at 500 hPa
+V250|Northward wind at 250 hPa
+T850|Temperature at 850 hPa
+T500|Temperature at 500 hPa
+T250|Temperature at 250 hPa
+Q850|Specific humidity at 850 hPa
+Q500|Specific humidity at 500 hPa
+Q250|Specific humidity at 250 hPa
+H1000|Height at 1000 hPa
+H850|Height at 850 hPa
+H500|Height at 500 hPa
+H250|Height at 250 hPa
+OMEGA500|Vertical pressure velocity at 500 hPa
+U10M|Eastward wind at 10 m above displacement height
+U2M|Eastward wind at 2 m above the displacement height
+U50M|Eastward wind at 50 m above surface
+V10M|Northward wind at 10 m above the displacement height
+V2M|Northward wind at 2 m above the displacement height
+V50M|Northward wind at 50 m above
+T10M|Temperature at 10 m above the displacement height
+T2M|Temperature at 2 m above the displacement height
+QV10M|Specific humidity at 10 m above the displacement height
+QV2M|Specific humidity at 2 m above the displacement height
+TS|Surface skin temperature
+DISPH|Displacement height
+TROPPV|PV based tropopause pressure
+TROPPT|T based tropopause pressure
+TROPPB|Blended tropopause pressure
+TROPT|Tropopause temperature
+TROPQ|Tropopause specific humidity
+CLDPRS|Cloud-top pressure
+CLDTMP|Cloud-top temperature

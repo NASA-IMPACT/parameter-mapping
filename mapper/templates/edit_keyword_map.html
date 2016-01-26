@@ -8,8 +8,8 @@
 
 {% block content %}
 
-	<h2 align="center">Edit Maps</h2>
-	<h3 align="center"> {{maps.unique_name}}</h3>
+	<!-- <h2 align="center">Edit Maps</h2> -->
+	<h3 align="center" style="background: #CCCCCC"> {{maps.dataset_id}}</h3>
 	<!-- {% for mk, mv in maps.iteritems() %}
 		<h4>{{mk}}</h4>
 		<h4>{{mv}}</h4>
@@ -21,7 +21,7 @@
 	<div id="select-option-{{outerLoopIndex}}" style="visibility:hidden; display:none">
 		<select id="just_list_of_variables">
 			{% for variable, i in vs['ranked'] %}
-    		<option value="{{variable}}-->{{i}}">{{variable}} --> {{i}}</option>
+    		<option value="{{variable}}-->{{i}}">{{variable}} : {{i}}</option>
     		{% endfor %}
 		</select>
 	</div>
@@ -30,7 +30,7 @@
 	<div class="row">
 		<!-- <div class="col-sm-5 col-sm-offset-1" id="kv-maps"> -->
 			<div class="row" id="kv-maps-box">
-				<h3>Edit Keyword Map</h3>
+				<h3>Edit Sceince Keyword Map</h3>
 
 				<form method="POST" action="/_update_keyword_map/{{ maps.unique_name }}" id="update_keyword_map">
 
@@ -41,27 +41,39 @@
 
 						<ul class="list-group" id="kvkEdit-{{outerLoopIndex}}">
 						<br>
-						<strong> {{k}} </strong>
-						<input type="button" id="kvaddButtonEdit-{{outerLoopIndex}}-{{k}}" value="Add New Variable" type="button" class="btn btn-info" align="right" />
+						<div class="list-group-each-keyword">
+						<!-- {{k}} -->
+						{% set keyword_part_list = k.split('->') %}
+						{% for keyword_part in keyword_part_list %}
+							{% if loop.first %}
+								<div class="keyword-inline-first">{{keyword_part}}<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+							{% elif loop.last %}
+								<div class="keyword-inline-last">{{keyword_part}}</div>
+							{% else %}
+								<div class="keyword-inline">{{keyword_part}}<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+							{% endif %}
+						{% endfor %}
+						<input type="button" id="kvaddButtonEdit-{{outerLoopIndex}}-{{k}}" value="Assign New Variable" type="button" class="btn btn-info inline-button" align="right" />
+						</div>
 							{% for v, i in vs['mapped'] %}
 								<li class="list-group-item" id="kvk-innerlistEdit-{{outerLoopIndex}}-{{loop.index}}">
 									<select name="kvkEdit-{{outerLoopIndex}}-{{k}}">
 										{% for variable in variables %}
 										{% if v == variable %}
-							    		<option value="{{variable}}-->{{i}}" selected>{{variable}} --> {{i}}</option>
+							    		<option value="{{variable}}-->{{i}}" selected>{{variable}} : {{i}}</option>
 							    		{% else %}
-							    		<option value="{{variable}}-->{{i}}">{{variable}} --> {{i}}</option>
+							    		<option value="{{variable}}-->{{i}}">{{variable}} : {{i}}</option>
 							    		{% endif %}
 							    		{% endfor %}
 									</select> <!-- {{ v }} -->
-									<input type="button" id="kvremoveButtonEdit-{{outerLoopIndex}}-{{loop.index}}" value="Remove" />
+									<input type="button" id="kvremoveButtonEdit-{{outerLoopIndex}}-{{loop.index}}" value="Remove" class="btn btn-danger" />
 								</li>
 							{% endfor %}
 						</ul>
 					{% endfor %}
 				</div>
 				<br>
-				<input type="submit" value="save" class="btn btn-success">
+				<input type="submit" value="Save" class="btn btn-success">
 				</form>
 
 

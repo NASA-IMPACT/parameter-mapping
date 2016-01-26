@@ -3,7 +3,7 @@
 # @Author: ritesh
 # @Date:   2016-01-13 10:56:42
 # @Last Modified by:   ritesh
-# @Last Modified time: 2016-01-21 14:29:30
+# @Last Modified time: 2016-01-26 14:14:28
 
 import h5py
 from pyhdf import SD
@@ -14,6 +14,7 @@ import libmongo
 def hdf_read(file_path):
 	"""open the hdf 4 file for reading"""
 	hdf = SD.SD(file_path, SD.SDC.READ)
+	print hdf.info()
 	variable_list = list(set(hdf.datasets().keys()))
 	print variable_list
 	return variable_list
@@ -49,7 +50,7 @@ def extract(file_path, url=False):
 		"Extracting starts here"
 		variable_list = ext_func.get(ext, hdf5_read)(file_path)
 		"insert to db"
-		# insert_variables(variable_list)
+		insert_variables(variable_list)
 
 
 		# f = h5py.File(file_path, 'r')
@@ -66,7 +67,7 @@ def extract(file_path, url=False):
 
 def main():
 	# file_path = "/Users/ritesh/Programming-stuffs/ITSC-projects/darkdata/mapping-science-keyword/granules/MOD04_L2.A2015345.1630.051.NRT.hdf"
-	file_path = "/Users/ritesh/Programming-stuffs/ITSC-projects/darkdata/mapping-science-keyword/granules/MOD07_L2.A2016014.0745.005.2016014134404.hdf"
+	file_path = "/Users/ritesh/Programming-stuffs/ITSC-projects/darkdata/mapping-science-keyword/granules/LISOTD_LRDC_V2.3.2014.hdf"
 	extract(file_path, url=False)
 
 if __name__ == '__main__':

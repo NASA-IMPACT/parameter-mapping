@@ -8,25 +8,40 @@
 
 {% block content %}
 
-	<h1 align="center">Maps</h1>
-	<h3 align="center"> {{maps.unique_name}}</h3>
+	<!-- <h1 align="center">Maps</h1> -->
+	<h3 align="center" style="background: #DDDDDD"> {{maps.dataset_id}}</h3>
 
 	<div class="row">
 		<div class="col-sm-5 col-sm-offset-1" id="kv-maps">
 			<div class="row" id="kv-maps-box">
-				<h3>Keyword Map</h3>
+				<div class="div-inline"><h3>Science Keyword Map</h3></div>
 
-				<a href="/_edit_keyword_map/{{ maps.unique_name }}" class="btn btn-default btn-lg active" role="button">EDIT</a>
+				<a href="/_edit_keyword_map/{{ maps.unique_name }}" class="btn btn-info active" role="button">EDIT</a>
 				<br><br>
 				<div class="div-list-group" style="height:500px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px;" name="div-test">
 				{% for k, vs in sorted_maps['kv'].iteritems() %}
 
 					{% set outerLoopIndex = loop.index %}
-					<ul class="list-group" id="kvk-{{outerLoopIndex}}">
-						<h5 >{{k}} <span class="badge">{{vs['mapped']|length}}</span></h5>
+					<ul class="list-group" id="kvk-{{outerLoopIndex}}" style="background:#E6E6FA;">
+						<div class="list-group-each-keyword">
+							<!-- {{k}} -->
+						{% set keyword_part_list = k.split('->') %}
+						{% for keyword_part in keyword_part_list %}
+							{% if loop.first %}
+								<div class="keyword-inline-first">{{keyword_part}}<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+							{% elif loop.last %}
+								<div class="keyword-inline-last">{{keyword_part}}</div>
+							{% else %}
+								<div class="keyword-inline">{{keyword_part}}<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+							{% endif %}
+						{% endfor %}
+						<span class="badge">{{vs['mapped']|length}}</span>
+						</div>
+
+						<!-- <h5 >{{k}} <span class="badge">{{vs['mapped']|length}}</span></h5> -->
 						{% for v, i in vs['mapped'] %}
 							<li class="list-group-item" id="kvk-innerlist-{{outerLoopIndex}}-{{loop.index}}">
-								{{ v }} --> {{ i }}
+								{{ v }} : {{ i }}
 							</li>
 						{% endfor %}
 					</ul>
@@ -40,19 +55,19 @@
 
 		<div class="col-sm-5 col-sm-offset-1" id="kv-maps">
 			<div class="row" id="kv-maps-box">
-				<h3>Variable Map</h3>
+				<div class="div-inline"><h3>Parameter Map</h3></div>
 
-				<a href="/_edit_variable_map/{{ maps.unique_name }}" class="btn btn-default btn-lg active" role="button"> EDIT</a>
+				<a href="/_edit_variable_map/{{ maps.unique_name }}" class="btn btn-info " role="button"> EDIT</a>
 				<br><br>
 				<div class="div-list-group" style="height:500px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px;" name="div-test">
 				{% for v, ks in sorted_maps['vk'].iteritems() %}
 
 					{% set outerLoopIndex = loop.index %}
-					<ul class="list-group" id="vkv-{{outerLoopIndex}}">
-						<h5 >{{v}} <span class="badge">{{ks['mapped']|length}}</span></h5>
+					<ul class="list-group" id="vkv-{{outerLoopIndex}}" style="background: #E6E6FA;">
+						<div class="keyword-inline-variable">{{v}}</div>  <span class="badge">{{ks['mapped']|length}}</span>
 						{% for k, i in ks['mapped'] %}
 							<li class="list-group-item" id="vkv-innerlist-{{outerLoopIndex}}-{{loop.index}}">
-								{{ k }} --> {{ i }}
+								{{ k }} : {{ i }}
 							</li>
 						{% endfor %}
 					</ul>

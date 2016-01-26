@@ -9,6 +9,7 @@
 			<!-- Optional theme -->
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
 			<link rel="stylesheet" href="{{ url_for('static', filename='css/lib/dropzone/dropzone.css') }}" crossorigin="anonymous">
+			<link rel="stylesheet" href="{{ url_for('static', filename='css/mapper.css') }}">
 			<style>
 			.container {
 			max-width: 1000px;
@@ -19,7 +20,7 @@
 	</head>
 	<body>
 		<div id="content" class="container">
-		<a href="/" class="btn btn-primary btn-lg active" role="button" >HOME</a>
+		<a href="/" class="btn btn-primary" role="button" >HOME</a>
 			{% block content %}
 			{% endblock %}
 
@@ -27,7 +28,7 @@
 
 		<div id="footer">
 			{% block footer %}
-				<p align="center"> &copy; Copyright 2015 by <a href="#">ITSC</a>. </p>
+				<p align="center"> &copy; Copyright 2016 by <a href="#">ITSC</a>. </p>
 			{% endblock %}
 		</div>
 		</div>

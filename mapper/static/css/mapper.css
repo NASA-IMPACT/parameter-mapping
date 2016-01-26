@@ -1,0 +1,49 @@
+/*
+* @Author: ritesh
+* @Date:   2016-01-25 13:35:33
+* @Last Modified by:   ritesh
+* @Last Modified time: 2016-01-26 00:55:32
+*/
+
+.keyword-inline-first {
+display: inline-block;
+/*border: 1px solid red;*/
+margin:0px 0px 0px 20px;
+background: 	#B0C4DE;
+color: #00008B;
+}
+
+.keyword-inline-last {
+display: inline-block;
+/*border: 1px solid red;*/
+margin:0px;
+background: 	#B0C4DE;
+color: #00008B;
+}
+
+.keyword-inline {
+display: inline-block;
+/*border: 2px solid blue;*/
+margin:0px;
+background: 	#B0C4DE;
+color: #00008B;
+}
+
+.keyword-inline-variable {
+display: inline-block;
+/*border: 1px solid red;*/
+margin:0px 0px 0px 20px;
+background: 	#B0C4DE;
+color: #00008B;
+font-weight: bold
+}
+
+.div-inline {
+display: inline-block;
+/*border: 2px solid blue;*/
+margin: 2px 15px 2px 2px;
+padding: 2px;
+/*background: #AFEEEE;*/
+font-size: 150%;
+font-weight: bold;
+}

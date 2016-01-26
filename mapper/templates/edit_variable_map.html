@@ -8,8 +8,8 @@
 
 {% block content %}
 
-	<h2 align="center">Edit Maps</h2>
-	<h3 align="center"> {{maps.unique_name}}</h3>
+	<!-- <h2 align="center">Edit Maps</h2> -->
+	<h3 align="center" style="background: #CCCCCC"> {{maps.dataset_id}}</h3>
 	<!-- {% for mk, mv in maps.iteritems() %}
 		<h4>{{mk}}</h4>
 		<h4>{{mv}}</h4>
@@ -21,7 +21,7 @@
 	<div id="select-option-{{outerLoopIndex}}" style="visibility:hidden; display:none">
 		<select id="just_list_of_variables">
 			{% for keyword, i in ks['ranked'] %}
-    		<option value="{{keyword}}-->{{i}}">{{keyword}} --> {{i}}</option>
+    		<option value="{{keyword}}-->{{i}}">{{keyword}} : {{i}}</option>
     		{% endfor %}
 		</select>
 	</div>
@@ -30,7 +30,7 @@
 	<div class="row">
 		<!-- <div class="col-sm-5 col-sm-offset-1" id="kv-maps"> -->
 			<div class="row" id="kv-maps-box">
-				<h3>Editing Variable Map</h3>
+				<h3>Edit Parameter Variable Map</h3>
 
 				<form method="POST" action="/_update_variable_map/{{ maps.unique_name }}" id="update_variable_map">
 
@@ -41,27 +41,27 @@
 
 						<ul class="list-group" id="vkvEdit-{{outerLoopIndex}}">
 						<br>
-						<strong> {{v}} </strong>
-						<input type="button" id="vkaddButtonEdit-{{outerLoopIndex}}-{{v}}" value="Add New Keyword" type="button" class="btn btn-info" align="right" />
+						<div class="keyword-inline-variable">{{v}}</div>
+						<input type="button" id="vkaddButtonEdit-{{outerLoopIndex}}-{{v}}" value="Assign New Keyword" type="button" class="btn btn-info" align="right" />
 							{% for k, i in ks['mapped'] %}
 								<li class="list-group-item" id="vkv-innerlistEdit-{{outerLoopIndex}}-{{loop.index}}">
 									<select name="vkvEdit-{{outerLoopIndex}}-{{v}}">
 										{% for keyword in keywords %}
 										{% if k == keyword %}
-							    		<option value="{{keyword}}-->{{i}}" selected>{{keyword}} --> {{i}}</option>
+							    		<option value="{{keyword}}-->{{i}}" selected>{{keyword}} : {{i}}</option>
 							    		{% else %}
-							    		<option value="{{keyword}}-->{{i}}">{{keyword}} --> {{i}}</option>
+							    		<option value="{{keyword}}-->{{i}}">{{keyword}} : {{i}}</option>
 							    		{% endif %}
 							    		{% endfor %}
 									</select> <!-- {{ v }} -->
-									<input type="button" id="vkremoveButtonEdit-{{outerLoopIndex}}-{{loop.index}}" value="Remove" />
+									<input type="button" id="vkremoveButtonEdit-{{outerLoopIndex}}-{{loop.index}}" value="Remove" class="btn btn-danger" />
 								</li>
 							{% endfor %}
 						</ul>
 					{% endfor %}
 				</div>
 				<br>
-				<input type="submit" value="save" class="btn btn-success">
+				<input type="submit" value="Save" class="btn btn-success">
 				</form>
 
 

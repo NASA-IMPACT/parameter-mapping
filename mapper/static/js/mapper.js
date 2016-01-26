@@ -2,7 +2,7 @@
 * @Author: ritesh
 * @Date:   2015-12-01 14:59:30
 * @Last Modified by:   ritesh
-* @Last Modified time: 2016-01-21 00:48:20
+* @Last Modified time: 2016-01-25 17:04:19
 */
 
 
@@ -49,6 +49,13 @@ $( document ).ready(function() {
 
 	// });
 
+	// var keyword_header =$('div.list-group-each-keyword').text().trim();
+	// console.log(keyword_header);
+	// key_arr = keyword_header.split('->');
+	// console.log(key_arr.length);
+	// $("div.list-group-each-keyword").html("<span>"+key_arr[0] + key_arr[1]+ "</span>" );
+
+
 	$(document).on("click", '[id^=kvaddButton]' , function() {
     	// $(this).parent().remove();
     	var id = event.target.id;
@@ -57,7 +64,7 @@ $( document ).ready(function() {
 		while ($("#kvk-innerlist-"+num+"-"+count).length != 0) { count += 1;}
 		var selectedVal = $('#kvk-'+num +' select').val();
 		var newID = 'kvk-innerlist-'+num+'-'+count;
-		var removeButtonHtml = '<input type="button" id="kvremoveButton-'+num+'-'+count+'" value="Remove" />';
+		var removeButtonHtml = '<input type="button" id="kvremoveButton-'+num+'-'+count+'" value="Remove" class="btn btn-danger" />';
 		var appendLi = '<li class="list-group-item" id="'+newID+'">'+selectedVal+count+removeButtonHtml+'</li>';
 		$('#kvk-'+num).append(appendLi);
    	});
@@ -80,8 +87,8 @@ $( document ).ready(function() {
 		var selectOption = $('div#select-option-'+num).html();
 		console.log(selectOption);
 		// $selectOption.attr('style', 'visilibility:visible');
-		var removeButtonHtml = '<input type="button" id="vkremoveButtonEdit-'+num+'-'+count+'" value="Remove" />';
-		var appendLi = '<li class="list-group-item" id="'+newID+'">'+selectOption+count+removeButtonHtml+'</li>';
+		var removeButtonHtml = '<input type="button" id="vkremoveButtonEdit-'+num+'-'+count+'" value="Remove" class="btn btn-danger" />';
+		var appendLi = '<li class="list-group-item" id="'+newID+'">'+selectOption+' '+removeButtonHtml+'</li>';
 		$('#vkvEdit-'+num).append(appendLi);
    	});
 
@@ -103,8 +110,8 @@ $( document ).ready(function() {
 		var selectOption = $('div#select-option-'+num).html();
 		console.log(selectOption);
 		// // $selectOption.attr('style', 'visilibility:visible');
-		var removeButtonHtml = '<input type="button" id="kvremoveButtonEdit-'+num+'-'+count+'" value="Remove" />';
-		var appendLi = '<li class="list-group-item" id="'+newID+'">'+selectOption+count+removeButtonHtml+'</li>';
+		var removeButtonHtml = '<input type="button" id="kvremoveButtonEdit-'+num+'-'+count+'" value="Remove" class="btn btn-danger" />';
+		var appendLi = '<li class="list-group-item" id="'+newID+'">'+selectOption+' '+removeButtonHtml+'</li>';
 		$('#kvkEdit-'+num).append(appendLi);
    	});
 
