@@ -3,16 +3,19 @@
 # @Author: ritesh
 # @Date:   2015-11-25 10:53:58
 # @Last Modified by:   ritesh
-# @Last Modified time: 2016-01-22 12:20:09
+# @Last Modified time: 2016-02-11 11:00:51
 
-from flask import Flask, render_template, request, jsonify, redirect, url_for
+from flask import Flask, render_template, request, jsonify, redirect, url_for, Response
 from werkzeug import secure_filename
 import os
 import json
+from bson import json_util
 import time
 import operator
+from bson.objectid import ObjectId
 
-from lib import libmapper, airs, libmongo
+# from lib import libmapper, airs, libmongo
+from lib import libmongo
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 app = Flask(__name__)
@@ -20,10 +23,11 @@ app = Flask(__name__)
 app.config['ALLOWED_EXTENSIONS'] = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'hdf'])
 UPLOAD_DIR = "uploads"
 
-keywords = airs.AIRS_KEYWORDS
-variables = airs.AIRS_VARIABLES
-lookup = airs.Lookup(airs.AIRS_MAP)
+# keywords = airs.AIRS_KEYWORDS
+# variables = airs.AIRS_VARIABLES
+# lookup = airs.Lookup(airs.AIRS_MAP)
 
+python_to_mongo_map = {"keywords": "ks", "keyword":"ks", "variables":"vs", "variable":"vs", "maps":"ms", "map": "ms"}
 final_map = None
 uploaded_result = None
 collections = None
@@ -94,12 +98,12 @@ def show_map(collection_name):
     results = {"four": 4}
     print collection_name
     # collection_name = request.args.get('collection_name', 'ritesh', type=str)
-    print "Collection clicked in the list is : ", collection_name
+    # print "Collection clicked in the list is : ", collection_name
     db = libmongo.get_db()
     keywords = db.ks.find_one({"unique_name": collection_name}).get("keyword_list")
     variables = db.vs.find_one({"unique_name": collection_name}).get("variable_list")
     maps = db.ms.find_one({"unique_name": collection_name})
-    print keywords, variables, maps
+    # print keywords, variables, maps
 
     return render_template('maps.html', errors=errors, results=results, variables=variables, keywords=keywords, maps=maps, collections=collections)
 
@@ -107,10 +111,10 @@ def show_map(collection_name):
 @app.route('/save_keyword_map/', methods=['POST'])
 def save_keyword_map():
     data = request.data
-    print "Obtained data from map form: ", data
-    print request.args
-    print request.form
-    print request.values
+    # print "Obtained data from map form: ", data
+    # print request.args
+    # print request.form
+    # print request.values
     return redirect(url_for("index"))
 
 @app.route('/_show_keyword_map/<collection_name>', methods=['GET', 'POST'])
@@ -120,7 +124,7 @@ def show_keyword_map(collection_name):
     results = {"four": 4}
     print collection_name
     # collection_name = request.args.get('collection_name', 'ritesh', type=str)
-    print "Collection clicked in the list iddds : ", collection_name
+    # print "Collection clicked in the list iddds : ", collection_name
     db = libmongo.get_db()
     keywords = db.ks.find_one({"unique_name": collection_name}).get("keyword_list")
     variables = db.vs.find_one({"unique_name": collection_name}).get("variable_list")
@@ -144,12 +148,12 @@ def edit_keyword_map(collection_name):
     results = {"four": 4}
     print collection_name
     # collection_name = request.args.get('collection_name', 'ritesh', type=str)
-    print "Collection clicked in the list iddds : ", collection_name
+    # print "Collection clicked in the list iddds : ", collection_name
     db = libmongo.get_db()
     keywords = db.ks.find_one({"unique_name": collection_name}).get("keyword_list")
     variables = db.vs.find_one({"unique_name": collection_name}).get("variable_list")
     maps = db.ms.find_one({"unique_name": collection_name})
-    print keywords, variables, maps
+    # print keywords, variables, maps
 
     sorted_maps = dict()
     sorted_maps["unique_name"] = collection_name
@@ -167,12 +171,12 @@ def edit_variable_map(collection_name):
     results = {"four": 4}
     print collection_name
     # collection_name = request.args.get('collection_name', 'ritesh', type=str)
-    print "Collection clicked in the list iddds : ", collection_name
+    # print "Collection clicked in the list iddds : ", collection_name
     db = libmongo.get_db()
     keywords = db.ks.find_one({"unique_name": collection_name}).get("keyword_list")
     variables = db.vs.find_one({"unique_name": collection_name}).get("variable_list")
     maps = db.ms.find_one({"unique_name": collection_name})
-    print keywords, variables, maps
+    # print keywords, variables, maps
 
     sorted_maps = dict()
     sorted_maps["unique_name"] = collection_name
@@ -192,7 +196,7 @@ def update_keyword_map(collection_name):
     TO_UPDATE = {}
     if request.method == 'POST':
         print "here is the update thing "
-        print list(request.form.keys())
+        # print list(request.form.keys())
         # print request.form
         db = libmongo.get_db()
         col_map = db.ms.find_one({"unique_name": collection_name})
@@ -249,7 +253,7 @@ def update_variable_map(collection_name):
     TO_UPDATE = {}
     if request.method == 'POST':
         print "here is the update thing  for variable"
-        print list(request.form.keys())
+        # print list(request.form.keys())
         db = libmongo.get_db()
         col_map = db.ms.find_one({"unique_name": collection_name})
         vks = col_map.get("vk")
@@ -282,7 +286,7 @@ def update_variable_map(collection_name):
 
             vks[key] = {"mapped" : old_mapped_vk, "ranked": old_ranked_vk}
 
-        print "things to update is :", TO_UPDATE
+        # print "things to update is :", TO_UPDATE
 
     print "Collection clicked in the list iddds : ", collection_name
 
@@ -308,7 +312,7 @@ def index():
             url = request.form['url']
             # r = requests.get(url)
             r = url
-            print r
+            # print r
         except:
             errors.append(
                 "Unable to get URL. Please make sure it's valid and try again."
@@ -320,13 +324,14 @@ def index():
                 print result[0], result[1]
             print results
     print results
-    print variables
+    # print variables
     try:
         db = libmongo.get_db()
         collections = db.ms.find()
     except Exception, e:
         print "Db exception error"
-    return render_template('index.html', errors=errors, results=results, variables=variables, keywords=keywords, collections=collections)
+    return render_template('index.html', errors=errors, results=results, collections=collections)
+    # return render_template('index.html', errors=errors, results=results, variables=variables, keywords=keywords, collections=collections)
 
 
 @app.route('/upload', methods=['GET', 'POST'])
@@ -341,19 +346,121 @@ def upload():
     print uploaded_result.get('name', 'ritesh')
     return render_template('index.html', errors=errors, results=results, variables=variables, keywords=keywords)
 
-@app.route('/mapping', methods=['GET', 'POST'])
-def mapping():
-    print uploaded_result
-    if request.method == "POST":
-        print "This is POST request"
-    if request.method == "GET":
-        print "This is GET request"
-        # Read the hdf file and start extracting variables
-        final_map = libmapper.start_mapping(uploaded_result, url=False)
-        print "Final map is : ", final_map
+# @app.route('/mapping', methods=['GET', 'POST'])
+# def mapping():
+#     print uploaded_result
+#     if request.method == "POST":
+#         print "This is POST request"
+#     if request.method == "GET":
+#         print "This is GET request"
+#         # Read the hdf file and start extracting variables
+#         final_map = libmapper.start_mapping(uploaded_result, url=False)
+#         print "Final map is : ", final_map
+
+###########################
+"""REST API"""
+def to_json(data):
+    """Convert Mongo object(s) to JSON"""
+    # return json.dumps(data, default=json_util.default)
+    return json.dumps( data, indent = 4, sort_keys = True, ensure_ascii = False )
+
+def get_result(result):
+    result["id"] = str(result["_id"])
+    del result["_id"]
+    return result
+
+def get_map_result(result):
+    for k in result["kv"].keys():
+        del result["kv"][k]["ranked"]
+    for k in result["vk"].keys():
+        del result["vk"][k]["ranked"]
+    result["id"] = str(result["_id"])
+    del result["_id"]
+    return result
+
+@app.errorhandler(404)
+def not_found(error=None):
+    message = {
+            'status': 404,
+            'message': 'Not Found: ' + request.url,
+    }
+    resp = jsonify(message)
+    resp.status_code = 404
+    return resp
+
+@app.route('/service/<db_table_name>', methods=['GET'])
+def rest_service(db_table_name):
+    """Return a list of all UFO sightings
+    ex) GET /service/<db_table_name>
+        GET /service/db_table_name?dataset_id=something
+    """
+
+    try:
+        if request.method == 'GET':
+            db = libmongo.get_db()
+            table_name = python_to_mongo_map.get(db_table_name)
+
+            dataset_id = request.args.get("dataset_id")
+            print dataset_id
+            if not dataset_id:  #if dataset_id is not given
+                results = db[table_name].find()
+                json_results = []
+                if not table_name == "ms":
+                    for result in results:
+                        json_results.append(get_result(result))
+                else:
+                    for result in results:
+                        json_results.append(get_map_result(result))
+                # resp = jsonify({"keywords": json_results})
+                # resp.status_code = 200
+                # return resp
+                js = to_json(json_results)
+                resp = Response(js, status=200, mimetype='application/json')
+                return resp
+            else:
+                result = db[table_name].find_one({"dataset_id": dataset_id})
+                js = to_json(get_map_result(result)) if table_name == "ms" else to_json(get_result(result))
+                resp = Response(js, status=200, mimetype='application/json')
+                return resp
+    except Exception, e:
+        print (e)
+        return not_found()
 
 
+@app.route('/service/<db_table_name>/<id>', methods=['GET'])
+def rest_service_keyword(db_table_name, id):
+    """Return specific UFO sighting
+    ex) GET /service/keyword/123456
+    """
+    try:
+        if request.method == 'GET':
+            db = libmongo.get_db()
+            table_name = python_to_mongo_map.get(db_table_name)
+            result = db[table_name].find_one({'_id': ObjectId(id)})
+            js = to_json(get_map_result(result)) if table_name == "ms" else to_json(get_result(result))
+            resp = Response(js, status=200, mimetype='application/json')
+            return resp
+    except Exception, e:
+        print (e)
+        return not_found()
 
+
+# @app.route('/service/<db_table_name>/<id>', methods=['GET'])
+# def rest_service_keyword(db_table_name, id):
+#     """Return specific UFO sighting
+#     ex) GET /service/keyword/123456
+#     """
+#     try:
+#         if request.method == 'GET':
+#             db = libmongo.get_db()
+#             table_name = python_to_mongo_map.get(db_table_name)
+#             result = db[table_name].find_one({'_id': ObjectId(id)})
+#             js = to_json(get_map_result(result)) if table_name == "ms" else to_json(get_result(result))
+#             resp = Response(js, status=200, mimetype='application/json')
+#             return resp
+#     except Exception, e:
+#         print (e)
+#         return not_found()
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug = True)

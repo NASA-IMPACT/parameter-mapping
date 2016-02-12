@@ -3,7 +3,7 @@
 # @Author: ritesh
 # @Date:   2016-01-14 10:35:45
 # @Last Modified by:   ritesh
-# @Last Modified time: 2016-01-22 16:10:52
+# @Last Modified time: 2016-01-26 16:05:31
 
 """From the list of keyword in ks db collection
 	and list of variable in vs db collection
@@ -16,6 +16,7 @@ from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import RegexpTokenizer
 from textblob import TextBlob
 
+from acronyms import ACRONYMS, DISCARDS
 
 db = libmongo.get_db()
 word_tokenizer = RegexpTokenizer(r'\w+')
@@ -39,6 +40,22 @@ def diff(a, b):
 	b = set(b)
 	return [aa for aa in a if aa not in b]
 
+def get_variable_parts(variable):
+	""" 1. split variables
+		2. remove unwanted variables - DISCARDS
+		3. replace with acronyms - ACRONYMS
+		4. generate new set of variable variable_parts
+	"""
+	variable_parts = set(split_into_lemmas(variable))
+	new_variable_parts = set([part for part in variable_parts if part not in DISCARDS])
+	acronym_variable_parts = set([ACRONYMS.get(var, var) for var in new_variable_parts])
+	final_variable_parts = list()
+	for acr_var in acronym_variable_parts:
+		final_variable_parts.extend(split_into_lemmas(acr_var))
+	return set(final_variable_parts)
+
+
+
 def kv_generator(keywords, variables):
 	kv = dict()
 	for keyword in keywords:
@@ -47,7 +64,7 @@ def kv_generator(keywords, variables):
 		ranked = dict()
 		keyword_parts = set(split_into_lemmas(keyword))
 		for variable in variables:
-			variable_parts = set(split_into_lemmas(variable))
+			variable_parts = get_variable_parts(variable)
 			print keyword, keyword_parts, variable_parts
 			rank = len(keyword_parts & variable_parts)
 			if rank <= 0:
@@ -66,7 +83,7 @@ def vk_generator(variables, keywords):
 		vkd = dict()
 		mapped = dict()
 		ranked = dict()
-		variable_parts = set(split_into_lemmas(variable))
+		variable_parts = get_variable_parts(variable)
 		for keyword in keywords:
 			keyword_parts = set(split_into_lemmas(keyword))
 			print variable, variable_parts, keyword_parts
@@ -167,7 +184,9 @@ def main():
 	super_colls = colls_in_ks if len(set(colls_in_ks)) >= len(set(colls_in_vs)) else colls_in_vs
 	to_map_colls = diff(super_colls, colls_in_ms)
 	populate(to_map_colls)
-
+	print to_map_colls
+	print ACRONYMS
+	print DISCARDS
 
 if __name__ == '__main__':
 	main()

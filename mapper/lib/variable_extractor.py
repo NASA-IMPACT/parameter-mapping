@@ -3,7 +3,7 @@
 # @Author: ritesh
 # @Date:   2016-01-13 10:56:42
 # @Last Modified by:   ritesh
-# @Last Modified time: 2016-01-26 14:14:28
+# @Last Modified time: 2016-01-26 15:21:23
 
 import h5py
 from pyhdf import SD
@@ -15,6 +15,8 @@ def hdf_read(file_path):
 	"""open the hdf 4 file for reading"""
 	hdf = SD.SD(file_path, SD.SDC.READ)
 	print hdf.info()
+	print hdf.attributes()
+	print hdf.datasets()
 	variable_list = list(set(hdf.datasets().keys()))
 	print variable_list
 	return variable_list
@@ -50,7 +52,7 @@ def extract(file_path, url=False):
 		"Extracting starts here"
 		variable_list = ext_func.get(ext, hdf5_read)(file_path)
 		"insert to db"
-		insert_variables(variable_list)
+		# insert_variables(variable_list)
 
 
 		# f = h5py.File(file_path, 'r')

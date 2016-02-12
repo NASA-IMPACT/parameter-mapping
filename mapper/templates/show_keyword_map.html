@@ -12,13 +12,13 @@
 	<h3 align="center" style="background: #DDDDDD"> {{maps.dataset_id}}</h3>
 
 	<div class="row">
-		<div class="col-sm-5 col-sm-offset-1" id="kv-maps">
+		<div class="col-sm-6" id="kv-maps">
 			<div class="row" id="kv-maps-box">
 				<div class="div-inline"><h3>Science Keyword Map</h3></div>
 
 				<a href="/_edit_keyword_map/{{ maps.unique_name }}" class="btn btn-info active" role="button">EDIT</a>
 				<br><br>
-				<div class="div-list-group" style="height:500px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px;" name="div-test">
+				<div class="div-list-group" style="height:600px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px; margin:0 5px 0 0;" name="div-test">
 				{% for k, vs in sorted_maps['kv'].iteritems() %}
 
 					{% set outerLoopIndex = loop.index %}
@@ -53,13 +53,13 @@
 			</div>
 		</div>
 
-		<div class="col-sm-5 col-sm-offset-1" id="kv-maps">
+		<div class="col-sm-6" id="vk-maps">
 			<div class="row" id="kv-maps-box">
 				<div class="div-inline"><h3>Parameter Map</h3></div>
 
 				<a href="/_edit_variable_map/{{ maps.unique_name }}" class="btn btn-info " role="button"> EDIT</a>
 				<br><br>
-				<div class="div-list-group" style="height:500px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px;" name="div-test">
+				<div class="div-list-group" style="height:600px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px;" name="div-test">
 				{% for v, ks in sorted_maps['vk'].iteritems() %}
 
 					{% set outerLoopIndex = loop.index %}
