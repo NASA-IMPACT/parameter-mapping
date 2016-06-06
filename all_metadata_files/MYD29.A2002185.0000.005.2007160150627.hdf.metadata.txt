@@ -1,0 +1,49 @@
+variable:=:/Latitude
+  volume:=:       110568.
+  long_name:=:Coarse 5 km resolution latitude
+  units:=:degrees
+  valid_range:=:     -90.0000      90.0000
+  _FillValue:=:     -999.000
+  Source:=:MYD03 geolocation product; data read from center pixel in 5 km box
+variable:=:/Longitude
+  volume:=:       110568.
+  long_name:=:Coarse 5 km resolution longitude
+  units:=:degrees
+  valid_range:=:     -180.000      180.000
+  _FillValue:=:     -999.000
+  Source:=:MYD03 geolocation product; data read from center pixel in 5 km box
+variable:=:/Ice_Surface_Temperature
+  volume:=:  2.76216e+006
+  long_name:=:Ice Surface Temperature by split-window method
+  units:=:degree_Kelvin
+  format:=:F3.2
+  coordsys:=:cartesian
+  scale_factor:=:     0.010000000
+  scale_factor_err:=:      0.00000000
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  valid_range:=:   21000   31300
+  _FillValue:=:   65535
+  Key:=:
+0.0=missing, 1.0=no decision, 11.0=night, 25.0=land, 37.0=inland water, 39.0=open ocean, 50.0=cloud, 243.0-273.0 expected IST range, 655.35=fill
+  Valid EV Obs Band 31 (%):=:      100.000
+  Valid EV Obs Band 32 (%):=:      100.000
+  Saturated EV Obs Band 31 (%):=:     0.000000
+  Saturated EV Obs Band 32 (%):=:     0.000000
+  IST_coefficients, <240:=:      -1.5711228       1.0054774       1.8532795
+     -0.79051763
+  IST_coefficients, 240-260:=:      -2.3726969       1.0086041       1.6948239
+     -0.20525232
+  IST_coefficients, >260:=:      -4.2953046       1.0150179       1.9495255
+      0.19713258
+variable:=:/Ice_Surface_Temperature_Pixel_QA
+  volume:=:  2.76216e+006
+  long_name:=:Ice surface temperature pixel QA
+  units:=:none
+  format:=:I3
+  coordsys:=:cartesian
+  valid_range:=:   0 254
+  _FillValue:=: 255
+  Key:=:
+0=good quality, 1=other quality, 252=Antarctica mask, 253=land mask, 254=ocean mask, 255=fill

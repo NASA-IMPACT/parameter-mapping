@@ -1,0 +1,1964 @@
+variable:=:/lon
+  volume:=:      576.000
+  long_name:=:longitude
+  units:=:degrees_east
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/lat
+  volume:=:      361.000
+  long_name:=:latitude
+  units:=:degrees_north
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/time
+  volume:=:      1.00000
+  long_name:=:time
+  units:=:minutes since 1980-01-01 00:30:00
+  time_increment:=:       60000
+  begin_date:=:    19800101
+  begin_time:=:        3000
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/AUTCNVRN
+  volume:=:      207936.
+  long_name:=:autoconversion_loss_of_cloud_water
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/BKGERR
+  volume:=:      207936.
+  long_name:=:vertically_integrated_kinetic_energy_residual_for_BKG_energy_conservation
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/COLCNVRN
+  volume:=:      207936.
+  long_name:=:accretion_loss_of_cloud_water_to_rain
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/COLCNVSN
+  volume:=:      207936.
+  long_name:=:accretion_loss_of_cloud_water_to_snow
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/CUCNVCI
+  volume:=:      207936.
+  long_name:=:convective_source_of_cloud_ice
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/CUCNVCL
+  volume:=:      207936.
+  long_name:=:convective_source_of_cloud_water
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/CUCNVRN
+  volume:=:      207936.
+  long_name:=:convective_production_of_rain_water
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DHDT_ANA
+  volume:=:      207936.
+  long_name:=:total_potential_energy_tendency_due_to_analysis
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DHDT_BKG
+  volume:=:      207936.
+  long_name:=:vertically_integrated_potential_energy_tendency_due_to_gravity_wave_background
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DHDT_CUF
+  volume:=:      207936.
+  long_name:=:vertically_integrated_potential_energy_tendency_due_to_cumulus_friction
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DHDT_DYN
+  volume:=:      207936.
+  long_name:=:vertically_integrated_potential_energy_tendency_due_to_dynamics
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DHDT_FRI
+  volume:=:      207936.
+  long_name:=:vertically_integrated_potential_energy_tendency_due_to_friction
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DHDT_GWD
+  volume:=:      207936.
+  long_name:=:vertically_integrated_potential_energy_tendency_across_gwd
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DHDT_MST
+  volume:=:      207936.
+  long_name:=:vertically_integrated_potential_energy_tendency_across_moist
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DHDT_ORO
+  volume:=:      207936.
+  long_name:=:vertically_integrated_potential_energy_tendency_due_to_orographic_gravity_waves
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DHDT_PHY
+  volume:=:      207936.
+  long_name:=:total_potential_energy_tendency_due_to_physics
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DHDT_RAD
+  volume:=:      207936.
+  long_name:=:vertically_integrated_potential_energy_tendency_across_radiation
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DHDT_RAY
+  volume:=:      207936.
+  long_name:=:vertically_integrated_potential_energy_tendency_due_to_Rayleigh_friction
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DHDT_RES
+  volume:=:      207936.
+  long_name:=:vertically_integrated_cpt_tendency_residual
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DHDT_TRB
+  volume:=:      207936.
+  long_name:=:vertically_integrated_potential_energy_tendency_across_turbulence
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DKDT_ANA
+  volume:=:      207936.
+  long_name:=:total_kinetic_energy_tendency_due_to_analysis
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DKDT_BKG
+  volume:=:      207936.
+  long_name:=:vertically_integrated_kinetic_energy_dissipation_due_to_gravity_wave_background
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DKDT_DYN
+  volume:=:      207936.
+  long_name:=:vertically_integrated_kinetic_energy_tendency_due_to_dynamics
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DKDT_GWD
+  volume:=:      207936.
+  long_name:=:vertically_integrated_kinetic_energy_tendency_across_gwd
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DKDT_GWDRES
+  volume:=:      207936.
+  long_name:=:vertically_integrated_kinetic_energy_residual_for_total_energy_conservation
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DKDT_INT
+  volume:=:      207936.
+  long_name:=:vertically_integrated_kinetic_energy_dissipation_due_to_diffusion
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DKDT_MST
+  volume:=:      207936.
+  long_name:=:vertically_integrated_kinetic_energy_tendency_across_moist
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DKDT_ORO
+  volume:=:      207936.
+  long_name:=:vertically_integrated_kinetic_energy_dissipation_due_to_orographic_gravity_waves
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DKDT_PHY
+  volume:=:      207936.
+  long_name:=:vertically_integrated_kinetic_energy_tendency_due_to_physics
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DKDT_PHYPHY
+  volume:=:      207936.
+  long_name:=:vertically_integrated_kinetic_energy_tendency_across_physics
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DKDT_RAY
+  volume:=:      207936.
+  long_name:=:vertically_integrated_kinetic_energy_dissipation_due_to_Rayleigh_friction
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DKDT_SRF
+  volume:=:      207936.
+  long_name:=:vertically_integrated_kinetic_energy_dissipation_due_to_surface_friction
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DKDT_TOP
+  volume:=:      207936.
+  long_name:=:vertically_integrated_kinetic_energy_dissipation_due_to_topographic_friction
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DKDT_TRB
+  volume:=:      207936.
+  long_name:=:vertically_integrated_kinetic_energy_tendency_across_turbulence
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DMDT_ANA
+  volume:=:      207936.
+  long_name:=:vertically_integrated_mass_tendency_due_to_analysis
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DMDT_DYN
+  volume:=:      207936.
+  long_name:=:vertically_integrated_mass_tendency_due_to_dynamics
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DMDT_PHY
+  volume:=:      207936.
+  long_name:=:vertically_integrated_mass_tendency_due_to_physics
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DOXDT_ANA
+  volume:=:      207936.
+  long_name:=:vertically_integrated_ozone_tendency_due_to_analysis
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DOXDT_CHM
+  volume:=:      207936.
+  long_name:=:vertically_integrated_odd_oxygen_tendency_due_to_chemistry
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DOXDT_DYN
+  volume:=:      207936.
+  long_name:=:vertically_integrated_ozone_tendency_due_to_dynamics
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DOXDT_FIL
+  volume:=:      207936.
+  long_name:=:vertically_integrated_ox_adjustment_from_filling
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DOXDT_PHY
+  volume:=:      207936.
+  long_name:=:vertically_integrated_odd_oxygen_tendency_due_to_physics
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DPDT_ANA
+  volume:=:      207936.
+  long_name:=:mountain_work_tendency_due_to_analysis
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DPDT_DYN
+  volume:=:      207936.
+  long_name:=:mountain_work_tendency_due_to_dynamics
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DPDT_PHY
+  volume:=:      207936.
+  long_name:=:mountain_work_tendency_due_to_physics
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DQIDT_ANA
+  volume:=:      207936.
+  long_name:=:vertically_integrated_ice_water_tendency_due_to_analysis
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DQIDT_DYN
+  volume:=:      207936.
+  long_name:=:vertically_integrated_ice_water_tendency_due_to_dynamics
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DQIDT_FIL
+  volume:=:      207936.
+  long_name:=:vertically_integrated_qi_adjustment_from_filling
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DQIDT_MST
+  volume:=:      207936.
+  long_name:=:vertically_integrated_ice_tendency_due_to_moist_processes
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DQIDT_PHY
+  volume:=:      207936.
+  long_name:=:vertically_integrated_ice_tendency_due_to_physics
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DQLDT_ANA
+  volume:=:      207936.
+  long_name:=:vertically_integrated_liquid_water_tendency_due_to_analysis
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DQLDT_DYN
+  volume:=:      207936.
+  long_name:=:vertically_integrated_liquid_water_tendency_due_to_dynamics
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DQLDT_FIL
+  volume:=:      207936.
+  long_name:=:vertically_integrated_ql_adjustment_from_filling
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DQLDT_MST
+  volume:=:      207936.
+  long_name:=:vertically_integrated_liquid_water_tendency_due_to_moist_processes
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DQLDT_PHY
+  volume:=:      207936.
+  long_name:=:vertically_integrated_liquid_water_tendency_due_to_physics
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DQVDT_ANA
+  volume:=:      207936.
+  long_name:=:vertically_integrated_water_vapor_tendency_due_to_analysis
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DQVDT_CHM
+  volume:=:      207936.
+  long_name:=:vertically_integrated_water_vapor_tendency_due_to_chemistry
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DQVDT_DYN
+  volume:=:      207936.
+  long_name:=:vertically_integrated_water_vapor_tendency_due_to_dynamics
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DQVDT_FIL
+  volume:=:      207936.
+  long_name:=:vertically_integrated_qv_adjustment_from_filling
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DQVDT_MST
+  volume:=:      207936.
+  long_name:=:vertically_integrated_water_vapor_tendency_due_to_moist_processes
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DQVDT_PHY
+  volume:=:      207936.
+  long_name:=:vertically_integrated_water_vapor_tendency_due_to_physics
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DQVDT_TRB
+  volume:=:      207936.
+  long_name:=:vertically_integrated_water_vapor_tendency_due_to_turbulence
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DTHDT_ANA
+  volume:=:      207936.
+  long_name:=:vertically_integrated_THV_tendency_due_to_analysis
+  units:=:K kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DTHDT_DYN
+  volume:=:      207936.
+  long_name:=:vertically_integrated_THV_tendency_due_to_dynamics
+  units:=:K kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DTHDT_PHY
+  volume:=:      207936.
+  long_name:=:vertically_integrated_THV_tendency_due_to_physics
+  units:=:K kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/EVAP
+  volume:=:      207936.
+  long_name:=:evaporation_from_turbulence
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/EVPCL
+  volume:=:      207936.
+  long_name:=:evaporation_loss_of_cloud_water
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/EVPRN
+  volume:=:      207936.
+  long_name:=:evaporation_loss_of_precip_water
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/FRZCL
+  volume:=:      207936.
+  long_name:=:net_freezing_of_cloud_condensate
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/FRZRN
+  volume:=:      207936.
+  long_name:=:net_freezing_of_precip_condensate
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/HFLUX
+  volume:=:      207936.
+  long_name:=:sensible_heat_flux_from_turbulence
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/LSCNVCI
+  volume:=:      207936.
+  long_name:=:statistical_source_of_cloud_ice
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/LSCNVCL
+  volume:=:      207936.
+  long_name:=:statistical_source_of_cloud_water
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/LSCNVRN
+  volume:=:      207936.
+  long_name:=:spurious_rain_from_RH_cleanup
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/LWGNET
+  volume:=:      207936.
+  long_name:=:surface_net_downward_longwave_flux
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/LWTNET
+  volume:=:      207936.
+  long_name:=:upwelling_longwave_flux_at_toa
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/PRECCU
+  volume:=:      207936.
+  long_name:=:convective_rainfall
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/PRECLS
+  volume:=:      207936.
+  long_name:=:large_scale_rainfall
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/PRECSN
+  volume:=:      207936.
+  long_name:=:snowfall
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/QTFILL
+  volume:=:      207936.
+  long_name:=:vertically_integrated_total_water_adjustment_from_filling
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SDMCI
+  volume:=:      207936.
+  long_name:=:sedimentation_loss_of_cloud_ice
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SUBCI
+  volume:=:      207936.
+  long_name:=:sumblimation_loss_of_cloud_ice
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SUBSN
+  volume:=:      207936.
+  long_name:=:sumblimation_loss_of_precip_ice
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SWNETSRF
+  volume:=:      207936.
+  long_name:=:surface_net_downward_shortwave_flux
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SWNETTOA
+  volume:=:      207936.
+  long_name:=:toa_net_downward_shortwave_flux
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/UFLXCPT
+  volume:=:      207936.
+  long_name:=:eastward_flux_of_atmospheric_enthalpy
+  units:=:J m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/UFLXKE
+  volume:=:      207936.
+  long_name:=:eastward_flux_of_atmospheric_kinetic_energy
+  units:=:J m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/UFLXPHI
+  volume:=:      207936.
+  long_name:=:eastward_flux_of_atmospheric_potential_energy
+  units:=:J m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/UFLXQI
+  volume:=:      207936.
+  long_name:=:eastward_flux_of_atmospheric_ice
+  units:=:kg m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/UFLXQL
+  volume:=:      207936.
+  long_name:=:eastward_flux_of_atmospheric_liquid_water
+  units:=:kg m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/UFLXQV
+  volume:=:      207936.
+  long_name:=:eastward_flux_of_atmospheric_water_vapor
+  units:=:kg m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/VFLXCPT
+  volume:=:      207936.
+  long_name:=:northward_flux_of_atmospheric_enthalpy
+  units:=:J m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/VFLXKE
+  volume:=:      207936.
+  long_name:=:northward_flux_of_atmospheric_kinetic_energy
+  units:=:J m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/VFLXPHI
+  volume:=:      207936.
+  long_name:=:northward_flux_of_atmospheric_potential_energy
+  units:=:J m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/VFLXQI
+  volume:=:      207936.
+  long_name:=:northward_flux_of_atmospheric_ice
+  units:=:kg m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/VFLXQL
+  volume:=:      207936.
+  long_name:=:northward_flux_of_atmospheric_liquid_water
+  units:=:kg m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/VFLXQV
+  volume:=:      207936.
+  long_name:=:northward_flux_of_atmospheric_water_vapor
+  units:=:kg m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_AUTCNVRN
+  volume:=:      207936.
+  long_name:=:Variance_of_AUTCNVRN
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_BKGERR
+  volume:=:      207936.
+  long_name:=:Variance_of_BKGERR
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_COLCNVRN
+  volume:=:      207936.
+  long_name:=:Variance_of_COLCNVRN
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_COLCNVSN
+  volume:=:      207936.
+  long_name:=:Variance_of_COLCNVSN
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_CUCNVCI
+  volume:=:      207936.
+  long_name:=:Variance_of_CUCNVCI
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_CUCNVCL
+  volume:=:      207936.
+  long_name:=:Variance_of_CUCNVCL
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_CUCNVRN
+  volume:=:      207936.
+  long_name:=:Variance_of_CUCNVRN
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DHDT_ANA
+  volume:=:      207936.
+  long_name:=:Variance_of_DHDT_ANA
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DHDT_BKG
+  volume:=:      207936.
+  long_name:=:Variance_of_DHDT_BKG
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DHDT_CUF
+  volume:=:      207936.
+  long_name:=:Variance_of_DHDT_CUF
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DHDT_DYN
+  volume:=:      207936.
+  long_name:=:Variance_of_DHDT_DYN
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DHDT_FRI
+  volume:=:      207936.
+  long_name:=:Variance_of_DHDT_FRI
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DHDT_GWD
+  volume:=:      207936.
+  long_name:=:Variance_of_DHDT_GWD
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DHDT_MST
+  volume:=:      207936.
+  long_name:=:Variance_of_DHDT_MST
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DHDT_ORO
+  volume:=:      207936.
+  long_name:=:Variance_of_DHDT_ORO
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DHDT_PHY
+  volume:=:      207936.
+  long_name:=:Variance_of_DHDT_PHY
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DHDT_RAD
+  volume:=:      207936.
+  long_name:=:Variance_of_DHDT_RAD
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DHDT_RAY
+  volume:=:      207936.
+  long_name:=:Variance_of_DHDT_RAY
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DHDT_RES
+  volume:=:      207936.
+  long_name:=:Variance_of_DHDT_RES
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DHDT_TRB
+  volume:=:      207936.
+  long_name:=:Variance_of_DHDT_TRB
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DKDT_ANA
+  volume:=:      207936.
+  long_name:=:Variance_of_DKDT_ANA
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DKDT_BKG
+  volume:=:      207936.
+  long_name:=:Variance_of_DKDT_BKG
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DKDT_DYN
+  volume:=:      207936.
+  long_name:=:Variance_of_DKDT_DYN
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DKDT_GWD
+  volume:=:      207936.
+  long_name:=:Variance_of_DKDT_GWD
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DKDT_GWDRES
+  volume:=:      207936.
+  long_name:=:Variance_of_DKDT_GWDRES
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DKDT_INT
+  volume:=:      207936.
+  long_name:=:Variance_of_DKDT_INT
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DKDT_MST
+  volume:=:      207936.
+  long_name:=:Variance_of_DKDT_MST
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DKDT_ORO
+  volume:=:      207936.
+  long_name:=:Variance_of_DKDT_ORO
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DKDT_PHY
+  volume:=:      207936.
+  long_name:=:Variance_of_DKDT_PHY
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DKDT_PHYPHY
+  volume:=:      207936.
+  long_name:=:Variance_of_DKDT_PHYPHY
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DKDT_RAY
+  volume:=:      207936.
+  long_name:=:Variance_of_DKDT_RAY
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DKDT_SRF
+  volume:=:      207936.
+  long_name:=:Variance_of_DKDT_SRF
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DKDT_TOP
+  volume:=:      207936.
+  long_name:=:Variance_of_DKDT_TOP
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DKDT_TRB
+  volume:=:      207936.
+  long_name:=:Variance_of_DKDT_TRB
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DMDT_ANA
+  volume:=:      207936.
+  long_name:=:Variance_of_DMDT_ANA
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DMDT_DYN
+  volume:=:      207936.
+  long_name:=:Variance_of_DMDT_DYN
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DMDT_PHY
+  volume:=:      207936.
+  long_name:=:Variance_of_DMDT_PHY
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DOXDT_ANA
+  volume:=:      207936.
+  long_name:=:Variance_of_DOXDT_ANA
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DOXDT_CHM
+  volume:=:      207936.
+  long_name:=:Variance_of_DOXDT_CHM
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DOXDT_DYN
+  volume:=:      207936.
+  long_name:=:Variance_of_DOXDT_DYN
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DOXDT_FIL
+  volume:=:      207936.
+  long_name:=:Variance_of_DOXDT_FIL
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DOXDT_PHY
+  volume:=:      207936.
+  long_name:=:Variance_of_DOXDT_PHY
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DPDT_ANA
+  volume:=:      207936.
+  long_name:=:Variance_of_DPDT_ANA
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DPDT_DYN
+  volume:=:      207936.
+  long_name:=:Variance_of_DPDT_DYN
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DPDT_PHY
+  volume:=:      207936.
+  long_name:=:Variance_of_DPDT_PHY
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DQIDT_ANA
+  volume:=:      207936.
+  long_name:=:Variance_of_DQIDT_ANA
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DQIDT_DYN
+  volume:=:      207936.
+  long_name:=:Variance_of_DQIDT_DYN
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DQIDT_FIL
+  volume:=:      207936.
+  long_name:=:Variance_of_DQIDT_FIL
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DQIDT_MST
+  volume:=:      207936.
+  long_name:=:Variance_of_DQIDT_MST
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DQIDT_PHY
+  volume:=:      207936.
+  long_name:=:Variance_of_DQIDT_PHY
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DQLDT_ANA
+  volume:=:      207936.
+  long_name:=:Variance_of_DQLDT_ANA
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DQLDT_DYN
+  volume:=:      207936.
+  long_name:=:Variance_of_DQLDT_DYN
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DQLDT_FIL
+  volume:=:      207936.
+  long_name:=:Variance_of_DQLDT_FIL
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DQLDT_MST
+  volume:=:      207936.
+  long_name:=:Variance_of_DQLDT_MST
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DQLDT_PHY
+  volume:=:      207936.
+  long_name:=:Variance_of_DQLDT_PHY
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DQVDT_ANA
+  volume:=:      207936.
+  long_name:=:Variance_of_DQVDT_ANA
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DQVDT_CHM
+  volume:=:      207936.
+  long_name:=:Variance_of_DQVDT_CHM
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DQVDT_DYN
+  volume:=:      207936.
+  long_name:=:Variance_of_DQVDT_DYN
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DQVDT_FIL
+  volume:=:      207936.
+  long_name:=:Variance_of_DQVDT_FIL
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DQVDT_MST
+  volume:=:      207936.
+  long_name:=:Variance_of_DQVDT_MST
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DQVDT_PHY
+  volume:=:      207936.
+  long_name:=:Variance_of_DQVDT_PHY
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DQVDT_TRB
+  volume:=:      207936.
+  long_name:=:Variance_of_DQVDT_TRB
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DTHDT_ANA
+  volume:=:      207936.
+  long_name:=:Variance_of_DTHDT_ANA
+  units:=:K kg m-2 s-1 K kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DTHDT_DYN
+  volume:=:      207936.
+  long_name:=:Variance_of_DTHDT_DYN
+  units:=:K kg m-2 s-1 K kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DTHDT_PHY
+  volume:=:      207936.
+  long_name:=:Variance_of_DTHDT_PHY
+  units:=:K kg m-2 s-1 K kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_EVAP
+  volume:=:      207936.
+  long_name:=:Variance_of_EVAP
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_EVPCL
+  volume:=:      207936.
+  long_name:=:Variance_of_EVPCL
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_EVPRN
+  volume:=:      207936.
+  long_name:=:Variance_of_EVPRN
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_FRZCL
+  volume:=:      207936.
+  long_name:=:Variance_of_FRZCL
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_FRZRN
+  volume:=:      207936.
+  long_name:=:Variance_of_FRZRN
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_HFLUX
+  volume:=:      207936.
+  long_name:=:Variance_of_HFLUX
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_LSCNVCI
+  volume:=:      207936.
+  long_name:=:Variance_of_LSCNVCI
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_LSCNVCL
+  volume:=:      207936.
+  long_name:=:Variance_of_LSCNVCL
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_LSCNVRN
+  volume:=:      207936.
+  long_name:=:Variance_of_LSCNVRN
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_LWGNET
+  volume:=:      207936.
+  long_name:=:Variance_of_LWGNET
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_LWTNET
+  volume:=:      207936.
+  long_name:=:Variance_of_LWTNET
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_PRECCU
+  volume:=:      207936.
+  long_name:=:Variance_of_PRECCU
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_PRECLS
+  volume:=:      207936.
+  long_name:=:Variance_of_PRECLS
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_PRECSN
+  volume:=:      207936.
+  long_name:=:Variance_of_PRECSN
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_QTFILL
+  volume:=:      207936.
+  long_name:=:Variance_of_QTFILL
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_SDMCI
+  volume:=:      207936.
+  long_name:=:Variance_of_SDMCI
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_SUBCI
+  volume:=:      207936.
+  long_name:=:Variance_of_SUBCI
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_SUBSN
+  volume:=:      207936.
+  long_name:=:Variance_of_SUBSN
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_SWNETSRF
+  volume:=:      207936.
+  long_name:=:Variance_of_SWNETSRF
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_SWNETTOA
+  volume:=:      207936.
+  long_name:=:Variance_of_SWNETTOA
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_UFLXCPT
+  volume:=:      207936.
+  long_name:=:Variance_of_UFLXCPT
+  units:=:J m-1 s-1 J m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_UFLXKE
+  volume:=:      207936.
+  long_name:=:Variance_of_UFLXKE
+  units:=:J m-1 s-1 J m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_UFLXPHI
+  volume:=:      207936.
+  long_name:=:Variance_of_UFLXPHI
+  units:=:J m-1 s-1 J m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_UFLXQI
+  volume:=:      207936.
+  long_name:=:Variance_of_UFLXQI
+  units:=:kg m-1 s-1 kg m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_UFLXQL
+  volume:=:      207936.
+  long_name:=:Variance_of_UFLXQL
+  units:=:kg m-1 s-1 kg m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_UFLXQV
+  volume:=:      207936.
+  long_name:=:Variance_of_UFLXQV
+  units:=:kg m-1 s-1 kg m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_VFLXCPT
+  volume:=:      207936.
+  long_name:=:Variance_of_VFLXCPT
+  units:=:J m-1 s-1 J m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_VFLXKE
+  volume:=:      207936.
+  long_name:=:Variance_of_VFLXKE
+  units:=:J m-1 s-1 J m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_VFLXPHI
+  volume:=:      207936.
+  long_name:=:Variance_of_VFLXPHI
+  units:=:J m-1 s-1 J m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_VFLXQI
+  volume:=:      207936.
+  long_name:=:Variance_of_VFLXQI
+  units:=:kg m-1 s-1 kg m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_VFLXQL
+  volume:=:      207936.
+  long_name:=:Variance_of_VFLXQL
+  units:=:kg m-1 s-1 kg m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_VFLXQV
+  volume:=:      207936.
+  long_name:=:Variance_of_VFLXQV
+  units:=:kg m-1 s-1 kg m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015

@@ -1,0 +1,115 @@
+variable:=:/lon
+  volume:=:      576.000
+  long_name:=:longitude
+  units:=:degrees_east
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/lat
+  volume:=:      361.000
+  long_name:=:latitude
+  units:=:degrees_north
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/time
+  volume:=:      24.0000
+  long_name:=:time
+  units:=:minutes since 1980-01-01 00:30:00
+  time_increment:=:       10000
+  begin_date:=:    19800101
+  begin_time:=:        3000
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/COCL
+  volume:=: 4.99046e+006
+  long_name:=:CO Column Burden __ENSEMBLE__
+  units:=:kg m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  scale_factor:=:      1.00000
+  add_offset:=:     0.000000
+  standard_name:=:CO Column Burden __ENSEMBLE__
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/COEM
+  volume:=: 4.99046e+006
+  long_name:=:CO Emission __ENSEMBLE__
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  scale_factor:=:      1.00000
+  add_offset:=:     0.000000
+  standard_name:=:CO Emission __ENSEMBLE__
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/COLS
+  volume:=: 4.99046e+006
+  long_name:=:CO Chemical Loss __ENSEMBLE__
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  scale_factor:=:      1.00000
+  add_offset:=:     0.000000
+  standard_name:=:CO Chemical Loss __ENSEMBLE__
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/COPD
+  volume:=: 4.99046e+006
+  long_name:=:CO Chemical Production __ENSEMBLE__
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  scale_factor:=:      1.00000
+  add_offset:=:     0.000000
+  standard_name:=:CO Chemical Production __ENSEMBLE__
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/COSC
+  volume:=: 4.99046e+006
+  long_name:=:CO Surface Concentration in ppbv __ENSEMBLE__
+  units:=:1e-9
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  scale_factor:=:      1.00000
+  add_offset:=:     0.000000
+  standard_name:=:CO Surface Concentration in ppbv __ENSEMBLE__
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/LWI
+  volume:=: 4.99046e+006
+  long_name:=:land(1)_water(0)_ice(2)_flag
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  scale_factor:=:      1.00000
+  add_offset:=:     0.000000
+  standard_name:=:land(1)_water(0)_ice(2)_flag
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/TO3
+  volume:=: 4.99046e+006
+  long_name:=:total_column_ozone
+  units:=:Dobsons
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  scale_factor:=:      1.00000
+  add_offset:=:     0.000000
+  standard_name:=:total_column_ozone
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015

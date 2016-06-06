@@ -1,0 +1,192 @@
+variable:=:/lon
+  volume:=:      576.000
+  long_name:=:longitude
+  units:=:degrees_east
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/lat
+  volume:=:      361.000
+  long_name:=:latitude
+  units:=:degrees_north
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/lev
+  volume:=:      42.0000
+  long_name:=:vertical level
+  units:=:hPa
+  positive:=:down
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/time
+  volume:=:      1.00000
+  long_name:=:time
+  units:=:minutes since 1980-01-01 01:30:00
+  time_increment:=:       60000
+  begin_date:=:    19800101
+  begin_time:=:       13000
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DTDTANA
+  volume:=: 8.73331e+006
+  long_name:=:total_temperature_analysis_tendency
+  units:=:K s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DTDTDYN
+  volume:=: 8.73331e+006
+  long_name:=:tendency_of_air_temperature_due_to_dynamics
+  units:=:K s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DTDTFRI
+  volume:=: 8.73331e+006
+  long_name:=:tendency_of_air_temperature_due_to_friction
+  units:=:K s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DTDTGWD
+  volume:=: 8.73331e+006
+  long_name:=:air_temperature_tendency_due_to_GWD
+  units:=:K s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DTDTMST
+  volume:=: 8.73331e+006
+  long_name:=:tendency_of_air_temperature_due_to_moist_processes
+  units:=:K s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DTDTRAD
+  volume:=: 8.73331e+006
+  long_name:=:tendency_of_air_temperature_due_to_radiation
+  units:=:K s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DTDTTOT
+  volume:=: 8.73331e+006
+  long_name:=:tendency_of_air_temperature_due_to_physics
+  units:=:K s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DTDTTRB
+  volume:=: 8.73331e+006
+  long_name:=:tendency_of_air_temperature_due_to_turbulence
+  units:=:K s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DTDTANA
+  volume:=: 8.73331e+006
+  long_name:=:Variance_of_DTDTANA
+  units:=:K s-1 K s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DTDTDYN
+  volume:=: 8.73331e+006
+  long_name:=:Variance_of_DTDTDYN
+  units:=:K s-1 K s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DTDTFRI
+  volume:=: 8.73331e+006
+  long_name:=:Variance_of_DTDTFRI
+  units:=:K s-1 K s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DTDTGWD
+  volume:=: 8.73331e+006
+  long_name:=:Variance_of_DTDTGWD
+  units:=:K s-1 K s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DTDTMST
+  volume:=: 8.73331e+006
+  long_name:=:Variance_of_DTDTMST
+  units:=:K s-1 K s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DTDTRAD
+  volume:=: 8.73331e+006
+  long_name:=:Variance_of_DTDTRAD
+  units:=:K s-1 K s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DTDTTOT
+  volume:=: 8.73331e+006
+  long_name:=:Variance_of_DTDTTOT
+  units:=:K s-1 K s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DTDTTRB
+  volume:=: 8.73331e+006
+  long_name:=:Variance_of_DTDTTRB
+  units:=:K s-1 K s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015

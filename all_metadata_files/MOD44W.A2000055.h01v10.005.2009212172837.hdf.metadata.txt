@@ -1,0 +1,27 @@
+variable:=:/water_mask
+  volume:=:  2.30400e+007
+  long_name:=:water_mask
+  units:=:none
+  valid_range:=:   0 253
+  _FillValue:=: 253
+  Legend:=:
+
+               0 -- land
+               1 -- water
+               253 -- Outside of projection
+variable:=:/water_mask_QA
+  volume:=:  2.30400e+007
+  long_name:=:water_mask_QA
+  units:=:none
+  valid_range:=:   0 253
+  _FillValue:=: 253
+  Legend:=:
+
+              1 -- SRTM Water Body Dataset (SWBD) water
+              2 -- MODIS 250m Waterhits water
+              3 -- MODIS 250m Decision tree water
+              4 -- Digitized water
+              5 -- Mosaic of Antarctica (MOA) water
+              10 -- Digitized land
+              253 -- Outside of projection
+              255 -- Fill

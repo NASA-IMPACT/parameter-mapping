@@ -1,0 +1,71 @@
+variable:=:/latitude
+  volume:=:      720.000
+  standard_name:=:latitude
+  axis:=:Y
+  valid_range:=:     -89.8750   valid_range:=:      89.8750
+  _CoordinateAxisType:=:lat
+  units:=:degrees_north
+variable:=:/longitude
+  volume:=:      1440.00
+  standard_name:=:longitude
+  axis:=:X
+  valid_range:=:     0.125000   valid_range:=:      359.875
+  units:=:degrees_east
+variable:=:/time
+  volume:=:      2.00000
+  standard_name:=:time
+  axis:=:T
+  valid_range:=:      1.00000   valid_range:=:      2.00000
+  units:=:hours since 1987-07-09T00:00:00Z
+variable:=:/sst_dtime
+  volume:=: 2.07360e+006
+  standard_name:=:sst_dtime
+  long_name:=:SST_DTime
+  valid_range:=:     0.000000   valid_range:=:      24.0000
+  scale_factor:=:     0.100000
+  add_offset:=:     0.000000
+  units:=:hours since 1987-07-09T00:00:00Z
+variable:=:/wind_speed
+  volume:=: 2.07360e+006
+  units:=:m/s
+  standard_name:=:wind_speed
+  long_name:=:10 meter Surface Wind Speed
+  valid_range:=:     0.000000   valid_range:=:      50.0000
+  flag_values:=:     251   flag_values:=:     252   flag_values:=:     253
+  flag_values:=:     254   flag_values:=:     255
+  flag_meanings:=:missing_wind_speed_due_to_rain sea_ice bad_data no_observations land_mass
+  scale_factor:=:     0.200000
+  add_offset:=:     0.000000
+variable:=:/atmosphere_water_vapor_content
+  volume:=: 2.07360e+006
+  units:=:kg m-2
+  standard_name:=:atmosphere_water_vapor_content
+  long_name:=:Columnar Water Vapor
+  valid_range:=:     0.000000   valid_range:=:      75.0000
+  flag_values:=:     251   flag_values:=:     252   flag_values:=:     253
+  flag_values:=:     254   flag_values:=:     255
+  flag_meanings:=:missing_wind_speed_due_to_rain sea_ice bad_data no_observations land_mass
+  scale_factor:=:     0.300000
+  add_offset:=:     0.000000
+variable:=:/atmosphere_cloud_liquid_water_content
+  volume:=: 2.07360e+006
+  units:=:kg m-2
+  standard_name:=:atmosphere_cloud_liquid_water_content
+  long_name:=:Columnar Cloud Liquid Water
+  valid_range:=:   -0.0500000   valid_range:=:      2.45000
+  flag_values:=:     251   flag_values:=:     252   flag_values:=:     253
+  flag_values:=:     254   flag_values:=:     255
+  flag_meanings:=:missing_wind_speed_due_to_rain sea_ice bad_data no_observations land_mass
+  scale_factor:=:    0.0100000
+  add_offset:=:   -0.0500000
+variable:=:/rainfall_rate
+  volume:=: 2.07360e+006
+  units:=:mm/hr
+  standard_name:=:rainfall_rate
+  long_name:=:Rain Rate
+  valid_range:=:     0.000000   valid_range:=:      25.0000
+  flag_values:=:     251   flag_values:=:     252   flag_values:=:     253
+  flag_values:=:     254   flag_values:=:     255
+  flag_meanings:=:missing_wind_speed_due_to_rain sea_ice bad_data no_observations land_mass
+  scale_factor:=:     0.100000
+  add_offset:=:     0.000000

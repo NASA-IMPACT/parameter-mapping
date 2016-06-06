@@ -1,0 +1,1024 @@
+variable:=:/lon
+  volume:=:      576.000
+  long_name:=:longitude
+  units:=:degrees_east
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/lat
+  volume:=:      361.000
+  long_name:=:latitude
+  units:=:degrees_north
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/time
+  volume:=:      1.00000
+  long_name:=:time
+  units:=:minutes since 1980-01-01 00:30:00
+  time_increment:=:       60000
+  begin_date:=:    19800101
+  begin_time:=:        3000
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/BASEFLOW
+  volume:=:      207936.
+  long_name:=:baseflow_flux
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/ECHANGE
+  volume:=:      207936.
+  long_name:=:rate_of_change_of_total_land_energy
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/EVLAND
+  volume:=:      207936.
+  long_name:=:Evaporation_land
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/EVPINTR
+  volume:=:      207936.
+  long_name:=:interception_loss_energy_flux
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/EVPSBLN
+  volume:=:      207936.
+  long_name:=:snow_ice_evaporation_energy_flux
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/EVPSOIL
+  volume:=:      207936.
+  long_name:=:baresoil_evap_energy_flux
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/EVPTRNS
+  volume:=:      207936.
+  long_name:=:transpiration_energy_flux
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/FRSAT
+  volume:=:      207936.
+  long_name:=:fractional_area_of_saturated_zone
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/FRSNO
+  volume:=:      207936.
+  long_name:=:fractional_area_of_land_snowcover
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/FRUNST
+  volume:=:      207936.
+  long_name:=:fractional_area_of_unsaturated_zone
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/FRWLT
+  volume:=:      207936.
+  long_name:=:fractional_area_of_wilting_zone
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/GHLAND
+  volume:=:      207936.
+  long_name:=:Ground_heating_land
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/GRN
+  volume:=:      207936.
+  long_name:=:greeness_fraction
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/GWETPROF
+  volume:=:      207936.
+  long_name:=:ave_prof_soil_moisture
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/GWETROOT
+  volume:=:      207936.
+  long_name:=:root_zone_soil_wetness
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/GWETTOP
+  volume:=:      207936.
+  long_name:=:surface_soil_wetness
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/LAI
+  volume:=:      207936.
+  long_name:=:leaf_area_index
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/LHLAND
+  volume:=:      207936.
+  long_name:=:Latent_heat_flux_land
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/LWLAND
+  volume:=:      207936.
+  long_name:=:Net_longwave_land
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/PARDFLAND
+  volume:=:      207936.
+  long_name:=:surface_downwelling_par_diffuse_flux
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/PARDRLAND
+  volume:=:      207936.
+  long_name:=:surface_downwelling_par_beam_flux
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/PRECSNOLAND
+  volume:=:      207936.
+  long_name:=:snowfall_land
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/PRECTOTLAND
+  volume:=:      207936.
+  long_name:=:Total_precipitation_land
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/PRMC
+  volume:=:      207936.
+  long_name:=:water_profile
+  units:=:m-3 m-3
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/QINFIL
+  volume:=:      207936.
+  long_name:=:Soil_water_infiltration_rate
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/RUNOFF
+  volume:=:      207936.
+  long_name:=:overland_runoff_including_throughflow
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/RZMC
+  volume:=:      207936.
+  long_name:=:water_root_zone
+  units:=:m-3 m-3
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SFMC
+  volume:=:      207936.
+  long_name:=:water_surface_layer
+  units:=:m-3 m-3
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SHLAND
+  volume:=:      207936.
+  long_name:=:Sensible_heat_flux_land
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SMLAND
+  volume:=:      207936.
+  long_name:=:Snowmelt_flux_land
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SNODP
+  volume:=:      207936.
+  long_name:=:snow_depth
+  units:=:m
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SNOMAS
+  volume:=:      207936.
+  long_name:=:Total_snow_storage_land
+  units:=:kg m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SPLAND
+  volume:=:      207936.
+  long_name:=:rate_of_spurious_land_energy_source
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SPSNOW
+  volume:=:      207936.
+  long_name:=:rate_of_spurious_snow_energy
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SPWATR
+  volume:=:      207936.
+  long_name:=:rate_of_spurious_land_water_source
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SWLAND
+  volume:=:      207936.
+  long_name:=:Net_shortwave_land
+  units:=:W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/TELAND
+  volume:=:      207936.
+  long_name:=:Total_energy_storage_land
+  units:=:J m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/TPSNOW
+  volume:=:      207936.
+  long_name:=:surface_temperature_of_snow
+  units:=:K
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/TSAT
+  volume:=:      207936.
+  long_name:=:surface_temperature_of_saturated_zone
+  units:=:K
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/TSOIL1
+  volume:=:      207936.
+  long_name:=:soil_temperatures_layer_1
+  units:=:K
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/TSOIL2
+  volume:=:      207936.
+  long_name:=:soil_temperatures_layer_2
+  units:=:K
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/TSOIL3
+  volume:=:      207936.
+  long_name:=:soil_temperatures_layer_3
+  units:=:K
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/TSOIL4
+  volume:=:      207936.
+  long_name:=:soil_temperatures_layer_4
+  units:=:K
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/TSOIL5
+  volume:=:      207936.
+  long_name:=:soil_temperatures_layer_5
+  units:=:K
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/TSOIL6
+  volume:=:      207936.
+  long_name:=:soil_temperatures_layer_6
+  units:=:K
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/TSURF
+  volume:=:      207936.
+  long_name:=:surface_temperature_of_land_incl_snow
+  units:=:K
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/TUNST
+  volume:=:      207936.
+  long_name:=:surface_temperature_of_unsaturated_zone
+  units:=:K
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/TWLAND
+  volume:=:      207936.
+  long_name:=:Avail_water_storage_land
+  units:=:kg m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/TWLT
+  volume:=:      207936.
+  long_name:=:surface_temperature_of_wilted_zone
+  units:=:K
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/WCHANGE
+  volume:=:      207936.
+  long_name:=:rate_of_change_of_total_land_water
+  units:=:kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_BASEFLOW
+  volume:=:      207936.
+  long_name:=:Variance_of_BASEFLOW
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_ECHANGE
+  volume:=:      207936.
+  long_name:=:Variance_of_ECHANGE
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_EVLAND
+  volume:=:      207936.
+  long_name:=:Variance_of_EVLAND
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_EVPINTR
+  volume:=:      207936.
+  long_name:=:Variance_of_EVPINTR
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_EVPSBLN
+  volume:=:      207936.
+  long_name:=:Variance_of_EVPSBLN
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_EVPSOIL
+  volume:=:      207936.
+  long_name:=:Variance_of_EVPSOIL
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_EVPTRNS
+  volume:=:      207936.
+  long_name:=:Variance_of_EVPTRNS
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_FRSAT
+  volume:=:      207936.
+  long_name:=:Variance_of_FRSAT
+  units:=:1 1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_FRSNO
+  volume:=:      207936.
+  long_name:=:Variance_of_FRSNO
+  units:=:1 1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_FRUNST
+  volume:=:      207936.
+  long_name:=:Variance_of_FRUNST
+  units:=:1 1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_FRWLT
+  volume:=:      207936.
+  long_name:=:Variance_of_FRWLT
+  units:=:1 1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_GHLAND
+  volume:=:      207936.
+  long_name:=:Variance_of_GHLAND
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_GRN
+  volume:=:      207936.
+  long_name:=:Variance_of_GRN
+  units:=:1 1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_GWETPROF
+  volume:=:      207936.
+  long_name:=:Variance_of_GWETPROF
+  units:=:1 1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_GWETROOT
+  volume:=:      207936.
+  long_name:=:Variance_of_GWETROOT
+  units:=:1 1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_GWETTOP
+  volume:=:      207936.
+  long_name:=:Variance_of_GWETTOP
+  units:=:1 1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_LAI
+  volume:=:      207936.
+  long_name:=:Variance_of_LAI
+  units:=:1 1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_LHLAND
+  volume:=:      207936.
+  long_name:=:Variance_of_LHLAND
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_LWLAND
+  volume:=:      207936.
+  long_name:=:Variance_of_LWLAND
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_PARDFLAND
+  volume:=:      207936.
+  long_name:=:Variance_of_PARDFLAND
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_PARDRLAND
+  volume:=:      207936.
+  long_name:=:Variance_of_PARDRLAND
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_PRECSNOLAND
+  volume:=:      207936.
+  long_name:=:Variance_of_PRECSNOLAND
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_PRECTOTLAND
+  volume:=:      207936.
+  long_name:=:Variance_of_PRECTOTLAND
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_PRMC
+  volume:=:      207936.
+  long_name:=:Variance_of_PRMC
+  units:=:m-3 m-3 m-3 m-3
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_QINFIL
+  volume:=:      207936.
+  long_name:=:Variance_of_QINFIL
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_RUNOFF
+  volume:=:      207936.
+  long_name:=:Variance_of_RUNOFF
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_RZMC
+  volume:=:      207936.
+  long_name:=:Variance_of_RZMC
+  units:=:m-3 m-3 m-3 m-3
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_SFMC
+  volume:=:      207936.
+  long_name:=:Variance_of_SFMC
+  units:=:m-3 m-3 m-3 m-3
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_SHLAND
+  volume:=:      207936.
+  long_name:=:Variance_of_SHLAND
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_SMLAND
+  volume:=:      207936.
+  long_name:=:Variance_of_SMLAND
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_SNODP
+  volume:=:      207936.
+  long_name:=:Variance_of_SNODP
+  units:=:m m
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_SNOMAS
+  volume:=:      207936.
+  long_name:=:Variance_of_SNOMAS
+  units:=:kg m-2 kg m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_SPLAND
+  volume:=:      207936.
+  long_name:=:Variance_of_SPLAND
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_SPSNOW
+  volume:=:      207936.
+  long_name:=:Variance_of_SPSNOW
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_SPWATR
+  volume:=:      207936.
+  long_name:=:Variance_of_SPWATR
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_SWLAND
+  volume:=:      207936.
+  long_name:=:Variance_of_SWLAND
+  units:=:W m-2 W m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_TELAND
+  volume:=:      207936.
+  long_name:=:Variance_of_TELAND
+  units:=:J m-2 J m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_TPSNOW
+  volume:=:      207936.
+  long_name:=:Variance_of_TPSNOW
+  units:=:K K
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_TSAT
+  volume:=:      207936.
+  long_name:=:Variance_of_TSAT
+  units:=:K K
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_TSOIL1
+  volume:=:      207936.
+  long_name:=:Variance_of_TSOIL1
+  units:=:K K
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_TSOIL2
+  volume:=:      207936.
+  long_name:=:Variance_of_TSOIL2
+  units:=:K K
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_TSOIL3
+  volume:=:      207936.
+  long_name:=:Variance_of_TSOIL3
+  units:=:K K
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_TSOIL4
+  volume:=:      207936.
+  long_name:=:Variance_of_TSOIL4
+  units:=:K K
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_TSOIL5
+  volume:=:      207936.
+  long_name:=:Variance_of_TSOIL5
+  units:=:K K
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_TSOIL6
+  volume:=:      207936.
+  long_name:=:Variance_of_TSOIL6
+  units:=:K K
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_TSURF
+  volume:=:      207936.
+  long_name:=:Variance_of_TSURF
+  units:=:K K
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_TUNST
+  volume:=:      207936.
+  long_name:=:Variance_of_TUNST
+  units:=:K K
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_TWLAND
+  volume:=:      207936.
+  long_name:=:Variance_of_TWLAND
+  units:=:kg m-2 kg m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_TWLT
+  volume:=:      207936.
+  long_name:=:Variance_of_TWLT
+  units:=:K K
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_WCHANGE
+  volume:=:      207936.
+  long_name:=:Variance_of_WCHANGE
+  units:=:kg m-2 s-1 kg m-2 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015

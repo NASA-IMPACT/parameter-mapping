@@ -1,0 +1,28 @@
+variable:=:/FireMask
+  volume:=:  2.88000e+006
+  valid_range:=:   0   9
+  _FillValue:=:   0
+  legend:=:
+Classes:
+0 missing input data
+1 not processed (obsolete)
+2 not processed (obsolete)
+3 non-fire water
+4 cloud
+5 non-fire land
+6 unknown
+7 fire (low confidence)
+8 fire (nominal confidence)
+9 fire (high confidence)
+variable:=:/QA
+  volume:=:  2.88000e+006
+  valid_range:=:   0   6
+  units:=:bit field
+variable:=:/MaxFRP
+  volume:=:  2.88000e+006
+  scale_factor:=:     0.100000
+  _FillValue:=:           0
+  units:=:MW
+variable:=:/sample
+  volume:=:  2.88000e+006
+  valid_range:=:       0    1353

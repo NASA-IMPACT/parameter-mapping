@@ -1,0 +1,524 @@
+variable:=:/lon
+  volume:=:      576.000
+  long_name:=:longitude
+  units:=:degrees_east
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/lat
+  volume:=:      361.000
+  long_name:=:latitude
+  units:=:degrees_north
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/time
+  volume:=:      24.0000
+  long_name:=:time
+  units:=:minutes since 1980-01-01 00:30:00
+  time_increment:=:       10000
+  begin_date:=:    19800101
+  begin_time:=:        3000
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/BCANGSTR
+  volume:=: 4.99046e+006
+  long_name:=:Black Carbon Angstrom parameter [470-870 nm]
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/BCCMASS
+  volume:=: 4.99046e+006
+  long_name:=:Black Carbon Column Mass Density
+  units:=:kg m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/BCEXTTAU
+  volume:=: 4.99046e+006
+  long_name:=:Black Carbon Extinction AOT [550 nm]
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/BCFLUXU
+  volume:=: 4.99046e+006
+  long_name:=:Black Carbon column u-wind mass flux
+  units:=:kg m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/BCFLUXV
+  volume:=: 4.99046e+006
+  long_name:=:Black Carbon column v-wind mass flux
+  units:=:kg m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/BCSCATAU
+  volume:=: 4.99046e+006
+  long_name:=:Black Carbon Scattering AOT [550 nm]
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/BCSMASS
+  volume:=: 4.99046e+006
+  long_name:=:Black Carbon Surface Mass Concentration
+  units:=:kg m-3
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DMSCMASS
+  volume:=: 4.99046e+006
+  long_name:=:DMS Column Mass Density __ENSEMBLE__
+  units:=:kg m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DMSSMASS
+  volume:=: 4.99046e+006
+  long_name:=:DMS Surface Mass Concentration __ENSEMBLE__
+  units:=:kg m-3
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DUANGSTR
+  volume:=: 4.99046e+006
+  long_name:=:Dust Angstrom parameter [470-870 nm]
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DUCMASS
+  volume:=: 4.99046e+006
+  long_name:=:Dust Column Mass Density
+  units:=:kg m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DUCMASS25
+  volume:=: 4.99046e+006
+  long_name:=:Dust Column Mass Density - PM 2.5
+  units:=:kg m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DUEXTT25
+  volume:=: 4.99046e+006
+  long_name:=:Dust Extinction AOT [550 nm] - PM 2.5
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DUEXTTAU
+  volume:=: 4.99046e+006
+  long_name:=:Dust Extinction AOT [550 nm]
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DUFLUXU
+  volume:=: 4.99046e+006
+  long_name:=:Dust column u-wind mass flux
+  units:=:kg m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DUFLUXV
+  volume:=: 4.99046e+006
+  long_name:=:Dust column v-wind mass flux
+  units:=:kg m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DUSCAT25
+  volume:=: 4.99046e+006
+  long_name:=:Dust Scattering AOT [550 nm] - PM 2.5
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DUSCATAU
+  volume:=: 4.99046e+006
+  long_name:=:Dust Scattering AOT [550 nm]
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DUSMASS
+  volume:=: 4.99046e+006
+  long_name:=:Dust Surface Mass Concentration
+  units:=:kg m-3
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DUSMASS25
+  volume:=: 4.99046e+006
+  long_name:=:Dust Surface Mass Concentration - PM 2.5
+  units:=:kg m-3
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/OCANGSTR
+  volume:=: 4.99046e+006
+  long_name:=:Organic Carbon Angstrom parameter [470-870 nm] __ENSEMBLE__
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/OCCMASS
+  volume:=: 4.99046e+006
+  long_name:=:Organic Carbon Column Mass Density __ENSEMBLE__
+  units:=:kg m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/OCEXTTAU
+  volume:=: 4.99046e+006
+  long_name:=:Organic Carbon Extinction AOT [550 nm] __ENSEMBLE__
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/OCFLUXU
+  volume:=: 4.99046e+006
+  long_name:=:Organic Carbon column u-wind mass flux __ENSEMBLE__
+  units:=:kg m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/OCFLUXV
+  volume:=: 4.99046e+006
+  long_name:=:Organic Carbon column v-wind mass flux __ENSEMBLE__
+  units:=:kg m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/OCSCATAU
+  volume:=: 4.99046e+006
+  long_name:=:Organic Carbon Scattering AOT [550 nm] __ENSEMBLE__
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/OCSMASS
+  volume:=: 4.99046e+006
+  long_name:=:Organic Carbon Surface Mass Concentration __ENSEMBLE__
+  units:=:kg m-3
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SO2CMASS
+  volume:=: 4.99046e+006
+  long_name:=:SO2 Column Mass Density __ENSEMBLE__
+  units:=:kg m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SO2SMASS
+  volume:=: 4.99046e+006
+  long_name:=:SO2 Surface Mass Concentration __ENSEMBLE__
+  units:=:kg m-3
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SO4CMASS
+  volume:=: 4.99046e+006
+  long_name:=:SO4 Column Mass Density __ENSEMBLE__
+  units:=:kg m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SO4SMASS
+  volume:=: 4.99046e+006
+  long_name:=:SO4 Surface Mass Concentration __ENSEMBLE__
+  units:=:kg m-3
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SSANGSTR
+  volume:=: 4.99046e+006
+  long_name:=:Sea Salt Angstrom parameter [470-870 nm]
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SSCMASS
+  volume:=: 4.99046e+006
+  long_name:=:Sea Salt Column Mass Density
+  units:=:kg m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SSCMASS25
+  volume:=: 4.99046e+006
+  long_name:=:Sea Salt Column Mass Density - PM 2.5
+  units:=:kg m-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SSEXTT25
+  volume:=: 4.99046e+006
+  long_name:=:Sea Salt Extinction AOT [550 nm] - PM 2.5
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SSEXTTAU
+  volume:=: 4.99046e+006
+  long_name:=:Sea Salt Extinction AOT [550 nm]
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SSFLUXU
+  volume:=: 4.99046e+006
+  long_name:=:Sea Salt column u-wind mass flux
+  units:=:kg m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SSFLUXV
+  volume:=: 4.99046e+006
+  long_name:=:Sea Salt column v-wind mass flux
+  units:=:kg m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SSSCAT25
+  volume:=: 4.99046e+006
+  long_name:=:Sea Salt Scattering AOT [550 nm] - PM 2.5
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SSSCATAU
+  volume:=: 4.99046e+006
+  long_name:=:Sea Salt Scattering AOT [550 nm]
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SSSMASS
+  volume:=: 4.99046e+006
+  long_name:=:Sea Salt Surface Mass Concentration
+  units:=:kg m-3
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SSSMASS25
+  volume:=: 4.99046e+006
+  long_name:=:Sea Salt Surface Mass Concentration - PM 2.5
+  units:=:kg m-3
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SUANGSTR
+  volume:=: 4.99046e+006
+  long_name:=:SO4 Angstrom parameter [470-870 nm] __ENSEMBLE__
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SUEXTTAU
+  volume:=: 4.99046e+006
+  long_name:=:SO4 Extinction AOT [550 nm] __ENSEMBLE__
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SUFLUXU
+  volume:=: 4.99046e+006
+  long_name:=:SO4 column u-wind mass flux __ENSEMBLE__
+  units:=:kg m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SUFLUXV
+  volume:=: 4.99046e+006
+  long_name:=:SO4 column v-wind mass flux __ENSEMBLE__
+  units:=:kg m-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SUSCATAU
+  volume:=: 4.99046e+006
+  long_name:=:SO4 Scattering AOT [550 nm] __ENSEMBLE__
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/TOTANGSTR
+  volume:=: 4.99046e+006
+  long_name:=:Total Aerosol Angstrom parameter [470-870 nm]
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/TOTEXTTAU
+  volume:=: 4.99046e+006
+  long_name:=:Total Aerosol Extinction AOT [550 nm]
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/TOTSCATAU
+  volume:=: 4.99046e+006
+  long_name:=:Total Aerosol Scattering AOT [550 nm]
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015

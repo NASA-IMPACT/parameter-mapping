@@ -1,0 +1,14 @@
+variable:=:/Percent_Tree_Cover
+  volume:=:  2.30400e+007
+variable:=:/Percent_NonTree_Vegetation
+  volume:=:  2.30400e+007
+variable:=:/Percent_NonVegetated
+  volume:=:  2.30400e+007
+variable:=:/Quality
+  volume:=:  2.30400e+007
+variable:=:/Percent_Tree_Cover_SD
+  volume:=:  2.30400e+007
+variable:=:/Percent_NonVegetated_SD
+  volume:=:  2.30400e+007
+variable:=:/Cloud
+  volume:=:  2.30400e+007

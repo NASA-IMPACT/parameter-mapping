@@ -1,0 +1,125 @@
+variable:=:/lon
+  volume:=:      576.000
+  long_name:=:longitude
+  units:=:degrees_east
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/lat
+  volume:=:      361.000
+  long_name:=:latitude
+  units:=:degrees_north
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/lev
+  volume:=:      72.0000
+  long_name:=:vertical level
+  units:=:layer
+  positive:=:down
+  coordinate:=:eta
+  standard_name:=:model_layers
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/time
+  volume:=:      8.00000
+  long_name:=:time
+  units:=:minutes since 1980-01-01 00:00:00
+  time_increment:=:       30000
+  begin_date:=:    19800101
+  begin_time:=:           0
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/AIRDENS
+  volume:=: 1.19771e+008
+  long_name:=:air_density
+  units:=:kg m-3
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  scale_factor:=:      1.00000
+  add_offset:=:     0.000000
+  standard_name:=:air_density
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/BCINC
+  volume:=: 1.19771e+008
+  long_name:=:Black Carbon Mixing Ratio Analysis Increments
+  units:=:kg/kg
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  scale_factor:=:      1.00000
+  add_offset:=:     0.000000
+  standard_name:=:Black Carbon Mixing Ratio Analysis Increments
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DUINC
+  volume:=: 1.19771e+008
+  long_name:=:Dust Mixing Ratio Analysis Increments
+  units:=:kg/kg
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  scale_factor:=:      1.00000
+  add_offset:=:     0.000000
+  standard_name:=:Dust Mixing Ratio Analysis Increments
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/OCINC
+  volume:=: 1.19771e+008
+  long_name:=:Organic Carbon Mixing Ratio Analysis Increments
+  units:=:kg/kg
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  scale_factor:=:      1.00000
+  add_offset:=:     0.000000
+  standard_name:=:Organic Carbon Mixing Ratio Analysis Increments
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SSINC
+  volume:=: 1.19771e+008
+  long_name:=:Sea-salt Mixing Ratio Analysis Increments
+  units:=:kg/kg
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  scale_factor:=:      1.00000
+  add_offset:=:     0.000000
+  standard_name:=:Sea-salt Mixing Ratio Analysis Increments
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/SUINC
+  volume:=: 1.19771e+008
+  long_name:=:Sulfate Mixing Ratio Analysis Increments
+  units:=:kg/kg
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  scale_factor:=:      1.00000
+  add_offset:=:     0.000000
+  standard_name:=:Sulfate Mixing Ratio Analysis Increments
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/delp
+  volume:=: 1.19771e+008
+  long_name:=:pressure_thickness
+  units:=:Pa
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  scale_factor:=:      1.00000
+  add_offset:=:     0.000000
+  standard_name:=:pressure_thickness
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015

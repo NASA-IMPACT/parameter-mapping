@@ -1,0 +1,47 @@
+variable:=:/HDFEOS/GRIDS/ColumnAmountNO2/Data Fields/ColumnAmountNO2
+  volume:=:2653433
+  _FillValue:=:
+  MissingValue:=:
+  ScaleFactor:=:
+  Offset:=:
+  Units:=:molec/cm2
+  Title:=:NO2 vertical column density
+  Description:=:Field=ColumnAmountNO2,StdField=ColumnAmountNO2Std,SolarZenithAngle=[0:85],VcdQualityFlags=~19,XTrackQualityFlags=0,RootMeanSquareErrorOfFit=[0:0.0003],TerrainReflectivity=[0:300]
+variable:=:/HDFEOS/GRIDS/ColumnAmountNO2/Data Fields/ColumnAmountNO2CloudScreened
+  volume:=:1875846
+  _FillValue:=:
+  MissingValue:=:
+  ScaleFactor:=:
+  Offset:=:
+  Units:=:molec/cm2
+  Title:=:NO2 vertical column density, screened for CloudFraction < 30%
+  Description:=:Field=ColumnAmountNO2,StdField=ColumnAmountNO2Std,SolarZenithAngle=[0:85],CloudFraction=[0:300],VcdQualityFlags=~19,XTrackQualityFlags=0,RootMeanSquareErrorOfFit=[0:0.0003],TerrainReflectivity=[0:300]
+variable:=:/HDFEOS/GRIDS/ColumnAmountNO2/Data Fields/ColumnAmountNO2Trop
+  volume:=:2859126
+  _FillValue:=:
+  MissingValue:=:
+  ScaleFactor:=:
+  Offset:=:
+  Units:=:molec/cm2
+  Title:=:NO2 tropospheric column density
+  Description:=:Field=ColumnAmountNO2Trop,StdField=ColumnAmountNO2TropStd,SolarZenithAngle=[0:85],VcdQualityFlags=~19,XTrackQualityFlags=0,RootMeanSquareErrorOfFit=[0:0.0003],TerrainReflectivity=[0:300]
+variable:=:/HDFEOS/GRIDS/ColumnAmountNO2/Data Fields/ColumnAmountNO2TropCloudScreened
+  volume:=:2011761
+  _FillValue:=:
+  MissingValue:=:
+  ScaleFactor:=:
+  Offset:=:
+  Units:=:molec/cm2
+  Title:=:NO2 tropospheric column density, screened for CloudFraction < 30%
+  Description:=:Field=ColumnAmountNO2Trop,StdField=ColumnAmountNO2TropStd,SolarZenithAngle=[0:85],CloudFraction=[0:300],VcdQualityFlags=~19,XTrackQualityFlags=0,RootMeanSquareErrorOfFit=[0:0.0003],TerrainReflectivity=[0:300]
+variable:=:/HDFEOS/GRIDS/ColumnAmountNO2/Data Fields/Weight
+  volume:=:2769288
+  _FillValue:=:
+  MissingValue:=:
+  ScaleFactor:=:
+  Offset:=:
+  Units:=:NoUnits
+  Title:=:Weight Factor used for each Grid Cell
+  Description:=:
+variable:=:/HDFEOS INFORMATION/StructMetadata.0
+  volume:=:32000

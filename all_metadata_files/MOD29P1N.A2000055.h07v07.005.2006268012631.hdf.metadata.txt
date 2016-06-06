@@ -1,0 +1,24 @@
+variable:=:/Ice_Surface_Temperature
+  volume:=:       904401.
+  long_name:=:Ice surface temperature for daily tile
+  units:=:degree_Kelvin
+  format:=:F4.1
+  coordsys:=:cartesian
+  valid_range:=:   21000   31320
+  _FillValue:=:       7
+  scale_factor:=:     0.010000000
+  scale_factor_err:=:      0.00000000
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:          23
+  Key:=:
+0.0=missing, 1.0=no decision, 11.0=night,25.0=land, 37.0=inland water, 39.0=open ocean, 50.0=cloud, 243.0-273.0 expected IST range, 655.35=fill
+variable:=:/Ice_Surface_Temperature_Spatial_QA
+  volume:=:       904401.
+  long_name:=:Ice surface temperature spatial QA for daily tile
+  units:=:none
+  format:=:I3
+  coordsys:=:cartesian
+  valid_range:=:   0 255
+  _FillValue:=: 255
+  Key:=:0=good quality, 1=other quality, 253=land mask, 254=ocean mask, 255=fill

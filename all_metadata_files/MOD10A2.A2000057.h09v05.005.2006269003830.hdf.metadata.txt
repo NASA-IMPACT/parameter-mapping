@@ -1,0 +1,22 @@
+variable:=:/Maximum_Snow_Extent
+  volume:=:  5.76000e+006
+  long_name:=:Maximum snow extent over the 8-day period
+  units:=:none
+  format:=:I3
+  coordsys:=:cartesian
+  valid_range:=:   0 254
+  _FillValue:=: 255
+  Cell_area (km^2):=:     0.214659
+  Max_snow_area (km^2):=:      164078.
+  Key:=:
+0=missing data, 1=no decision, 11=night, 25=no snow, 37=lake, 39=ocean, 50=cloud, 100=lake ice, 200=snow, 254=detector saturated, 255=fill
+variable:=:/Eight_Day_Snow_Cover
+  volume:=:  5.76000e+006
+  long_name:=:Eight day snow cover chronobyte
+  units:=:bit
+  format:=:I3
+  coordsys:=:cartesian
+  valid_range:=:   0 255
+  _FillValue:=:   0
+  Key:=:
+Snow occurrence in chronological order.  Day in period ordered as 87654321 corresponds to bit order of 76543210.  Bit value of 1 means snow was observed. Bit value of 0 means snow was not observed.

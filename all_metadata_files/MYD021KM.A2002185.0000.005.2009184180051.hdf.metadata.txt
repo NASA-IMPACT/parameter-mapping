@@ -1,0 +1,261 @@
+variable:=:/Latitude
+  volume:=:       110568.
+  units:=:degrees
+  valid_range:=:     -90.0000      90.0000
+  _FillValue:=:     -999.000
+  line_numbers:=:3,8
+  frame_numbers:=:3,8,13,...
+variable:=:/Longitude
+  volume:=:       110568.
+  units:=:degrees
+  valid_range:=:     -180.000      180.000
+  _FillValue:=:     -999.000
+  line_numbers:=:3,8
+  frame_numbers:=:3,8,13,...
+variable:=:/EV_1KM_RefSB
+  volume:=:  4.14324e+007
+  long_name:=:Earth View 1KM Reflective Solar Bands Scaled Integers
+  units:=:none
+  valid_range:=:       0   32767
+  _FillValue:=:   65535
+  band_names:=:8,9,10,11,12,13lo,13hi,14lo,14hi,15,16,17,18,19,26
+  radiance_scales:=:   0.00643274   0.00475978   0.00358864   0.00289503
+   0.00227587   0.00120941  0.000581999   0.00114757  0.000416182  0.000949256
+  0.000622502   0.00635494   0.00938631   0.00693781   0.00276045
+  radiance_offsets:=:      316.972      316.972      316.972      316.972
+      316.972      316.972      316.972      316.972      316.972      316.972
+      316.972      316.972      316.972      316.972      316.972
+  radiance_units:=:Watts/m^2/micrometer/steradian
+  reflectance_scales:=: 1.19525e-005 8.10884e-006 5.89429e-006 4.98680e-006
+ 3.90455e-006 2.53800e-006 1.22135e-006 2.47433e-006 8.97353e-007 2.38099e-006
+ 2.07716e-006 2.20835e-005 3.49400e-005 2.58044e-005 2.45553e-005
+  reflectance_offsets:=:      316.972      316.972      316.972      316.972
+      316.972      316.972      316.972      316.972      316.972      316.972
+      316.972      316.972      316.972      316.972      316.972
+  reflectance_units:=:none
+  corrected_counts_scales:=:     0.126194     0.126194     0.126194     0.126194
+     0.126194     0.126194     0.126194     0.126194     0.126194     0.126194
+     0.126194     0.126194     0.126194     0.126194     0.126194
+  corrected_counts_offsets:=:      316.972      316.972      316.972
+      316.972      316.972      316.972      316.972      316.972      316.972
+      316.972      316.972      316.972      316.972      316.972      316.972
+  corrected_counts_units:=:counts
+variable:=:/EV_1KM_RefSB_Uncert_Indexes
+  volume:=:  4.14324e+007
+  long_name:=:Earth View 1KM Reflective Solar Bands Uncertainty Indexes
+  units:=:none
+  valid_range:=:   0  15
+  _FillValue:=: 255
+  specified_uncertainty:=:      1.50000      1.50000      1.50000      1.50000
+      1.50000      1.50000      1.50000      1.50000      1.50000      1.50000
+      1.50000      1.50000      1.50000      1.50000      1.50000
+  scaling_factor:=:      7.00000      7.00000      7.00000      7.00000
+      7.00000      7.00000      7.00000      7.00000      7.00000      7.00000
+      7.00000      7.00000      7.00000      7.00000      5.00000
+  uncertainty_units:=:percent
+variable:=:/EV_1KM_Emissive
+  volume:=:  4.41946e+007
+  long_name:=:Earth View 1KM Emissive Bands Scaled Integers
+  units:=:none
+  valid_range:=:       0   32767
+  _FillValue:=:   65535
+  band_names:=:20,21,22,23,24,25,27,28,29,30,31,32,33,34,35,36
+  radiance_scales:=: 6.93075e-005   0.00346690 7.62658e-005 8.99075e-005
+ 3.15561e-005 5.63982e-005  0.000117832  0.000192450  0.000557085  0.000406323
+  0.000650807  0.000571001  0.000262337  0.000200873  0.000176763  0.000118595
+  radiance_offsets:=:      2467.26      2480.60      2478.18      2402.47
+      1077.44      1560.33      2724.22      2317.49      2610.02      1560.33
+      2035.93      2119.08      2500.60      2499.09      2500.52      2495.89
+  radiance_units:=:Watts/m^2/micrometer/steradian
+variable:=:/EV_1KM_Emissive_Uncert_Indexes
+  volume:=:  4.41946e+007
+  long_name:=:Earth View 1KM Emissive Bands Uncertainty Indexes
+  units:=:none
+  valid_range:=:   0  15
+  _FillValue:=: 255
+  specified_uncertainty:=:     0.562500      2.50000     0.500000     0.500000
+     0.500000     0.500000     0.500000     0.500000     0.500000     0.500000
+     0.375000     0.375000     0.500000     0.500000     0.500000     0.500000
+  scaling_factor:=:      5.00000      4.00000      4.00000      4.00000
+      4.00000      4.00000      4.00000      4.00000      4.00000      4.00000
+      4.00000      4.00000      4.00000      4.00000      4.00000      4.00000
+  uncertainty_units:=:percent
+variable:=:/EV_250_Aggr1km_RefSB
+  volume:=:  5.52432e+006
+  long_name:=:
+Earth View 250M Aggregated 1km Reflective Solar Bands Scaled Integers
+  units:=:none
+  valid_range:=:       0   32767
+  _FillValue:=:   65535
+  band_names:=:1,2
+  radiance_scales:=:    0.0281011   0.00938976
+  radiance_offsets:=:    -0.000000    -0.000000
+  radiance_units:=:Watts/m^2/micrometer/steradian
+  reflectance_scales:=: 5.67494e-005 3.07593e-005
+  reflectance_offsets:=:    -0.000000    -0.000000
+  reflectance_units:=:none
+  corrected_counts_scales:=:     0.124973     0.124973
+  corrected_counts_offsets:=:    -0.000000    -0.000000
+  corrected_counts_units:=:counts
+variable:=:/EV_250_Aggr1km_RefSB_Uncert_Indexes
+  volume:=:  5.52432e+006
+  long_name:=:
+Earth View 250M Aggregated 1km Reflective Solar Bands Uncertainty Indexes
+  units:=:none
+  valid_range:=:   0  15
+  _FillValue:=: 255
+  specified_uncertainty:=:      1.50000      1.50000
+  scaling_factor:=:      7.00000      7.00000
+  uncertainty_units:=:percent
+variable:=:/EV_250_Aggr1km_RefSB_Samples_Used
+  volume:=:  5.52432e+006
+  long_name:=:
+Earth View 250M Aggregated 1km Reflective Solar Bands Number of Samples Used in Aggregation
+  units:=:none
+  valid_range:=:   0  28
+  _FillValue:=: 255
+variable:=:/EV_500_Aggr1km_RefSB
+  volume:=:  1.38108e+007
+  long_name:=:
+Earth View 500M Aggregated 1km Reflective Solar Bands Scaled Integers
+  units:=:none
+  valid_range:=:       0   32767
+  _FillValue:=:   65535
+  band_names:=:3,4,5,6,7
+  radiance_scales:=:    0.0208953    0.0184368   0.00476068   0.00267532
+  0.000831662
+  radiance_offsets:=:    -0.000000    -0.000000    -0.000000    -0.000000
+    -0.000000
+  radiance_units:=:Watts/m^2/micrometer/steradian
+  reflectance_scales:=: 3.24953e-005 3.20982e-005 3.25512e-005 3.61085e-005
+ 2.98766e-005
+  reflectance_offsets:=:    -0.000000    -0.000000    -0.000000    -0.000000
+    -0.000000
+  reflectance_units:=:none
+  corrected_counts_scales:=:     0.124973     0.124973     0.124973     0.124973
+     0.124973
+  corrected_counts_offsets:=:    -0.000000    -0.000000    -0.000000
+    -0.000000    -0.000000
+  corrected_counts_units:=:counts
+variable:=:/EV_500_Aggr1km_RefSB_Uncert_Indexes
+  volume:=:  1.38108e+007
+  long_name:=:
+Earth View 500M Aggregated 1km Reflective Solar Bands Uncertainty Indexes
+  units:=:none
+  valid_range:=:   0  15
+  _FillValue:=: 255
+  specified_uncertainty:=:      1.50000      1.50000      1.50000      1.50000
+      1.50000
+  scaling_factor:=:      7.00000      7.00000      5.00000      5.00000
+      5.00000
+  uncertainty_units:=:percent
+variable:=:/EV_500_Aggr1km_RefSB_Samples_Used
+  volume:=:  1.38108e+007
+  long_name:=:
+Earth View 500M Aggregated 1km Reflective Solar Bands Number of Samples Used in Aggregation
+  units:=:none
+  valid_range:=:   0   6
+  _FillValue:=: 255
+variable:=:/Height
+  volume:=:       110568.
+  units:=:meters
+  valid_range:=:    -400   10000
+  _FillValue:=:  -32767
+  line_numbers:=:3,8
+  frame_numbers:=:3,8,13,...
+variable:=:/SensorZenith
+  volume:=:       110568.
+  units:=:degrees
+  valid_range:=:       0   18000
+  _FillValue:=:  -32767
+  scale_factor:=:     0.010000000
+  line_numbers:=:3,8
+  frame_numbers:=:3,8,13,...
+variable:=:/SensorAzimuth
+  volume:=:       110568.
+  units:=:degrees
+  valid_range:=:  -18000   18000
+  _FillValue:=:  -32767
+  scale_factor:=:     0.010000000
+  line_numbers:=:3,8
+  frame_numbers:=:3,8,13,...
+variable:=:/Range
+  volume:=:       110568.
+  units:=:meters
+  valid_range:=:   27000   65535
+  _FillValue:=:       0
+  scale_factor:=:       25.000000
+  line_numbers:=:3,8
+  frame_numbers:=:3,8,13,...
+variable:=:/SolarZenith
+  volume:=:       110568.
+  units:=:degrees
+  valid_range:=:       0   18000
+  _FillValue:=:  -32767
+  scale_factor:=:     0.010000000
+  line_numbers:=:3,8
+  frame_numbers:=:3,8,13,...
+variable:=:/SolarAzimuth
+  volume:=:       110568.
+  units:=:degrees
+  valid_range:=:  -18000   18000
+  _FillValue:=:  -32767
+  scale_factor:=:     0.010000000
+  line_numbers:=:3,8
+  frame_numbers:=:3,8,13,...
+variable:=:/gflags
+  volume:=:       110568.
+  _FillValue:=: 255
+  Bit 7(MSB):=:1 = invalid input data
+  Bit 6:=:1 = no ellipsoid intersection
+  Bit 5:=:1 = no valid terrain data
+  Bit 4:=:1 = DEM missing or of inferior quality
+  Bit 3:=:1 = invalid sensor range
+variable:=:/EV_Band26
+  volume:=:  2.76216e+006
+  long_name:=:Earth View Band 26 Scaled Integers
+  units:=:none
+  valid_range:=:       0   32767
+  _FillValue:=:   65535
+  radiance_scales:=:   0.00276045
+  radiance_offsets:=:      316.972
+  radiance_units:=:Watts/m^2/micrometer/steradian
+  reflectance_scales:=: 2.45553e-005
+  reflectance_offsets:=:      316.972
+  reflectance_units:=:none
+  corrected_counts_scales:=:     0.126194
+  corrected_counts_offsets:=:      316.972
+  corrected_counts_units:=:counts
+variable:=:/EV_Band26_Uncert_Indexes
+  volume:=:  2.76216e+006
+  long_name:=:Earth View Band 26 Uncertainty Indexes
+  units:=:none
+  valid_range:=:   0  15
+  _FillValue:=: 255
+  specified_uncertainty:=:      1.50000
+  scaling_factor:=:      5.00000
+  uncertainty_units:=:percent
+variable:=:/Noise in Thermal Detectors
+  volume:=:       160.000
+variable:=:/Change in relative responses of thermal detectors
+  volume:=:       160.000
+variable:=:/DC Restore Change for Thermal Bands
+  volume:=:       32640.0
+variable:=:/DC Restore Change for Reflective 250m Bands
+  volume:=:       16320.0
+variable:=:/DC Restore Change for Reflective 500m Bands
+  volume:=:       20400.0
+variable:=:/DC Restore Change for Reflective 1km Bands
+  volume:=:       30600.0
+variable:=:/Band_250M
+  volume:=:       2.00000
+  long_name:=:250M Band Numbers for Subsetting
+variable:=:/Band_500M
+  volume:=:       5.00000
+  long_name:=:500M Band Numbers for Subsetting
+variable:=:/Band_1KM_RefSB
+  volume:=:       15.0000
+  long_name:=:1KM Reflective Solar Band Numbers for Subsetting
+variable:=:/Band_1KM_Emissive
+  volume:=:       16.0000
+  long_name:=:1KM Emissive Band Numbers for Subsetting

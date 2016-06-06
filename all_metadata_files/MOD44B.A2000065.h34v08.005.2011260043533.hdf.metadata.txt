@@ -1,0 +1,8 @@
+variable:=:/Percent_Tree_Cover
+  volume:=:  2.30400e+007
+variable:=:/Quality
+  volume:=:  2.30400e+007
+variable:=:/Percent_Tree_Cover_SD
+  volume:=:  2.30400e+007
+variable:=:/Cloud
+  volume:=:  2.30400e+007

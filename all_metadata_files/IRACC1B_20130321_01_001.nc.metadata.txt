@@ -1,0 +1,1564 @@
+variable:=:/Surface
+  volume:=:      1265.00
+  units:=:seconds
+  long_name:=:Two way travel time to surface used during processing. Not the final picked surface.
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1265.0000
+variable:=:/fasttime
+  volume:=:      3615.00
+  units:=:microseconds
+  long_name:=:2-way travel time in µseconds
+  standard_name:=:time
+  positive:=:down
+  axis:=:Z
+  matlab_class:=:double
+  matlab_size:=:       3615.0000   matlab_size:=:       1.0000000
+variable:=:/lat
+  volume:=:      1265.00
+  standard_name:=:latitude
+  units:=:degrees_north
+  long_name:=:Latitude of sample
+  axis:=:Y
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1265.0000
+variable:=:/lon
+  volume:=:      1265.00
+  standard_name:=:longitude
+  units:=:degrees_east
+  long_name:=:Longitude of sample
+  axis:=:X
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1265.0000
+variable:=:/altitude
+  volume:=:      1265.00
+  standard_name:=:height
+  units:=:meters
+  positive:=:up
+  long_name:=:Altitude of antenna above nominal sea level (WGS84)
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1265.0000
+variable:=:/roll
+  volume:=:      1265.00
+  standard_name:=:roll
+  units:=:degrees
+  long_name:=:Roll of the platform.  Positive is right wing down.  Zero is horizontal.
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1265.0000
+variable:=:/pitch
+  volume:=:      1265.00
+  standard_name:=:pitch
+  units:=:degrees
+  long_name:=:Pitch of the platform.  Positive is nose up.  Zero is horizontal.
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1265.0000
+variable:=:/heading
+  volume:=:      1265.00
+  standard_name:=:heading
+  units:=:degrees
+  long_name:=:Heading of the platform.  Positive is clockwise from above.  Zero is true north.
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1265.0000
+variable:=:/amplitude
+  volume:=: 4.57298e+006
+  units:=:counts in dB
+  long_name:=:Amplitude of low/high gain merged radar reflection after processing
+  coordinates:=:time travel channel
+  matlab_class:=:single
+  matlab_size:=:       3615.0000   matlab_size:=:       1265.0000
+variable:=:/param_get_heights(1).radar_name
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       6.0000000
+variable:=:/param_get_heights(1).season_name
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       17.000000
+variable:=:/param_get_heights(1).day_seg
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       11.000000
+variable:=:/param_get_heights(1).cmd(1).frms
+  volume:=:      123.000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       123.00000
+variable:=:/param_get_heights(1).cmd(1).create_vectors
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).cmd(1).create_records
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).cmd(1).create_frames
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).cmd(1).get_heights
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).cmd(1).csarp
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).cmd(1).combine_wf_chan
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).cmd(1).generic
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).cmd(1).mission_names
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       24.000000
+variable:=:/param_get_heights(1).cmd(1).notes
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_get_heights(1).sw_version(1).ver
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       3.0000000
+variable:=:/param_get_heights(1).sw_version(1).date_time
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       15.000000
+variable:=:/param_get_heights(1).sw_version(1).cur_date_time
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       20.000000
+variable:=:/param_get_heights(1).sw_version(1).rev
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).param_file_version
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       3.0000000
+variable:=:/param_get_heights(1).vectors(1).file(1).radar_num
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_get_heights(1).vectors(1).file(1).adc
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).vectors(1).file(1).start_idx
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).vectors(1).file(1).stop_idx
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).vectors(1).file(1).base_dir
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       40.000000
+variable:=:/param_get_heights(1).vectors(1).file(1).adc_folder_name
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       14.000000
+variable:=:/param_get_heights(1).vectors(1).file(1).file_prefix
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       9.0000000
+variable:=:/param_get_heights(1).vectors(1).out_fn
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_get_heights(1).vectors(1).gps(1).fn
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_get_heights(1).vectors(1).gps(1).time_offset
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).vectors(1).gps(1).verification
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_get_heights(1).vectors(1).gps(1).utc_time_halved
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).records(1).file(1).adcs
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).records(1).gps(1).en
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).records(1).records_fn
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_get_heights(1).records(1).force_all
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).records(1).frames_fn
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_get_heights(1).records(1).geotiff_fn
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       41.000000
+variable:=:/param_get_heights(1).records(1).frame_mode
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).records(1).debug_level
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).records(1).file_version
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_get_heights(1).get_heights(1).qlook(1).out_path
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       10.000000
+variable:=:/param_get_heights(1).get_heights(1).qlook(1).en
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).get_heights(1).qlook(1).img_comb
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_get_heights(1).get_heights(1).block_size
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).get_heights(1).frm_types
+  volume:=:      2.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       2.0000000
+variable:=:/param_get_heights(1).get_heights(1).imgs{1}
+  volume:=:      2.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       2.0000000
+variable:=:/param_get_heights(1).get_heights(1).coh_noise_method
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).get_heights(1).coh_noise_arg
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_get_heights(1).get_heights(1).ft_wind
+  volume:=:      7.00000
+  matlab_class:=:function_handle
+  matlab_size:=:       1.0000000   matlab_size:=:       7.0000000
+variable:=:/param_get_heights(1).get_heights(1).ft_wind_time
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).get_heights(1).pulse_rfi(1).en
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_get_heights(1).get_heights(1).pulse_rfi(1).inv_ave
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_get_heights(1).get_heights(1).pulse_rfi(1).thresh_scale
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_get_heights(1).get_heights(1).roll_correction
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_get_heights(1).get_heights(1).lever_arm_fh
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_get_heights(1).get_heights(1).elev_correction
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).get_heights(1).B_filter
+  volume:=:      10.0000
+  matlab_class:=:double
+  matlab_size:=:       10.000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).get_heights(1).decimate_factor
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).get_heights(1).inc_ave
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).get_heights(1).surf(1).en
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).get_heights(1).surf(1).img_idx
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).get_heights(1).surf(1).min_bin
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).get_heights(1).surf(1).manual
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).get_heights(1).surf(1).search_rng
+  volume:=:      11.0000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       11.000000
+variable:=:/param_get_heights(1).get_heights(1).trim_vals
+  volume:=:      2.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       2.0000000
+variable:=:/param_get_heights(1).get_heights(1).presums
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).get_heights(1).pulse_comp
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).get_heights(1).ft_dec
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).get_heights(1).combine_rx
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).csarp(1).out_path
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_get_heights(1).csarp(1).frm_types
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).csarp(1).chunk_len
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).csarp(1).chunk_overlap
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).csarp(1).frm_overlap
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).csarp(1).coh_noise_removal
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).csarp(1).imgs{1}
+  volume:=:      30.0000
+  matlab_class:=:double
+  matlab_size:=:       15.000000   matlab_size:=:       2.0000000
+variable:=:/param_get_heights(1).csarp(1).imgs{2}
+  volume:=:      30.0000
+  matlab_class:=:double
+  matlab_size:=:       15.000000   matlab_size:=:       2.0000000
+variable:=:/param_get_heights(1).csarp(1).combine_rx
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).csarp(1).time_of_full_support
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).csarp(1).pulse_rfi(1).en
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).csarp(1).pulse_rfi(1).inv_ave
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).csarp(1).pulse_rfi(1).thresh_scale
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).csarp(1).trim_vals
+  volume:=:      2.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       2.0000000
+variable:=:/param_get_heights(1).csarp(1).pulse_comp
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).csarp(1).ft_dec
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).csarp(1).ft_wind
+  volume:=:      7.00000
+  matlab_class:=:function_handle
+  matlab_size:=:       1.0000000   matlab_size:=:       7.0000000
+variable:=:/param_get_heights(1).csarp(1).ft_wind_time
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).csarp(1).lever_arm_fh
+  volume:=:      9.00000
+  matlab_class:=:function_handle
+  matlab_size:=:       1.0000000   matlab_size:=:       9.0000000
+variable:=:/param_get_heights(1).csarp(1).mocomp(1).en
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).csarp(1).mocomp(1).type
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).csarp(1).mocomp(1).uniform_en
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).csarp(1).sar_type
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       3.0000000
+variable:=:/param_get_heights(1).csarp(1).sigma_x
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).csarp(1).sub_aperture_steering
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).csarp(1).st_wind
+  volume:=:      15.0000
+  matlab_class:=:inline
+  matlab_size:=:       1.0000000   matlab_size:=:       15.000000
+variable:=:/param_get_heights(1).csarp(1).start_eps
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).csarp(1).refraction_method
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_get_heights(1).csarp(1).skip_surf
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_get_heights(1).csarp(1).start_range_bin_above_surf
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_get_heights(1).csarp(1).start_range_bin
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_get_heights(1).csarp(1).end_range_bin
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_get_heights(1).combine(1).in_path
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_get_heights(1).combine(1).array_path
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_get_heights(1).combine(1).out_path
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_get_heights(1).combine(1).img_comb
+  volume:=:      2.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       2.0000000
+variable:=:/param_get_heights(1).combine(1).imgs{1}
+  volume:=:      14.0000
+  matlab_class:=:double
+  matlab_size:=:       7.0000000   matlab_size:=:       2.0000000
+variable:=:/param_get_heights(1).combine(1).imgs{2}
+  volume:=:      14.0000
+  matlab_class:=:double
+  matlab_size:=:       7.0000000   matlab_size:=:       2.0000000
+variable:=:/param_get_heights(1).combine(1).method
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       8.0000000
+variable:=:/param_get_heights(1).combine(1).window
+  volume:=:      7.00000
+  matlab_class:=:function_handle
+  matlab_size:=:       1.0000000   matlab_size:=:       7.0000000
+variable:=:/param_get_heights(1).combine(1).bin_rng
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).combine(1).rline_rng
+  volume:=:      11.0000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       11.000000
+variable:=:/param_get_heights(1).combine(1).debug_level
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).combine(1).dbin
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).combine(1).dline
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).combine(1).three_dim(1).en
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).combine(1).three_dim(1).layer
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_get_heights(1).combine(1).Nsv
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).combine(1).freq_rng
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).combine(1).sv_fh
+  volume:=:      29.0000
+  matlab_class:=:inline
+  matlab_size:=:       1.0000000   matlab_size:=:       29.000000
+variable:=:/param_get_heights(1).combine(1).diag_load
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).combine(1).Nsig
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).radar(1).fs
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).radar(1).prf
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).radar(1).adc_bits
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).radar(1).Vpp_scale
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).radar(1).wfs(1).Tpd
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).radar(1).wfs(1).f0
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).radar(1).wfs(1).f1
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).radar(1).wfs(1).Tadc
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).radar(1).wfs(1).ref_fn
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_get_heights(1).radar(1).wfs(1).tukey
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).radar(1).wfs(1).tx_weights
+  volume:=:      2.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       2.0000000
+variable:=:/param_get_heights(1).radar(1).wfs(1).rx_paths
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).radar(1).wfs(1).adc_gains
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).radar(1).wfs(1).chan_equal_dB
+  volume:=:      5.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       5.0000000
+variable:=:/param_get_heights(1).radar(1).wfs(1).chan_equal_deg
+  volume:=:      5.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       5.0000000
+variable:=:/param_get_heights(1).radar(1).wfs(1).Tsys
+  volume:=:      5.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       5.0000000
+variable:=:/param_get_heights(1).debug_level
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).sched(1).type
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       13.000000
+variable:=:/param_get_heights(1).sched(1).url
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       26.000000
+variable:=:/param_get_heights(1).sched(1).name
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_get_heights(1).sched(1).data_location
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       37.000000
+variable:=:/param_get_heights(1).sched(1).submit_arguments
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       68.000000
+variable:=:/param_get_heights(1).sched(1).max_in_queue
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).sched(1).max_tasks_per_jobs
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).sched(1).max_retries
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).sched(1).worker_fn
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       57.000000
+variable:=:/param_get_heights(1).sched(1).force_compile
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{1}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       28.000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{1}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{2}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       28.000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{2}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{3}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       28.000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{3}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{4}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       17.000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{4}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{5}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       18.000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{5}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{6}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       15.000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{6}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{7}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       30.000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{7}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{8}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       18.000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{8}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{9}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       12.000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{9}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{10}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       22.000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{10}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{11}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       9.0000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{11}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{12}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       10.000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{12}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{13}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       10.000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{13}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{14}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       15.000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{14}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{15}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       9.0000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{15}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{16}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       8.0000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{16}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{17}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       8.0000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{17}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{18}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       15.000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{18}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{19}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       11.000000
+variable:=:/param_get_heights(1).sched(1).hidden_depend_funs{19}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).sched(1).cluster_size
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).sched(1).rerun_only
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).sched(1).stop_on_fail
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).path
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       55.000000
+variable:=:/param_get_heights(1).path_override
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       36.000000
+variable:=:/param_get_heights(1).tmp_path
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       32.000000
+variable:=:/param_get_heights(1).data_path
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       22.000000
+variable:=:/param_get_heights(1).data_support_path
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       31.000000
+variable:=:/param_get_heights(1).support_path
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       36.000000
+variable:=:/param_get_heights(1).out_path
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       29.000000
+variable:=:/param_get_heights(1).gis_path
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       30.000000
+variable:=:/param_get_heights(1).load(1).imgs{1}
+  volume:=:      2.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       2.0000000
+variable:=:/param_get_heights(1).load(1).recs
+  volume:=:      2.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       2.0000000
+variable:=:/param_get_heights(1).load(1).recs_keep
+  volume:=:      2.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       2.0000000
+variable:=:/param_get_heights(1).load(1).adcs
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_get_heights(1).proc(1).frm
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/time
+  volume:=:      1265.00
+  units:=:seconds since 2013-03-21 00:00:00
+  calendar:=:standard
+  long_name:=:Time of day UTC
+  standard_name:=:time
+  axis:=:T
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1265.0000
+variable:=:/param_records(1).radar_name
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       6.0000000
+variable:=:/param_records(1).season_name
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       17.000000
+variable:=:/param_records(1).day_seg
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       11.000000
+variable:=:/param_records(1).cmd(1).frms
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).cmd(1).create_vectors
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).cmd(1).create_records
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).cmd(1).create_frames
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).cmd(1).get_heights
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).cmd(1).csarp
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).cmd(1).combine_wf_chan
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).cmd(1).generic
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).cmd(1).mission_names
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       18.000000
+variable:=:/param_records(1).cmd(1).notes
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       62.000000
+variable:=:/param_records(1).sw_version(1).ver
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       3.0000000
+variable:=:/param_records(1).sw_version(1).date_time
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       15.000000
+variable:=:/param_records(1).sw_version(1).cur_date_time
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       20.000000
+variable:=:/param_records(1).sw_version(1).rev
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).param_file_version
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       3.0000000
+variable:=:/param_records(1).vectors(1).file(1).radar_num
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).vectors(1).file(1).adc
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).vectors(1).file(1).start_idx
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).vectors(1).file(1).stop_idx
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).vectors(1).file(1).base_dir
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       9.0000000
+variable:=:/param_records(1).vectors(1).file(1).adc_folder_name
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       14.000000
+variable:=:/param_records(1).vectors(1).file(1).file_prefix
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       9.0000000
+variable:=:/param_records(1).vectors(1).out_fn
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).vectors(1).gps(1).fn
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).vectors(1).gps(1).time_offset
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).vectors(1).gps(1).verification
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).vectors(1).gps(1).utc_time_halved
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).records(1).file(1).adcs
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).records(1).gps(1).en
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).records(1).records_fn
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).records(1).force_all
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).records(1).frames_fn
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).records(1).geotiff_fn
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       41.000000
+variable:=:/param_records(1).records(1).frame_mode
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).records(1).debug_level
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).records(1).file_version
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).get_heights(1).qlook(1).out_path
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).get_heights(1).qlook(1).en
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).get_heights(1).qlook(1).img_comb
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).get_heights(1).block_size
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).get_heights(1).frm_types
+  volume:=:      2.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       2.0000000
+variable:=:/param_records(1).get_heights(1).imgs{1}
+  volume:=:      2.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       2.0000000
+variable:=:/param_records(1).get_heights(1).coh_noise_method
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).get_heights(1).coh_noise_arg
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).get_heights(1).ft_wind
+  volume:=:      7.00000
+  matlab_class:=:function_handle
+  matlab_size:=:       1.0000000   matlab_size:=:       7.0000000
+variable:=:/param_records(1).get_heights(1).ft_wind_time
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).get_heights(1).pulse_rfi(1).en
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).get_heights(1).pulse_rfi(1).inv_ave
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).get_heights(1).pulse_rfi(1).thresh_scale
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).get_heights(1).roll_correction
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).get_heights(1).lever_arm_fh
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).get_heights(1).elev_correction
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).get_heights(1).B_filter
+  volume:=:      10.0000
+  matlab_class:=:double
+  matlab_size:=:       10.000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).get_heights(1).decimate_factor
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).get_heights(1).inc_ave
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).get_heights(1).surf(1).en
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).get_heights(1).surf(1).img_idx
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).get_heights(1).surf(1).min_bin
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).get_heights(1).surf(1).manual
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).get_heights(1).surf(1).search_rng
+  volume:=:      11.0000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       11.000000
+variable:=:/param_records(1).csarp(1).out_path
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).csarp(1).frm_types
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).csarp(1).chunk_len
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).csarp(1).chunk_overlap
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).csarp(1).frm_overlap
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).csarp(1).coh_noise_removal
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).csarp(1).imgs
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).csarp(1).combine_rx
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).csarp(1).time_of_full_support
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).csarp(1).pulse_rfi(1).en
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).csarp(1).pulse_rfi(1).inv_ave
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).csarp(1).pulse_rfi(1).thresh_scale
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).csarp(1).trim_vals
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).csarp(1).pulse_comp
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).csarp(1).ft_dec
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).csarp(1).ft_wind
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).csarp(1).ft_wind_time
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).csarp(1).lever_arm_fh
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).csarp(1).mocomp(1).en
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).csarp(1).mocomp(1).type
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).csarp(1).mocomp(1).uniform_en
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).csarp(1).sar_type
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).csarp(1).sigma_x
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).csarp(1).sub_aperture_steering
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).csarp(1).st_wind
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).csarp(1).start_eps
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).csarp(1).refraction_method
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).csarp(1).skip_surf
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).csarp(1).start_range_bin_above_surf
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).csarp(1).start_range_bin
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).csarp(1).end_range_bin
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).radar(1).fs
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).radar(1).prf
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).radar(1).adc_bits
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).radar(1).Vpp_scale
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).radar(1).wfs(1).Tpd
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).radar(1).wfs(1).f0
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).radar(1).wfs(1).f1
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).radar(1).wfs(1).Tadc
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).radar(1).wfs(1).ref_fn
+  volume:=:     0.000000
+  matlab_class:=:double
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).radar(1).wfs(1).tukey
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).radar(1).wfs(1).tx_weights
+  volume:=:      2.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       2.0000000
+variable:=:/param_records(1).radar(1).wfs(1).rx_paths
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).radar(1).wfs(1).adc_gains
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).radar(1).wfs(1).chan_equal_dB
+  volume:=:      5.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       5.0000000
+variable:=:/param_records(1).radar(1).wfs(1).chan_equal_deg
+  volume:=:      5.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       5.0000000
+variable:=:/param_records(1).radar(1).wfs(1).Tsys
+  volume:=:      5.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       5.0000000
+variable:=:/param_records(1).debug_level
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).sched(1).type
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       13.000000
+variable:=:/param_records(1).sched(1).url
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).sched(1).name
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:      0.00000000   matlab_size:=:      0.00000000
+variable:=:/param_records(1).sched(1).data_location
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       15.000000
+variable:=:/param_records(1).sched(1).submit_arguments
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       31.000000
+variable:=:/param_records(1).sched(1).max_in_queue
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).sched(1).max_tasks_per_jobs
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).sched(1).max_retries
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).sched(1).worker_fn
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       45.000000
+variable:=:/param_records(1).sched(1).force_compile
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{1}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       28.000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{1}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{2}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       28.000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{2}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{3}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       28.000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{3}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{4}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       17.000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{4}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{5}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       18.000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{5}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{6}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       15.000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{6}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{7}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       30.000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{7}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{8}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       18.000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{8}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{9}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       12.000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{9}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{10}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       22.000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{10}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{11}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       9.0000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{11}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{12}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       10.000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{12}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{13}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       10.000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{13}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{14}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       15.000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{14}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{15}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       9.0000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{15}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{16}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       8.0000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{16}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{17}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       8.0000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{17}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{18}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       15.000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{18}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{19}{1}
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       11.000000
+variable:=:/param_records(1).sched(1).hidden_depend_funs{19}{2}
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).sched(1).cluster_size
+  volume:=:      1.00000
+  matlab_class:=:double
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).sched(1).rerun_only
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).sched(1).stop_on_fail
+  volume:=:      1.00000
+  matlab_class:=:logical
+  matlab_size:=:       1.0000000   matlab_size:=:       1.0000000
+variable:=:/param_records(1).path
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       36.000000
+variable:=:/param_records(1).path_override
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       29.000000
+variable:=:/param_records(1).tmp_path
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       15.000000
+variable:=:/param_records(1).data_path
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       9.0000000
+variable:=:/param_records(1).data_support_path
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       18.000000
+variable:=:/param_records(1).support_path
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       23.000000
+variable:=:/param_records(1).out_path
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       9.0000000
+variable:=:/param_records(1).gis_path
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       17.000000
+variable:=:/param_records(1).gps_source
+  volume:=:      69.0000
+  matlab_class:=:char
+  matlab_size:=:       1.0000000   matlab_size:=:       18.000000

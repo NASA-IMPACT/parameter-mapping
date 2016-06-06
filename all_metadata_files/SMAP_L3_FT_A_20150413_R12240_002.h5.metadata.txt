@@ -1,0 +1,213 @@
+variable:=:/Ancillary_Data/altitude_dem
+  volume:=:18848781
+  units:=:meters
+  long_name:=:The Earth surface elevation within the 3km cell. The AM (dimension AMPM=0) and PM (AMPM=1) observations are stored separately in the array.
+  coordinates:=:/Freeze_Thaw_Retrieval_Data/latitude /Freeze_Thaw_Retrieval_Data/longitude
+  valid_min:=:
+  valid_max:=:
+  _FillValue:=:
+variable:=:/Ancillary_Data/altitude_std_dev
+  volume:=:18905049
+  units:=:meters
+  long_name:=:The standard deviation of the Earth surface elevation within the 3km cell.  This element provides a surface roughness measure. The AM (dimension AMPM=0) and PM (AMPM=1) observations are stored separately in the array.
+  coordinates:=:/Freeze_Thaw_Retrieval_Data/latitude /Freeze_Thaw_Retrieval_Data/longitude
+  valid_min:=:
+  valid_max:=:
+  _FillValue:=:
+variable:=:/Ancillary_Data/landcover_class
+  volume:=:1643878
+  coordinates:=:/Freeze_Thaw_Retrieval_Data/latitude /Freeze_Thaw_Retrieval_Data/longitude
+  long_name:=:An enumerated type that specifies the predominant surface vegetation found in the grid cell. The AM (dimension AMPM=0) and PM (AMPM=1) observations are stored separately in the array.
+  _FillValue:=:
+variable:=:/Ancillary_Data/open_water_body_fraction
+  volume:=:6380812
+  valid_min:=:
+  long_name:=:Fraction of the area of the grid cell surface covered by open water.  Open water areas do not have vegetation at or on the water surface. The AM (dimension AMPM=0) and PM (AMPM=1) observations are stored separately in the array.
+  coordinates:=:/Freeze_Thaw_Retrieval_Data/latitude /Freeze_Thaw_Retrieval_Data/longitude
+  valid_max:=:
+  _FillValue:=:
+variable:=:/Freeze_Thaw_Retrieval_Data/EASE_column_index
+  volume:=:2611337
+  valid_min:=:
+  valid_max:=:
+  long_name:=:The column index of the 3 km EASE grid cell that contains the associated data. The AM (dimension AMPM=0) and PM (AMPM=1) observations are stored separately in the array.
+  coordinates:=:/Freeze_Thaw_Retrieval_Data/latitude /Freeze_Thaw_Retrieval_Data/longitude
+  _FillValue:=:
+variable:=:/Freeze_Thaw_Retrieval_Data/EASE_row_index
+  volume:=:958303
+  valid_min:=:
+  valid_max:=:
+  long_name:=:The row index of the 3 km EASE grid cell that contains the associated data. The AM (dimension AMPM=0) and PM (AMPM=1) observations are stored separately in the array.
+  coordinates:=:/Freeze_Thaw_Retrieval_Data/latitude /Freeze_Thaw_Retrieval_Data/longitude
+  _FillValue:=:
+variable:=:/Freeze_Thaw_Retrieval_Data/data_sampling_density
+  volume:=:8966744
+  units:=:km
+  long_name:=:Average distance between data samples in a window that surrounds the grid cell.  Window size is TBD. The AM (dimension AMPM=0) and PM (AMPM=1) observations are stored separately in the array.
+  coordinates:=:/Freeze_Thaw_Retrieval_Data/latitude /Freeze_Thaw_Retrieval_Data/longitude
+  valid_min:=:
+  valid_max:=:
+  _FillValue:=:
+variable:=:/Freeze_Thaw_Retrieval_Data/freeze_reference
+  volume:=:15342957
+  units:=:dB
+  long_name:=:Reference sigma0 value used as a basis to indicate frozen conditions. The AM (dimension AMPM=0) and PM (AMPM=1) observations are stored separately in the array.
+  coordinates:=:/Freeze_Thaw_Retrieval_Data/latitude /Freeze_Thaw_Retrieval_Data/longitude
+  valid_min:=:
+  valid_max:=:
+  _FillValue:=:
+variable:=:/Freeze_Thaw_Retrieval_Data/freeze_reference_date
+  volume:=:6172640
+  long_name:=:Date of the data used to determine the reference freeze condition. The AM (dimension AMPM=0) and PM (AMPM=1) observations are stored separately in the array.
+  coordinates:=:/Freeze_Thaw_Retrieval_Data/latitude /Freeze_Thaw_Retrieval_Data/longitude
+variable:=:/Freeze_Thaw_Retrieval_Data/freeze_thaw
+  volume:=:703464
+  valid_min:=:
+  valid_max:=:
+  long_name:=:Boolean that indicates whether soil within cell is frozen or thawed.  A value of zero value implies thawed conditions, a value of 1 implies frozen. The AM (dimension AMPM=0) and PM (AMPM=1) observations are stored separately in the array.
+  coordinates:=:/Freeze_Thaw_Retrieval_Data/latitude /Freeze_Thaw_Retrieval_Data/longitude
+  _FillValue:=:
+variable:=:/Freeze_Thaw_Retrieval_Data/freeze_thaw_time_seconds
+  volume:=:33653910
+  units:=:seconds
+  long_name:=:Time of the freeze-thaw determination for this particular element in seconds from the standard epoch. The AM (dimension AMPM=0) and PM (AMPM=1) observations are stored separately in the array.
+  coordinates:=:/Freeze_Thaw_Retrieval_Data/latitude /Freeze_Thaw_Retrieval_Data/longitude
+  valid_min:=:
+  valid_max:=:
+  _FillValue:=:
+variable:=:/Freeze_Thaw_Retrieval_Data/freeze_thaw_time_utc
+  volume:=:45499313
+  long_name:=:Time of the freeze-thaw determination for this particular element in UTC. The AM (dimension AMPM=0) and PM (AMPM=1) observations are stored separately in the array.
+  coordinates:=:/Freeze_Thaw_Retrieval_Data/latitude /Freeze_Thaw_Retrieval_Data/longitude
+variable:=:/Freeze_Thaw_Retrieval_Data/freeze_thaw_uncertainty
+  volume:=:1396330
+  valid_min:=:
+  long_name:=:Uncertainty measure for the recorded freeze-thaw result.  Method to determine uncertainty is TBD. The AM (dimension AMPM=0) and PM (AMPM=1) observations are stored separately in the array.
+  coordinates:=:/Freeze_Thaw_Retrieval_Data/latitude /Freeze_Thaw_Retrieval_Data/longitude
+  valid_max:=:
+  _FillValue:=:
+variable:=:/Freeze_Thaw_Retrieval_Data/latitude
+  volume:=:24074428
+  units:=:degrees_north
+  long_name:=:Latitude of the center of the Earth based grid cell. The AM (dimension AMPM=0) and PM (AMPM=1) observations are stored separately in the array.
+variable:=:/Freeze_Thaw_Retrieval_Data/longitude
+  volume:=:25363890
+  units:=:degrees_east
+  long_name:=:Longitude of the center of the Earth based grid cell. The AM (dimension AMPM=0) and PM (AMPM=1) observations are stored separately in the array.
+variable:=:/Freeze_Thaw_Retrieval_Data/reference_image_threshold
+  volume:=:2006724
+  units:=:dB
+  long_name:=:Threshold based on reference freeze and thaw to differentiate between freeze and thaw conditions. The AM (dimension AMPM=0) and PM (AMPM=1) observations are stored separately in the array.
+  coordinates:=:/Freeze_Thaw_Retrieval_Data/latitude /Freeze_Thaw_Retrieval_Data/longitude
+  valid_min:=:
+  valid_max:=:
+  _FillValue:=:
+variable:=:/Freeze_Thaw_Retrieval_Data/retrieval_qual_flag
+  volume:=:1080900
+  _FillValue:=:
+  long_name:=:Sequence of bit flags that indicate the conditions and the quality of the freeze-thaw retrieval. The AM (dimension AMPM=0) and PM (AMPM=1) observations are stored separately in the array.
+  coordinates:=:/Freeze_Thaw_Retrieval_Data/latitude /Freeze_Thaw_Retrieval_Data/longitude
+  flag_masks:=:1s, 2s, 4s, 8s, 16s, 32s
+  flag_meanings:=:Retrieval_recommended_flag Retrieval_attempted_flag Retrieval_success_flag Radar_water_body_detection_success_flag Freeze-thaw_retrieval_success_flag Radar_vegetation_index_retrieval_success_flag
+variable:=:/Freeze_Thaw_Retrieval_Data/surface_flag
+  volume:=:1872077
+  long_name:=:Bit flags that record ambient surface conditions for the grid cell
+  coordinates:=:/Freeze_Thaw_Retrieval_Data/latitude /Freeze_Thaw_Retrieval_Data/longitude
+  _FillValue:=:
+  flag_masks:=:1s, 2s, 4s, 8s, 16s, 32s, 64s, 128s, 256s, 512s, 1024s, 2048s
+  flag_meanings:=:3_km_static_water_body_flag 3_km_radar_water_body_detection_flag 3_km_coastal_proximity_flag 3_km_urban_area_flag 3_km_precipitation_flag 3_km_snow_or_ice_flag 3_km_permanent_snow_or_ice_flag 3_km_radar_frozen_ground_flag 3_km_model_frozen_ground_flag 3_km_mountainous_terrain_flag 3_km_dense_vegetation_flag 3_km_nadir_region_flag
+variable:=:/Freeze_Thaw_Retrieval_Data/thaw_reference
+  volume:=:17351451
+  units:=:dB
+  long_name:=:Reference sigma0 value used as a basis to indicate thawed conditions. The AM (dimension AMPM=0) and PM (AMPM=1) observations are stored separately in the array.
+  coordinates:=:/Freeze_Thaw_Retrieval_Data/latitude /Freeze_Thaw_Retrieval_Data/longitude
+  valid_min:=:
+  valid_max:=:
+  _FillValue:=:
+variable:=:/Freeze_Thaw_Retrieval_Data/thaw_reference_date
+  volume:=:6079901
+  long_name:=:Date of the data used to determine the reference thawed conditon. The AM (dimension AMPM=0) and PM (AMPM=1) observations are stored separately in the array.
+  coordinates:=:/Freeze_Thaw_Retrieval_Data/latitude /Freeze_Thaw_Retrieval_Data/longitude
+variable:=:/Freeze_Thaw_Retrieval_Data/transition_direction
+  volume:=:300000
+  valid_min:=:
+  valid_max:=:
+  long_name:=:Boolean that indicates transitional direction.  0 indicates AM frozen, PM thawed, 1 indicates AM thawed, PM frozen. Value is always zero if not in transition state.
+  coordinates:=:/Freeze_Thaw_Retrieval_Data/latitude /Freeze_Thaw_Retrieval_Data/longitude
+  _FillValue:=:
+variable:=:/Freeze_Thaw_Retrieval_Data/transition_state_flag
+  volume:=:300000
+  valid_min:=:
+  valid_max:=:
+  long_name:=:Boolean that indicates whether soil is in transitional state from AM to PM on the same day.  0 indicates state is not in transition, 1 indicates state is in transition.
+  coordinates:=:/Freeze_Thaw_Retrieval_Data/latitude /Freeze_Thaw_Retrieval_Data/longitude
+  _FillValue:=:
+variable:=:/Radar_Data/kp_hh
+  volume:=:27146362
+  units:=:dB
+  long_name:=:Overall error measure for HH-pol Sigma0 within the grid cell, includes calibration, RFI and contamination effects. The AM (dimension AMPM=0) and PM (AMPM=1) observations are stored separately in the array.
+  coordinates:=:/Freeze_Thaw_Retrieval_Data/latitude /Freeze_Thaw_Retrieval_Data/longitude
+  valid_min:=:
+  valid_max:=:
+  _FillValue:=:
+variable:=:/Radar_Data/kp_vv
+  volume:=:27224923
+  units:=:dB
+  long_name:=:Overall error measure for VV-pol Sigma0 within the grid cell, includes calibration, RFI and contamination effects. The AM (dimension AMPM=0) and PM (AMPM=1) observations are stored separately in the array.
+  coordinates:=:/Freeze_Thaw_Retrieval_Data/latitude /Freeze_Thaw_Retrieval_Data/longitude
+  valid_min:=:
+  valid_max:=:
+  _FillValue:=:
+variable:=:/Radar_Data/kp_xpol
+  volume:=:27098029
+  units:=:dB
+  long_name:=:Overall error measure for cross-pol Sigma0 within the grid cell, includes calibration, RFI and contamination effects. The AM (dimension AMPM=0) and PM (AMPM=1) observations are stored separately in the array.
+  coordinates:=:/Freeze_Thaw_Retrieval_Data/latitude /Freeze_Thaw_Retrieval_Data/longitude
+  valid_min:=:
+  valid_max:=:
+  _FillValue:=:
+variable:=:/Radar_Data/sigma0_hh_mean
+  volume:=:27714394
+  units:=:dB
+  long_name:=:Mean of 1 km instrument resolution HH-pol backscatter in the 3 km Earth grid cell. The AM (dimension AMPM=0) and PM (AMPM=1) observations are stored separately in the array.
+  coordinates:=:/Freeze_Thaw_Retrieval_Data/latitude /Freeze_Thaw_Retrieval_Data/longitude
+  valid_min:=:
+  valid_max:=:
+  _FillValue:=:
+variable:=:/Radar_Data/sigma0_qual_flag_hh
+  volume:=:6876334
+  _FillValue:=:
+  long_name:=:Representative quality flags of horizontal polarization sigma0 measures in the grid cell. The AM (dimension AMPM=0) and PM (AMPM=1) observations are stored separately in the array.
+  coordinates:=:/Freeze_Thaw_Retrieval_Data/latitude /Freeze_Thaw_Retrieval_Data/longitude
+  flag_masks:=:1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072
+  flag_meanings:=:Mean_horizontal_polarization_quality_flag Forward_looking_horizontal_polarization_quality_flag Aft_looking_horizontal_polarization_quality_flag Mean_horizontal_polarization_range_flag Forward_looking_horizontal_polarization_range_flag Aft_looking_horizontal_polarization_range_flag Mean_horizontal_polarization_RFI_clean_flag Mean_horizontal_polarization_RFI_repair_flag Forward_looking_horizontal_polarization_RFI_clean_flag Forward_looking_horizontal_polarization_RFI_repair_flag Aft_looking_horizontal_polarization_RFI_clean_flag Aft_looking_horizontal_polarization_RFI_repair_flag Mean_horizontal_polarization_Faraday_Rotation_Flag Forward_looking_horizontal_polarization_Faraday_Rotation_Flag Aft_looking_horizontal_polarization_Faraday_Rotation_Flag Mean_horizontal_polarization_Kp_flag Forward_looking_horizontal_polarization_Kp_flag Aft_looking_horizontal_polarization_Kp_flag
+variable:=:/Radar_Data/sigma0_qual_flag_vv
+  volume:=:6774414
+  _FillValue:=:
+  long_name:=:Representative quality flags of vertical polarization sigma0 measures in the grid cell. The AM (dimension AMPM=0) and PM (AMPM=1) observations are stored separately in the array.
+  coordinates:=:/Freeze_Thaw_Retrieval_Data/latitude /Freeze_Thaw_Retrieval_Data/longitude
+  flag_masks:=:1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072
+  flag_meanings:=:Mean_vertical_polarization_quality_flag Forward_looking_vertical_polarization_quality_flag Aft_looking_vertical_polarization_quality_flag Mean_vertical_polarization_range_flag Forward_looking_vertical_polarization_range_flag Aft_looking_vertical_polarization_range_flag Mean_vertical_polarization_RFI_clean_flag Mean_vertical_polarization_RFI_repair_flag Forward_looking_vertical_polarization_RFI_clean_flag Forward_looking_vertical_polarization_RFI_repair_flag Aft_looking_vertical_polarization_RFI_clean_flag Aft_looking_vertical_polarization_RFI_repair_flag Mean_vertical_polarization_Faraday_Rotation_Flag Forward_looking_vertical_polarization_Faraday_Rotation_Flag Aft_looking_vertical_polarization_Faraday_Rotation_Flag Mean_vertical_polarization_Kp_flag Forward_looking_vertical_polarization_Kp_flag Aft_looking_vertical_polarization_Kp_flag
+variable:=:/Radar_Data/sigma0_qual_flag_xpol
+  volume:=:7039360
+  _FillValue:=:
+  long_name:=:Representative quality flags of cross polarized sigma0 measures in the grid cell. The AM (dimension AMPM=0) and PM (AMPM=1) observations are stored separately in the array.
+  coordinates:=:/Freeze_Thaw_Retrieval_Data/latitude /Freeze_Thaw_Retrieval_Data/longitude
+  flag_masks:=:1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072
+  flag_meanings:=:Mean_cross_polarized_quality_flag Forward_looking_cross_polarized_quality_flag Aft_looking_cross_polarized_quality_flag Mean_cross_polarized_range_flag Forward_looking_cross_polarized_range_flag Aft_looking_cross_polarized_range_flag Mean_cross_polarized_RFI_clean_flag Mean_cross_polarized_RFI_repair_flag Forward_looking_cross_polarized_RFI_clean_flag Forward_looking_cross_polarized_RFI_repair_flag Aft_looking_cross_polarized_RFI_clean_flag Aft_looking_cross_polarized_RFI_repair_flag Mean_cross_polarized_Faraday_Rotation_Flag Forward_looking_cross_polarized_Faraday_Rotation_Flag Aft_looking_cross_polarized_Faraday_Rotation_Flag Mean_cross_polarized_Kp_flag Forward_looking_cross_polarized_Kp_flag Aft_looking_cross_polarized_Kp_flag
+variable:=:/Radar_Data/sigma0_vv_mean
+  volume:=:27763056
+  units:=:dB
+  long_name:=:Mean of 1 km instrument resolution VV-pol backscatter in the 3 km Earth grid cell. The AM (dimension AMPM=0) and PM (AMPM=1) observations are stored separately in the array.
+  coordinates:=:/Freeze_Thaw_Retrieval_Data/latitude /Freeze_Thaw_Retrieval_Data/longitude
+  valid_min:=:
+  valid_max:=:
+  _FillValue:=:
+variable:=:/Radar_Data/sigma0_xpol_mean
+  volume:=:27739268
+  units:=:dB
+  long_name:=:Mean of 1 km instrument resolution cross-polarization backscatter in the 3 km Earth grid cell. The AM (dimension AMPM=0) and PM (AMPM=1) observations are stored separately in the array.
+  coordinates:=:/Freeze_Thaw_Retrieval_Data/latitude /Freeze_Thaw_Retrieval_Data/longitude
+  valid_min:=:
+  valid_max:=:
+  _FillValue:=:

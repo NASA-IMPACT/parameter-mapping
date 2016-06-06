@@ -1,0 +1,757 @@
+variable:=:/Latitude
+  volume:=:       109620.
+  long_name:=:Geodetic Latitude at 5km Resolution
+  units:=:degrees_north
+  valid_range:=:   -9000    9000
+  _FillValue:=:  -32768
+  scale_factor:=:     0.010000000
+  add_offset:=:       0
+  Parameter_Type:=:MODIS Input
+  Cell_Along_Swath_Sampling:=:           3        2028           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:Internal geolocation arrays
+  source_info:=:
+MOD06_L2.A2000061.0000.051.2010273191331.hdf
+pge06v06
+	Latitude
+variable:=:/Longitude
+  volume:=:       109620.
+  long_name:=:Geodetic Longitude at 5km Resolution
+  units:=:degrees_east
+  valid_range:=:  -18000   18000
+  _FillValue:=:  -32768
+  scale_factor:=:     0.010000000
+  add_offset:=:       0
+  Parameter_Type:=:MODIS Input
+  Cell_Along_Swath_Sampling:=:           3        2028           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:Internal geolocation arrays
+  source_info:=:
+
+MOD06_L2.A2000061.0000.051.2010273191331.hdf
+pge06v06
+	Longitude
+variable:=:/Cloud_Optical_Thickness
+  volume:=:       109620.
+  long_name:=:
+Cloud Optical Thickness two-channel retrieval using band 7 and either band 1, 2, or 5
+  units:=:none
+  valid_range:=:       0   10000
+  _FillValue:=:   -9999
+  scale_factor:=:     0.010000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2029           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MOD06_L2.A2000061.0000.051.2010273191331.hdf
+pge06v06
+	Cloud_Optical_Thickness
+variable:=:/Cloud_Effective_Radius
+  volume:=:       109620.
+  long_name:=:
+Cloud Particle Effective Radius two-channel retrieval using band 7 and either band 1, 2, or 5
+  units:=:micron
+  valid_range:=:       0   10000
+  _FillValue:=:   -9999
+  scale_factor:=:     0.010000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2029           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MOD06_L2.A2000061.0000.051.2010273191331.hdf
+pge06v06
+	Cloud_Effective_Radius
+variable:=:/Cloud_Water_Path
+  volume:=:       109620.
+  long_name:=:
+Column Water Path two-band retrieval using band 7 and either band 1, 2, or 5
+  units:=:g/m^2
+  valid_range:=:       0   10000
+  _FillValue:=:   -9999
+  scale_factor:=:       1.0000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2029           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MOD06_L2.A2000061.0000.051.2010273191331.hdf
+pge06v06
+	Cloud_Water_Path
+variable:=:/Cloud_Effective_Radius_Difference
+  volume:=:       219240.
+  long_name:=:
+Cloud Particle Effective Radius two-channel retrieval using band 6 and band 20 differenced from band 7 retrieval and either band 1, 2, or 5. Plane 1 of SDS is band 6 - band 7 retrieval, Plane 2 is band 20 - band 7 retrieval.
+  units:=:micron
+  valid_range:=:  -10000   10000
+  _FillValue:=:   -9999
+  scale_factor:=:     0.010000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2029           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MOD06_L2.A2000061.0000.051.2010273191331.hdf
+pge06v06
+	Effective_Radius_Difference
+variable:=:/Cloud_Optical_Thickness_1621
+  volume:=:       109620.
+  long_name:=:
+Cloud Optical Thickness two-channel retrieval using band 7 and band 6
+  units:=:none
+  valid_range:=:       0   10000
+  _FillValue:=:   -9999
+  scale_factor:=:     0.010000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2029           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MOD06_L2.A2000061.0000.051.2010273191331.hdf
+pge06v06
+	Cloud_Optical_Thickness_1621
+variable:=:/Cloud_Effective_Radius_1621
+  volume:=:       109620.
+  long_name:=:
+Cloud Particle Effective Radius two-channel retrieval using band 7 and band 6
+  units:=:micron
+  valid_range:=:       0   10000
+  _FillValue:=:   -9999
+  scale_factor:=:     0.010000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2029           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MOD06_L2.A2000061.0000.051.2010273191331.hdf
+pge06v06
+	Cloud_Effective_Radius_1621
+variable:=:/Cloud_Water_Path_1621
+  volume:=:       109620.
+  long_name:=:Column Water Path two-band retrieval using band 7 and band 6
+  units:=:g/m^2
+  valid_range:=:       0   10000
+  _FillValue:=:   -9999
+  scale_factor:=:       1.0000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2029           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MOD06_L2.A2000061.0000.051.2010273191331.hdf
+pge06v06
+	Cloud_Water_Path_1621
+variable:=:/Cloud_Optical_Thickness_Uncertainty
+  volume:=:       109620.
+  long_name:=:Cloud Optical Thickness Relative Uncertainty (Percent)
+  units:=:percent
+  valid_range:=:       0   20000
+  _FillValue:=:   -9999
+  scale_factor:=:     0.010000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2029           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MOD06_L2.A2000061.0000.051.2010273191331.hdf
+pge06v06
+	Cloud_Optical_Thickness_Uncertainty
+variable:=:/Cloud_Effective_Radius_Uncertainty
+  volume:=:       109620.
+  long_name:=:Cloud Effective Particle Radius Relative Uncertainty (Percent)
+  units:=:percent
+  valid_range:=:       0   20000
+  _FillValue:=:   -9999
+  scale_factor:=:     0.010000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2029           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MOD06_L2.A2000061.0000.051.2010273191331.hdf
+pge06v06
+	Cloud_Effective_Radius_Uncertainty
+variable:=:/Cloud_Water_Path_Uncertainty
+  volume:=:       109620.
+  long_name:=:Cloud Water Path Relative Uncertainty (Percent)
+  units:=:percent
+  valid_range:=:       0   20000
+  _FillValue:=:   -9999
+  scale_factor:=:     0.010000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2029           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MOD06_L2.A2000061.0000.051.2010273191331.hdf
+pge06v06
+	Cloud_Water_Path_Uncertainty
+variable:=:/Cloud_Optical_Thickness_Uncertainty_1621
+  volume:=:       109620.
+  long_name:=:
+Cloud Optical Thickness Relative Uncertainty (Percent) using band 7 and band 6
+  units:=:percent
+  valid_range:=:       0   20000
+  _FillValue:=:   -9999
+  scale_factor:=:     0.010000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2029           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MOD06_L2.A2000061.0000.051.2010273191331.hdf
+pge06v06
+	Cloud_Optical_Thickness_Uncertainty_1621
+variable:=:/Cloud_Effective_Radius_Uncertainty_1621
+  volume:=:       109620.
+  long_name:=:
+Cloud Effective Particle Radius Relative Uncertainty (Percent) using band 7 and band 6
+  units:=:percent
+  valid_range:=:       0   20000
+  _FillValue:=:   -9999
+  scale_factor:=:     0.010000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2029           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MOD06_L2.A2000061.0000.051.2010273191331.hdf
+pge06v06
+	Cloud_Effective_Radius_Uncertainty_1621
+variable:=:/Cloud_Water_Path_Uncertainty_1621
+  volume:=:       109620.
+  long_name:=:
+Cloud Water Path Relative Uncertainty (Percent) using band 7 and band 6
+  units:=:percent
+  valid_range:=:       0   20000
+  _FillValue:=:   -9999
+  scale_factor:=:     0.010000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2029           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MOD06_L2.A2000061.0000.051.2010273191331.hdf
+pge06v06
+	Cloud_Water_Path_Uncertainty_1621
+variable:=:/Cloud_Phase_Optical_Properties
+  volume:=:       109620.
+  long_name:=:
+Cloud Phase Determination Used in Optical Thickness/Effective Radius Retrieval
+  units:=:none
+  valid_range:=:       0       4
+  _FillValue:=:       0
+  scale_factor:=:       1.0000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2029           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MOD06_L2.A2000061.0000.051.2010273191331.hdf
+pge06v06
+	Cloud_Phase_Optical_Properties
+variable:=:/Cloud_Phase_Infrared
+  volume:=:       109620.
+  long_name:=:Cloud Phase Infrared
+  units:=:none
+  valid_range:=:   0   6
+  _FillValue:=: 127
+  scale_factor:=:       1.0000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           3        2028           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:Internal geolocation arrays
+  source_info:=:
+
+MOD06_L2.A2000061.0000.051.2010273191331.hdf
+pge06v06
+	Cloud_Phase_Infrared
+variable:=:/Cloud_Quality_Assurance
+  volume:=:       548100.
+  long_name:=:Cloud Quality Assurance at 5km Resolution
+  units:=:none
+  valid_range:=:   0 255
+  _FillValue:=:   0
+  scale_factor:=:       1.0000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2029           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  description:=:
+See MODIS atmosphere QA plan (1 x 1 km Product quality and retrieval processing QA flags) for details 
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MOD06_L2.A2000061.0000.051.2010273191331.hdf
+pge06v06
+	Quality_Assurance_1km
+variable:=:/Cirrus_Reflectance
+  volume:=:       109620.
+  long_name:=:Cirrus Reflectance
+  units:=:none
+  valid_range:=:       0    8000
+  _FillValue:=:   -9999
+  scale_factor:=:   0.00020000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2029           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MOD06_L2.A2000061.0000.051.2010273191331.hdf
+pge06v06
+	Cirrus_Reflectance
+variable:=:/Cloud_Top_Pressure
+  volume:=:       109620.
+  long_name:=:Cloud Top Pressure
+  units:=:hPa
+  valid_range:=:      10   11000
+  _FillValue:=:  -32768
+  scale_factor:=:      0.10000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           3        2028           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:Internal geolocation arrays
+  source_info:=:
+
+MOD06_L2.A2000061.0000.051.2010273191331.hdf
+pge06v06
+	Cloud_Top_Pressure
+variable:=:/Cloud_Top_Temperature
+  volume:=:       109620.
+  long_name:=:Cloud Top Temperature
+  units:=:K
+  valid_range:=:       0   20000
+  _FillValue:=:  -32768
+  scale_factor:=:     0.010000000
+  add_offset:=:      -15000.000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           3        2028           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:Internal geolocation arrays
+  source_info:=:
+
+MOD06_L2.A2000061.0000.051.2010273191331.hdf
+pge06v06
+	Cloud_Top_Temperature
+variable:=:/Cloud_Fraction
+  volume:=:       109620.
+  long_name:=:Cloud Fraction
+  units:=:none
+  valid_range:=:   0 100
+  _FillValue:=: 127
+  scale_factor:=:     0.010000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           3        2028           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:Internal geolocation arrays
+  source_info:=:
+
+MOD06_L2.A2000061.0000.051.2010273191331.hdf
+pge06v06
+	Cloud_Fraction
+variable:=:/Precipitable_Water_Near_Infrared_Clear
+  volume:=:       109620.
+  long_name:=:
+Total Column Precipitable Water Vapor - Near Infrared Clear Retrieval
+  valid_range:=:       0   20000
+  _FillValue:=:   -9999
+  scale_factor:=:    0.0010000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2029           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:Internal geolocation arrays
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MOD05_L2.A2000061.0000.051.2010273182358.hdf
+pge04v04
+	Water_Vapor_Near_Infrared
+	Quality_Assurance_Near_Infrared
+pixels w/o 0|3 in two most significant bits of QA_Near_IR byte 0 get _FillValue
+variable:=:/Precipitable_Water_Infrared_Clear
+  volume:=:       109620.
+  long_name:=:Total Column Precipitable Water Vapor - IR Clear Retrieval
+  units:=:cm
+  valid_range:=:       0   20000
+  _FillValue:=:   -9999
+  scale_factor:=:    0.0010000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           3        2028           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:Internal geolocation arrays
+  source_info:=:
+
+MOD07_L2.A2000061.0000.005.2010030014151.hdf
+pge03v5.3.1
+	Water_Vapor
+variable:=:/Cloud_Mask
+  volume:=:       109620.
+  long_name:=:MODIS Cloud Mask
+  units:=:none
+  valid_range:=:   0 255
+  _FillValue:=:   0
+  scale_factor:=:       1.0000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2029           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  description:=:
+
+                                                                                   
+                                                                                    
+ Bit fields within each byte are numbered from the left:                            
+ 7, 6, 5, 4, 3, 2, 1, 0.                                                            
+ The left-most bit (bit 7) is the most significant bit.                             
+ The right-most bit (bit 0) is the least significant bit.                           
+                                                                                    
+ bit field       Description                             Key                        
+ ---------       -----------                             ---                        
+                                                                                    
+ 0               Cloud Mask Flag                      0 = Not  determined           
+                                                      1 = Determined                
+                                                                                    
+ 2, 1            Unobstructed FOV Quality Flag        00 = Cloudy                   
+                                                      01 = Uncertain                
+                                                      10 = Probably  Clear          
+                                                      11 = Confident  Clear         
+                 PROCESSING PATH                                                    
+                 ---------------                                                    
+ 3               Day or Night Path                    0 = Night  / 1 = Day          
+ 4               Sunglint Path                        0 = Yes    / 1 = No           
+ 5               Snow/Ice Background Path             0 = Yes    / 1 = No           
+ 7, 6            Land or Water Path                   00 = Water                    
+                                                      01 = Coastal                  
+                                                      10 = Desert                   
+                                                      11 = Land                     
+  
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MOD35_L2.A2000061.0000.005.2010030014047.hdf
+pge03v5.3.1
+	Cloud_Mask
+variable:=:/Latitude_10km
+  volume:=:       27405.0
+  long_name:=:Geodetic Latitude at 10km Resolution
+  units:=:Degrees_north
+  valid_range:=:   -9000    9000
+  _FillValue:=:  -32768
+  scale_factor:=:     0.010000000
+  add_offset:=:       0
+  Parameter_Type:=:MODIS Input
+  Cell_Along_Swath_Sampling:=:           5        2025          10
+  Cell_Across_Swath_Sampling:=:           5        1345          10
+  Geolocation_Pointer:=:Geolocation data not applicable
+  source_info:=:
+MOD04_L2.A2000061.0000.051.2010273183136.hdf
+pge04v04
+	Latitude
+variable:=:/Longitude_10km
+  volume:=:       27405.0
+  long_name:=:Geodetic Longitude at 10km Resolution
+  units:=:Degrees_east
+  valid_range:=:  -18000   18000
+  _FillValue:=:  -32768
+  scale_factor:=:     0.010000000
+  add_offset:=:       0
+  Parameter_Type:=:MODIS Input
+  Cell_Along_Swath_Sampling:=:           5        2025          10
+  Cell_Across_Swath_Sampling:=:           5        1345          10
+  Geolocation_Pointer:=:Geolocation data not applicable
+  source_info:=:
+
+MOD04_L2.A2000061.0000.051.2010273183136.hdf
+pge04v04
+	Longitude
+variable:=:/Solar_Zenith_10km
+  volume:=:       27405.0
+  long_name:=:Solar Zenith Angle, Cell to Sun at 10km Resolution
+  units:=:Degrees
+  valid_range:=:       0   18000
+  _FillValue:=:   -9999
+  scale_factor:=:     0.010000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:MODIS Input
+  Cell_Along_Swath_Sampling:=:           5        2025          10
+  Cell_Across_Swath_Sampling:=:           5        1345          10
+  Geolocation_Pointer:=:Internal geolocation arrays
+  source_info:=:
+
+MOD04_L2.A2000061.0000.051.2010273183136.hdf
+pge04v04
+	Solar_Zenith
+variable:=:/Viewing_Zenith_10km
+  volume:=:       27405.0
+  long_name:=:Viewing_Zenith Angle, Cell to Viewing at 10km Resolution
+  units:=:Degrees
+  valid_range:=:       0   18000
+  _FillValue:=:   -9999
+  scale_factor:=:     0.010000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:MODIS Input
+  Cell_Along_Swath_Sampling:=:           5        2025          10
+  Cell_Across_Swath_Sampling:=:           5        1345          10
+  Geolocation_Pointer:=:Internal geolocation arrays
+  source_info:=:
+
+MOD04_L2.A2000061.0000.051.2010273183136.hdf
+pge04v04
+	Sensor_Zenith
+variable:=:/Relative_Azimuth_10km
+  volume:=:       27405.0
+  long_name:=:
+Relative Azimuth ( RA = abs(180-abs(snsr_az-slr_az)) ) at 10km Resolution
+  units:=:Degrees
+  valid_range:=:  -18000   18000
+  _FillValue:=:   -9999
+  scale_factor:=:     0.010000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output 
+  Cell_Along_Swath_Sampling:=:           5        2025          10
+  Cell_Across_Swath_Sampling:=:           5        1345          10
+  Geolocation_Pointer:=:Internal geolocation arrays
+  source_info:=:
+
+MOD04_L2.A2000061.0000.051.2010273183136.hdf
+pge04v04
+	Sensor_Azimuth
+	Solar_Azimuth
+for each pixel: RA = abs(180-abs(snsr_az-slr_az))
+variable:=:/Aerosol_Optical_Depth
+  volume:=:       27405.0
+  long_name:=:
+AOT at 0.55 micron for both ocean (best) and land (corrected) with best quality data (Quality flag=3)
+  units:=:None
+  valid_range:=:    -100    5000
+  _FillValue:=:   -9999
+  scale_factor:=:    0.0010000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           5        2025          10
+  Cell_Across_Swath_Sampling:=:           5        1345          10
+  Geolocation_Pointer:=:Internal geolocation arrays
+  source_info:=:
+
+MOD04_L2.A2000061.0000.051.2010273183136.hdf
+pge04v04
+	Optical_Depth_Land_And_Ocean
+variable:=:/Aerosol_Optical_Depth_Ratio_Small
+  volume:=:       27405.0
+  long_name:=:Ratio of small mode optical depth at 0.55 micron
+  units:=:None
+  valid_range:=:       0    1000
+  _FillValue:=:   -9999
+  scale_factor:=:    0.0010000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           5        2025          10
+  Cell_Across_Swath_Sampling:=:           5        1345          10
+  Geolocation_Pointer:=:Internal geolocation arrays
+  source_info:=:
+
+MOD04_L2.A2000061.0000.051.2010273183136.hdf
+pge04v04
+	Optical_Depth_Ratio_Small_Land_And_Ocean
+variable:=:/Aerosol_Solution_Index_Ocean_Small_Average
+  volume:=:       27405.0
+  long_name:=:Solution Number index (1 through 4) small particles
+  units:=:None
+  valid_range:=:   1   4
+  _FillValue:=: 157
+  scale_factor:=:       1.0000000
+  add_offset:=:   0
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           5        2025          10
+  Cell_Across_Swath_Sampling:=:           5        1345          10
+  Geolocation_Pointer:=:Internal geolocation arrays
+  source_info:=:
+
+MOD04_L2.A2000061.0000.051.2010273183136.hdf
+pge04v04
+	Solution_Index_Ocean_Small
+variable:=:/Aerosol_Solution_Index_Ocean_Large_Average
+  volume:=:       27405.0
+  long_name:=:Solution Number index (5 through 9) large particles
+  units:=:None
+  valid_range:=:   5   9
+  _FillValue:=: 157
+  scale_factor:=:       1.0000000
+  add_offset:=:   0
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           5        2025          10
+  Cell_Across_Swath_Sampling:=:           5        1345          10
+  Geolocation_Pointer:=:Internal geolocation arrays
+  source_info:=:
+
+MOD04_L2.A2000061.0000.051.2010273183136.hdf
+pge04v04
+	Solution_Index_Ocean_Large
+variable:=:/Deep_Blue_Aerosol_Optical_Depth_550_Land
+  volume:=:       27405.0
+  long_name:=:
+AOT at 0.55 micron for land with all quality data (Quality flag=1,2,3)
+  units:=:None
+  valid_range:=:       0    5000
+  _FillValue:=:   -9999
+  scale_factor:=:    0.0010000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           5        2025          10
+  Cell_Across_Swath_Sampling:=:           5        1345          10
+  Geolocation_Pointer:=:Internal geolocation arrays
+  source_info:=:
+
+MOD04_L2.A2000061.0000.051.2010273183136.hdf
+pge04v04
+	Deep_Blue_Aerosol_Optical_Depth_550_Land
+variable:=:/Deep_Blue_Angstrom_Exponent_Land
+  volume:=:       27405.0
+  long_name:=:
+Deep Blue Angstrom Exponent for land (0.412-0.47 micron) with all quality data (Quality flag=1,2,3)
+  units:=:None
+  valid_range:=:    -500    5000
+  _FillValue:=:   -9999
+  scale_factor:=:    0.0010000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           5        2025          10
+  Cell_Across_Swath_Sampling:=:           5        1345          10
+  Geolocation_Pointer:=:Internal geolocation arrays
+  source_info:=:
+
+MOD04_L2.A2000061.0000.051.2010273183136.hdf
+pge04v04
+	Deep_Blue_Angstrom_Exponent_Land
+variable:=:/Deep_Blue_Single_Scattering_Albedo_412_Land
+  volume:=:       27405.0
+  long_name:=:
+Deep Blue Single Scattering Albedo at 0.412 micron for land with all quality data (Quality flag=1,2,3)
+  units:=:None
+  valid_range:=:     700    1000
+  _FillValue:=:   -9999
+  scale_factor:=:    0.0010000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           5        2025          10
+  Cell_Across_Swath_Sampling:=:           5        1345          10
+  Geolocation_Pointer:=:Internal geolocation arrays
+  source_info:=:
+
+MOD04_L2.A2000061.0000.051.2010273183136.hdf
+pge04v04
+	Deep_Blue_Single_Scattering_Albedo_Land
+variable:=:/Deep_Blue_Aerosol_Quality_Assurance
+  volume:=:       27405.0
+  long_name:=:Runtime QA flags
+  units:=:None
+  valid_range:=:   0 255
+  _FillValue:=:   0
+  scale_factor:=:       1.0000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           5        2025          10
+  Cell_Across_Swath_Sampling:=:           5        1345          10
+  Geolocation_Pointer:=:Internal geolocation arrays
+  description:=:
+see MODIS atmosphere QA plan for details                                            
+
+  source_info:=:
+
+MOD04_L2.A2000061.0000.051.2010273183136.hdf
+pge04v04
+	Quality_Assurance_Land
+variable:=:/Aerosol_Quality_Assurance
+  volume:=:       27405.0
+  long_name:=:Runtime QA flags
+  units:=:None
+  valid_range:=:   0 255
+  _FillValue:=:   0
+  scale_factor:=:       1.0000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           5        2025          10
+  Cell_Across_Swath_Sampling:=:           5        1345          10
+  Geolocation_Pointer:=:Internal geolocation arrays
+  description:=:
+see MODIS atmosphere QA plan for details                                            
+
+  source_info:=:
+
+MOD04_L2.A2000061.0000.051.2010273183136.hdf
+pge04v04
+	Quality_Assurance_Land
+	Quality_Assurance_Ocean
+pixel = Quality_Assurance_Land byte 0 bits 1, 2, 5, 6 followed by
+Quality_Assurance_Ocean byte 0 bits 5, 6
+bits 6, 7 unused

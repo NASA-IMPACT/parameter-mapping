@@ -1,0 +1,548 @@
+variable:=:/AscDescIndx
+  volume:=:59799
+  Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/BandChans
+  volume:=:136
+  Dimensions:=:BandNo
+variable:=:/BandChi2
+  volume:=:846
+  Dimensions:=:BandNo   Dimensions:=:ChanNo
+variable:=:/BaselineAlt
+  volume:=:107
+  Dimensions:=:FBchan   Dimensions:=:BandNo
+variable:=:/BaselineLatBin
+  volume:=:64
+  Dimensions:=:Min/Max lat   Dimensions:=:LatBin
+variable:=:/HDFEOS INFORMATION/coremetadata.0
+  volume:=:65535
+variable:=:/HDFEOS INFORMATION/xmlmetadata
+  volume:=:65535
+variable:=:/LCF
+  volume:=:1816
+variable:=:/LatBinChanAvg
+  volume:=:11091
+  Dimensions:=:FBChan   Dimensions:=:BandNo   Dimensions:=:LatBin
+variable:=:/LatBinIndx
+  volume:=:60115
+  Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/MAFStartTimeGIRD
+  volume:=:56210
+  Dimensions:=:MAF
+variable:=:/PCF
+  volume:=:8255
+variable:=:/Pri_Reflec
+  volume:=:42144
+  Dimensions:=:MAF
+variable:=:/R1A:118.B1F:PT.S0.FB25-1
+  volume:=:37745921
+  Dimensions:=:chanFB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R1A:118.B1F:PT.S0.FB25-1 Baseline
+  volume:=:389832
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R1A:118.B1F:PT.S0.FB25-1 Baseline precision
+  volume:=:227111
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R1A:118.B1F:PT.S0.FB25-1 BaselineAC
+  volume:=:389832
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R1A:118.B1F:PT.S0.FB25-1 BaselineAC precision
+  volume:=:235304
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R1A:118.B1F:PT.S0.FB25-1 BaselineDC
+  volume:=:52680
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R1A:118.B1F:PT.S0.FB25-1 BaselineDC precision
+  volume:=:52680
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R1A:118.B1F:PT.S0.FB25-1 precision
+  volume:=:36580170
+  Dimensions:=:chanFB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R1A:118.B32W:PT.S0.WF4-1
+  volume:=:6390331
+  Dimensions:=:chanWF   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R1A:118.B32W:PT.S0.WF4-1 Baseline
+  volume:=:87284
+  Dimensions:=:chanWF   Dimensions:=:MAF
+variable:=:/R1A:118.B32W:PT.S0.WF4-1 Baseline precision
+  volume:=:85037
+  Dimensions:=:chanWF   Dimensions:=:MAF
+variable:=:/R1A:118.B32W:PT.S0.WF4-1 BaselineAC
+  volume:=:38632
+  Dimensions:=:chanWF   Dimensions:=:MAF
+variable:=:/R1A:118.B32W:PT.S0.WF4-1 BaselineAC precision
+  volume:=:80776
+  Dimensions:=:chanWF   Dimensions:=:MAF
+variable:=:/R1A:118.B32W:PT.S0.WF4-1 BaselineDC
+  volume:=:85263
+  Dimensions:=:chanWF   Dimensions:=:MAF
+variable:=:/R1A:118.B32W:PT.S0.WF4-1 BaselineDC precision
+  volume:=:85059
+  Dimensions:=:chanWF   Dimensions:=:MAF
+variable:=:/R1A:118.B32W:PT.S0.WF4-1 precision
+  volume:=:5935945
+  Dimensions:=:chanWF   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R1B:118.B34W:PT.S0.WF4-3
+  volume:=:164949
+  Dimensions:=:chanWF   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R1B:118.B34W:PT.S0.WF4-3 Baseline
+  volume:=:38632
+  Dimensions:=:chanWF   Dimensions:=:MAF
+variable:=:/R1B:118.B34W:PT.S0.WF4-3 Baseline precision
+  volume:=:87800
+  Dimensions:=:chanWF   Dimensions:=:MAF
+variable:=:/R1B:118.B34W:PT.S0.WF4-3 BaselineAC
+  volume:=:38632
+  Dimensions:=:chanWF   Dimensions:=:MAF
+variable:=:/R1B:118.B34W:PT.S0.WF4-3 BaselineAC precision
+  volume:=:87800
+  Dimensions:=:chanWF   Dimensions:=:MAF
+variable:=:/R1B:118.B34W:PT.S0.WF4-3 BaselineDC
+  volume:=:38632
+  Dimensions:=:chanWF   Dimensions:=:MAF
+variable:=:/R1B:118.B34W:PT.S0.WF4-3 BaselineDC precision
+  volume:=:38632
+  Dimensions:=:chanWF   Dimensions:=:MAF
+variable:=:/R1B:118.B34W:PT.S0.WF4-3 precision
+  volume:=:115896
+  Dimensions:=:chanWF   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R2:190.B27M:HCN.S0.MB11-1
+  volume:=:17617905
+  Dimensions:=:chanMB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R2:190.B27M:HCN.S0.MB11-1 Baseline
+  volume:=:192897
+  Dimensions:=:chanMB   Dimensions:=:MAF
+variable:=:/R2:190.B27M:HCN.S0.MB11-1 Baseline precision
+  volume:=:147580
+  Dimensions:=:chanMB   Dimensions:=:MAF
+variable:=:/R2:190.B27M:HCN.S0.MB11-1 BaselineAC
+  volume:=:182624
+  Dimensions:=:chanMB   Dimensions:=:MAF
+variable:=:/R2:190.B27M:HCN.S0.MB11-1 BaselineAC precision
+  volume:=:147504
+  Dimensions:=:chanMB   Dimensions:=:MAF
+variable:=:/R2:190.B27M:HCN.S0.MB11-1 BaselineDC
+  volume:=:52680
+  Dimensions:=:chanMB   Dimensions:=:MAF
+variable:=:/R2:190.B27M:HCN.S0.MB11-1 BaselineDC precision
+  volume:=:52676
+  Dimensions:=:chanMB   Dimensions:=:MAF
+variable:=:/R2:190.B27M:HCN.S0.MB11-1 precision
+  volume:=:16611970
+  Dimensions:=:chanMB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R2:190.B2F:H2O.S0.FB25-2
+  volume:=:39395393
+  Dimensions:=:chanFB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R2:190.B2F:H2O.S0.FB25-2 Baseline
+  volume:=:389832
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R2:190.B2F:H2O.S0.FB25-2 Baseline precision
+  volume:=:228007
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R2:190.B2F:H2O.S0.FB25-2 BaselineAC
+  volume:=:389832
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R2:190.B2F:H2O.S0.FB25-2 BaselineAC precision
+  volume:=:231792
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R2:190.B2F:H2O.S0.FB25-2 BaselineDC
+  volume:=:52680
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R2:190.B2F:H2O.S0.FB25-2 BaselineDC precision
+  volume:=:52680
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R2:190.B2F:H2O.S0.FB25-2 precision
+  volume:=:37282029
+  Dimensions:=:chanFB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R2:190.B3F:N2O.S2.FB25-3
+  volume:=:39603624
+  Dimensions:=:chanFB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R2:190.B3F:N2O.S2.FB25-3 Baseline
+  volume:=:389832
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R2:190.B3F:N2O.S2.FB25-3 Baseline precision
+  volume:=:230332
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R2:190.B3F:N2O.S2.FB25-3 BaselineAC
+  volume:=:389832
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R2:190.B3F:N2O.S2.FB25-3 BaselineAC precision
+  volume:=:231792
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R2:190.B3F:N2O.S2.FB25-3 BaselineDC
+  volume:=:52680
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R2:190.B3F:N2O.S2.FB25-3 BaselineDC precision
+  volume:=:52680
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R2:190.B3F:N2O.S2.FB25-3 precision
+  volume:=:37258443
+  Dimensions:=:chanFB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R2:190.B4F:HNO3.S0.FB25-4
+  volume:=:39558973
+  Dimensions:=:chanFB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R2:190.B4F:HNO3.S0.FB25-4 Baseline
+  volume:=:389832
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R2:190.B4F:HNO3.S0.FB25-4 Baseline precision
+  volume:=:231646
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R2:190.B4F:HNO3.S0.FB25-4 BaselineAC
+  volume:=:389832
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R2:190.B4F:HNO3.S0.FB25-4 BaselineAC precision
+  volume:=:231792
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R2:190.B4F:HNO3.S0.FB25-4 BaselineDC
+  volume:=:52680
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R2:190.B4F:HNO3.S0.FB25-4 BaselineDC precision
+  volume:=:52680
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R2:190.B4F:HNO3.S0.FB25-4 precision
+  volume:=:37060484
+  Dimensions:=:chanFB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R2:190.B5F:CLO.S0.FB25-5
+  volume:=:39578242
+  Dimensions:=:chanFB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R2:190.B5F:CLO.S0.FB25-5 Baseline
+  volume:=:389832
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R2:190.B5F:CLO.S0.FB25-5 Baseline precision
+  volume:=:230077
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R2:190.B5F:CLO.S0.FB25-5 BaselineAC
+  volume:=:389832
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R2:190.B5F:CLO.S0.FB25-5 BaselineAC precision
+  volume:=:238816
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R2:190.B5F:CLO.S0.FB25-5 BaselineDC
+  volume:=:52680
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R2:190.B5F:CLO.S0.FB25-5 BaselineDC precision
+  volume:=:52680
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R2:190.B5F:CLO.S0.FB25-5 precision
+  volume:=:36528808
+  Dimensions:=:chanFB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R2:190.B6F:O3.S0.FB25-6
+  volume:=:39529944
+  Dimensions:=:chanFB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R2:190.B6F:O3.S0.FB25-6 Baseline
+  volume:=:389832
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R2:190.B6F:O3.S0.FB25-6 Baseline precision
+  volume:=:230278
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R2:190.B6F:O3.S0.FB25-6 BaselineAC
+  volume:=:389832
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R2:190.B6F:O3.S0.FB25-6 BaselineAC precision
+  volume:=:235304
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R2:190.B6F:O3.S0.FB25-6 BaselineDC
+  volume:=:52680
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R2:190.B6F:O3.S0.FB25-6 BaselineDC precision
+  volume:=:52680
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R2:190.B6F:O3.S0.FB25-6 precision
+  volume:=:36914712
+  Dimensions:=:chanFB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R3:240.B33W:O3.S0.WF4-2
+  volume:=:6494350
+  Dimensions:=:chanWF   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R3:240.B33W:O3.S0.WF4-2 Baseline
+  volume:=:87249
+  Dimensions:=:chanWF   Dimensions:=:MAF
+variable:=:/R3:240.B33W:O3.S0.WF4-2 Baseline precision
+  volume:=:85576
+  Dimensions:=:chanWF   Dimensions:=:MAF
+variable:=:/R3:240.B33W:O3.S0.WF4-2 BaselineAC
+  volume:=:38632
+  Dimensions:=:chanWF   Dimensions:=:MAF
+variable:=:/R3:240.B33W:O3.S0.WF4-2 BaselineAC precision
+  volume:=:87800
+  Dimensions:=:chanWF   Dimensions:=:MAF
+variable:=:/R3:240.B33W:O3.S0.WF4-2 BaselineDC
+  volume:=:85336
+  Dimensions:=:chanWF   Dimensions:=:MAF
+variable:=:/R3:240.B33W:O3.S0.WF4-2 BaselineDC precision
+  volume:=:85590
+  Dimensions:=:chanWF   Dimensions:=:MAF
+variable:=:/R3:240.B33W:O3.S0.WF4-2 precision
+  volume:=:5810924
+  Dimensions:=:chanWF   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R3:240.B7F:O3.S0.FB25-7
+  volume:=:39046749
+  Dimensions:=:chanFB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R3:240.B7F:O3.S0.FB25-7 Baseline
+  volume:=:389832
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R3:240.B7F:O3.S0.FB25-7 Baseline precision
+  volume:=:231892
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R3:240.B7F:O3.S0.FB25-7 BaselineAC
+  volume:=:389832
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R3:240.B7F:O3.S0.FB25-7 BaselineAC precision
+  volume:=:235304
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R3:240.B7F:O3.S0.FB25-7 BaselineDC
+  volume:=:52680
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R3:240.B7F:O3.S0.FB25-7 BaselineDC precision
+  volume:=:52680
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R3:240.B7F:O3.S0.FB25-7 precision
+  volume:=:37243078
+  Dimensions:=:chanFB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R3:240.B8F:PT.S3.FB25-8
+  volume:=:39436714
+  Dimensions:=:chanFB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R3:240.B8F:PT.S3.FB25-8 Baseline
+  volume:=:389832
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R3:240.B8F:PT.S3.FB25-8 Baseline precision
+  volume:=:231329
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R3:240.B8F:PT.S3.FB25-8 BaselineAC
+  volume:=:389832
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R3:240.B8F:PT.S3.FB25-8 BaselineAC precision
+  volume:=:235304
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R3:240.B8F:PT.S3.FB25-8 BaselineDC
+  volume:=:52680
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R3:240.B8F:PT.S3.FB25-8 BaselineDC precision
+  volume:=:52680
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R3:240.B8F:PT.S3.FB25-8 precision
+  volume:=:36951519
+  Dimensions:=:chanFB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R3:240.B9F:CO.S0.FB25-9
+  volume:=:39378919
+  Dimensions:=:chanFB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R3:240.B9F:CO.S0.FB25-9 Baseline
+  volume:=:389832
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R3:240.B9F:CO.S0.FB25-9 Baseline precision
+  volume:=:231898
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R3:240.B9F:CO.S0.FB25-9 BaselineAC
+  volume:=:389832
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R3:240.B9F:CO.S0.FB25-9 BaselineAC precision
+  volume:=:235304
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R3:240.B9F:CO.S0.FB25-9 BaselineDC
+  volume:=:52680
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R3:240.B9F:CO.S0.FB25-9 BaselineDC precision
+  volume:=:52680
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R3:240.B9F:CO.S0.FB25-9 precision
+  volume:=:36801952
+  Dimensions:=:chanFB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R4:640.B10F:CLO.S0.FB25-10
+  volume:=:39386613
+  Dimensions:=:chanFB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R4:640.B10F:CLO.S0.FB25-10 Baseline
+  volume:=:52680
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R4:640.B10F:CLO.S0.FB25-10 Baseline precision
+  volume:=:216752
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R4:640.B10F:CLO.S0.FB25-10 BaselineAC
+  volume:=:42144
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R4:640.B10F:CLO.S0.FB25-10 BaselineAC precision
+  volume:=:228280
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R4:640.B10F:CLO.S0.FB25-10 BaselineDC
+  volume:=:52680
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R4:640.B10F:CLO.S0.FB25-10 BaselineDC precision
+  volume:=:52680
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R4:640.B10F:CLO.S0.FB25-10 precision
+  volume:=:36625496
+  Dimensions:=:chanFB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R4:640.B11F:BRO.S0.FB25-11
+  volume:=:39344433
+  Dimensions:=:chanFB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R4:640.B11F:BRO.S0.FB25-11 Baseline
+  volume:=:52680
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R4:640.B11F:BRO.S0.FB25-11 Baseline precision
+  volume:=:214689
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R4:640.B11F:BRO.S0.FB25-11 BaselineAC
+  volume:=:42144
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R4:640.B11F:BRO.S0.FB25-11 BaselineAC precision
+  volume:=:228280
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R4:640.B11F:BRO.S0.FB25-11 BaselineDC
+  volume:=:52680
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R4:640.B11F:BRO.S0.FB25-11 BaselineDC precision
+  volume:=:52680
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R4:640.B11F:BRO.S0.FB25-11 precision
+  volume:=:36443593
+  Dimensions:=:chanFB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R4:640.B13F:HCL.S0.FB25-13
+  volume:=:39191362
+  Dimensions:=:chanFB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R4:640.B13F:HCL.S0.FB25-13 Baseline
+  volume:=:52680
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R4:640.B13F:HCL.S0.FB25-13 Baseline precision
+  volume:=:212808
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R4:640.B13F:HCL.S0.FB25-13 BaselineAC
+  volume:=:42144
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R4:640.B13F:HCL.S0.FB25-13 BaselineAC precision
+  volume:=:228280
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R4:640.B13F:HCL.S0.FB25-13 BaselineDC
+  volume:=:52680
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R4:640.B13F:HCL.S0.FB25-13 BaselineDC precision
+  volume:=:52680
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R4:640.B13F:HCL.S0.FB25-13 precision
+  volume:=:36631137
+  Dimensions:=:chanFB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R4:640.B14F:O3.S0.FB25-14
+  volume:=:39176547
+  Dimensions:=:chanFB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R4:640.B14F:O3.S0.FB25-14 Baseline
+  volume:=:52680
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R4:640.B14F:O3.S0.FB25-14 Baseline precision
+  volume:=:213725
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R4:640.B14F:O3.S0.FB25-14 BaselineAC
+  volume:=:42144
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R4:640.B14F:O3.S0.FB25-14 BaselineAC precision
+  volume:=:228280
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R4:640.B14F:O3.S0.FB25-14 BaselineDC
+  volume:=:52678
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R4:640.B14F:O3.S0.FB25-14 BaselineDC precision
+  volume:=:52680
+  Dimensions:=:chanFB   Dimensions:=:MAF
+variable:=:/R4:640.B14F:O3.S0.FB25-14 precision
+  volume:=:36638544
+  Dimensions:=:chanFB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R4:640.B28M:HO2.S0.MB11-2
+  volume:=:17544834
+  Dimensions:=:chanMB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R4:640.B28M:HO2.S0.MB11-2 Baseline
+  volume:=:52680
+  Dimensions:=:chanMB   Dimensions:=:MAF
+variable:=:/R4:640.B28M:HO2.S0.MB11-2 Baseline precision
+  volume:=:136573
+  Dimensions:=:chanMB   Dimensions:=:MAF
+variable:=:/R4:640.B28M:HO2.S0.MB11-2 BaselineAC
+  volume:=:42144
+  Dimensions:=:chanMB   Dimensions:=:MAF
+variable:=:/R4:640.B28M:HO2.S0.MB11-2 BaselineAC precision
+  volume:=:147504
+  Dimensions:=:chanMB   Dimensions:=:MAF
+variable:=:/R4:640.B28M:HO2.S0.MB11-2 BaselineDC
+  volume:=:52680
+  Dimensions:=:chanMB   Dimensions:=:MAF
+variable:=:/R4:640.B28M:HO2.S0.MB11-2 BaselineDC precision
+  volume:=:52680
+  Dimensions:=:chanMB   Dimensions:=:MAF
+variable:=:/R4:640.B28M:HO2.S0.MB11-2 precision
+  volume:=:16031207
+  Dimensions:=:chanMB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R4:640.B29M:HOCL.S0.MB11-3
+  volume:=:17542762
+  Dimensions:=:chanMB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R4:640.B29M:HOCL.S0.MB11-3 Baseline
+  volume:=:52680
+  Dimensions:=:chanMB   Dimensions:=:MAF
+variable:=:/R4:640.B29M:HOCL.S0.MB11-3 Baseline precision
+  volume:=:135994
+  Dimensions:=:chanMB   Dimensions:=:MAF
+variable:=:/R4:640.B29M:HOCL.S0.MB11-3 BaselineAC
+  volume:=:42144
+  Dimensions:=:chanMB   Dimensions:=:MAF
+variable:=:/R4:640.B29M:HOCL.S0.MB11-3 BaselineAC precision
+  volume:=:147504
+  Dimensions:=:chanMB   Dimensions:=:MAF
+variable:=:/R4:640.B29M:HOCL.S0.MB11-3 BaselineDC
+  volume:=:52680
+  Dimensions:=:chanMB   Dimensions:=:MAF
+variable:=:/R4:640.B29M:HOCL.S0.MB11-3 BaselineDC precision
+  volume:=:52680
+  Dimensions:=:chanMB   Dimensions:=:MAF
+variable:=:/R4:640.B29M:HOCL.S0.MB11-3 precision
+  volume:=:16023430
+  Dimensions:=:chanMB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R4:640.B30M:HO2.S0.MB11-4
+  volume:=:17459275
+  Dimensions:=:chanMB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R4:640.B30M:HO2.S0.MB11-4 Baseline
+  volume:=:52680
+  Dimensions:=:chanMB   Dimensions:=:MAF
+variable:=:/R4:640.B30M:HO2.S0.MB11-4 Baseline precision
+  volume:=:135185
+  Dimensions:=:chanMB   Dimensions:=:MAF
+variable:=:/R4:640.B30M:HO2.S0.MB11-4 BaselineAC
+  volume:=:42144
+  Dimensions:=:chanMB   Dimensions:=:MAF
+variable:=:/R4:640.B30M:HO2.S0.MB11-4 BaselineAC precision
+  volume:=:147504
+  Dimensions:=:chanMB   Dimensions:=:MAF
+variable:=:/R4:640.B30M:HO2.S0.MB11-4 BaselineDC
+  volume:=:52680
+  Dimensions:=:chanMB   Dimensions:=:MAF
+variable:=:/R4:640.B30M:HO2.S0.MB11-4 BaselineDC precision
+  volume:=:52678
+  Dimensions:=:chanMB   Dimensions:=:MAF
+variable:=:/R4:640.B30M:HO2.S0.MB11-4 precision
+  volume:=:16213698
+  Dimensions:=:chanMB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R4:640.B31M:BRO.S0.MB11-5
+  volume:=:17474454
+  Dimensions:=:chanMB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R4:640.B31M:BRO.S0.MB11-5 Baseline
+  volume:=:52680
+  Dimensions:=:chanMB   Dimensions:=:MAF
+variable:=:/R4:640.B31M:BRO.S0.MB11-5 Baseline precision
+  volume:=:134881
+  Dimensions:=:chanMB   Dimensions:=:MAF
+variable:=:/R4:640.B31M:BRO.S0.MB11-5 BaselineAC
+  volume:=:42144
+  Dimensions:=:chanMB   Dimensions:=:MAF
+variable:=:/R4:640.B31M:BRO.S0.MB11-5 BaselineAC precision
+  volume:=:147504
+  Dimensions:=:chanMB   Dimensions:=:MAF
+variable:=:/R4:640.B31M:BRO.S0.MB11-5 BaselineDC
+  volume:=:52680
+  Dimensions:=:chanMB   Dimensions:=:MAF
+variable:=:/R4:640.B31M:BRO.S0.MB11-5 BaselineDC precision
+  volume:=:52680
+  Dimensions:=:chanMB   Dimensions:=:MAF
+variable:=:/R4:640.B31M:BRO.S0.MB11-5 precision
+  volume:=:16178324
+  Dimensions:=:chanMB   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/Sec_Reflec
+  volume:=:42144
+  Dimensions:=:MAF
+variable:=:/Ter_Reflec
+  volume:=:42144
+  Dimensions:=:MAF
+variable:=:/counterMAF
+  volume:=:42144
+  Dimensions:=:MAF

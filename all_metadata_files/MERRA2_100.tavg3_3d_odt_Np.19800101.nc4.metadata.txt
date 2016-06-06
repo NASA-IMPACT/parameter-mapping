@@ -1,0 +1,99 @@
+variable:=:/lon
+  volume:=:      576.000
+  long_name:=:longitude
+  units:=:degrees_east
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/lat
+  volume:=:      361.000
+  long_name:=:latitude
+  units:=:degrees_north
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/lev
+  volume:=:      42.0000
+  long_name:=:vertical level
+  units:=:hPa
+  positive:=:down
+  coordinate:=:PLE
+  standard_name:=:PLE_level
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/time
+  volume:=:      8.00000
+  long_name:=:time
+  units:=:minutes since 1980-01-01 01:30:00
+  time_increment:=:       30000
+  begin_date:=:    19800101
+  begin_time:=:       13000
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DOXDTANA
+  volume:=: 6.98665e+007
+  long_name:=:total_ozone_analysis_tendency
+  units:=:mol mol-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  scale_factor:=:      1.00000
+  add_offset:=:     0.000000
+  standard_name:=:total_ozone_analysis_tendency
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DOXDTCHM
+  volume:=: 6.98665e+007
+  long_name:=:tendency_of_odd_oxygen_mixing_ratio_due_to_chemistry
+  units:=:mol mol-1 s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  scale_factor:=:      1.00000
+  add_offset:=:     0.000000
+  standard_name:=:tendency_of_odd_oxygen_mixing_ratio_due_to_chemistry
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DOXDTDYN
+  volume:=: 6.98665e+007
+  long_name:=:tendency_of_ozone_due_to_dynamics
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  scale_factor:=:      1.00000
+  add_offset:=:     0.000000
+  standard_name:=:tendency_of_ozone_due_to_dynamics
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+  units:=:mol mol-1 s-1
+variable:=:/DOXDTMST
+  volume:=: 6.98665e+007
+  long_name:=:tendency_of_odd_oxygen_due_to_moist_processes
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  scale_factor:=:      1.00000
+  add_offset:=:     0.000000
+  standard_name:=:tendency_of_odd_oxygen_due_to_moist_processes
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+  units:=:mol mol-1 s-1
+variable:=:/DOXDTTRB
+  volume:=: 6.98665e+007
+  long_name:=:tendency_of_odd_oxygen_due_to_turbulence
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  scale_factor:=:      1.00000
+  add_offset:=:     0.000000
+  standard_name:=:tendency_of_odd_oxygen_due_to_turbulence
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+  units:=:mol mol-1 s-1

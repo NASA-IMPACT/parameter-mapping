@@ -1,0 +1,35 @@
+variable:=:/Gpp_1km
+  volume:=:  1.44000e+006
+  scale_factor:=:   0.00010000000
+  scale_factor_err:=:      0.00000000
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:          23
+  valid_range:=:       0   65500
+  _FillValue:=:   65535
+  long_name:=:
+MOD17A3 GPP--MODIS Gridded 1KM Annual Gross Primary Productivity (GPP)
+  units:=:kg_C/m^2
+variable:=:/Npp_1km
+  volume:=:  1.44000e+006
+  scale_factor:=:   0.00010000000
+  scale_factor_err:=:      0.00000000
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:          23
+  valid_range:=:       0   65500
+  _FillValue:=:   65535
+  long_name:=:
+MOD17A3 NPP--MODIS Gridded 1KM Annual Net Primary Productivity (NPP)
+  units:=:kg_C/m^2
+variable:=:/Gpp_Npp_QC_1km
+  volume:=:  1.44000e+006
+  scale_factor:=:       1.0000000
+  scale_factor_err:=:      0.00000000
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:          21
+  valid_range:=:   0 100
+  _FillValue:=: 255
+  long_name:=:Gpp_Npp_Qc_1km, (bad_Qc days / total days) in growing season
+  units:=:Percent (%)

@@ -1,0 +1,244 @@
+variable:=:/Coarse Resolution Surface Reflectance Band 1
+  volume:=:  2.59200e+007
+  _FillValue:=:  -28672
+  valid_range:=:    -100   16000
+  scale_factor:=:       10000.000
+  scale_factor_err:=:      0.00000000
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  units:=:reflectance
+  long_name:=:Coarse Resolution Surface Reflectance Band 1
+variable:=:/Coarse Resolution Surface Reflectance Band 2
+  volume:=:  2.59200e+007
+  _FillValue:=:  -28672
+  valid_range:=:    -100   16000
+  scale_factor:=:       10000.000
+  scale_factor_err:=:      0.00000000
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  units:=:reflectance
+  long_name:=:Coarse Resolution Surface Reflectance Band 2
+variable:=:/Coarse Resolution Surface Reflectance Band 3
+  volume:=:  2.59200e+007
+  _FillValue:=:  -28672
+  valid_range:=:    -100   16000
+  scale_factor:=:       10000.000
+  scale_factor_err:=:      0.00000000
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  units:=:reflectance
+  long_name:=:Coarse Resolution Surface Reflectance Band 3
+variable:=:/Coarse Resolution Surface Reflectance Band 4
+  volume:=:  2.59200e+007
+  _FillValue:=:  -28672
+  valid_range:=:    -100   16000
+  scale_factor:=:       10000.000
+  scale_factor_err:=:      0.00000000
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  units:=:reflectance
+  long_name:=:Coarse Resolution Surface Reflectance Band 4
+variable:=:/Coarse Resolution Surface Reflectance Band 5
+  volume:=:  2.59200e+007
+  _FillValue:=:  -28672
+  valid_range:=:    -100   16000
+  scale_factor:=:       10000.000
+  scale_factor_err:=:      0.00000000
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  units:=:reflectance
+  long_name:=:Coarse Resolution Surface Reflectance Band 5
+variable:=:/Coarse Resolution Surface Reflectance Band 6
+  volume:=:  2.59200e+007
+  _FillValue:=:  -28672
+  valid_range:=:    -100   16000
+  scale_factor:=:       10000.000
+  scale_factor_err:=:      0.00000000
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  units:=:reflectance
+  long_name:=:Coarse Resolution Surface Reflectance Band 6
+variable:=:/Coarse Resolution Surface Reflectance Band 7
+  volume:=:  2.59200e+007
+  _FillValue:=:  -28672
+  valid_range:=:    -100   16000
+  scale_factor:=:       10000.000
+  scale_factor_err:=:      0.00000000
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  units:=:reflectance
+  long_name:=:Coarse Resolution Surface Reflectance Band 7
+variable:=:/Coarse Resolution Solar Zenith Angle
+  volume:=:  2.59200e+007
+  _FillValue:=:       0
+  valid_range:=:       0   18000
+  scale_factor:=:       100.00000
+  scale_factor_err:=:      0.00000000
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  units:=:degrees
+  long_name:=:Coarse Resolution Solar Zenith Angle
+variable:=:/Coarse Resolution View Zenith Angle
+  volume:=:  2.59200e+007
+  _FillValue:=:       0
+  valid_range:=:       0   18000
+  scale_factor:=:       100.00000
+  scale_factor_err:=:      0.00000000
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  units:=:degrees
+  long_name:=:Coarse Resolution View Zenith Angle
+variable:=:/Coarse Resolution Relative Azimuth Angle
+  volume:=:  2.59200e+007
+  _FillValue:=:       0
+  valid_range:=:  -18000   18000
+  scale_factor:=:       100.00000
+  scale_factor_err:=:      0.00000000
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  units:=:degrees
+  long_name:=:Coarse Resolution Relative Azimuth Angle
+variable:=:/Coarse Resolution Ozone
+  volume:=:  2.59200e+007
+  _FillValue:=:   0
+  valid_range:=:   0 255
+  scale_factor:=:       400.00000
+  scale_factor_err:=:      0.00000000
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  units:=:cm atm
+  long_name:=:Coarse Resolution Ozone
+variable:=:/Coarse Resolution Brightness Temperature Band 20
+  volume:=:  2.59200e+007
+  _FillValue:=:       0
+  valid_range:=:       0   40000
+  scale_factor:=:       100.00000
+  scale_factor_err:=:      0.00000000
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  units:=:degrees K
+  long_name:=:Coarse Resolution Brightness Temperature Band 20
+variable:=:/Coarse Resolution Brightness Temperature Band 21
+  volume:=:  2.59200e+007
+  _FillValue:=:       0
+  valid_range:=:       0   40000
+  scale_factor:=:       100.00000
+  scale_factor_err:=:      0.00000000
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  units:=:degrees K
+  long_name:=:Coarse Resolution Brightness Temperature Band 21
+variable:=:/Coarse Resolution Brightness Temperature Band 31
+  volume:=:  2.59200e+007
+  _FillValue:=:       0
+  valid_range:=:       0   40000
+  scale_factor:=:       100.00000
+  scale_factor_err:=:      0.00000000
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  units:=:degrees K
+  long_name:=:Coarse Resolution Brightness Temperature Band 31
+variable:=:/Coarse Resolution Brightness Temperature Band 32
+  volume:=:  2.59200e+007
+  _FillValue:=:       0
+  valid_range:=:       0   40000
+  scale_factor:=:       100.00000
+  scale_factor_err:=:      0.00000000
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  units:=:degrees K
+  long_name:=:Coarse Resolution Brightness Temperature Band 32
+variable:=:/Coarse Resolution Granule Time
+  volume:=:  2.59200e+007
+  _FillValue:=:       0
+  valid_range:=:       0    2355
+  scale_factor:=:       1.0000000
+  scale_factor_err:=:      0.00000000
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  units:=:HHMM
+  long_name:=:Coarse Resolution Granule Time
+variable:=:/Coarse Resolution QA
+  volume:=:  2.59200e+007
+  _FillValue:=:           0
+  valid_range:=:           0  1073741824
+  units:=:bit field
+  long_name:=:Coarse Resolution QA
+variable:=:/Coarse Resolution Internal CM
+  volume:=:  2.59200e+007
+  _FillValue:=:       0
+  valid_range:=:       0    8191
+  units:=:bit field
+  long_name:=:Coarse Resolution Internal CM
+  QA index:=:
+
+	Bits are listed from the MSB (bit 15) to the LSB (bit 0):
+	Bit    Description
+	15     unused 
+	14     AOT has climatological values;
+	       1 -- yes
+	       0 -- no
+	13     criteria used for aerosol retrieval; 
+	       1 -- criterion 2
+	       0 -- criterion 1
+	12     pan flag; 
+	       1 -- salt pan
+	       0 -- no salt pan
+	10-11  cirrus; 
+	       00 -- none
+	       01 -- small
+	       10 -- average
+	       11 -- high
+	9      pixel is adjacent to cloud;
+	       1 -- yes
+	       0 -- no
+	8      cloud shadow;
+	       1 -- yes
+	       0 -- no
+	7      dust; 
+	       1 -- yes
+	       0 -- no
+	6      sun glint;
+	       1 -- yes
+	       0 -- no
+	5      fire;
+	       1 -- yes
+	       0 -- no
+	4      snow;
+	       1 -- yes
+	       0 -- no
+	3      low clouds;
+	       1 -- yes
+	       0 -- no
+	2      high clouds;
+	       1 -- yes
+	       0 -- no
+	1      clear;
+	       1 -- yes
+	       0 -- no
+	0      cloudy;
+	       1 -- yes
+	       0 -- no
+
+variable:=:/n pixels averaged
+  volume:=:  2.59200e+007
+  _FillValue:=:   0
+  valid_range:=:   0  40
+  units:=:(unitless)
+  long_name:=:n pixels averaged

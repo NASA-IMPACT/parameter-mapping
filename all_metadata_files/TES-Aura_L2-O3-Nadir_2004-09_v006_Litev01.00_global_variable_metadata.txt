@@ -1,0 +1,976 @@
+Summary of TES-Aura_L2-O3-Nadir_2004-09_v006_Litev01.00.nc: filetype = NC_FORMAT_NETCDF4, 3 groups (max. depth = 1), 4 dimensions (4 fixed, 0 record), 85 variables (85 atomic-type, 0 non-atomic), 343 attributes (6 global, 0 group, 337 variable)
+
+Global attributes:
+Global attribute 0: identifier_product_DOI, size = 31 NC_CHAR, value = 10.5067/AURA/TES/TESO3LN_L2.006
+Global attribute 1: identifier_product_DOI_authority, size = 17 NC_CHAR, value = http://dx.doi.org
+Global attribute 2: coremetadata, size = 6629 NC_CHAR, value = 
+GROUP                  = INVENTORYMETADATA
+  GROUPTYPE            = MASTERGROUP
+
+  GROUP                  = ECSDATAGRANULE
+
+    OBJECT                 = LOCALGRANULEID
+      NUM_VAL              = 1
+      VALUE                = "TES-Aura_L2-O3-Nadir_2004-09_v006_Litev01.00.nc"
+    END_OBJECT             = LOCALGRANULEID
+
+    OBJECT                 = PRODUCTIONDATETIME
+      NUM_VAL              = 1
+      VALUE                = "2015-02-22T19:02:05.000Z"
+    END_OBJECT             = PRODUCTIONDATETIME
+
+    OBJECT                 = LOCALVERSIONID
+      NUM_VAL              = 1
+      VALUE                = "L2_Products_Lite_Main:R01.00.00"
+    END_OBJECT             = LOCALVERSIONID
+
+  END_GROUP              = ECSDATAGRANULE
+
+  GROUP                  = MEASUREDPARAMETER
+
+    OBJECT                 = MEASUREDPARAMETERCONTAINER
+      CLASS                = "1"
+
+      OBJECT                 = PARAMETERNAME
+        CLASS                = "1"
+        NUM_VAL              = 1
+        VALUE                = "Granule"
+      END_OBJECT             = PARAMETERNAME
+
+      GROUP                  = QAFLAGS
+        CLASS                = "1"
+
+        OBJECT                 = SCIENCEQUALITYFLAG
+          NUM_VAL              = 1
+          VALUE                = "Not Investigated"
+          CLASS                = "1"
+        END_OBJECT             = SCIENCEQUALITYFLAG
+
+      END_GROUP              = QAFLAGS
+
+    END_OBJECT             = MEASUREDPARAMETERCONTAINER
+
+  END_GROUP              = MEASUREDPARAMETER
+
+  GROUP                  = COLLECTIONDESCRIPTIONCLASS
+
+    OBJECT                 = SHORTNAME
+      NUM_VAL              = 1
+      VALUE                = "TL2O3LN"
+    END_OBJECT             = SHORTNAME
+
+    OBJECT                 = VERSIONID
+      NUM_VAL              = 1
+      VALUE                = 6
+    END_OBJECT             = VERSIONID
+
+  END_GROUP              = COLLECTIONDESCRIPTIONCLASS
+
+  GROUP                  = INPUTGRANULE
+
+    OBJECT                 = INPUTPOINTER
+      NUM_VAL              = 1
+      VALUE                = "Production History at block: / (Root path) Attributes: Production_History"
+    END_OBJECT             = INPUTPOINTER
+
+  END_GROUP              = INPUTGRANULE
+
+  GROUP                  = SPATIALDOMAINCONTAINER
+
+    GROUP                  = GRANULELOCALITY
+
+      OBJECT                 = LOCALITYVALUE
+        NUM_VAL              = 1
+        VALUE                = "Global"
+      END_OBJECT             = LOCALITYVALUE
+
+    END_GROUP              = GRANULELOCALITY
+
+    GROUP                  = HORIZONTALSPATIALDOMAINCONTAINER
+
+      GROUP                  = BOUNDINGRECTANGLE
+
+        OBJECT                 = WESTBOUNDINGCOORDINATE
+          NUM_VAL              = 1
+          VALUE                = -180.0
+        END_OBJECT             = WESTBOUNDINGCOORDINATE
+
+        OBJECT                 = NORTHBOUNDINGCOORDINATE
+          NUM_VAL              = 1
+          VALUE                = 90.0
+        END_OBJECT             = NORTHBOUNDINGCOORDINATE
+
+        OBJECT                 = EASTBOUNDINGCOORDINATE
+          NUM_VAL              = 1
+          VALUE                = 180.0
+        END_OBJECT             = EASTBOUNDINGCOORDINATE
+
+        OBJECT                 = SOUTHBOUNDINGCOORDINATE
+          NUM_VAL              = 1
+          VALUE                = -90.0
+        END_OBJECT             = SOUTHBOUNDINGCOORDINATE
+
+      END_GROUP              = BOUNDINGRECTANGLE
+
+    END_GROUP              = HORIZONTALSPATIALDOMAINCONTAINER
+
+  END_GROUP              = SPATIALDOMAINCONTAINER
+
+  GROUP                  = RANGEDATETIME
+
+    OBJECT                 = RANGEBEGINNINGTIME
+      NUM_VAL              = 1
+      VALUE                = "00:00:00.000000Z"
+    END_OBJECT             = RANGEBEGINNINGTIME
+
+    OBJECT                 = RANGEENDINGTIME
+      NUM_VAL              = 1
+      VALUE                = "23:59:59.000000Z"
+    END_OBJECT             = RANGEENDINGTIME
+
+    OBJECT                 = RANGEBEGINNINGDATE
+      NUM_VAL              = 1
+      VALUE                = "2004-09-01"
+    END_OBJECT             = RANGEBEGINNINGDATE
+
+    OBJECT                 = RANGEENDINGDATE
+      NUM_VAL              = 1
+      VALUE                = "2004-09-30"
+    END_OBJECT             = RANGEENDINGDATE
+
+  END_GROUP              = RANGEDATETIME
+
+  GROUP                  = PGEVERSIONCLASS
+
+    OBJECT                 = PGEVERSION
+      NUM_VAL              = 1
+      VALUE                = "R01.00.00"
+    END_OBJECT             = PGEVERSION
+
+  END_GROUP              = PGEVERSIONCLASS
+
+  GROUP                  = ASSOCIATEDPLATFORMINSTRUMENTSENSOR
+
+    OBJECT                 = ASSOCIATEDPLATFORMINSTRUMENTSENSORCONTAINER
+      CLASS                = "1"
+
+      OBJECT                 = ASSOCIATEDPLATFORMSHORTNAME
+        CLASS                = "1"
+        NUM_VAL              = 1
+        VALUE                = "Aura"
+      END_OBJECT             = ASSOCIATEDPLATFORMSHORTNAME
+
+      OBJECT                 = ASSOCIATEDINSTRUMENTSHORTNAME
+        CLASS                = "1"
+        NUM_VAL              = 1
+        VALUE                = "TES"
+      END_OBJECT             = ASSOCIATEDINSTRUMENTSHORTNAME
+
+      OBJECT                 = ASSOCIATEDSENSORSHORTNAME
+        CLASS                = "1"
+        NUM_VAL              = 1
+        VALUE                = "FTS"
+      END_OBJECT             = ASSOCIATEDSENSORSHORTNAME
+
+      OBJECT                 = OPERATIONMODE
+        CLASS                = "1"
+        NUM_VAL              = 1
+        VALUE                = "Routine"
+      END_OBJECT             = OPERATIONMODE
+
+    END_OBJECT             = ASSOCIATEDPLATFORMINSTRUMENTSENSORCONTAINER
+
+  END_GROUP              = ASSOCIATEDPLATFORMINSTRUMENTSENSOR
+
+  GROUP                  = ADDITIONALATTRIBUTES
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "1"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "1"
+        NUM_VAL              = 1
+        VALUE                = "DOI"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "1"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "1"
+          VALUE                = "10.5067/AURA/TES/TESO3LN_L2.006"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+  END_GROUP              = ADDITIONALATTRIBUTES
+
+END_GROUP              = INVENTORYMETADATA
+
+END
+
+Global attribute 3: VerticalCoordinate, size = 8 NC_CHAR, value = Pressure
+Global attribute 4: Scan_Resolution, size = 3 NC_CHAR, value = Low
+Global attribute 5: history, size = 32 NC_CHAR, value = created Sun Feb 22 11:02:05 2015
+
+Altitude: type NC_FLOAT, 2 dimensions, 4 attributes, compressed? no, chunked? no, packed? no
+Altitude size (RAM) = 1474*26*sizeof(NC_FLOAT) = 38324*4 = 153296 bytes
+Altitude dimension 0: Grid_Targets, size = 1474 NC_INT (Coordinate is Grid_Targets)
+Altitude dimension 1: Grid_Pressure, size = 26 NC_FLOAT (Coordinate is Grid_Pressure)
+Altitude attribute 0: LongName, size = 23 NC_CHAR, value = altitude at each target
+Altitude attribute 1: Units, size = 6 NC_CHAR, value = meters
+Altitude attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+Altitude attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+AverageCloudEffOpticalDepth: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+AverageCloudEffOpticalDepth size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+AverageCloudEffOpticalDepth dimension 0: Grid_Targets, size = 1474 NC_INT (Coordinate is Grid_Targets)
+AverageCloudEffOpticalDepth attribute 0: LongName, size = 37 NC_CHAR, value = average cloud effective optical depth
+AverageCloudEffOpticalDepth attribute 1: Units, size = 1 NC_CHAR, value = 
+AverageCloudEffOpticalDepth attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+AverageCloudEffOpticalDepth attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+AverageCloudEffOpticalDepthError: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+AverageCloudEffOpticalDepthError size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+AverageCloudEffOpticalDepthError dimension 0: Grid_Targets, size = 1474 NC_INT (Coordinate is Grid_Targets)
+AverageCloudEffOpticalDepthError attribute 0: LongName, size = 43 NC_CHAR, value = average cloud effective optical depth error
+AverageCloudEffOpticalDepthError attribute 1: Units, size = 1 NC_CHAR, value = 
+AverageCloudEffOpticalDepthError attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+AverageCloudEffOpticalDepthError attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+AveragingKernel: type NC_FLOAT, 3 dimensions, 5 attributes, compressed? no, chunked? no, packed? no
+AveragingKernel size (RAM) = 1474*26*26*sizeof(NC_FLOAT) = 996424*4 = 3985696 bytes
+AveragingKernel dimension 0: Grid_Targets, size = 1474 NC_INT (Coordinate is Grid_Targets)
+AveragingKernel dimension 1: Grid_Pressure, size = 26 NC_FLOAT (Coordinate is Grid_Pressure)
+AveragingKernel dimension 2: Grid_Pressure, size = 26 NC_FLOAT (Coordinate is Grid_Pressure)
+AveragingKernel attribute 0: LongName, size = 520 NC_CHAR, value = The averaging kernel is the sensitivity of the estimated state to variations in the atmospheric state. The rows of the averaging kernel represent the sensitivity of the estimated state at a specific pressure level to variations in the atmospheric state at all levels. The columns of averaging kernel represent the sensitivity of the estimated state at all levels to variations in the atmospheric state at specific pressure level.  For atmospheric species this is the sensitivity of retrieved ln(vmr) to the true ln(vmr).
+AveragingKernel attribute 1: FullDescription, size = 59 NC_CHAR, value = see http://tes.jpl.nasa.gov/uploadedfiles/TES_DPS_V11.8.pdf
+AveragingKernel attribute 2: Units, size = 1 NC_CHAR, value = 
+AveragingKernel attribute 3: FillValue, size = 1 NC_FLOAT, value = -999
+AveragingKernel attribute 4: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Characterization/AveragingKernelDiagonal
+AveragingKernelDiagonal: type NC_FLOAT, 2 dimensions, 4 attributes, compressed? no, chunked? no, packed? no
+AveragingKernelDiagonal size (RAM) = 1474*26*sizeof(NC_FLOAT) = 38324*4 = 153296 bytes
+AveragingKernelDiagonal dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+AveragingKernelDiagonal dimension 1: /Grid_Pressure, size = 26 NC_FLOAT (Coordinate is /Grid_Pressure)
+AveragingKernelDiagonal attribute 0: LongName, size = 25 NC_CHAR, value = averaging kernel diagonal
+AveragingKernelDiagonal attribute 1: Units, size = 1 NC_CHAR, value = 
+AveragingKernelDiagonal attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+AveragingKernelDiagonal attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Characterization/CloudEffectiveOpticalDepth
+CloudEffectiveOpticalDepth: type NC_FLOAT, 2 dimensions, 4 attributes, compressed? no, chunked? no, packed? no
+CloudEffectiveOpticalDepth size (RAM) = 1474*25*sizeof(NC_FLOAT) = 36850*4 = 147400 bytes
+CloudEffectiveOpticalDepth dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+CloudEffectiveOpticalDepth dimension 1: /Grid_Cloud, size = 25 NC_INT (Coordinate is /Grid_Cloud)
+CloudEffectiveOpticalDepth attribute 0: LongName, size = 37 NC_CHAR, value = average cloud effective optical depth
+CloudEffectiveOpticalDepth attribute 1: Units, size = 1 NC_CHAR, value = 
+CloudEffectiveOpticalDepth attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+CloudEffectiveOpticalDepth attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Characterization/CloudEffectiveOpticalDepthError
+CloudEffectiveOpticalDepthError: type NC_FLOAT, 2 dimensions, 4 attributes, compressed? no, chunked? no, packed? no
+CloudEffectiveOpticalDepthError size (RAM) = 1474*25*sizeof(NC_FLOAT) = 36850*4 = 147400 bytes
+CloudEffectiveOpticalDepthError dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+CloudEffectiveOpticalDepthError dimension 1: /Grid_Cloud, size = 25 NC_INT (Coordinate is /Grid_Cloud)
+CloudEffectiveOpticalDepthError attribute 0: LongName, size = 43 NC_CHAR, value = average cloud effective optical depth error
+CloudEffectiveOpticalDepthError attribute 1: Units, size = 1 NC_CHAR, value = 
+CloudEffectiveOpticalDepthError attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+CloudEffectiveOpticalDepthError attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Characterization/CloudTopPressureError
+CloudTopPressureError: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+CloudTopPressureError size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+CloudTopPressureError dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+CloudTopPressureError attribute 0: LongName, size = 24 NC_CHAR, value = Cloud top pressure error
+CloudTopPressureError attribute 1: Units, size = 3 NC_CHAR, value = hPa
+CloudTopPressureError attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+CloudTopPressureError attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Characterization/CloudVariability_QA
+CloudVariability_QA: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+CloudVariability_QA size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+CloudVariability_QA dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+CloudVariability_QA attribute 0: LongName, size = 47 NC_CHAR, value = Quality value calculated from cloud variability
+CloudVariability_QA attribute 1: Units, size = 1 NC_CHAR, value = 
+CloudVariability_QA attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+CloudVariability_QA attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Characterization/Desert_Emiss_QA
+Desert_Emiss_QA: type NC_INT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+Desert_Emiss_QA size (RAM) = 1474*sizeof(NC_INT) = 1474*4 = 5896 bytes
+Desert_Emiss_QA dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+Desert_Emiss_QA attribute 0: LongName, size = 85 NC_CHAR, value = Quality value comparing the retrieved emissivity at 1020 to look for silicate feature
+Desert_Emiss_QA attribute 1: Units, size = 1 NC_CHAR, value = 
+Desert_Emiss_QA attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+Desert_Emiss_QA attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Characterization/H2O_HDO_Corr_QA
+H2O_HDO_Corr_QA: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+H2O_HDO_Corr_QA size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+H2O_HDO_Corr_QA dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+H2O_HDO_Corr_QA attribute 0: LongName, size = 35 NC_CHAR, value = Water consistency quality assurance
+H2O_HDO_Corr_QA attribute 1: Units, size = 1 NC_CHAR, value = 
+H2O_HDO_Corr_QA attribute 2: FillValue, size = 7 NC_CHAR, value = -999.00
+H2O_HDO_Corr_QA attribute 3: MissingValue, size = 7 NC_CHAR, value = -999.00
+
+/Characterization/KDotDL_QA
+KDotDL_QA: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+KDotDL_QA size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+KDotDL_QA dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+KDotDL_QA attribute 0: LongName, size = 60 NC_CHAR, value = Jacobian dotted into the radiance residual quality assurance
+KDotDL_QA attribute 1: Units, size = 1 NC_CHAR, value = 
+KDotDL_QA attribute 2: FillValue, size = 7 NC_CHAR, value = -999.00
+KDotDL_QA attribute 3: MissingValue, size = 7 NC_CHAR, value = -999.00
+
+/Characterization/LDotDL_QA
+LDotDL_QA: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+LDotDL_QA size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+LDotDL_QA dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+LDotDL_QA attribute 0: LongName, size = 60 NC_CHAR, value = Radiance dotted into the radiance residual quality assurance
+LDotDL_QA attribute 1: Units, size = 1 NC_CHAR, value = 
+LDotDL_QA attribute 2: FillValue, size = 7 NC_CHAR, value = -999.00
+LDotDL_QA attribute 3: MissingValue, size = 7 NC_CHAR, value = -999.00
+
+/Characterization/MeasurementErrorCovariance
+MeasurementErrorCovariance: type NC_FLOAT, 3 dimensions, 4 attributes, compressed? no, chunked? no, packed? no
+MeasurementErrorCovariance size (RAM) = 1474*26*26*sizeof(NC_FLOAT) = 996424*4 = 3985696 bytes
+MeasurementErrorCovariance dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+MeasurementErrorCovariance dimension 1: /Grid_Pressure, size = 26 NC_FLOAT (Coordinate is /Grid_Pressure)
+MeasurementErrorCovariance dimension 2: /Grid_Pressure, size = 26 NC_FLOAT (Coordinate is /Grid_Pressure)
+MeasurementErrorCovariance attribute 0: LongName, size = 34 NC_CHAR, value = Propagated measured radiance noise
+MeasurementErrorCovariance attribute 1: Units, size = 9 NC_CHAR, value = ln(vmr)^2
+MeasurementErrorCovariance attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+MeasurementErrorCovariance attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Characterization/Precision
+Precision: type NC_FLOAT, 2 dimensions, 4 attributes, compressed? no, chunked? no, packed? no
+Precision size (RAM) = 1474*26*sizeof(NC_FLOAT) = 38324*4 = 153296 bytes
+Precision dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+Precision dimension 1: /Grid_Pressure, size = 26 NC_FLOAT (Coordinate is /Grid_Pressure)
+Precision attribute 0: LongName, size = 68 NC_CHAR, value = square root of diagonal elements of the measurement error covariance
+Precision attribute 1: Units, size = 7 NC_CHAR, value = ln(vmr)
+Precision attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+Precision attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Characterization/RadianceResidualMean
+RadianceResidualMean: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+RadianceResidualMean size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+RadianceResidualMean dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+RadianceResidualMean attribute 0: LongName, size = 60 NC_CHAR, value = Mean of the model and data radiance difference (per species)
+RadianceResidualMean attribute 1: Units, size = 1 NC_CHAR, value = 
+RadianceResidualMean attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+RadianceResidualMean attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Characterization/RadianceResidualRMS
+RadianceResidualRMS: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+RadianceResidualRMS size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+RadianceResidualRMS dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+RadianceResidualRMS attribute 0: LongName, size = 32 NC_CHAR, value = RMS of model and data difference
+RadianceResidualRMS attribute 1: Units, size = 1 NC_CHAR, value = 
+RadianceResidualRMS attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+RadianceResidualRMS attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Characterization/ResidualNormFinal
+ResidualNormFinal: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+ResidualNormFinal size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+ResidualNormFinal dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+ResidualNormFinal attribute 0: LongName, size = 31 NC_CHAR, value = residual between model and data
+ResidualNormFinal attribute 1: Units, size = 1 NC_CHAR, value = 
+ResidualNormFinal attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+ResidualNormFinal attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Characterization/ResidualNormInitial
+ResidualNormInitial: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+ResidualNormInitial size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+ResidualNormInitial dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+ResidualNormInitial attribute 0: LongName, size = 39 NC_CHAR, value = initial residual between model and data
+ResidualNormInitial attribute 1: Units, size = 1 NC_CHAR, value = 
+ResidualNormInitial attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+ResidualNormInitial attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Characterization/SurfaceEmissMean_QA
+SurfaceEmissMean_QA: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+SurfaceEmissMean_QA size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+SurfaceEmissMean_QA dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+SurfaceEmissMean_QA attribute 0: LongName, size = 151 NC_CHAR, value = Quality value comparing the retrieved emissivity to the initial emissivity. Fill forocean and limb scenes. This will be fill forthe species HDO and H2O
+SurfaceEmissMean_QA attribute 1: Units, size = 1 NC_CHAR, value = 
+SurfaceEmissMean_QA attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+SurfaceEmissMean_QA attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Characterization/SurfaceTempConstraint
+SurfaceTempConstraint: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+SurfaceTempConstraint size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+SurfaceTempConstraint dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+SurfaceTempConstraint attribute 0: LongName, size = 79 NC_CHAR, value = Surface temperature value used to constrain the retrieval (species independent)
+SurfaceTempConstraint attribute 1: Units, size = 1 NC_CHAR, value = K
+SurfaceTempConstraint attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+SurfaceTempConstraint attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Characterization/SurfaceTempDegreesOfFreedom
+SurfaceTempDegreesOfFreedom: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+SurfaceTempDegreesOfFreedom size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+SurfaceTempDegreesOfFreedom dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+SurfaceTempDegreesOfFreedom attribute 0: LongName, size = 38 NC_CHAR, value = Surface temperature degrees of freedom
+SurfaceTempDegreesOfFreedom attribute 1: Units, size = 1 NC_CHAR, value = 
+SurfaceTempDegreesOfFreedom attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+SurfaceTempDegreesOfFreedom attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Characterization/SurfaceTempError
+SurfaceTempError: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+SurfaceTempError size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+SurfaceTempError dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+SurfaceTempError attribute 0: LongName, size = 42 NC_CHAR, value = Error in the retrieved Surface temperature
+SurfaceTempError attribute 1: Units, size = 1 NC_CHAR, value = K
+SurfaceTempError attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+SurfaceTempError attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Characterization/SurfaceTempInitial
+SurfaceTempInitial: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+SurfaceTempInitial size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+SurfaceTempInitial dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+SurfaceTempInitial attribute 0: LongName, size = 92 NC_CHAR, value = Initial surface temperature at the start of the retrieval process, currently taken from GMAO
+SurfaceTempInitial attribute 1: Units, size = 1 NC_CHAR, value = K
+SurfaceTempInitial attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+SurfaceTempInitial attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Characterization/SurfaceTempObservationError
+SurfaceTempObservationError: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+SurfaceTempObservationError size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+SurfaceTempObservationError dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+SurfaceTempObservationError attribute 0: LongName, size = 278 NC_CHAR, value = Measurement + systematic + cross-state errors. The utility of the observation error is for comparisons with other measurements and for assimilation. The smoothing erroris accounted for when one applies the averaging kernel, so the observation error accounts for everything else.
+SurfaceTempObservationError attribute 1: Units, size = 1 NC_CHAR, value = K
+SurfaceTempObservationError attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+SurfaceTempObservationError attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Characterization/SurfaceTempPrecision
+SurfaceTempPrecision: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+SurfaceTempPrecision size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+SurfaceTempPrecision dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+SurfaceTempPrecision attribute 0: LongName, size = 67 NC_CHAR, value = Square-root of diagonal element of the measurement error covariance
+SurfaceTempPrecision attribute 1: Units, size = 1 NC_CHAR, value = K
+SurfaceTempPrecision attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+SurfaceTempPrecision attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Characterization/SurfaceTempVsApriori_QA
+SurfaceTempVsApriori_QA: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+SurfaceTempVsApriori_QA size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+SurfaceTempVsApriori_QA dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+SurfaceTempVsApriori_QA attribute 0: LongName, size = 65 NC_CHAR, value = Quality value comparing the surface temperature to a priori value
+SurfaceTempVsApriori_QA attribute 1: Units, size = 1 NC_CHAR, value = K
+SurfaceTempVsApriori_QA attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+SurfaceTempVsApriori_QA attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Characterization/TotalColumnDensity
+TotalColumnDensity: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+TotalColumnDensity size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+TotalColumnDensity dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+TotalColumnDensity attribute 0: LongName, size = 114 NC_CHAR, value = Total column amount computed from the retrieved profile. For the Atmospheric Temperature, this will be a fillvalue
+TotalColumnDensity attribute 1: Units, size = 12 NC_CHAR, value = molecules/m2
+TotalColumnDensity attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+TotalColumnDensity attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Characterization/TotalColumnDensityError
+TotalColumnDensityError: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+TotalColumnDensityError size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+TotalColumnDensityError dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+TotalColumnDensityError attribute 0: LongName, size = 130 NC_CHAR, value = Error in total column amount computed from total error covarianceFor the Atmospheric Temperature Product this will be a fill value
+TotalColumnDensityError attribute 1: Units, size = 12 NC_CHAR, value = molecules/m2
+TotalColumnDensityError attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+TotalColumnDensityError attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Characterization/TotalColumnDensityInitial
+TotalColumnDensityInitial: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+TotalColumnDensityInitial size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+TotalColumnDensityInitial dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+TotalColumnDensityInitial attribute 0: LongName, size = 119 NC_CHAR, value = Total column amount computed from the initial profile. For the Atmospheric Temperature Product this will be a fillvalue
+TotalColumnDensityInitial attribute 1: Units, size = 12 NC_CHAR, value = molecules/m2
+TotalColumnDensityInitial attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+TotalColumnDensityInitial attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Characterization/TotalError
+TotalError: type NC_FLOAT, 2 dimensions, 4 attributes, compressed? no, chunked? no, packed? no
+TotalError size (RAM) = 1474*26*sizeof(NC_FLOAT) = 38324*4 = 153296 bytes
+TotalError dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+TotalError dimension 1: /Grid_Pressure, size = 26 NC_FLOAT (Coordinate is /Grid_Pressure)
+TotalError attribute 0: LongName, size = 291 NC_CHAR, value = Square-root of diagonal elements of output total error covariance (i.e. smoothing, systematic, and measurement error). For atmospheric temperature, it represents the error in (K). For Atmospheric Species, positive error bar = exp(ln(vmr)+err)-vmr, negative error bar = vmr-exp(ln(vmr)-error)
+TotalError attribute 1: Units, size = 7 NC_CHAR, value = ln(vmr)
+TotalError attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+TotalError attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Characterization/TotalErrorCovariance
+TotalErrorCovariance: type NC_FLOAT, 3 dimensions, 4 attributes, compressed? no, chunked? no, packed? no
+TotalErrorCovariance size (RAM) = 1474*26*26*sizeof(NC_FLOAT) = 996424*4 = 3985696 bytes
+TotalErrorCovariance dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+TotalErrorCovariance dimension 1: /Grid_Pressure, size = 26 NC_FLOAT (Coordinate is /Grid_Pressure)
+TotalErrorCovariance dimension 2: /Grid_Pressure, size = 26 NC_FLOAT (Coordinate is /Grid_Pressure)
+TotalErrorCovariance attribute 0: LongName, size = 209 NC_CHAR, value = Sum of smoothing, systematic, and measurement error. For atmospheric temperature, it represents the covariance of the error of temperature. For Atmospheric Species, it is the covariance of the error of ln(vmr)
+TotalErrorCovariance attribute 1: Units, size = 9 NC_CHAR, value = ln(vmr)^2
+TotalErrorCovariance attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+TotalErrorCovariance attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+CloudTopPressure: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+CloudTopPressure size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+CloudTopPressure dimension 0: Grid_Targets, size = 1474 NC_INT (Coordinate is Grid_Targets)
+CloudTopPressure attribute 0: LongName, size = 52 NC_CHAR, value = Pressure of inferred cloud top (species independent)
+CloudTopPressure attribute 1: Units, size = 3 NC_CHAR, value = hPa
+CloudTopPressure attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+CloudTopPressure attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+ConstraintVector: type NC_FLOAT, 2 dimensions, 4 attributes, compressed? no, chunked? no, packed? no
+ConstraintVector size (RAM) = 1474*26*sizeof(NC_FLOAT) = 38324*4 = 153296 bytes
+ConstraintVector dimension 0: Grid_Targets, size = 1474 NC_INT (Coordinate is Grid_Targets)
+ConstraintVector dimension 1: Grid_Pressure, size = 26 NC_FLOAT (Coordinate is Grid_Pressure)
+ConstraintVector attribute 0: LongName, size = 31 NC_CHAR, value = tes apriori volume mixing ratio
+ConstraintVector attribute 1: Units, size = 9 NC_CHAR, value = mole/mole
+ConstraintVector attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+ConstraintVector attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+DayNightFlag: type NC_INT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+DayNightFlag size (RAM) = 1474*sizeof(NC_INT) = 1474*4 = 5896 bytes
+DayNightFlag dimension 0: Grid_Targets, size = 1474 NC_INT (Coordinate is Grid_Targets)
+DayNightFlag attribute 0: LongName, size = 35 NC_CHAR, value = day and night flag (1=day, 0=night)
+DayNightFlag attribute 1: Units, size = 1 NC_CHAR, value = 
+DayNightFlag attribute 2: FillValue, size = 1 NC_SHORT, value = -99
+DayNightFlag attribute 3: MissingValue, size = 1 NC_SHORT, value = -99
+
+DegreesOfFreedomForSignal: type NC_FLOAT, 1 dimension, 5 attributes, compressed? no, chunked? no, packed? no
+DegreesOfFreedomForSignal size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+DegreesOfFreedomForSignal dimension 0: Grid_Targets, size = 1474 NC_INT (Coordinate is Grid_Targets)
+DegreesOfFreedomForSignal attribute 0: LongName, size = 48 NC_CHAR, value = number of independent parameters for the profile
+DegreesOfFreedomForSignal attribute 1: other_name, size = 29 NC_CHAR, value = trace of the averaging kernel
+DegreesOfFreedomForSignal attribute 2: Units, size = 1 NC_CHAR, value = 
+DegreesOfFreedomForSignal attribute 3: FillValue, size = 1 NC_FLOAT, value = -999
+DegreesOfFreedomForSignal attribute 4: MissingValue, size = 1 NC_FLOAT, value = -999
+
+FmOzoneBandFlux: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+FmOzoneBandFlux size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+FmOzoneBandFlux dimension 0: Grid_Targets, size = 1474 NC_INT (Coordinate is Grid_Targets)
+FmOzoneBandFlux attribute 0: LongName, size = 35 NC_CHAR, value = Ozone band flux calculated from TES
+FmOzoneBandFlux attribute 1: Units, size = 1 NC_CHAR, value = 
+FmOzoneBandFlux attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+FmOzoneBandFlux attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Geolocation/BoresightAzimuth
+BoresightAzimuth: type NC_DOUBLE, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+BoresightAzimuth size (RAM) = 1474*sizeof(NC_DOUBLE) = 1474*8 = 11792 bytes
+BoresightAzimuth dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+BoresightAzimuth attribute 0: LongName, size = 67 NC_CHAR, value = TES boresight (LOS) azimuth angle relative to the local north at SC
+BoresightAzimuth attribute 1: Units, size = 15 NC_CHAR, value = Decimal degrees
+BoresightAzimuth attribute 2: FillValue, size = 7 NC_CHAR, value = -999.00
+BoresightAzimuth attribute 3: MissingValue, size = 7 NC_CHAR, value = -999.00
+
+/Geolocation/BoresightNadirAngle
+BoresightNadirAngle: type NC_DOUBLE, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+BoresightNadirAngle size (RAM) = 1474*sizeof(NC_DOUBLE) = 1474*8 = 11792 bytes
+BoresightNadirAngle dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+BoresightNadirAngle attribute 0: LongName, size = 61 NC_CHAR, value = TES boresight (LOS) nadir angle relative to local nadir at SC
+BoresightNadirAngle attribute 1: Units, size = 15 NC_CHAR, value = Decimal degrees
+BoresightNadirAngle attribute 2: FillValue, size = 7 NC_CHAR, value = -999.00
+BoresightNadirAngle attribute 3: MissingValue, size = 7 NC_CHAR, value = -999.00
+
+/Geolocation/DominantSurfaceType
+DominantSurfaceType: type NC_INT, 1 dimension, 5 attributes, compressed? no, chunked? no, packed? no
+DominantSurfaceType size (RAM) = 1474*sizeof(NC_INT) = 1474*4 = 5896 bytes
+DominantSurfaceType dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+DominantSurfaceType attribute 0: LongName, size = 21 NC_CHAR, value = Dominant surface type
+DominantSurfaceType attribute 1: FullDescription, size = 59 NC_CHAR, value = see http://tes.jpl.nasa.gov/uploadedfiles/TES_DPS_V11.8.pdf
+DominantSurfaceType attribute 2: Units, size = 1 NC_CHAR, value = 
+DominantSurfaceType attribute 3: FillValue, size = 1 NC_SHORT, value = -99
+DominantSurfaceType attribute 4: MissingValue, size = 1 NC_SHORT, value = -99
+
+/Geolocation/Latitude_Footprint_1
+Latitude_Footprint_1: type NC_DOUBLE, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+Latitude_Footprint_1 size (RAM) = 1474*sizeof(NC_DOUBLE) = 1474*8 = 11792 bytes
+Latitude_Footprint_1 dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+Latitude_Footprint_1 attribute 0: LongName, size = 39 NC_CHAR, value = latitude for footprint bounding point 1
+Latitude_Footprint_1 attribute 1: Units, size = 13 NC_CHAR, value = degrees_north
+Latitude_Footprint_1 attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+Latitude_Footprint_1 attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Geolocation/Latitude_Footprint_2
+Latitude_Footprint_2: type NC_DOUBLE, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+Latitude_Footprint_2 size (RAM) = 1474*sizeof(NC_DOUBLE) = 1474*8 = 11792 bytes
+Latitude_Footprint_2 dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+Latitude_Footprint_2 attribute 0: LongName, size = 39 NC_CHAR, value = latitude for footprint bounding point 2
+Latitude_Footprint_2 attribute 1: Units, size = 13 NC_CHAR, value = degrees_north
+Latitude_Footprint_2 attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+Latitude_Footprint_2 attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Geolocation/Latitude_Footprint_3
+Latitude_Footprint_3: type NC_DOUBLE, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+Latitude_Footprint_3 size (RAM) = 1474*sizeof(NC_DOUBLE) = 1474*8 = 11792 bytes
+Latitude_Footprint_3 dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+Latitude_Footprint_3 attribute 0: LongName, size = 39 NC_CHAR, value = latitude for footprint bounding point 3
+Latitude_Footprint_3 attribute 1: Units, size = 13 NC_CHAR, value = degrees_north
+Latitude_Footprint_3 attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+Latitude_Footprint_3 attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Geolocation/Latitude_Footprint_4
+Latitude_Footprint_4: type NC_DOUBLE, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+Latitude_Footprint_4 size (RAM) = 1474*sizeof(NC_DOUBLE) = 1474*8 = 11792 bytes
+Latitude_Footprint_4 dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+Latitude_Footprint_4 attribute 0: LongName, size = 39 NC_CHAR, value = latitude for footprint bounding point 4
+Latitude_Footprint_4 attribute 1: Units, size = 13 NC_CHAR, value = degrees_north
+Latitude_Footprint_4 attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+Latitude_Footprint_4 attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Geolocation/LocalSolarTime
+LocalSolarTime: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+LocalSolarTime size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+LocalSolarTime dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+LocalSolarTime attribute 0: LongName, size = 28 NC_CHAR, value = local solar time at location
+LocalSolarTime attribute 1: Units, size = 37 NC_CHAR, value = hours_of_day.fraction_of_hours_of_day
+LocalSolarTime attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+LocalSolarTime attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Geolocation/Longitude_Footprint_1
+Longitude_Footprint_1: type NC_DOUBLE, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+Longitude_Footprint_1 size (RAM) = 1474*sizeof(NC_DOUBLE) = 1474*8 = 11792 bytes
+Longitude_Footprint_1 dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+Longitude_Footprint_1 attribute 0: LongName, size = 40 NC_CHAR, value = longitude for footprint bounding point 1
+Longitude_Footprint_1 attribute 1: Units, size = 12 NC_CHAR, value = degrees_east
+Longitude_Footprint_1 attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+Longitude_Footprint_1 attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Geolocation/Longitude_Footprint_2
+Longitude_Footprint_2: type NC_DOUBLE, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+Longitude_Footprint_2 size (RAM) = 1474*sizeof(NC_DOUBLE) = 1474*8 = 11792 bytes
+Longitude_Footprint_2 dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+Longitude_Footprint_2 attribute 0: LongName, size = 41 NC_CHAR, value = llongitude for footprint bounding point 2
+Longitude_Footprint_2 attribute 1: Units, size = 12 NC_CHAR, value = degrees_east
+Longitude_Footprint_2 attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+Longitude_Footprint_2 attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Geolocation/Longitude_Footprint_3
+Longitude_Footprint_3: type NC_DOUBLE, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+Longitude_Footprint_3 size (RAM) = 1474*sizeof(NC_DOUBLE) = 1474*8 = 11792 bytes
+Longitude_Footprint_3 dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+Longitude_Footprint_3 attribute 0: LongName, size = 41 NC_CHAR, value = llongitude for footprint bounding point 3
+Longitude_Footprint_3 attribute 1: Units, size = 12 NC_CHAR, value = degrees_east
+Longitude_Footprint_3 attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+Longitude_Footprint_3 attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Geolocation/Longitude_Footprint_4
+Longitude_Footprint_4: type NC_DOUBLE, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+Longitude_Footprint_4 size (RAM) = 1474*sizeof(NC_DOUBLE) = 1474*8 = 11792 bytes
+Longitude_Footprint_4 dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+Longitude_Footprint_4 attribute 0: LongName, size = 40 NC_CHAR, value = longitude for footprint bounding point 4
+Longitude_Footprint_4 attribute 1: Units, size = 12 NC_CHAR, value = degrees_east
+Longitude_Footprint_4 attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+Longitude_Footprint_4 attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Geolocation/Run
+Run: type NC_INT, 1 dimension, 1 attribute, compressed? no, chunked? no, packed? no
+Run size (RAM) = 1474*sizeof(NC_INT) = 1474*4 = 5896 bytes
+Run dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+Run attribute 0: LongName, size = 29 NC_CHAR, value = Associated TES original RUNID
+
+/Geolocation/Scan
+Scan: type NC_INT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+Scan size (RAM) = 1474*sizeof(NC_INT) = 1474*4 = 5896 bytes
+Scan dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+Scan attribute 0: LongName, size = 29 NC_CHAR, value = scan number within a sequence
+Scan attribute 1: Units, size = 1 NC_CHAR, value = 
+Scan attribute 2: FillValue, size = 1 NC_SHORT, value = -999
+Scan attribute 3: MissingValue, size = 1 NC_SHORT, value = -999
+
+/Geolocation/Sequence
+Sequence: type NC_INT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+Sequence size (RAM) = 1474*sizeof(NC_INT) = 1474*4 = 5896 bytes
+Sequence dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+Sequence attribute 0: LongName, size = 28 NC_CHAR, value = sequence number within a run
+Sequence attribute 1: Units, size = 1 NC_CHAR, value = 
+Sequence attribute 2: FillValue, size = 1 NC_SHORT, value = -999
+Sequence attribute 3: MissingValue, size = 1 NC_SHORT, value = -999
+
+/Geolocation/SolarZenithAngle
+SolarZenithAngle: type NC_FLOAT, 1 dimension, 5 attributes, compressed? no, chunked? no, packed? no
+SolarZenithAngle size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+SolarZenithAngle dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+SolarZenithAngle attribute 0: LongName, size = 59 NC_CHAR, value = Solar zenith relative to the local zenith at the spacecraft
+SolarZenithAngle attribute 1: Units, size = 15 NC_CHAR, value = decimal degrees
+SolarZenithAngle attribute 2: calendar, size = 6 NC_CHAR, value = julian
+SolarZenithAngle attribute 3: FillValue, size = 1 NC_FLOAT, value = -999
+SolarZenithAngle attribute 4: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Geolocation/SurfaceElevStandardDeviation
+SurfaceElevStandardDeviation: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+SurfaceElevStandardDeviation size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+SurfaceElevStandardDeviation dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+SurfaceElevStandardDeviation attribute 0: LongName, size = 54 NC_CHAR, value = standard deviation of average elevation over footprint
+SurfaceElevStandardDeviation attribute 1: Units, size = 6 NC_CHAR, value = meters
+SurfaceElevStandardDeviation attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+SurfaceElevStandardDeviation attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Geolocation/Tgt_SpacecraftAzimuth
+Tgt_SpacecraftAzimuth: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+Tgt_SpacecraftAzimuth size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+Tgt_SpacecraftAzimuth dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+Tgt_SpacecraftAzimuth attribute 0: LongName, size = 88 NC_CHAR, value = TES boresight (LOS) azimuth angle relative to the local north at the target geolocation.
+Tgt_SpacecraftAzimuth attribute 1: Units, size = 31 NC_CHAR, value = Decimal degrees (east of north)
+Tgt_SpacecraftAzimuth attribute 2: FillValue, size = 7 NC_CHAR, value = -999.00
+Tgt_SpacecraftAzimuth attribute 3: MissingValue, size = 7 NC_CHAR, value = -999.00
+
+/Geolocation/Tgt_SpacecraftZenith
+Tgt_SpacecraftZenith: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+Tgt_SpacecraftZenith size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+Tgt_SpacecraftZenith dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+Tgt_SpacecraftZenith attribute 0: LongName, size = 88 NC_CHAR, value = TES boresight (LOS) zenith angle relative to the local zenith at the target geolocation.
+Tgt_SpacecraftZenith attribute 1: Units, size = 15 NC_CHAR, value = Decimal degrees
+Tgt_SpacecraftZenith attribute 2: FillValue, size = 7 NC_CHAR, value = -999.00
+Tgt_SpacecraftZenith attribute 3: MissingValue, size = 7 NC_CHAR, value = -999.00
+
+/Geolocation/YearFloat
+YearFloat: type NC_DOUBLE, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+YearFloat size (RAM) = 1474*sizeof(NC_DOUBLE) = 1474*8 = 11792 bytes
+YearFloat dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+YearFloat attribute 0: LongName, size = 30 NC_CHAR, value = year plus fraction of the year
+YearFloat attribute 1: Units, size = 1 NC_CHAR, value = 
+YearFloat attribute 2: FillValue, size = 7 NC_CHAR, value = -999.00
+YearFloat attribute 3: MissingValue, size = 7 NC_CHAR, value = -999.00
+
+GlobalSurveyFlag: type NC_INT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+GlobalSurveyFlag size (RAM) = 1474*sizeof(NC_INT) = 1474*4 = 5896 bytes
+GlobalSurveyFlag dimension 0: Grid_Targets, size = 1474 NC_INT (Coordinate is Grid_Targets)
+GlobalSurveyFlag attribute 0: LongName, size = 44 NC_CHAR, value = If run is a global survey ==1, otherwise ==0
+GlobalSurveyFlag attribute 1: Units, size = 1 NC_CHAR, value = 
+GlobalSurveyFlag attribute 2: FillValue, size = 7 NC_CHAR, value = -999.00
+GlobalSurveyFlag attribute 3: MissingValue, size = 7 NC_CHAR, value = -999.00
+
+Grid_Cloud: type NC_INT, 1 dimension, 2 attributes, compressed? no, chunked? no, packed? no
+Grid_Cloud size (RAM) = 25*sizeof(NC_INT) = 25*4 = 100 bytes
+Grid_Cloud dimension 0: Grid_Cloud, size = 25 NC_INT (Coordinate is Grid_Cloud)
+Grid_Cloud attribute 0: LongName, size = 49 NC_CHAR, value = wavenumber grid for Cloud effective optical depth
+Grid_Cloud attribute 1: Units, size = 4 NC_CHAR, value = cm-1
+
+Grid_Pressure: type NC_FLOAT, 1 dimension, 2 attributes, compressed? no, chunked? no, packed? no
+Grid_Pressure size (RAM) = 26*sizeof(NC_FLOAT) = 26*4 = 104 bytes
+Grid_Pressure dimension 0: Grid_Pressure, size = 26 NC_FLOAT (Coordinate is Grid_Pressure)
+Grid_Pressure attribute 0: LongName, size = 89 NC_CHAR, value = full retrieval pressure grid.  Actual pressure grid varies depending on surface pressure.
+Grid_Pressure attribute 1: Units, size = 1 NC_CHAR, value = 
+
+Grid_Pressure_FM: type NC_FLOAT, 1 dimension, 2 attributes, compressed? no, chunked? no, packed? no
+Grid_Pressure_FM size (RAM) = 67*sizeof(NC_FLOAT) = 67*4 = 268 bytes
+Grid_Pressure_FM dimension 0: Grid_Pressure_FM, size = 67 NC_FLOAT (Coordinate is Grid_Pressure_FM)
+Grid_Pressure_FM attribute 0: LongName, size = 117 NC_CHAR, value = full pressure grid used in TES forward model calculation.  Actual pressure grid varies depending on surface pressure.
+Grid_Pressure_FM attribute 1: Units, size = 3 NC_CHAR, value = hPa
+
+Grid_Targets: type NC_INT, 1 dimension, 2 attributes, compressed? no, chunked? no, packed? no
+Grid_Targets size (RAM) = 1474*sizeof(NC_INT) = 1474*4 = 5896 bytes
+Grid_Targets dimension 0: Grid_Targets, size = 1474 NC_INT (Coordinate is Grid_Targets)
+Grid_Targets attribute 0: LongName, size = 42 NC_CHAR, value = number of individual points sampled by TES
+Grid_Targets attribute 1: Units, size = 1 NC_CHAR, value = 
+
+L1BOzoneBandFlux: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+L1BOzoneBandFlux size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+L1BOzoneBandFlux dimension 0: Grid_Targets, size = 1474 NC_INT (Coordinate is Grid_Targets)
+L1BOzoneBandFlux attribute 0: LongName, size = 30 NC_CHAR, value = Ozone band flux from radiances
+L1BOzoneBandFlux attribute 1: Units, size = 1 NC_CHAR, value = 
+L1BOzoneBandFlux attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+L1BOzoneBandFlux attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+Latitude: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+Latitude size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+Latitude dimension 0: Grid_Targets, size = 1474 NC_INT (Coordinate is Grid_Targets)
+Latitude attribute 0: LongName, size = 8 NC_CHAR, value = latitude
+Latitude attribute 1: Units, size = 13 NC_CHAR, value = degrees_north
+Latitude attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+Latitude attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+Longitude: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+Longitude size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+Longitude dimension 0: Grid_Targets, size = 1474 NC_INT (Coordinate is Grid_Targets)
+Longitude attribute 0: LongName, size = 9 NC_CHAR, value = longitude
+Longitude attribute 1: Units, size = 12 NC_CHAR, value = degrees_east
+Longitude attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+Longitude attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+O3_Ccurve_QA: type NC_INT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+O3_Ccurve_QA size (RAM) = 1474*sizeof(NC_INT) = 1474*4 = 5896 bytes
+O3_Ccurve_QA dimension 0: Grid_Targets, size = 1474 NC_INT (Coordinate is Grid_Targets)
+O3_Ccurve_QA attribute 0: LongName, size = 65 NC_CHAR, value = Flag for if O3 ccurve found.  1=no ccurve found.  0=ccurve found.
+O3_Ccurve_QA attribute 1: Units, size = 1 NC_CHAR, value = 
+O3_Ccurve_QA attribute 2: FillValue, size = 1 NC_SHORT, value = 157
+O3_Ccurve_QA attribute 3: MissingValue, size = 1 NC_SHORT, value = 157
+
+ObservationErrorCovariance: type NC_FLOAT, 3 dimensions, 4 attributes, compressed? no, chunked? no, packed? no
+ObservationErrorCovariance size (RAM) = 1474*26*26*sizeof(NC_FLOAT) = 996424*4 = 3985696 bytes
+ObservationErrorCovariance dimension 0: Grid_Targets, size = 1474 NC_INT (Coordinate is Grid_Targets)
+ObservationErrorCovariance dimension 1: Grid_Pressure, size = 26 NC_FLOAT (Coordinate is Grid_Pressure)
+ObservationErrorCovariance dimension 2: Grid_Pressure, size = 26 NC_FLOAT (Coordinate is Grid_Pressure)
+ObservationErrorCovariance attribute 0: LongName, size = 319 NC_CHAR, value = Measurement + systematic + cross-state errors.  The utility of the observation error is for comparisons with other measurements and for assimilation.  The smoothing error is accounted for when one applies the averaging kernel, so the observation error accounts for everything else. See comment for TotalErrorCovariance.
+ObservationErrorCovariance attribute 1: FullDescription, size = 59 NC_CHAR, value = see http://tes.jpl.nasa.gov/uploadedfiles/TES_DPS_V11.8.pdf
+ObservationErrorCovariance attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+ObservationErrorCovariance attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+OzoneIRK: type NC_FLOAT, 2 dimensions, 4 attributes, compressed? no, chunked? no, packed? no
+OzoneIRK size (RAM) = 1474*26*sizeof(NC_FLOAT) = 38324*4 = 153296 bytes
+OzoneIRK dimension 0: Grid_Targets, size = 1474 NC_INT (Coordinate is Grid_Targets)
+OzoneIRK dimension 1: Grid_Pressure, size = 26 NC_FLOAT (Coordinate is Grid_Pressure)
+OzoneIRK attribute 0: LongName, size = 9 NC_CHAR, value = Ozone IRK
+OzoneIRK attribute 1: Units, size = 1 NC_CHAR, value = 
+OzoneIRK attribute 2: FillValue, size = 1 NC_SHORT, value = -999
+OzoneIRK attribute 3: MissingValue, size = 1 NC_SHORT, value = -999
+
+Pressure: type NC_FLOAT, 2 dimensions, 4 attributes, compressed? no, chunked? no, packed? no
+Pressure size (RAM) = 1474*26*sizeof(NC_FLOAT) = 38324*4 = 153296 bytes
+Pressure dimension 0: Grid_Targets, size = 1474 NC_INT (Coordinate is Grid_Targets)
+Pressure dimension 1: Grid_Pressure, size = 26 NC_FLOAT (Coordinate is Grid_Pressure)
+Pressure attribute 0: LongName, size = 44 NC_CHAR, value = atmospheric pressure grid used for retrieval
+Pressure attribute 1: Units, size = 3 NC_CHAR, value = hPa
+Pressure attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+Pressure attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Retrieval/AirDensity
+AirDensity: type NC_FLOAT, 2 dimensions, 4 attributes, compressed? no, chunked? no, packed? no
+AirDensity size (RAM) = 1474*26*sizeof(NC_FLOAT) = 38324*4 = 153296 bytes
+AirDensity dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+AirDensity dimension 1: /Grid_Pressure, size = 26 NC_FLOAT (Coordinate is /Grid_Pressure)
+AirDensity attribute 0: LongName, size = 14 NC_CHAR, value = density of air
+AirDensity attribute 1: Units, size = 13 NC_CHAR, value = molecules/m^3
+AirDensity attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+AirDensity attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Retrieval/Altitude_FM
+Altitude_FM: type NC_FLOAT, 2 dimensions, 4 attributes, compressed? no, chunked? no, packed? no
+Altitude_FM size (RAM) = 1474*67*sizeof(NC_FLOAT) = 98758*4 = 395032 bytes
+Altitude_FM dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+Altitude_FM dimension 1: /Grid_Pressure_FM, size = 67 NC_FLOAT (Coordinate is /Grid_Pressure_FM)
+Altitude_FM attribute 0: LongName, size = 34 NC_CHAR, value = altitude at each target on FM grid
+Altitude_FM attribute 1: Units, size = 6 NC_CHAR, value = meters
+Altitude_FM attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+Altitude_FM attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Retrieval/Initial
+Initial: type NC_FLOAT, 2 dimensions, 4 attributes, compressed? no, chunked? no, packed? no
+Initial size (RAM) = 1474*26*sizeof(NC_FLOAT) = 38324*4 = 153296 bytes
+Initial dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+Initial dimension 1: /Grid_Pressure, size = 26 NC_FLOAT (Coordinate is /Grid_Pressure)
+Initial attribute 0: LongName, size = 86 NC_CHAR, value = Initial vmr data or temperature data (for retrieved temperature) used in the retrieval
+Initial attribute 1: Units, size = 8 NC_CHAR, value = VMR or K
+Initial attribute 2: FillValue, size = 7 NC_CHAR, value = -999.00
+Initial attribute 3: MissingValue, size = 7 NC_CHAR, value = -999.00
+
+/Retrieval/Map
+Map: type NC_FLOAT, 3 dimensions, 4 attributes, compressed? no, chunked? no, packed? no
+Map size (RAM) = 1474*67*26*sizeof(NC_FLOAT) = 2567708*4 = 10270832 bytes
+Map dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+Map dimension 1: /Grid_Pressure_FM, size = 67 NC_FLOAT (Coordinate is /Grid_Pressure_FM)
+Map dimension 2: /Grid_Pressure, size = 26 NC_FLOAT (Coordinate is /Grid_Pressure)
+Map attribute 0: LongName, size = 54 NC_CHAR, value = Map from retrieval grid to FM grid [Ret grid, FM grid]
+Map attribute 1: Units, size = 1 NC_CHAR, value = 
+Map attribute 2: FillValue, size = 7 NC_CHAR, value = -999.00
+Map attribute 3: MissingValue, size = 7 NC_CHAR, value = -999.00
+
+/Retrieval/OzoneTroposphericColumn
+OzoneTroposphericColumn: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+OzoneTroposphericColumn size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+OzoneTroposphericColumn dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+OzoneTroposphericColumn attribute 0: LongName, size = 127 NC_CHAR, value = Total tropospheric column amount computed from the retrieved profile. For the Atmospheric Temperature, this will be a fillvalue
+OzoneTroposphericColumn attribute 1: Units, size = 12 NC_CHAR, value = molecules/m2
+OzoneTroposphericColumn attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+OzoneTroposphericColumn attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Retrieval/OzoneTroposphericColumnError
+OzoneTroposphericColumnError: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+OzoneTroposphericColumnError size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+OzoneTroposphericColumnError dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+OzoneTroposphericColumnError attribute 0: LongName, size = 35 NC_CHAR, value = Tropospheric column error estimate.
+OzoneTroposphericColumnError attribute 1: Units, size = 12 NC_CHAR, value = molecules/m2
+OzoneTroposphericColumnError attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+OzoneTroposphericColumnError attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Retrieval/OzoneTroposphericColumnInitial
+OzoneTroposphericColumnInitial: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+OzoneTroposphericColumnInitial size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+OzoneTroposphericColumnInitial dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+OzoneTroposphericColumnInitial attribute 0: LongName, size = 28 NC_CHAR, value = Initial tropospheric column.
+OzoneTroposphericColumnInitial attribute 1: Units, size = 12 NC_CHAR, value = molecules/m2
+OzoneTroposphericColumnInitial attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+OzoneTroposphericColumnInitial attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Retrieval/Pressure_FM
+Pressure_FM: type NC_FLOAT, 2 dimensions, 4 attributes, compressed? no, chunked? no, packed? no
+Pressure_FM size (RAM) = 1474*67*sizeof(NC_FLOAT) = 98758*4 = 395032 bytes
+Pressure_FM dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+Pressure_FM dimension 1: /Grid_Pressure_FM, size = 67 NC_FLOAT (Coordinate is /Grid_Pressure_FM)
+Pressure_FM attribute 0: LongName, size = 56 NC_CHAR, value = atmospheric pressure on grid used for radiative transfer
+Pressure_FM attribute 1: Units, size = 3 NC_CHAR, value = hPa
+Pressure_FM attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+Pressure_FM attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+/Retrieval/TropopausePressure
+TropopausePressure: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+TropopausePressure size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+TropopausePressure dimension 0: /Grid_Targets, size = 1474 NC_INT (Coordinate is /Grid_Targets)
+TropopausePressure attribute 0: LongName, size = 102 NC_CHAR, value = Pressure between the troposphere and stratosphere used to calculate the tropospheric column, from GMAO
+TropopausePressure attribute 1: Units, size = 3 NC_CHAR, value = hPa
+TropopausePressure attribute 2: FillValue, size = 7 NC_CHAR, value = -999.00
+TropopausePressure attribute 3: MissingValue, size = 7 NC_CHAR, value = -999.00
+
+Species: type NC_FLOAT, 2 dimensions, 4 attributes, compressed? no, chunked? no, packed? no
+Species size (RAM) = 1474*26*sizeof(NC_FLOAT) = 38324*4 = 153296 bytes
+Species dimension 0: Grid_Targets, size = 1474 NC_INT (Coordinate is Grid_Targets)
+Species dimension 1: Grid_Pressure, size = 26 NC_FLOAT (Coordinate is Grid_Pressure)
+Species attribute 0: LongName, size = 22 NC_CHAR, value = O3 volume mixing ratio
+Species attribute 1: Units, size = 39 NC_CHAR, value = volume mixing ratio relative to dry air
+Species attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+Species attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+SpeciesRetrievalQuality: type NC_INT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+SpeciesRetrievalQuality size (RAM) = 1474*sizeof(NC_INT) = 1474*4 = 5896 bytes
+SpeciesRetrievalQuality dimension 0: Grid_Targets, size = 1474 NC_INT (Coordinate is Grid_Targets)
+SpeciesRetrievalQuality attribute 0: LongName, size = 25 NC_CHAR, value = Retrieval quality, 1=good
+SpeciesRetrievalQuality attribute 1: Units, size = 1 NC_CHAR, value = 
+SpeciesRetrievalQuality attribute 2: FillValue, size = 7 NC_CHAR, value = -999.00
+SpeciesRetrievalQuality attribute 3: MissingValue, size = 7 NC_CHAR, value = -999.00
+
+SurfaceTemperature: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+SurfaceTemperature size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+SurfaceTemperature dimension 0: Grid_Targets, size = 1474 NC_INT (Coordinate is Grid_Targets)
+SurfaceTemperature attribute 0: LongName, size = 19 NC_CHAR, value = surface temperature
+SurfaceTemperature attribute 1: Units, size = 1 NC_CHAR, value = K
+SurfaceTemperature attribute 2: FillValue, size = 1 NC_FLOAT, value = -999
+SurfaceTemperature attribute 3: MissingValue, size = 1 NC_FLOAT, value = -999
+
+SurfaceTypeFootprint: type NC_INT, 1 dimension, 5 attributes, compressed? no, chunked? no, packed? no
+SurfaceTypeFootprint size (RAM) = 1474*sizeof(NC_INT) = 1474*4 = 5896 bytes
+SurfaceTypeFootprint dimension 0: Grid_Targets, size = 1474 NC_INT (Coordinate is Grid_Targets)
+SurfaceTypeFootprint attribute 0: LongName, size = 22 NC_CHAR, value = surface type footprint
+SurfaceTypeFootprint attribute 1: description, size = 39 NC_CHAR, value = 1=freshwater,2=saltwater,3=land,4=mixed
+SurfaceTypeFootprint attribute 2: Units, size = 1 NC_CHAR, value = 
+SurfaceTypeFootprint attribute 3: FillValue, size = 1 NC_SHORT, value = -99
+SurfaceTypeFootprint attribute 4: MissingValue, size = 1 NC_SHORT, value = -99
+
+Time: type NC_DOUBLE, 1 dimension, 5 attributes, compressed? no, chunked? no, packed? no
+Time size (RAM) = 1474*sizeof(NC_DOUBLE) = 1474*8 = 11792 bytes
+Time dimension 0: Grid_Targets, size = 1474 NC_INT (Coordinate is Grid_Targets)
+Time attribute 0: LongName, size = 11 NC_CHAR, value = Julian date
+Time attribute 1: Units, size = 50 NC_CHAR, value = seconds since some reference (1993-01-01 00:00:00)
+Time attribute 2: calendar, size = 6 NC_CHAR, value = julian
+Time attribute 3: FillValue, size = 1 NC_FLOAT, value = -999
+Time attribute 4: MissingValue, size = 1 NC_FLOAT, value = -999
+
+UT_Hour: type NC_FLOAT, 1 dimension, 5 attributes, compressed? no, chunked? no, packed? no
+UT_Hour size (RAM) = 1474*sizeof(NC_FLOAT) = 1474*4 = 5896 bytes
+UT_Hour dimension 0: Grid_Targets, size = 1474 NC_INT (Coordinate is Grid_Targets)
+UT_Hour attribute 0: LongName, size = 63 NC_CHAR, value = UTC hour at location.  fraction corresponds to minutes, seconds
+UT_Hour attribute 1: Units, size = 5 NC_CHAR, value = hours
+UT_Hour attribute 2: example, size = 8 NC_CHAR, value = 19.44000
+UT_Hour attribute 3: FillValue, size = 1 NC_FLOAT, value = -999
+UT_Hour attribute 4: MissingValue, size = 1 NC_FLOAT, value = -999
+
+YYYYMMDD: type NC_DOUBLE, 1 dimension, 5 attributes, compressed? no, chunked? no, packed? no
+YYYYMMDD size (RAM) = 1474*sizeof(NC_DOUBLE) = 1474*8 = 11792 bytes
+YYYYMMDD dimension 0: Grid_Targets, size = 1474 NC_INT (Coordinate is Grid_Targets)
+YYYYMMDD attribute 0: LongName, size = 35 NC_CHAR, value = Human readable UTC time at location
+YYYYMMDD attribute 1: Units, size = 16 NC_CHAR, value = time as YYYYMMDD
+YYYYMMDD attribute 2: example, size = 8 NC_CHAR, value = 20060805
+YYYYMMDD attribute 3: FillValue, size = 1 NC_FLOAT, value = -999
+YYYYMMDD attribute 4: MissingValue, size = 1 NC_FLOAT, value = -999
+

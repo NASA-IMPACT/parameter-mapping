@@ -1,0 +1,125 @@
+variable:=:/lon
+  volume:=:      576.000
+  long_name:=:longitude
+  units:=:degrees_east
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/lat
+  volume:=:      361.000
+  long_name:=:latitude
+  units:=:degrees_north
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/lev
+  volume:=:      72.0000
+  long_name:=:vertical level
+  units:=:layer
+  positive:=:down
+  coordinate:=:eta
+  standard_name:=:model_layers
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/time
+  volume:=:      8.00000
+  long_name:=:time
+  units:=:minutes since 1980-01-01 01:30:00
+  time_increment:=:       30000
+  begin_date:=:    19800101
+  begin_time:=:       13000
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/CLOUD
+  volume:=: 1.19771e+008
+  long_name:=:cloud_fraction_for_radiation
+  units:=:1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  scale_factor:=:      1.00000
+  add_offset:=:     0.000000
+  standard_name:=:cloud_fraction_for_radiation
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DELP
+  volume:=: 1.19771e+008
+  long_name:=:pressure_thickness
+  units:=:Pa
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  scale_factor:=:      1.00000
+  add_offset:=:     0.000000
+  standard_name:=:pressure_thickness
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DTDTLWR
+  volume:=: 1.19771e+008
+  long_name:=:air_temperature_tendency_due_to_longwave
+  units:=:K s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  scale_factor:=:      1.00000
+  add_offset:=:     0.000000
+  standard_name:=:air_temperature_tendency_due_to_longwave
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DTDTLWRCLR
+  volume:=: 1.19771e+008
+  long_name:=:air_temperature_tendency_due_to_longwave_for_clear_skies
+  units:=:K s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  scale_factor:=:      1.00000
+  add_offset:=:     0.000000
+  standard_name:=:air_temperature_tendency_due_to_longwave_for_clear_skies
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DTDTSWR
+  volume:=: 1.19771e+008
+  long_name:=:air_temperature_tendency_due_to_shortwave
+  units:=:K s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  scale_factor:=:      1.00000
+  add_offset:=:     0.000000
+  standard_name:=:air_temperature_tendency_due_to_shortwave
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DTDTSWRCLR
+  volume:=: 1.19771e+008
+  long_name:=:air_temperature_tendency_due_to_shortwave_for_clear_skies
+  units:=:K s-1
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  scale_factor:=:      1.00000
+  add_offset:=:     0.000000
+  standard_name:=:air_temperature_tendency_due_to_shortwave_for_clear_skies
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/PS
+  volume:=: 1.66349e+006
+  long_name:=:surface_pressure
+  units:=:Pa
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  scale_factor:=:      1.00000
+  add_offset:=:     0.000000
+  standard_name:=:surface_pressure
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015

@@ -1,0 +1,386 @@
+variable:=:/num_observations
+  volume:=:  1.44000e+006
+  long_name:=:Number of Observations
+  units:=:none
+  valid_range:=:   0 127
+  _FillValue:=: 255
+variable:=:/sur_refl_b08_1
+  volume:=:  1.44000e+006
+  long_name:=:1km Surface Reflectance Band 8 - first layer
+  units:=:reflectance
+  valid_range:=:    -100   16000
+  _FillValue:=:  -28672
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  scale_factor:=:       10000.000
+  scale_factor_err:=:      0.00000000
+  Nadir Data Resolution:=:1km
+variable:=:/sur_refl_b09_1
+  volume:=:  1.44000e+006
+  long_name:=:1km Surface Reflectance Band 9 - first layer
+  units:=:reflectance
+  valid_range:=:    -100   16000
+  _FillValue:=:  -28672
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  scale_factor:=:       10000.000
+  scale_factor_err:=:      0.00000000
+  Nadir Data Resolution:=:1km
+variable:=:/sur_refl_b10_1
+  volume:=:  1.44000e+006
+  long_name:=:1km Surface Reflectance Band 10 - first layer
+  units:=:reflectance
+  valid_range:=:    -100   16000
+  _FillValue:=:  -28672
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  scale_factor:=:       10000.000
+  scale_factor_err:=:      0.00000000
+  Nadir Data Resolution:=:1km
+variable:=:/sur_refl_b11_1
+  volume:=:  1.44000e+006
+  long_name:=:1km Surface Reflectance Band 11 - first layer
+  units:=:reflectance
+  valid_range:=:    -100   16000
+  _FillValue:=:  -28672
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  scale_factor:=:       10000.000
+  scale_factor_err:=:      0.00000000
+  Nadir Data Resolution:=:1km
+variable:=:/sur_refl_b12_1
+  volume:=:  1.44000e+006
+  long_name:=:1km Surface Reflectance Band 12 - first layer
+  units:=:reflectance
+  valid_range:=:    -100   16000
+  _FillValue:=:  -28672
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  scale_factor:=:       10000.000
+  scale_factor_err:=:      0.00000000
+  Nadir Data Resolution:=:1km
+variable:=:/sur_refl_b13_1
+  volume:=:  1.44000e+006
+  long_name:=:1km Surface Reflectance Band 13 - first layer
+  units:=:reflectance
+  valid_range:=:    -100   16000
+  _FillValue:=:  -28672
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  scale_factor:=:       10000.000
+  scale_factor_err:=:      0.00000000
+  Nadir Data Resolution:=:1km
+variable:=:/sur_refl_b14_1
+  volume:=:  1.44000e+006
+  long_name:=:1km Surface Reflectance Band 14 - first layer
+  units:=:reflectance
+  valid_range:=:    -100   16000
+  _FillValue:=:  -28672
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  scale_factor:=:       10000.000
+  scale_factor_err:=:      0.00000000
+  Nadir Data Resolution:=:1km
+variable:=:/sur_refl_b15_1
+  volume:=:  1.44000e+006
+  long_name:=:1km Surface Reflectance Band 15 - first layer
+  units:=:reflectance
+  valid_range:=:    -100   16000
+  _FillValue:=:  -28672
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  scale_factor:=:       10000.000
+  scale_factor_err:=:      0.00000000
+  Nadir Data Resolution:=:1km
+variable:=:/sur_refl_b16_1
+  volume:=:  1.44000e+006
+  long_name:=:1km Surface Reflectance Band 16 - first layer
+  units:=:reflectance
+  valid_range:=:    -100   16000
+  _FillValue:=:  -28672
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  scale_factor:=:       10000.000
+  scale_factor_err:=:      0.00000000
+  Nadir Data Resolution:=:1km
+variable:=:/QC_b8_15_1km_1
+  volume:=:  1.44000e+006
+  long_name:=:1km b8-15 Reflectance Band Quality - first layer
+  units:=:bit field
+  valid_range:=:           0  4294966019
+  _FillValue:=:   787410671
+  Nadir Data Resolution:=:1km
+  QA index:=:
+
+	Bits are listed from the MSB (bit 31) to the LSB (bit 0):
+	Bit    Description
+	28-31  band 15 data quality four bit range;
+	       0000 -- highest quality
+	       0111 -- noisy detector
+	       1000 -- dead detector, data interpolated in L1B
+	       1001 -- solar zenith >= 86 degrees
+	       1010 -- solar zenith >= 85 and < 86 degrees
+	       1011 -- missing input
+	       1100 -- internal constant used in place of climatological data 
+	               for at least one atmospheric constant
+	       1101 -- correction out of bounds pixel constrained to extreme 
+	               allowable value
+	       1110 -- L1B data faulty
+	       1111 -- not processed due to deep ocean or clouds
+	24-27  band 14 data quality four bit range;
+	       SAME AS ABOVE
+	20-23  band 13 data quality four bit range;
+	       SAME AS ABOVE
+	16-19  band 12 data quality four bit range;
+	       SAME AS ABOVE
+	12-15  band 11 data quality four bit range;
+	       SAME AS ABOVE
+	8-11   band 10 data quality four bit range;
+	       SAME AS ABOVE
+	4-7    band 9 data quality four bit range;
+	       SAME AS ABOVE
+	0-3    band 8 data quality four bit range;
+	       SAME AS ABOVE
+
+
+variable:=:/QC_b16_1km_1
+  volume:=:  1.44000e+006
+  long_name:=:1km b16 Reflectance Band Quality - first layer
+  units:=:bit field
+  valid_range:=:   0 255
+  _FillValue:=:   3
+  Nadir Data Resolution:=:1km
+  QA index:=:
+
+	Bits are listed from the MSB (bit 31) to the LSB (bit 0):
+	Bit    Description
+	4-7    band 16 data quality four bit range;
+	       0000 -- highest quality
+	       0111 -- noisy detector
+	       1000 -- dead detector, data interpolated in L1B
+	       1001 -- solar zenith >= 86 degrees
+	       1010 -- solar zenith >= 85 and < 86 degrees
+	       1011 -- missing input
+	       1100 -- internal constant used in place of climatological data 
+	               for at least one atmospheric constant
+	       1101 -- correction out of bounds pixel constrained to extreme 
+	               allowable value
+	       1110 -- L1B data faulty
+	       1111 -- not processed due to deep ocean or clouds
+	0-3    spare (unused); 
+
+
+variable:=:/orbit_pnt_1
+  volume:=:  1.44000e+006
+  long_name:=:Orbit pointer - first layer
+  units:=:none
+  valid_range:=:   0  15
+  _FillValue:=: 255
+variable:=:/granule_pnt_1
+  volume:=:  1.44000e+006
+  long_name:=:Granule Pointer - first layer
+  units:=:none
+  valid_range:=:   0 254
+  _FillValue:=: 255
+variable:=:/sur_refl_b08_c
+  volume:=:       22175.0
+  long_name:=:1km Surface Reflectance Band 8 - additional layers, compact
+  units:=:reflectance
+  valid_range:=:    -100   16000
+  _FillValue:=:  -28672
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  scale_factor:=:       10000.000
+  scale_factor_err:=:      0.00000000
+  Nadir Data Resolution:=:1km
+variable:=:/sur_refl_b09_c
+  volume:=:       22175.0
+  long_name:=:1km Surface Reflectance Band 9 - additional layers, compact
+  units:=:reflectance
+  valid_range:=:    -100   16000
+  _FillValue:=:  -28672
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  scale_factor:=:       10000.000
+  scale_factor_err:=:      0.00000000
+  Nadir Data Resolution:=:1km
+variable:=:/sur_refl_b10_c
+  volume:=:       22175.0
+  long_name:=:1km Surface Reflectance Band 10 - additional layers, compact
+  units:=:reflectance
+  valid_range:=:    -100   16000
+  _FillValue:=:  -28672
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  scale_factor:=:       10000.000
+  scale_factor_err:=:      0.00000000
+  Nadir Data Resolution:=:1km
+variable:=:/sur_refl_b11_c
+  volume:=:       22175.0
+  long_name:=:1km Surface Reflectance Band 11 - additional layers, compact
+  units:=:reflectance
+  valid_range:=:    -100   16000
+  _FillValue:=:  -28672
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  scale_factor:=:       10000.000
+  scale_factor_err:=:      0.00000000
+  Nadir Data Resolution:=:1km
+variable:=:/sur_refl_b12_c
+  volume:=:       22175.0
+  long_name:=:1km Surface Reflectance Band 12 - additional layers, compact
+  units:=:reflectance
+  valid_range:=:    -100   16000
+  _FillValue:=:  -28672
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  scale_factor:=:       10000.000
+  scale_factor_err:=:      0.00000000
+  Nadir Data Resolution:=:1km
+variable:=:/sur_refl_b13_c
+  volume:=:       22175.0
+  long_name:=:1km Surface Reflectance Band 13 - additional layers, compact
+  units:=:reflectance
+  valid_range:=:    -100   16000
+  _FillValue:=:  -28672
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  scale_factor:=:       10000.000
+  scale_factor_err:=:      0.00000000
+  Nadir Data Resolution:=:1km
+variable:=:/sur_refl_b14_c
+  volume:=:       22175.0
+  long_name:=:1km Surface Reflectance Band 14 - additional layers, compact
+  units:=:reflectance
+  valid_range:=:    -100   16000
+  _FillValue:=:  -28672
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  scale_factor:=:       10000.000
+  scale_factor_err:=:      0.00000000
+  Nadir Data Resolution:=:1km
+variable:=:/sur_refl_b15_c
+  volume:=:       22175.0
+  long_name:=:1km Surface Reflectance Band 15 - additional layers, compact
+  units:=:reflectance
+  valid_range:=:    -100   16000
+  _FillValue:=:  -28672
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  scale_factor:=:       10000.000
+  scale_factor_err:=:      0.00000000
+  Nadir Data Resolution:=:1km
+variable:=:/sur_refl_b16_c
+  volume:=:       22175.0
+  long_name:=:1km Surface Reflectance Band 16 - additional layers, compact
+  units:=:reflectance
+  valid_range:=:    -100   16000
+  _FillValue:=:  -28672
+  add_offset:=:      0.00000000
+  add_offset_err:=:      0.00000000
+  calibrated_nt:=:           5
+  scale_factor:=:       10000.000
+  scale_factor_err:=:      0.00000000
+  Nadir Data Resolution:=:1km
+variable:=:/QC_b8_15_1km_c
+  volume:=:       22175.0
+  long_name:=:1km b8-15 Reflectance Band Quality - additional layers, compact
+  units:=:bit field
+  valid_range:=:           0  4294966019
+  _FillValue:=:   787410671
+  Nadir Data Resolution:=:1km
+  QA index:=:
+
+	Bits are listed from the MSB (bit 31) to the LSB (bit 0):
+	Bit    Description
+	28-31  band 15 data quality four bit range;
+	       0000 -- highest quality
+	       0111 -- noisy detector
+	       1000 -- dead detector, data interpolated in L1B
+	       1001 -- solar zenith >= 86 degrees
+	       1010 -- solar zenith >= 85 and < 86 degrees
+	       1011 -- missing input
+	       1100 -- internal constant used in place of climatological data 
+	               for at least one atmospheric constant
+	       1101 -- correction out of bounds pixel constrained to extreme 
+	               allowable value
+	       1110 -- L1B data faulty
+	       1111 -- not processed due to deep ocean or clouds
+	24-27  band 14 data quality four bit range;
+	       SAME AS ABOVE
+	20-23  band 13 data quality four bit range;
+	       SAME AS ABOVE
+	16-19  band 12 data quality four bit range;
+	       SAME AS ABOVE
+	12-15  band 11 data quality four bit range;
+	       SAME AS ABOVE
+	8-11   band 10 data quality four bit range;
+	       SAME AS ABOVE
+	4-7    band 9 data quality four bit range;
+	       SAME AS ABOVE
+	0-3    band 8 data quality four bit range;
+	       SAME AS ABOVE
+
+
+variable:=:/QC_b16_1km_c
+  volume:=:       22175.0
+  long_name:=:1km b16 Reflectance Band Quality - additional layers, compact
+  units:=:bit field
+  valid_range:=:   0 255
+  _FillValue:=:   3
+  Nadir Data Resolution:=:1km
+  QA index:=:
+
+	Bits are listed from the MSB (bit 31) to the LSB (bit 0):
+	Bit    Description
+	4-7    band 16 data quality four bit range;
+	       0000 -- highest quality
+	       0111 -- noisy detector
+	       1000 -- dead detector, data interpolated in L1B
+	       1001 -- solar zenith >= 86 degrees
+	       1010 -- solar zenith >= 85 and < 86 degrees
+	       1011 -- missing input
+	       1100 -- internal constant used in place of climatological data 
+	               for at least one atmospheric constant
+	       1101 -- correction out of bounds pixel constrained to extreme 
+	               allowable value
+	       1110 -- L1B data faulty
+	       1111 -- not processed due to deep ocean or clouds
+	0-3    spare (unused); 
+
+
+variable:=:/orbit_pnt_c
+  volume:=:       22175.0
+  long_name:=:Orbit pointer - additional layers, compact
+  units:=:none
+  valid_range:=:   0  15
+  _FillValue:=: 255
+variable:=:/granule_pnt_c
+  volume:=:       22175.0
+  long_name:=:Granule Pointer - additional layers, compact
+  units:=:none
+  valid_range:=:   0 254
+  _FillValue:=: 255
+variable:=:/nadd_obs_row
+  volume:=:       1200.00
+  long_name:=:Number of additional observations per row
+  units:=:none
+  valid_range:=:           0  2147483647
+  _FillValue:=:          -1

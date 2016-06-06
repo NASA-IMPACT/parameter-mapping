@@ -1,0 +1,42 @@
+variable:=:/Snow_Cover_Daily_Tile
+  volume:=:  5.76000e+006
+  long_name:=:Snow cover extent by best observation of the day
+  units:=:none
+  format:=:I3
+  coordsys:=:cartesian
+  valid_range:=:   0 254
+  _FillValue:=: 255
+  missing_value:=:   0
+  Key:=:
+0=missing data, 1=no decision, 11=night, 25=no snow, 37=lake, 39=ocean, 50=cloud, 100=lake ice, 200=snow, 254=detector saturated, 255=fill
+variable:=:/Snow_Spatial_QA
+  volume:=:  5.76000e+006
+  long_name:=:Spatial QA of the observation selected for the day
+  units:=:none
+  format:=:I3
+  coordsys:=:cartesian
+  valid_range:=:   0 254
+  _FillValue:=: 255
+  Key:=:
+0=good quality, 1=other quality, 252=Antarctica mask, 253=land mask, 254=ocean mask, 255=fill
+variable:=:/Snow_Albedo_Daily_Tile
+  volume:=:  5.76000e+006
+  long_name:=:Snow albedo of the corresponding snow cover observation
+  units:=:none
+  format:=:I3
+  coordsys:=:cartesian
+  valid_range:=:   0 100
+  _FillValue:=: 255
+  missing_value:=: 250
+  Key:=:
+0-100=snow albedo, 101=no_decision, 111=night, 125=land, 137=inland water, 139=ocean, 150=cloud, 250=missing, 251=self_shadowing, 252=landmask mismatch, 253=BRDF_failure, 254=non-production_mask
+variable:=:/Fractional_Snow_Cover
+  volume:=:  5.76000e+006
+  long_name:=:Fractional snow covered land for the tile
+  units:=:none
+  format:=:I3
+  coordsys:=:cartesian
+  valid_range:=:   0 254
+  _FillValue:=: 255
+  Key:=:
+0-100=fractional snow, 200=missing data, 201=no decision, 211=night, 225=land, 237=inland water, 239=ocean, 250=cloud, 254=detector saturated, 255=fill

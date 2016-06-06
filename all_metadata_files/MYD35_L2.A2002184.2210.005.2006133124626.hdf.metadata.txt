@@ -1,0 +1,388 @@
+variable:=:/Latitude
+  volume:=:       109620.
+  valid_range:=:     -90.0000      90.0000
+  _FillValue:=:     -999.990
+  long_name:=:Geodetic Latitude
+  units:=:degrees_north
+  scale_factor:=:       1.0000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:MODIS Input
+  Cell_Along_Swath_Sampling:=:           3        2028           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:Internal geolocation arrays
+variable:=:/Longitude
+  volume:=:       109620.
+  valid_range:=:     -180.000      180.000
+  _FillValue:=:     -999.990
+  long_name:=:Geodetic Longitude
+  units:=:degrees_east
+  scale_factor:=:       1.0000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:MODIS Input
+  Cell_Along_Swath_Sampling:=:           3        2028           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:Internal geolocation arrays
+variable:=:/Scan_Start_Time
+  volume:=:       109620.
+  valid_range:=:      0.00000000  3.1558001e+009
+  _FillValue:=:      -999.90002
+  long_name:=:TAI time at start of scan replicated across the swath
+  units:=:seconds since 1993-1-1 00:00:00.0 0
+  scale_factor:=:       1.0000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:MODIS Input
+  Cell_Along_Swath_Sampling:=:           3        2028           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:Internal geolocation arrays
+variable:=:/Solar_Zenith
+  volume:=:       109620.
+  valid_range:=:       0   18000
+  _FillValue:=:   -9999
+  long_name:=:Solar Zenith Angle, Cell to Sun
+  units:=:degrees
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:MODIS Input
+  Cell_Along_Swath_Sampling:=:           3        2028           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:Internal geolocation arrays
+variable:=:/Solar_Azimuth
+  volume:=:       109620.
+  valid_range:=:  -18000   18000
+  _FillValue:=:   -9999
+  long_name:=:Solar Azimuth Angle, Cell to Sun
+  units:=:degrees
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:MODIS Input
+  Cell_Along_Swath_Sampling:=:           3        2028           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:Internal geolocation arrays
+variable:=:/Sensor_Zenith
+  volume:=:       109620.
+  valid_range:=:       0   18000
+  _FillValue:=:   -9999
+  long_name:=:Sensor Zenith Angle, Cell to Sensor
+  units:=:degrees
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:MODIS Input
+  Cell_Along_Swath_Sampling:=:           3        2028           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:Internal geolocation arrays
+variable:=:/Sensor_Azimuth
+  volume:=:       109620.
+  valid_range:=:  -18000   18000
+  _FillValue:=:   -9999
+  long_name:=:Sensor Azimuth Angle, Cell to Sensor
+  units:=:degrees
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:MODIS Input
+  Cell_Along_Swath_Sampling:=:           3        2028           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:Internal geolocation arrays
+variable:=:/Cloud_Mask
+  volume:=:  1.64917e+007
+  valid_range:=:   0 255
+  _FillValue:=:   0
+  long_name:=:MODIS Cloud Mask and Spectral Test Results
+  units:=:none
+  scale_factor:=:       1.0000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           1        2030           1
+  Cell_Across_Swath_Sampling:=:           1        1354           1
+  Geolocation_Pointer:=:External MODIS geolocation product
+  description:=:
+
+                                                                                   
+                                                                                    
+ Bit fields within each byte are numbered from the left:                            
+ 7, 6, 5, 4, 3, 2, 1, 0.                                                            
+ The left-most bit (bit 7) is the most significant bit.                             
+ The right-most bit (bit 0) is the least significant bit.                           
+                                                                                    
+ bit field       Description                             Key                        
+ ---------       -----------                             ---                        
+                                                                                    
+ 0               Cloud Mask Flag                      0 = Not  determined           
+                                                      1 = Determined                
+                                                                                    
+ 2, 1            Unobstructed FOV Quality Flag        00 = Cloudy                   
+                                                      01 = Uncertain                
+                                                      10 = Probably  Clear          
+                                                      11 = Confident  Clear         
+                 PROCESSING PATH                                                    
+                 ---------------                                                    
+ 3               Day or Night Path                    0 = Night  / 1 = Day          
+ 4               Sunglint Path                        0 = Yes    / 1 = No           
+ 5               Snow/Ice Background Path             0 = Yes    / 1 = No           
+ 7, 6            Land or Water Path                   00 = Water                    
+                                                      01 = Coastal                  
+                                                      10 = Desert                   
+                                                      11 = Land                     
+ ____ END BYTE 1 ______________ ___________________________________________         
+                                                                                    
+ bit field       Description                             Key                        
+ ---------       -----------                             ---                        
+                                                                                    
+                 ADDITIONAL INFORMATION                                             
+                 ----------------------                                             
+ 0               Non- cloud obstruction Flag              0 = Yes / 1 = No          
+ 1               Thin Cirrus Detected  (Solar)           0 =  Yes / 1 = No          
+ 2               Shadow Found                            0 =  Yes / 1 = No          
+ 3               Thin Cirrus Detected  (Infrared)        0 =  Yes / 1 = No          
+ 4               Adjacent Cloud Detected **              0 =  Yes / 1 = No          
+                 ** Implemented Post Launch to                                      
+                    Indicate cloud found within                                     
+                    surrounding 1 km pixels *                                       
+                                                                                    
+                 1-km CLOUD FLAGS                                                   
+                 ----------------                                                   
+ 5               Cloud Flag -  IR Threshold               0 = Yes / 1 = No          
+ 6               High Cloud Flag -  CO2 Test              0 = Yes / 1 = No          
+ 7               High Cloud Flag -  6.7 micron Test       0 = Yes / 1 = No          
+ ____ END BYTE 2 ______________ ___________________________________________         
+                                                                                    
+ bit field       Description                             Key                        
+ ---------       -----------                             ---                        
+                                                                                    
+ 0               High Cloud Flag -  1.38 micron Test      0 = Yes / 1 = No          
+ 1               High Cloud Flag - 3.7- 12 micron Test    0 = Yes / 1 = No          
+ 2               Cloud Flag -  IR Temperature             0 = Yes / 1 = No          
+                              Difference                                            
+ 3               Cloud Flag - 3.7- 11 micron Test         0 = Yes / 1 = No          
+ 4               Cloud Flag -  Visible Reflectance Test   0 = Yes / 1 = No          
+ 5               Cloud Flag -  Visible Reflectance        0 = Yes / 1 = No          
+                              Ratio Test                                            
+ 6               Cloud Flag -  NDVI Final Confidence      0 = Yes / 1 = No          
+                              Confirmation Test                                     
+ 7               Cloud Flag - Night 7.3- 11 micron Test   0 = Yes / 1 = No          
+ ____ END BYTE 3 ______________ ___________________________________________         
+                                                                                    
+ bit field       Description                             Key                        
+ ---------       -----------                             ---                        
+                                                                                    
+                 ADDITIONAL TESTS                                                   
+                 ----------------                                                   
+ 0               Cloud Flag -  Spare                      0 = Yes / 1 = No          
+ 1               Cloud Flag -  Spatial Variability        0 = Yes / 1 = No          
+ 2               Final Confidence Confirmation Test      0 =  Yes / 1 = No          
+ 3               Cloud Flag -  Night Water                0 = Yes / 1 = No          
+                              Spatial Variability                                   
+ 4               Suspended Dust Flag                     0 =  Yes / 1 = No          
+                                                                                    
+ 5-7             Spares                                                             
+ ____ END BYTE 4 ______________ ___________________________________________         
+                                                                                    
+ bit field       Description                             Key                        
+ ---------       -----------                             ---                        
+                                                                                    
+                 250-m Cloud Flag - Visible Tests                                   
+                 --------------------------------                                   
+ 0               Element(1,1)                            0 =  Yes / 1 = No          
+ 1               Element(1,2)                            0 =  Yes / 1 = No          
+ 2               Element(1,3)                            0 =  Yes / 1 = No          
+ 3               Element(1,4)                            0 =  Yes / 1 = No          
+ 4               Element(2,1)                            0 =  Yes / 1 = No          
+ 5               Element(2,2)                            0 =  Yes / 1 = No          
+ 6               Element(2,3)                            0 =  Yes / 1 = No          
+ 7               Element(2,4)                            0 =  Yes / 1 = No          
+ ____ END BYTE 5 ______________ ___________________________________________         
+                                                                                    
+ bit field       Description                             Key                        
+ ----------      -----------                             ---                        
+                                                                                    
+ 0               Element(3,1)                            0 =  Yes / 1 = No          
+ 1               Element(3,2)                            0 =  Yes / 1 = No          
+ 2               Element(3,3)                            0 =  Yes / 1 = No          
+ 3               Element(3,4)                            0 =  Yes / 1 = No          
+ 4               Element(4,1)                            0 =  Yes / 1 = No          
+ 5               Element(4,2)                            0 =  Yes / 1 = No          
+ 6               Element(4,3)                            0 =  Yes / 1 = No          
+ 7               Element(4,4)                            0 =  Yes / 1 = No          
+ ____ END BYTE 6 ______________ ___________________________________________         
+
+variable:=:/Quality_Assurance
+  volume:=:  2.74862e+007
+  valid_range:=:   0 255
+  _FillValue:=:   0
+  long_name:=:Quality Assurance for Cloud Mask
+  units:=:none
+  scale_factor:=:       1.0000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           1        2030           1
+  Cell_Across_Swath_Sampling:=:           1        1354           1
+  Geolocation_Pointer:=:External MODIS geolocation product
+  description:=:
+
+                                                                                   
+        Product Run Time QA Flags                                                   
+ QA Flag Name    Number of Bits  Bit Value   Description                            
+ -------------------------------------------------------------                      
+ Cloud Mask QA        1             0       not useful                              
+   (1km)                            1       useful                                  
+                                                                                    
+ Cloud Mask           3            0-7      8 confidence levels                     
+   Confidence QA                                                                    
+   (1km)                                                                            
+                                                                                    
+ Spares               4                                                             
+  -------- ( 1 byte total ) --------------------------------                        
+                                                                                    
+ Optional run time QA flags - Individual test application                           
+                                                                                    
+ QA Flag Name    Number of Bits  Bit Value   Description                            
+ -------------------------------------------------------------                      
+ NCO test             1             0       Not Applied                             
+                                    1       Applied                                 
+                                                                                    
+ Thin Cirrus          1             0       Not Applied                             
+   test (Solar)                     1       Applied                                 
+                                                                                    
+ Shadow Tests         1             0       Not Applied                             
+                                    1       Applied                                 
+                                                                                    
+ Thin Cirrus          1             0       Not Applied                             
+   test(IR)                         1       Applied                                 
+                                                                                    
+ Cloud Adjancency     1             0       Not Applied                             
+   test(IR)                         1       Applied                                 
+                                                                                    
+ IR Threshold         1             0       Not Applied                             
+   test                             1       Applied                                 
+                                                                                    
+ High Cloud           1             0       Not Applied                             
+   Test (CO2)                       1       Applied                                 
+                                                                                    
+ High Cloud           1             0       Not Applied                             
+   Test (6.7)                       1       Applied                                 
+                                                                                    
+ High Cloud           1             0       Not Applied                             
+   Test (1.38)                      1       Applied                                 
+                                                                                    
+ High Cloud           1             0       Not Applied                             
+   Test (3.7-12um)                  1       Applied                                 
+                                                                                    
+ IR Temperature       1             0       Not Applied                             
+   Difference Tests                 1       Applied                                 
+                                                                                    
+ 3.7-11um Test        1             0       Not Applied                             
+                                    1       Applied                                 
+                                                                                    
+ .68 Reflectance      1             0       Not Applied                             
+   Test                             1       Applied                                 
+                                                                                    
+ Visible Ratio        1             0       Not Applied                             
+   Test                             1       Applied                                 
+                                                                                    
+ NDVI Final           1             0       Not Applied                             
+   Confidence                       1       Applied                                 
+   Confirmation                                                                     
+                                                                                    
+ Spare                1             0       Not Applied                             
+                                    1       Applied                                 
+                                                                                    
+ Spare                1             0       Not Applied                             
+                                    1       Applied                                 
+                                                                                    
+ Spatial              1             0       Not Applied                             
+   Variability Test                 1       Applied                                 
+                                                                                    
+ Final Confidence     1             0       Not Applied                             
+   Confirmation Test                1       Applied                                 
+                                                                                    
+ Night Water          1             0       Not Applied                             
+   Spatial Variability              1       Applied                                 
+                                                                                    
+ Suspended Dust Test  1             0       Not Applied                             
+                                    1       Applied                                 
+                                                                                    
+ Spares               3                                                             
+                                                                                    
+ 250 m Visible      1(16)           0       Not Applied                             
+   Tests                            1       Applied                                 
+   (16 times as (line1,element1),(line1, element2),...                              
+   (line4,element4))                                                                
+                                                                                    
+  -------- ( 5 bytes total ) --------------------------------                       
+                                                                                    
+ Optional run time QA flags - data information flags                                
+                                                                                    
+ QA Flag Name    Number of Bits  Bit Value   Description                            
+  -------------------------------------------------------------                     
+ Number of            2             0       None                                    
+   bands used to                    1       1-7                                     
+   generate                         2       8-14                                    
+   cloud mask                       3       15-21                                   
+                                                                                    
+ Number of            2             0       None                                    
+   spectral                         1       1-3                                     
+   tests used to                    2       4-6                                     
+   generate                         3       7-9                                     
+   cloud mask                                                                       
+                                                                                    
+ Spares               4                                                             
+                                                                                    
+  -------- ( 1 byte total ) --------------------------------                        
+                                                                                    
+ Optional run time QA flags - data resource flags                                   
+                                                                                    
+ QA Flag Name    Number of Bits  Bit Value   Description                            
+ -------------------------------------------------------------                      
+ Clear                2             0       MOD35                                   
+   Radiance                         1       Model forward calculation               
+   Origin                           2       Other                                   
+                                    3       Not used                                
+                                                                                    
+ Surface              2             0       NCEP GDAS                               
+   Temperature                      1       DAO                                     
+   Over Land                        2       MOD11                                   
+                                    3       Other                                   
+                                                                                    
+ Surface              2             0       Reynolds blended                        
+   Temperature                      1       DAO                                     
+   Over Ocean                       2       MOD28                                   
+                                    3       Other                                   
+                                                                                    
+ Surface Winds        2             0       NCEP GDAS                               
+                                    1       DAO                                     
+                                    2       Other                                   
+                                    3       Not used                                
+                                                                                    
+ Ecosystem Map        2             0       Loveland NA 1km                         
+                                    1       Olson Ecosystem                         
+                                    2       MOD12                                   
+                                    3       Other                                   
+                                                                                    
+ Snow mask            2             0       MOD33                                   
+                                    1       SSMI Product                            
+                                    2       Other                                   
+                                    3       Not used                                
+                                                                                    
+ Ice cover            2             0       MOD42                                   
+                                    1       SSMI product                            
+                                    2       Other                                   
+                                    3       Not used                                
+                                                                                    
+ Land/Sea Mask        2             0       USGS 1 km 6 level                       
+                                    1       USGS 1 km binary                        
+                                    2       Other                                   
+                                    3       Not used                                
+                                                                                    
+ Digital              1             0       EOS DEM                                 
+   Elevation                        1       Not used                                
+   Model                                                                            
+                                                                                    
+ Precipitable         2             0       NCEP GDAS                               
+   Water                            1       DAO                                     
+                                    2       MOD07                                   
+                                    3       Other                                   
+                                                                                    
+ Spare                5                                                             
+                                                                                    
+  -------- ( 3 bytes total ) --------------------------------                       
+                                                                                    
+

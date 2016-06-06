@@ -1,0 +1,232 @@
+variable:=:/lon
+  volume:=:      576.000
+  long_name:=:longitude
+  units:=:degrees_east
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/lat
+  volume:=:      361.000
+  long_name:=:latitude
+  units:=:degrees_north
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/lev
+  volume:=:      42.0000
+  long_name:=:vertical level
+  units:=:hPa
+  positive:=:down
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/time
+  volume:=:      1.00000
+  long_name:=:time
+  units:=:minutes since 1980-01-01 01:30:00
+  time_increment:=:       60000
+  begin_date:=:    19800101
+  begin_time:=:       13000
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DUDTANA
+  volume:=: 8.73331e+006
+  long_name:=:total_eastward_wind_analysis_tendency
+  units:=:m s-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DUDTDYN
+  volume:=: 8.73331e+006
+  long_name:=:tendency_of_eastward_wind_due_to_dynamics
+  units:=:m/s/s
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DUDTGWD
+  volume:=: 8.73331e+006
+  long_name:=:tendency_of_eastward_wind_due_to_GWD
+  units:=:m s-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DUDTMST
+  volume:=: 8.73331e+006
+  long_name:=:zonal_wind_tendency_due_to_moist
+  units:=:m s-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DUDTTRB
+  volume:=: 8.73331e+006
+  long_name:=:tendency_of_eastward_wind_due_to_turbulence
+  units:=:m s-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DVDTANA
+  volume:=: 8.73331e+006
+  long_name:=:total_northward_wind_analysis_tendency
+  units:=:m s-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DVDTDYN
+  volume:=: 8.73331e+006
+  long_name:=:tendency_of_northward_wind_due_to_dynamics
+  units:=:m/s/s
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DVDTGWD
+  volume:=: 8.73331e+006
+  long_name:=:tendency_of_northward_wind_due_to_GWD
+  units:=:m s-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DVDTMST
+  volume:=: 8.73331e+006
+  long_name:=:meridional_wind_tendency_due_to_moist
+  units:=:m s-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/DVDTTRB
+  volume:=: 8.73331e+006
+  long_name:=:tendency_of_northward_wind_due_to_turbulence
+  units:=:m s-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DUDTANA
+  volume:=: 8.73331e+006
+  long_name:=:Variance_of_DUDTANA
+  units:=:m s-2 m s-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DUDTDYN
+  volume:=: 8.73331e+006
+  long_name:=:Variance_of_DUDTDYN
+  units:=:m/s/s m/s/s
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DUDTGWD
+  volume:=: 8.73331e+006
+  long_name:=:Variance_of_DUDTGWD
+  units:=:m s-2 m s-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DUDTMST
+  volume:=: 8.73331e+006
+  long_name:=:Variance_of_DUDTMST
+  units:=:m s-2 m s-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DUDTTRB
+  volume:=: 8.73331e+006
+  long_name:=:Variance_of_DUDTTRB
+  units:=:m s-2 m s-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DVDTANA
+  volume:=: 8.73331e+006
+  long_name:=:Variance_of_DVDTANA
+  units:=:m s-2 m s-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DVDTDYN
+  volume:=: 8.73331e+006
+  long_name:=:Variance_of_DVDTDYN
+  units:=:m/s/s m/s/s
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DVDTGWD
+  volume:=: 8.73331e+006
+  long_name:=:Variance_of_DVDTGWD
+  units:=:m s-2 m s-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DVDTMST
+  volume:=: 8.73331e+006
+  long_name:=:Variance_of_DVDTMST
+  units:=:m s-2 m s-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015
+variable:=:/Var_DVDTTRB
+  volume:=: 8.73331e+006
+  long_name:=:Variance_of_DVDTTRB
+  units:=:m s-2 m s-2
+  _FillValue:=: 1.00000e+015
+  missing_value:=: 1.00000e+015
+  fmissing_value:=: 1.00000e+015
+  vmax:=: 1.00000e+015
+  vmin:=:-1.00000e+015
+  valid_range:=:-1.00000e+015   valid_range:=: 1.00000e+015

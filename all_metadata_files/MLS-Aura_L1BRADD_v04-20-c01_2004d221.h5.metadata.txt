@@ -1,0 +1,125 @@
+variable:=:/BandChans
+  volume:=:136
+  Dimensions:=:BandNo
+variable:=:/BandChi2
+  volume:=:846
+  Dimensions:=:BandNo   Dimensions:=:ChanNo
+variable:=:/HDFEOS INFORMATION/coremetadata.0
+  volume:=:65535
+variable:=:/HDFEOS INFORMATION/xmlmetadata
+  volume:=:65535
+variable:=:/LCF
+  volume:=:1811
+variable:=:/MAFStartTimeGIRD
+  volume:=:56210
+  Dimensions:=:MAF
+variable:=:/PCF
+  volume:=:8352
+variable:=:/Pri_Reflec
+  volume:=:42144
+  Dimensions:=:MAF
+variable:=:/R1A:118.B22D:PT.S0.DACS-4
+  volume:=:192096194
+  Dimensions:=:chanDACS   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R1A:118.B22D:PT.S0.DACS-4 Baseline
+  volume:=:71119
+  Dimensions:=:chanDACS   Dimensions:=:MAF
+variable:=:/R1A:118.B22D:PT.S0.DACS-4 Baseline precision
+  volume:=:49168
+  Dimensions:=:chanDACS   Dimensions:=:MAF
+variable:=:/R1A:118.B22D:PT.S0.DACS-4 BaselineAC
+  volume:=:49168
+  Dimensions:=:chanDACS   Dimensions:=:MAF
+variable:=:/R1A:118.B22D:PT.S0.DACS-4 BaselineAC precision
+  volume:=:49168
+  Dimensions:=:chanDACS   Dimensions:=:MAF
+variable:=:/R1A:118.B22D:PT.S0.DACS-4 BaselineDC
+  volume:=:70775
+  Dimensions:=:chanDACS   Dimensions:=:MAF
+variable:=:/R1A:118.B22D:PT.S0.DACS-4 BaselineDC precision
+  volume:=:49168
+  Dimensions:=:chanDACS   Dimensions:=:MAF
+variable:=:/R1A:118.B22D:PT.S0.DACS-4 precision
+  volume:=:183831541
+  Dimensions:=:chanDACS   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R2:190.B23D:H2O.S0.DACS-2
+  volume:=:195999622
+  Dimensions:=:chanDACS   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R2:190.B23D:H2O.S0.DACS-2 Baseline
+  volume:=:70929
+  Dimensions:=:chanDACS   Dimensions:=:MAF
+variable:=:/R2:190.B23D:H2O.S0.DACS-2 Baseline precision
+  volume:=:49168
+  Dimensions:=:chanDACS   Dimensions:=:MAF
+variable:=:/R2:190.B23D:H2O.S0.DACS-2 BaselineAC
+  volume:=:49168
+  Dimensions:=:chanDACS   Dimensions:=:MAF
+variable:=:/R2:190.B23D:H2O.S0.DACS-2 BaselineAC precision
+  volume:=:49168
+  Dimensions:=:chanDACS   Dimensions:=:MAF
+variable:=:/R2:190.B23D:H2O.S0.DACS-2 BaselineDC
+  volume:=:70641
+  Dimensions:=:chanDACS   Dimensions:=:MAF
+variable:=:/R2:190.B23D:H2O.S0.DACS-2 BaselineDC precision
+  volume:=:49168
+  Dimensions:=:chanDACS   Dimensions:=:MAF
+variable:=:/R2:190.B23D:H2O.S0.DACS-2 precision
+  volume:=:182364126
+  Dimensions:=:chanDACS   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R3:240.B24D:O3.S0.DACS-3
+  volume:=:193243023
+  Dimensions:=:chanDACS   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R3:240.B24D:O3.S0.DACS-3 Baseline
+  volume:=:71044
+  Dimensions:=:chanDACS   Dimensions:=:MAF
+variable:=:/R3:240.B24D:O3.S0.DACS-3 Baseline precision
+  volume:=:49168
+  Dimensions:=:chanDACS   Dimensions:=:MAF
+variable:=:/R3:240.B24D:O3.S0.DACS-3 BaselineAC
+  volume:=:49168
+  Dimensions:=:chanDACS   Dimensions:=:MAF
+variable:=:/R3:240.B24D:O3.S0.DACS-3 BaselineAC precision
+  volume:=:49168
+  Dimensions:=:chanDACS   Dimensions:=:MAF
+variable:=:/R3:240.B24D:O3.S0.DACS-3 BaselineDC
+  volume:=:70878
+  Dimensions:=:chanDACS   Dimensions:=:MAF
+variable:=:/R3:240.B24D:O3.S0.DACS-3 BaselineDC precision
+  volume:=:49168
+  Dimensions:=:chanDACS   Dimensions:=:MAF
+variable:=:/R3:240.B24D:O3.S0.DACS-3 precision
+  volume:=:185773195
+  Dimensions:=:chanDACS   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R3:240.B25D:CO.S1.DACS-1
+  volume:=:199769073
+  Dimensions:=:chanDACS   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/R3:240.B25D:CO.S1.DACS-1 Baseline
+  volume:=:70947
+  Dimensions:=:chanDACS   Dimensions:=:MAF
+variable:=:/R3:240.B25D:CO.S1.DACS-1 Baseline precision
+  volume:=:49168
+  Dimensions:=:chanDACS   Dimensions:=:MAF
+variable:=:/R3:240.B25D:CO.S1.DACS-1 BaselineAC
+  volume:=:49168
+  Dimensions:=:chanDACS   Dimensions:=:MAF
+variable:=:/R3:240.B25D:CO.S1.DACS-1 BaselineAC precision
+  volume:=:49168
+  Dimensions:=:chanDACS   Dimensions:=:MAF
+variable:=:/R3:240.B25D:CO.S1.DACS-1 BaselineDC
+  volume:=:70796
+  Dimensions:=:chanDACS   Dimensions:=:MAF
+variable:=:/R3:240.B25D:CO.S1.DACS-1 BaselineDC precision
+  volume:=:49168
+  Dimensions:=:chanDACS   Dimensions:=:MAF
+variable:=:/R3:240.B25D:CO.S1.DACS-1 precision
+  volume:=:183068833
+  Dimensions:=:chanDACS   Dimensions:=:GHz.MIF   Dimensions:=:MAF
+variable:=:/Sec_Reflec
+  volume:=:42144
+  Dimensions:=:MAF
+variable:=:/Ter_Reflec
+  volume:=:42144
+  Dimensions:=:MAF
+variable:=:/counterMAF
+  volume:=:42144
+  Dimensions:=:MAF

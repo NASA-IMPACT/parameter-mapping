@@ -1,0 +1,32 @@
+variable:=:/Latitude
+  volume:=:       637734.
+  units:=:degrees
+  valid_range:=:     -90.0000      90.0000
+  _FillValue:=:     -999.000
+variable:=:/Longitude
+  volume:=:       637734.
+  units:=:degrees
+  valid_range:=:     -180.000      180.000
+  _FillValue:=:     -999.000
+variable:=:/EV_500_RefSB
+  volume:=:  1.27547e+007
+  long_name:=:Earth View 500M Reflective Solar Bands Scaled Integers
+  units:=:none
+  valid_range:=:       0   32767
+  _FillValue:=:   65535
+  band_names:=:3,4,5,6,7
+  radiance_scales:=:    0.0198964    0.0175550   0.00384370   0.00236085
+  0.000687170
+  radiance_offsets:=:    -0.000000    -0.000000    -0.000000    -0.000000
+    -0.000000
+  radiance_units:=:Watts/m^2/micrometer/steradian
+  reflectance_scales:=: 3.03266e-005 2.99413e-005 2.57883e-005 3.12758e-005
+ 2.42116e-005
+  reflectance_offsets:=:    -0.000000    -0.000000    -0.000000    -0.000000
+    -0.000000
+  reflectance_units:=:none
+  corrected_counts_scales:=:     0.124973     0.124973     0.124973     0.124973
+     0.124973
+  corrected_counts_offsets:=:    -0.000000    -0.000000    -0.000000
+    -0.000000    -0.000000
+  corrected_counts_units:=:counts

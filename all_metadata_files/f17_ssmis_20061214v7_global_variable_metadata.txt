@@ -1,0 +1,120 @@
+Summary of f17_ssmis_20061214v7.nc: filetype = NC_FORMAT_NETCDF4, 0 groups (max. depth = 0), 3 dimensions (3 fixed, 0 record), 8 variables (8 atomic-type, 0 non-atomic), 68 attributes (17 global, 0 group, 51 variable)
+
+Global attributes:
+Global attribute 0: chunksize, size = 2 NC_CHAR, value = 90
+Global attribute 1: comment, size = 993 NC_CHAR, value = Version-7 algorithm processing was performed during August 2011 and continues forward for active instruments.  Use data files with a date of August 2011 or newer.  The RSS SSMIS geophysical dataset consists of data derived from observations collected by SSMIS instruments carried onboard the DMSP series of polar orbiting satellites. These satellites are numbered:  F16 SSMIS Oct 2003 to present, F17 SSMIS Dec 2006 to present, F18 SSMIS Nov 2009 to present. Daily files of SSMIS geophysical parameters consist of data mapped to a regular grid complete with data gaps between orbits. Two maps exist for each parameter, one of ascending orbit segments and the other of descending orbit segments. Data on each of the maps are overwritten at both the high latitudes (where successive orbits cross) and at the 'seam' or the region where the last orbit of the day overlaps the first orbit of the day. Water vapor and cloud liquid water are given in kg/m2 (which is equivalent to 1 mm or 0.1 g/cm2).
+Global attribute 2: Conventions, size = 6 NC_CHAR, value = CF-1.6
+Global attribute 3: history, size = 931 NC_CHAR, value = Starting in August 2011, all SSMIS data were reprocessed from a preliminary beta version to the official Version-7.  Use data files that have a creation date of August 2011 or later.  At GHRC, RSS binary files are translated to netCDF-4 for archive, and for distribution to netCDF users.   RSS Provenance: processing location = Remote Sensing Systems, processing host = Ops1p, input files = SSMIS Level 2B data files (fSS_rRRRRR.dat, SS= sat number, RRRRR=orbital rev number), processing code name = ssmis_processor.exe, processing code version = 2011-08-08T02:55:51Z.  GHRC Provenance:  processing location = GHRC,  processing host = gale.nsstc.nasa.gov, processing environment = ops, binary input file name = f17_20061214v7.gz (daily), processing script name = RSSbinary2netCDF.jar, processing script version = 2012-06-01T20:09:29Z, configuration file name = SSMIS_F17_Daily.xml, configuration file version = 2012-06-12T15:05:07Z
+Global attribute 4: institution, size = 200 NC_CHAR, value = Remote Sensing Systems, Santa Rosa, California.  Sponsored by the NASA Earth Science MEaSUREs DISCOVER Project.
+Global Hydrology Resource Center, Huntsville, Alabama, a NASA earth science data center.
+Global attribute 5: numberofpasses, size = 1 NC_CHAR, value = 2
+Global attribute 6: passdirection, size = 56 NC_CHAR, value = 1:ascending orbit segments. 2:descending orbit segments.
+Global attribute 7: references, size = 46 NC_CHAR, value = http://www.ssmi.com/ssmi/ssmi_description.html
+Global attribute 8: satid, size = 8 NC_CHAR, value = DMSP-F17
+Global attribute 9: scale, size = 158 NC_CHAR, value = SSMIS data are scaled for storage and affect the resolution of the data:  time: x0.1 hrs, wind: x0.2 m/s, vapor: x0.3 kg/m2, cloud: x0.01 kg/m2, rain: x0.1 mm
+Global attribute 10: sensorid, size = 5 NC_CHAR, value = SSMIS
+Global attribute 11: source, size = 131 NC_CHAR, value = Data derived from observations collected by SSMIS instruments carried onboard the DMSP series of polar orbiting satellites(F16-F18)
+Global attribute 12: title, size = 56 NC_CHAR, value = RSS SSMIS Ocean Product Grids Daily from DMSP F17 netCDF
+Global attribute 13: value, size = 250 NC_CHAR, value = 251(1506 for time)=missing wind speed due to rain, or missing water vapor due to heavy rain.  252(1512 for time)=sea ice. 253(1518 for time)=SSMIS observations exist,but are bad. 254(1524 for time)=no SSMIS observations. 255(1530 for time)=land mass.
+Global attribute 14: begin_time, size = 20 NC_CHAR, value = 2006-12-14T00:00:00Z
+Global attribute 15: end_time, size = 20 NC_CHAR, value = 2006-12-14T23:59:59Z
+Global attribute 16: identifier_product_DOI, size = 39 NC_CHAR, value = 10.5067/MEASURES/DMSP-F17/SSMIS/DATA301
+
+atmosphere_cloud_liquid_water_content: type NC_SHORT, 3 dimensions, 8 attributes, compressed? yes, chunked? yes, packed? yes
+atmosphere_cloud_liquid_water_content compression (Lempel-Ziv without shuffling) level = 2
+atmosphere_cloud_liquid_water_content size (RAM) = 2*720*1440*sizeof(NC_SHORT) = 2073600*2 = 4147200 bytes
+atmosphere_cloud_liquid_water_content dimension 0: time, size = 2 NC_SHORT, chunksize = 2 (Coordinate is time)
+atmosphere_cloud_liquid_water_content dimension 1: latitude, size = 720 NC_FLOAT, chunksize = 90 (Coordinate is latitude)
+atmosphere_cloud_liquid_water_content dimension 2: longitude, size = 1440 NC_FLOAT, chunksize = 90 (Coordinate is longitude)
+atmosphere_cloud_liquid_water_content attribute 0: units, size = 6 NC_CHAR, value = kg m-2
+atmosphere_cloud_liquid_water_content attribute 1: standard_name, size = 37 NC_CHAR, value = atmosphere_cloud_liquid_water_content
+atmosphere_cloud_liquid_water_content attribute 2: long_name, size = 27 NC_CHAR, value = Columnar Cloud Liquid Water
+atmosphere_cloud_liquid_water_content attribute 3: valid_range, size = 2 NC_FLOAT, value = -0.05, 2.45
+atmosphere_cloud_liquid_water_content attribute 4: flag_values, size = 5 NC_SHORT, value = 251, 252, 253, 254, 255
+atmosphere_cloud_liquid_water_content attribute 5: flag_meanings, size = 73 NC_CHAR, value = missing_wind_speed_due_to_rain sea_ice bad_data no_observations land_mass
+atmosphere_cloud_liquid_water_content attribute 6: scale_factor, size = 1 NC_FLOAT, value = 0.01
+atmosphere_cloud_liquid_water_content attribute 7: add_offset, size = 1 NC_FLOAT, value = -0.05
+
+atmosphere_water_vapor_content: type NC_SHORT, 3 dimensions, 8 attributes, compressed? yes, chunked? yes, packed? yes
+atmosphere_water_vapor_content compression (Lempel-Ziv without shuffling) level = 2
+atmosphere_water_vapor_content size (RAM) = 2*720*1440*sizeof(NC_SHORT) = 2073600*2 = 4147200 bytes
+atmosphere_water_vapor_content dimension 0: time, size = 2 NC_SHORT, chunksize = 2 (Coordinate is time)
+atmosphere_water_vapor_content dimension 1: latitude, size = 720 NC_FLOAT, chunksize = 90 (Coordinate is latitude)
+atmosphere_water_vapor_content dimension 2: longitude, size = 1440 NC_FLOAT, chunksize = 90 (Coordinate is longitude)
+atmosphere_water_vapor_content attribute 0: units, size = 6 NC_CHAR, value = kg m-2
+atmosphere_water_vapor_content attribute 1: standard_name, size = 30 NC_CHAR, value = atmosphere_water_vapor_content
+atmosphere_water_vapor_content attribute 2: long_name, size = 20 NC_CHAR, value = Columnar Water Vapor
+atmosphere_water_vapor_content attribute 3: valid_range, size = 2 NC_FLOAT, value = 0, 75
+atmosphere_water_vapor_content attribute 4: flag_values, size = 5 NC_SHORT, value = 251, 252, 253, 254, 255
+atmosphere_water_vapor_content attribute 5: flag_meanings, size = 73 NC_CHAR, value = missing_wind_speed_due_to_rain sea_ice bad_data no_observations land_mass
+atmosphere_water_vapor_content attribute 6: scale_factor, size = 1 NC_FLOAT, value = 0.3
+atmosphere_water_vapor_content attribute 7: add_offset, size = 1 NC_FLOAT, value = 0
+
+latitude: type NC_FLOAT, 1 dimension, 5 attributes, compressed? no, chunked? no, packed? no
+latitude size (RAM) = 720*sizeof(NC_FLOAT) = 720*4 = 2880 bytes
+latitude dimension 0: latitude, size = 720 NC_FLOAT (Coordinate is latitude)
+latitude attribute 0: standard_name, size = 8 NC_CHAR, value = latitude
+latitude attribute 1: axis, size = 1 NC_CHAR, value = Y
+latitude attribute 2: valid_range, size = 2 NC_FLOAT, value = -89.875, 89.875
+latitude attribute 3: _CoordinateAxisType, size = 3 NC_CHAR, value = lat
+latitude attribute 4: units, size = 13 NC_CHAR, value = degrees_north
+
+longitude: type NC_FLOAT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+longitude size (RAM) = 1440*sizeof(NC_FLOAT) = 1440*4 = 5760 bytes
+longitude dimension 0: longitude, size = 1440 NC_FLOAT (Coordinate is longitude)
+longitude attribute 0: standard_name, size = 9 NC_CHAR, value = longitude
+longitude attribute 1: axis, size = 1 NC_CHAR, value = X
+longitude attribute 2: valid_range, size = 2 NC_FLOAT, value = 0.125, 359.875
+longitude attribute 3: units, size = 12 NC_CHAR, value = degrees_east
+
+rainfall_rate: type NC_SHORT, 3 dimensions, 8 attributes, compressed? yes, chunked? yes, packed? yes
+rainfall_rate compression (Lempel-Ziv without shuffling) level = 2
+rainfall_rate size (RAM) = 2*720*1440*sizeof(NC_SHORT) = 2073600*2 = 4147200 bytes
+rainfall_rate dimension 0: time, size = 2 NC_SHORT, chunksize = 2 (Coordinate is time)
+rainfall_rate dimension 1: latitude, size = 720 NC_FLOAT, chunksize = 90 (Coordinate is latitude)
+rainfall_rate dimension 2: longitude, size = 1440 NC_FLOAT, chunksize = 90 (Coordinate is longitude)
+rainfall_rate attribute 0: units, size = 5 NC_CHAR, value = mm/hr
+rainfall_rate attribute 1: standard_name, size = 13 NC_CHAR, value = rainfall_rate
+rainfall_rate attribute 2: long_name, size = 9 NC_CHAR, value = Rain Rate
+rainfall_rate attribute 3: valid_range, size = 2 NC_FLOAT, value = 0, 25
+rainfall_rate attribute 4: flag_values, size = 5 NC_SHORT, value = 251, 252, 253, 254, 255
+rainfall_rate attribute 5: flag_meanings, size = 73 NC_CHAR, value = missing_wind_speed_due_to_rain sea_ice bad_data no_observations land_mass
+rainfall_rate attribute 6: scale_factor, size = 1 NC_FLOAT, value = 0.1
+rainfall_rate attribute 7: add_offset, size = 1 NC_FLOAT, value = 0
+
+sst_dtime: type NC_SHORT, 3 dimensions, 6 attributes, compressed? yes, chunked? yes, packed? yes
+sst_dtime compression (Lempel-Ziv without shuffling) level = 2
+sst_dtime size (RAM) = 2*720*1440*sizeof(NC_SHORT) = 2073600*2 = 4147200 bytes
+sst_dtime dimension 0: time, size = 2 NC_SHORT, chunksize = 2 (Coordinate is time)
+sst_dtime dimension 1: latitude, size = 720 NC_FLOAT, chunksize = 90 (Coordinate is latitude)
+sst_dtime dimension 2: longitude, size = 1440 NC_FLOAT, chunksize = 90 (Coordinate is longitude)
+sst_dtime attribute 0: standard_name, size = 9 NC_CHAR, value = sst_dtime
+sst_dtime attribute 1: long_name, size = 9 NC_CHAR, value = SST_DTime
+sst_dtime attribute 2: valid_range, size = 2 NC_FLOAT, value = 0, 24
+sst_dtime attribute 3: scale_factor, size = 1 NC_FLOAT, value = 0.1
+sst_dtime attribute 4: add_offset, size = 1 NC_FLOAT, value = 0
+sst_dtime attribute 5: units, size = 32 NC_CHAR, value = hours since 2006-12-14T00:00:00Z
+
+time: type NC_SHORT, 1 dimension, 4 attributes, compressed? no, chunked? no, packed? no
+time size (RAM) = 2*sizeof(NC_SHORT) = 2*2 = 4 bytes
+time dimension 0: time, size = 2 NC_SHORT (Coordinate is time)
+time attribute 0: standard_name, size = 4 NC_CHAR, value = time
+time attribute 1: axis, size = 1 NC_CHAR, value = T
+time attribute 2: valid_range, size = 2 NC_FLOAT, value = 1, 2
+time attribute 3: units, size = 32 NC_CHAR, value = hours since 2006-12-14T00:00:00Z
+
+wind_speed: type NC_SHORT, 3 dimensions, 8 attributes, compressed? yes, chunked? yes, packed? yes
+wind_speed compression (Lempel-Ziv without shuffling) level = 2
+wind_speed size (RAM) = 2*720*1440*sizeof(NC_SHORT) = 2073600*2 = 4147200 bytes
+wind_speed dimension 0: time, size = 2 NC_SHORT, chunksize = 2 (Coordinate is time)
+wind_speed dimension 1: latitude, size = 720 NC_FLOAT, chunksize = 90 (Coordinate is latitude)
+wind_speed dimension 2: longitude, size = 1440 NC_FLOAT, chunksize = 90 (Coordinate is longitude)
+wind_speed attribute 0: units, size = 3 NC_CHAR, value = m/s
+wind_speed attribute 1: standard_name, size = 10 NC_CHAR, value = wind_speed
+wind_speed attribute 2: long_name, size = 27 NC_CHAR, value = 10 meter Surface Wind Speed
+wind_speed attribute 3: valid_range, size = 2 NC_FLOAT, value = 0, 50
+wind_speed attribute 4: flag_values, size = 5 NC_SHORT, value = 251, 252, 253, 254, 255
+wind_speed attribute 5: flag_meanings, size = 73 NC_CHAR, value = missing_wind_speed_due_to_rain sea_ice bad_data no_observations land_mass
+wind_speed attribute 6: scale_factor, size = 1 NC_FLOAT, value = 0.2
+wind_speed attribute 7: add_offset, size = 1 NC_FLOAT, value = 0
+

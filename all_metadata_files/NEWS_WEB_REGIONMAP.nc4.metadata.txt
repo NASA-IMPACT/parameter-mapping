@@ -1,0 +1,13 @@
+variable:=:/lon
+  volume:=:      1440.00
+  units:=:degrees_east
+  long_name:=:longitude
+variable:=:/lat
+  volume:=:      720.000
+  units:=:degrees_north
+  long_name:=:latitude
+variable:=:/region
+  volume:=: 1.03680e+006
+  long_name:=:NEWS continent/basin delineation
+  valid_min:=:      1.00000
+  valid_max:=:      19.0000

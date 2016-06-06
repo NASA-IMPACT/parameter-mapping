@@ -1,0 +1,93 @@
+variable:=:/fire mask
+  volume:=:  2.76216e+006
+  valid_range:=:   0   9
+  legend:=:
+Classes:
+0 missing input data
+1 not processed (obsolete)
+2 not processed (obsolete)
+3 water
+4 cloud
+5 non-fire
+6 unknown
+7 fire (low confidence)
+8 fire (nominal confidence)
+9 fire (high confidence)
+variable:=:/algorithm QA
+  volume:=:  2.76216e+006
+  units:=:bit field
+variable:=:/FP_line
+  volume:=:       11.0000
+  long_name:=:granule line of fire pixel
+variable:=:/FP_sample
+  volume:=:       11.0000
+  long_name:=:granule sample of fire pixel
+variable:=:/FP_latitude
+  volume:=:       11.0000
+  long_name:=:latitude of fire pixel
+  units:=:degrees
+variable:=:/FP_longitude
+  volume:=:       11.0000
+  long_name:=:longitude of fire pixel
+  units:=:degrees
+variable:=:/FP_R2
+  volume:=:       11.0000
+  long_name:=:channel 2 reflectance of fire pixel
+variable:=:/FP_T21
+  volume:=:       11.0000
+  long_name:=:channel 21/22 brightness temperature of fire pixel
+  units:=:kelvins
+variable:=:/FP_T31
+  volume:=:       11.0000
+  long_name:=:channel 31 brightness temperature of fire pixel
+  units:=:kelvins
+variable:=:/FP_MeanT21
+  volume:=:       11.0000
+  long_name:=:channel 21/22 brightness temperature of background
+  units:=:kelvins
+variable:=:/FP_MeanT31
+  volume:=:       11.0000
+  long_name:=:channel 31 brightness temperature of background
+  units:=:kelvins
+variable:=:/FP_MeanDT
+  volume:=:       11.0000
+  long_name:=:mean background brightness temperature difference
+  units:=:kelvins
+variable:=:/FP_MAD_T21
+  volume:=:       11.0000
+  long_name:=:
+background channel 21/22 brightness temperature mean absolute deviation
+  units:=:kelvins
+variable:=:/FP_MAD_T31
+  volume:=:       11.0000
+  long_name:=:
+background channel 31 brightness temperature mean absolute deviation
+  units:=:kelvins
+variable:=:/FP_MAD_DT
+  volume:=:       11.0000
+  long_name:=:
+background brightness temperature difference mean absolute deviation
+  units:=:kelvins
+variable:=:/FP_power
+  volume:=:       11.0000
+  long_name:=:fire radiative power
+  units:=:MW
+variable:=:/FP_AdjCloud
+  volume:=:       11.0000
+  long_name:=:number of adjacent cloud pixels
+variable:=:/FP_AdjWater
+  volume:=:       11.0000
+  long_name:=:number of adjacent water pixels
+variable:=:/FP_WinSize
+  volume:=:       11.0000
+  long_name:=:background window size
+variable:=:/FP_NumValid
+  volume:=:       11.0000
+  long_name:=:number of valid background pixels
+variable:=:/FP_confidence
+  volume:=:       11.0000
+  long_name:=:detection confidence
+  units:=:%
+variable:=:/CMG_night
+  volume:=:       64544.0
+  long_name:=:Climate Modeling Grid information

@@ -1,0 +1,42 @@
+variable:=:/lon
+  volume:=:      720.000
+  long_name:=:longitude
+  standard_name:=:longitude
+  units:=:degrees_east
+  bin_location:=:center
+  axis:=:X
+  minimum:=:      0.00000000
+  maximum:=:       359.50000
+  spacing:=:      0.50000000
+  valid_range:=:     0.000000   valid_range:=:      360.000
+variable:=:/lat
+  volume:=:      361.000
+  long_name:=:latitude
+  standard_name:=:latitude
+  units:=:degrees_north
+  bin_location:=:center
+  axis:=:Y
+  minimum:=:      -90.000000
+  maximum:=:       90.000000
+  spacing:=:      0.50000000
+  valid_range:=:     -90.0000   valid_range:=:      90.0000
+variable:=:/time
+  volume:=:      520.000
+  long_name:=:time (days since 1/1/1900)
+  standard_name:=:time
+  units:=:days since 1900-1-1
+  axis:=:T
+  minimum:=:       18264.510
+  maximum:=:       21909.490
+  spacing:=:       7.0192000   spacing:=:       7.0288000
+  spacing:=:       7.0385000
+  valid_min:=:      0.00000000
+variable:=:/ssha
+  volume:=: 1.35158e+008
+  long_name:=:reconstructed SSHA
+  standard_name:=:sea_surface_height
+  units:=:cm
+  coordinates:=:lon lat time
+  scale_factor:=:      0.10000000
+  valid_range:=:   -2000   valid_range:=:    2000
+  _FillValue:=:   32767

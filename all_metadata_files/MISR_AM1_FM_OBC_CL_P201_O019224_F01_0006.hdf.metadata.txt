@@ -1,0 +1,12 @@
+variable:=:/PGE5_PKT_TIME_TABLE
+  volume:=:       1384.00
+variable:=:/PGE5_DIODE_TIME_TABLE
+  volume:=:       13840.0
+variable:=:/PGE5_RAD_TABLE
+  volume:=:       44980.0
+variable:=:/PGE5_RAD_QUAL
+  volume:=:       44980.0
+variable:=:/PGE5_TEMP_TABLE
+  volume:=:       1384.00
+variable:=:/PGE5_TEMP_QUAL
+  volume:=:       1384.00

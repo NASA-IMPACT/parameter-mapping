@@ -1,0 +1,1270 @@
+variable:=:/Latitude
+  volume:=:       110568.
+  _FillValue:=:     -999.000
+  units:=:degrees
+  valid_range:=:     -90.0000      90.0000
+variable:=:/Longitude
+  volume:=:       110568.
+  _FillValue:=:     -999.000
+  units:=:degrees
+  valid_range:=:     -180.000      180.000
+variable:=:/Cloud_Optical_Thickness
+  volume:=:       110568.
+  long_name:=:
+Cloud Optical Thickness two-channel retrieval using band 7(2.1um) and either band 1(0.65um), 2(0.86um), or 5(1.2um) from best points: not failed in any way, not marked for clear sky restoral
+  units:=:none
+  valid_range:=:       0   10000
+  _FillValue:=:   -9999
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           3        2038           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MYD06_L2.A2002185.0000.006.2013356131905.hdf
+pge06v6.0.72
+	Cloud_Optical_Thickness
+variable:=:/Cloud_Effective_Radius
+  volume:=:       110568.
+  long_name:=:
+Cloud Particle Effective Radius two-channel retrieval using band 7(2.1um) and either band 1(0.65um), 2(0.86um), or 5(1.2um) from best points: not failed in any way, not marked for clear sky restoral
+  units:=:micron
+  valid_range:=:       0   10000
+  _FillValue:=:   -9999
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           3        2038           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MYD06_L2.A2002185.0000.006.2013356131905.hdf
+pge06v6.0.72
+	Cloud_Effective_Radius
+variable:=:/Cloud_Water_Path
+  volume:=:       110568.
+  long_name:=:
+Column Water Path two-channel retrieval using band 7(2.1um) and either band 1(0.65um), 2(0.86um), or 5(1.2um)from best points: not failed in any way, not marked for clear sky restoral
+  units:=:g/m^2
+  valid_range:=:       0   10000
+  _FillValue:=:   -9999
+  scale_factor:=:       1.0000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           3        2038           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MYD06_L2.A2002185.0000.006.2013356131905.hdf
+pge06v6.0.72
+	Cloud_Water_Path
+variable:=:/Cloud_Optical_Thickness_1621
+  volume:=:       110568.
+  long_name:=:
+Cloud Optical Thickness two-channel retrieval using band 7(2.1um) and band 6(1.6um)from best points: not failed in any way, not marked for clear sky restoral
+  units:=:none
+  valid_range:=:       0   10000
+  _FillValue:=:   -9999
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           3        2038           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MYD06_L2.A2002185.0000.006.2013356131905.hdf
+pge06v6.0.72
+	Cloud_Optical_Thickness_1621
+variable:=:/Cloud_Effective_Radius_1621
+  volume:=:       110568.
+  long_name:=:
+Cloud Particle Effective Radius two-channel retrieval using band 7(2.1um) and band 6(1.6um)from best points: not failed in any way, not marked for clear sky restoral
+  units:=:micron
+  valid_range:=:       0   10000
+  _FillValue:=:   -9999
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           3        2038           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MYD06_L2.A2002185.0000.006.2013356131905.hdf
+pge06v6.0.72
+	Cloud_Effective_Radius_1621
+variable:=:/Cloud_Water_Path_1621
+  volume:=:       110568.
+  long_name:=:
+Column Water Path two-channel retrieval using band 7(2.1um) and band 6(1.6um)from best points: not failed in any way, not marked for clear sky restoral
+  units:=:g/m^2
+  valid_range:=:       0   10000
+  _FillValue:=:   -9999
+  scale_factor:=:       1.0000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           3        2038           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MYD06_L2.A2002185.0000.006.2013356131905.hdf
+pge06v6.0.72
+	Cloud_Water_Path_1621
+variable:=:/Cloud_Optical_Thickness_Uncertainty
+  volume:=:       110568.
+  long_name:=:
+Cloud Optical Thickness Relative Uncertainty (Percent)from both best points and points identified as cloud edge at 1km resolution or partly cloudy at 250m based on the Cloud_Optical_Thickness and Cloud_Effective_Radius results
+  units:=:percent
+  valid_range:=:       0   20000
+  _FillValue:=:   -9999
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           3        2038           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MYD06_L2.A2002185.0000.006.2013356131905.hdf
+pge06v6.0.72
+	Cloud_Optical_Thickness_Uncertainty
+variable:=:/Cloud_Effective_Radius_Uncertainty
+  volume:=:       110568.
+  long_name:=:
+Cloud Effective Particle Radius (from band 7(2.1um)) Relative Uncertainty (Percent)from both best points and points identified as cloud edge at 1km resolution or partly cloudy at 250m
+  units:=:percent
+  valid_range:=:       0   20000
+  _FillValue:=:   -9999
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           3        2038           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MYD06_L2.A2002185.0000.006.2013356131905.hdf
+pge06v6.0.72
+	Cloud_Effective_Radius_Uncertainty
+variable:=:/Cloud_Water_Path_Uncertainty
+  volume:=:       110568.
+  long_name:=:
+Cloud Water Path Relative Uncertainty (Percent)from both best points and points identified as cloud edge at 1km resolution or partly cloudy at 250m based on the Cloud_Water_Path result
+  units:=:percent
+  valid_range:=:       0   20000
+  _FillValue:=:   -9999
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           3        2038           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MYD06_L2.A2002185.0000.006.2013356131905.hdf
+pge06v6.0.72
+	Cloud_Water_Path_Uncertainty
+variable:=:/Cloud_Optical_Thickness_Uncertainty_1621
+  volume:=:       110568.
+  long_name:=:
+Cloud Optical Thickness Relative Uncertainty  (Percent) using band 7(2.1um) and band 6(1.6um)from both best points and points identified as cloud edge at 1km resolution or partly cloudy at 250m
+  units:=:percent
+  valid_range:=:       0   20000
+  _FillValue:=:   -9999
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           3        2038           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MYD06_L2.A2002185.0000.006.2013356131905.hdf
+pge06v6.0.72
+	Cloud_Optical_Thickness_Uncertainty_1621
+variable:=:/Cloud_Effective_Radius_Uncertainty_1621
+  volume:=:       110568.
+  long_name:=:
+Cloud Effective Particle Radius Relative Uncertainty (Percent) using band 7(2.1um) and band 6(1.6um)from both best points and points identified as cloud edge at 1km resolution or partly cloudy at 250m
+  units:=:percent
+  valid_range:=:       0   20000
+  _FillValue:=:   -9999
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           3        2038           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MYD06_L2.A2002185.0000.006.2013356131905.hdf
+pge06v6.0.72
+	Cloud_Effective_Radius_Uncertainty_1621
+variable:=:/Cloud_Water_Path_Uncertainty_1621
+  volume:=:       110568.
+  long_name:=:
+Cloud Water Path Relative Uncertainty  (Percent) using band 7(2.1um) and band 6(1.6um)from both best points and points identified as cloud edge at 1km resolution or partly cloudy at 250m
+  units:=:percent
+  valid_range:=:       0   20000
+  _FillValue:=:   -9999
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           3        2038           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MYD06_L2.A2002185.0000.006.2013356131905.hdf
+pge06v6.0.72
+	Cloud_Water_Path_Uncertainty_1621
+variable:=:/Cloud_Phase_Optical_Properties
+  volume:=:       110568.
+  long_name:=:
+Cloud Phase Determination Used in Optical Thickness/Effective Radius Retrieval
+  units:=:none
+  valid_range:=:   0   4
+  _FillValue:=:   0
+  scale_factor:=:       1.0000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           3        2038           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  description:=:
+\n                                                                                  
+                                                                                    
+ The values in this SDS are set to mean the following:                              
+ 0 -- cloud mask undetermined                                                       
+ 1 -- clear sky                                                                     
+ 2 -- liquid water cloud                                                            
+ 3 -- ice cloud                                                                     
+ 4 -- undetermined phase cloud (but retrieval is attempted as  liquid water 
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MYD06_L2.A2002185.0000.006.2013356131905.hdf
+pge06v6.0.72
+	Cloud_Phase_Optical_Properties
+variable:=:/Cloud_Phase_Infrared
+  volume:=:       110568.
+  long_name:=:Cloud Phase from 8.5 and 11 um Bands
+  units:=:none
+  valid_range:=:   0   6
+  _FillValue:=: 127
+  scale_factor:=:       1.0000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           3        2038           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:Internal geolocation arrays
+  source_info:=:
+
+MYD06_L2.A2002185.0000.006.2013356131905.hdf
+pge06v6.0.72
+	Cloud_Phase_Infrared
+variable:=:/Cloud_Quality_Assurance
+  volume:=:       995112.
+  long_name:=:Cloud Quality Assurance at 5km Resolution
+  units:=:none
+  valid_range:=:   0 255
+  _FillValue:=:   0
+  scale_factor:=:       1.0000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  description:=:
+\n                                                                                  
+                                                                                    
+Quality Assurance 1km reports on Cloud Optical Properties                           
+algorithm performance.  Refer to MOD_PR06OD User Documentation and the              
+MODIS atmosphere QA plan for complete descriptions and coding examples.             
+                                                                                    
+ Bit fields within each byte are numbered from the left:                            
+ 7, 6, 5, 4, 3, 2, 1, 0.                                                            
+ The left-most bit (bit 7) is the most significant bit.                             
+ The right-most bit (bit 0) is the least significant bit.                           
+                                                                                    
+                                                                                    
+ Byte 0 -----------------------------------------------------------------           
+  0   VNSWIR-2.1 Optical Thickness General QA       0 = Not Useful                  
+                                                    1 = Useful                      
+  2,1  VNSWIR-2.1 Optical Thickness Confidence QA   00 = No confidence              
+                                                    01 = Marginal                   
+                                                    10 = Good                       
+                                                    11 = Very Good                  
+  4,3 spare                                                                         
+  5   VNSWIR-2.1 Effective Radius General QA        0 = Not Useful                  
+                                                    1 = Useful                      
+  7,6 VNSWIR-2.1 Effective Radius Confidence QA     00 = No confidence              
+                                                    01 = Marginal                   
+                                                    10 = Good                       
+                                                    11 = Very Good                  
+ Byte 1 -----------------------------------------------------------------           
+  0   VNSWIR-2.1 Liquid Water Path General QA       0 = Not Useful                  
+                                                    1 = Useful                      
+  2,1 VNSWIR-2.1 Liquid Water Path Confidence QA    00 = No confidence              
+                                                    01 = Marginal                   
+                                                    10 = Good                       
+                                                    11 = Very Good                  
+  5,4,3          Retrieval Phase                    000 = No Cloud Mask             
+                                                    001 = No Cloud                  
+                                                    010 = Water Cloud               
+                                                    011 = Ice Cloud                 
+                                                    100 = Unknown Cloud             
+  6              1.6- 2.1 Retrieval Outcome          0 = Failed/No attempt          
+                                                    1 = Successful                  
+ Byte 2 -----------------------------------------------------------------           
+  2,1,0          Retrieval Phase                    000 = No Cloud Mask             
+                                                    001 = No Cloud                  
+                                                    010 = Water Cloud               
+                                                    011 = Ice Cloud                 
+                                                    100 = Unknown Cloud             
+  3           VNSWIR- 2.1 Retrieval Outcome          0 = Failed/No attempt          
+                                                    1 = Successful                  
+  4              Rayleigh Correction                0 = No Correction               
+                                                    1 = Correction                  
+  5              Water Vapor Correction             0 = No Correction               
+                                                    1 = Correction                  
+  7,6            Band Used for Optical Thickness Retrieval                          
+                                                    00 = No attempt                 
+                                                    01 = .645 micron                
+                                                    10 = .858 micron                
+                                                    11 = 1.24 micron                
+ Byte 3 -----------------------------------------------------------------           
+  0           Optical Thickness 1.6-2.1 General QA  0 = Not Useful                  
+                                                    1 = Useful                      
+  2,1         Optical Thickness 1.6-2.1 Condifence QA                               
+                                                    00 = No confidence              
+                                                    01 = Marginal                   
+                                                    10 = Good                       
+                                                    11 = Very Good                  
+  3           Effective Radius 1.6-2.1 General QA   0 = Not Useful                  
+                                                    1 = Useful                      
+  5,4         Effective Radius 1.6-2.1 Confidence QA                                
+                                                    00 = No confidence              
+                                                    01 = Marginal                   
+                                                    10 = Good                       
+                                                    11 = Very Good                  
+  6,7            Clear Sky Restoral Type QA                                         
+                                       00 = Not Restored                            
+                                       01 = Restored Via Edge detection             
+                                       10 = Restored Via Spatial  Variance          
+                                       11 = Restored Via 250m Tests                 
+ Byte 4 -----------------------------------------------------------------           
+  0           Water Path 1.6-2.1 General QA         0 = Not Useful                  
+                                                    1 = Useful                      
+  2,1         Water Path 1.6-2.1 Confidence QA      00 = No confidence              
+                                                    01 = Marginal                   
+                                                    10 = Good                       
+                                                    11 = Very Good                  
+  5,4,3          Multi Layer Cloud Flag      000 = Cloud Mask Undet                 
+                                             001 = Decision tree stop               
+                                             010 = single layer: water              
+                                             011 = multi layer: water               
+                                             100 = single layer: ice                
+                                             101 = multi layer: ice                 
+                                             110 = single layer:  unknown           
+                                             111 = multi layer: unknown             
+  7,6            spare                                                              
+ Byte 5 -----------------------------------------------------------------           
+  0              Phase difference multilayer test result                            
+  1              Delta precipitable water multilayer test result                    
+  2              Delta precipitable water at 900mb multilayer  test result          
+  3              Tau difference VNSWIR-SWIR multilayer test result                  
+  4              Pavolonis-Heidinger multilayer test result                         
+  7,6,5            spare                                                            
+ Byte 6 -----------------------------------------------------------------           
+  2,1,0        Retrieval Phase                      000 = No Cloud Mask             
+                                                    001 = No Cloud                  
+                                                    010 = Water Cloud               
+                                                    011 = Ice Cloud                 
+                                                    100 = Unknown Cloud             
+  3            VNSWIR- 1.6 Retrieval Outcome         0 = Failed/No attempt          
+                                                    1 = Successful                  
+  4,5,6    Retrieval Phase                          000 = No Cloud Mask             
+                                                    001 = No Cloud                  
+                                                    010 = Water Cloud               
+                                                    011 = Ice Cloud                 
+                                                    100 = Unknown Cloud             
+  7        VNSWIR- 1.6 PCL Retrieval Outcome         0 = Failed/No attempt          
+                                                    1 = Successful                  
+ Byte 7 -----------------------------------------------------------------           
+  2,1,0        Retrieval Phase                      000 = No Cloud Mask             
+                                                    001 = No Cloud                  
+                                                    010 = Water Cloud               
+                                                    011 = Ice Cloud                 
+                                                    100 = Unknown Cloud             
+  3            VNSWIR- 3.7 Retrieval Outcome         0 = Failed/No attempt          
+                                                    1 = Successful                  
+  4,5,6    Retrieval Phase                          000 = No Cloud Mask             
+                                                    001 = No Cloud                  
+                                                    010 = Water Cloud               
+                                                    011 = Ice Cloud                 
+                                                    100 = Unknown Cloud             
+  7        VNSWIR- 3.7 PCL Retrieval Outcome         0 = Failed/No attempt          
+                                                    1 = Successful                  
+ Byte 8 -----------------------------------------------------------------           
+  2,1,0          Retrieval Phase                    000 = No Cloud Mask             
+                                                    001 = No Cloud                  
+                                                    010 = Water Cloud               
+                                                    011 = Ice Cloud                 
+                                                    100 = Unknown Cloud             
+  3           1.6- 2.1 PCL Retrieval Outcome         0 = Failed/No attempt          
+                                                    1 = Successful                  
+  4,5,6    Retrieval Phase                          000 = No Cloud Mask             
+                                                    001 = No Cloud                  
+                                                    010 = Water Cloud               
+                                                    011 = Ice Cloud                 
+                                                    100 = Unknown Cloud             
+  7        VNSWIR- 2.1 PCL Retrieval Outcome         0 = Failed/No attempt          
+                                                    1 = Successful                  
+                                                                                    
+ Snow mask            2             0       MOD33                                   
+                                    1       SSMI Product                            
+                                    2       Other                                   
+                                    3       Not used                                
+                                                                                    
+ Ice cover            2             0       MOD42                                   
+                                    1       SSMI product                            
+                                    2       Other                                   
+                                    3       Not used                                
+                                                                                    
+ Land/Sea Mask        2             0       USGS 1 km 6 level                       
+                                    1       USGS 1 km binary                        
+                                    2       Other                                   
+                                    3       Not used                                
+                                                                                    
+ Digital              1             0       EOS DEM                                 
+   Elevation                        1       Not used                                
+   Model                                                                            
+                                                                                    
+ Precipitable         2             0       NCEP GDAS                               
+   Water                            1       DAO                                     
+                                    2       MOD07                                   
+                                    3       Other                                   
+                                                                                    
+ Spare                5                                                             
+                                                                                    
+  -------- ( 3 bytes total ) --------------------------------                       
+                                                                                    
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MYD06_L2.A2002185.0000.006.2013356131905.hdf
+pge06v6.0.72
+	Quality_Assurance_1km
+variable:=:/Cirrus_Reflectance
+  volume:=:       110568.
+  long_name:=:Cirrus Reflectance
+  units:=:none
+  valid_range:=:       0    8000
+  _FillValue:=:   -9999
+  scale_factor:=:   0.00019999999
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           3        2038           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MYD06_L2.A2002185.0000.006.2013356131905.hdf
+pge06v6.0.72
+	Cirrus_Reflectance
+variable:=:/Cloud_Top_Pressure
+  volume:=:       110568.
+  long_name:=:Cloud Top Pressure Level (rounded to nearest 5 mb)
+  units:=:hPa
+  valid_range:=:      10   11000
+  _FillValue:=:  -32768
+  scale_factor:=:      0.10000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           3        2038           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:Internal geolocation arrays
+  source_info:=:
+
+MYD06_L2.A2002185.0000.006.2013356131905.hdf
+pge06v6.0.72
+	Cloud_Top_Pressure
+variable:=:/Cloud_Top_Temperature
+  volume:=:       110568.
+  long_name:=:
+Temperature from Ancillary Data at Retrieved Cloud Top Pressure Level
+  units:=:K
+  valid_range:=:       0   20000
+  _FillValue:=:  -32768
+  scale_factor:=:    0.0099999998
+  add_offset:=:      -15000.000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           3        2038           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:Internal geolocation arrays
+  source_info:=:
+
+MYD06_L2.A2002185.0000.006.2013356131905.hdf
+pge06v6.0.72
+	Cloud_Top_Temperature
+variable:=:/Cloud_Fraction
+  volume:=:       110568.
+  long_name:=:
+Cloud Fraction in Retrieval Region (5x5 1-km Pixels) from 1-km Cloud Mask
+  units:=:none
+  valid_range:=:   0 100
+  _FillValue:=: 127
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           3        2038           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:Internal geolocation arrays
+  source_info:=:
+
+MYD06_L2.A2002185.0000.006.2013356131905.hdf
+pge06v6.0.72
+	Cloud_Fraction
+variable:=:/Precipitable_Water_Infrared_ClearSky
+  volume:=:       110568.
+  long_name:=:Total Column Precipitable Water Vapor - IR Clear Retrieval
+  units:=:cm
+  valid_range:=:       0   20000
+  _FillValue:=:   -9999
+  scale_factor:=:    0.0010000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           3        2038           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:Internal geolocation arrays
+  source_info:=:
+
+MYD07_L2.A2002185.0000.006.2014190202043.hdf
+pge03v6.0.40
+	Water_Vapor
+variable:=:/Cloud_Mask
+  volume:=:       110568.
+  long_name:=:MODIS Cloud Mask
+  units:=:none
+  valid_range:=:   0 255
+  _FillValue:=:   0
+  scale_factor:=:       1.0000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  description:=:
+\n                                                                                  
+                                                                                    
+ Bit fields within each byte are numbered from the left:                            
+ 7, 6, 5, 4, 3, 2, 1, 0.                                                            
+ The left-most bit (bit 7) is the most significant bit.                             
+ The right-most bit (bit 0) is the least significant bit.                           
+                                                                                    
+ bit field       Description                             Key                        
+ ---------       -----------                             ---                        
+                                                                                    
+ 0               Cloud Mask Flag                      0 = Not  determined           
+                                                      1 = Determined                
+                                                                                    
+ 2, 1            Unobstructed FOV Quality Flag        00 = Cloudy                   
+                                                      01 = Uncertain                
+                                                      10 = Probably  Clear          
+                                                      11 = Confident  Clear         
+                 PROCESSING PATH                                                    
+                 ---------------                                                    
+ 3               Day or Night Path                    0 = Night  / 1 = Day          
+ 4               Sunglint Path                        0 = Yes    / 1 = No           
+ 5               Snow/Ice Background Path             0 = Yes    / 1 = No           
+ 7, 6            Land or Water Path                   00 = Water                    
+                                                      01 = Coastal                  
+                                                      10 = Desert                   
+                                                      11 = Land                     
+  
+  1_km_to_5_km_subsampling_description:=:
+Each value in this dataset does not represent an average of properties over a 5 x 5 km grid box, but rather a single sample from within each 5 km box. Normally, pixels in across-track rows 4 and 9 (counting in the direction of increasing scan number) out of every set of 10 rows are used for subsampling the 1 km retrievals to a 5 km resolution. If the array contents are determined to be all fill values after selecting the default pixel subset (e.g., from failed detectors), a different pair of pixel rows is used to perform the subsampling. Note that 5 km data sets are centered on rows 3 and 8; the default sampling choice of 4 and 9 is for better data quality and avoidance of dead detectors on Aqua. The row pair used for the 1 km sample is always given by the first number and last digit of the second number of the attribute Cell_Along_Swath_Sampling. The attribute Cell_Across_Swath_Sampling indicates that columns 3 and 8 are used, as they always are, for across-track sampling. Again these values are to be interpreted counting in the direction of the scan, from 1 through 10 inclusively. For example, if the value of attribute Cell_Along_Swath_Sampling is 3, 2028, 5, then the third and eighth pixel rows were used for subsampling. A value of 4, 2029, 5 indicates that the default fourth and ninth rows pair was used.
+  source_info:=:
+
+MYD35_L2.A2002185.0000.006.2013354042205.hdf
+pge03v6.0.33
+	Cloud_Mask
+variable:=:/Total_Ozone
+  volume:=:       110568.
+  _FillValue:=:  -32768
+  valid_range:=:       0    5000
+  long_name:=:Total Ozone Burden
+  units:=:Dobson
+  scale_factor:=:      0.10000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           3        2038           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:Internal geolocation arrays
+variable:=:/Lifted_Index
+  volume:=:       110568.
+  _FillValue:=:  -32768
+  valid_range:=:   -2000    4000
+  long_name:=:Lifted Index
+  units:=:K
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           3        2038           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:Internal geolocation arrays
+variable:=:/K_Index
+  volume:=:       110568.
+  _FillValue:=:  -32768
+  valid_range:=:   11500   20000
+  long_name:=:K_Index
+  units:=:K
+  scale_factor:=:    0.0099999998
+  add_offset:=:      -15000.000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           3        2038           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:Internal geolocation arrays
+variable:=:/Total_Totals_Index
+  volume:=:       110568.
+  _FillValue:=:  -32768
+  valid_range:=:       0    8000
+  long_name:=:Total Totals
+  units:=:K
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           3        2038           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:Internal geolocation arrays
+variable:=:/Precipitable_Water_Near_Infrared_ClearSky
+  volume:=:       110568.
+  _FillValue:=:   -9999
+  long_name:=:Total Column Precipitable Water Vapor - Near Infrared Retrieval
+  unit:=:cm
+  scale_factor:=:    0.0010000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:Internal geolocation arrays
+  valid_range:=:       0   20000
+variable:=:/Cloud_Optical_Thickness_PCL
+  volume:=:       110568.
+  _FillValue:=:   -9999
+  valid_range:=:       0   10000
+  long_name:=:
+Cloud Optical Thickness two-channel retrieval using band 7(2.1um) and either band 1(0.65um), 2(0.86um), or 5(1.2um) (specified in Quality_Assurance_1km)from points identified as either partly cloudy from 250m cloud mask test or 1km cloud edges
+  units:=:none
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+variable:=:/Cloud_Optical_Thickness_16
+  volume:=:       110568.
+  _FillValue:=:   -9999
+  valid_range:=:       0   10000
+  long_name:=:
+Cloud Optical Thickness two-channel retrieval using band 6(1.6um) and either band 1(0.65um), 2(0.86um), or 5(1.2um) (specified in Quality_Assurance_1km)from best points: not failed in any way, not marked for clear sky restoral
+  units:=:none
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+variable:=:/Cloud_Optical_Thickness_16_PCL
+  volume:=:       110568.
+  _FillValue:=:   -9999
+  valid_range:=:       0   10000
+  long_name:=:
+Cloud Optical Thickness two-channel retrieval using band 6(1.6um) and either band 1(0.65um), 2(0.86um), or 5(1.2um)  (specified in Quality_Assurance_1km)from points identified as either partly cloudy from 250m cloud mask test or 1km cloud edges
+  units:=:none
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+variable:=:/Cloud_Optical_Thickness_37
+  volume:=:       110568.
+  _FillValue:=:   -9999
+  valid_range:=:       0   10000
+  long_name:=:
+Cloud Optical Thickness two-channel retrieval using band 20(3.7um) and either band 1(0.65um), 2(0.86um), or 5(1.2um) (specified in Quality_Assurance_1km)from best points: not failed in any way, not marked for clear sky restoral
+  units:=:none
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+variable:=:/Cloud_Optical_Thickness_37_PCL
+  volume:=:       110568.
+  _FillValue:=:   -9999
+  valid_range:=:       0   10000
+  long_name:=:
+Cloud Optical Thickness two-channel retrieval using band 20(3.7um) and either band 1(0.65um), 2(0.86um), or 5(1.2um) (specified in Quality_Assurance_1km)from points identified as either partly cloudy from 250m cloud mask test or 1km cloud edges
+  units:=:none
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+variable:=:/Cloud_Optical_Thickness_Uncertainty_16
+  volume:=:       110568.
+  _FillValue:=:   -9999
+  valid_range:=:       0   20000
+  long_name:=:
+Cloud Optical Thickness Relative Uncertainty (Percent)from both best points and points identified as cloud edge at 1km resolution or partly cloudy at 250m based on the Cloud_Optical_Thickness_16 and Cloud_Effective_Radius_16 results
+  units:=:percent
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+variable:=:/Cloud_Optical_Thickness_Uncertainty_37
+  volume:=:       110568.
+  _FillValue:=:   -9999
+  valid_range:=:       0   20000
+  long_name:=:
+Cloud Optical Thickness Relative Uncertainty (Percent)from both best points and points identified as cloud edge at 1km resolution or partly cloudy at 250m based on the Cloud_Optical_Thickness_37 and Cloud_Effective_Radius_37 results
+  units:=:percent
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+variable:=:/Cloud_Effective_Radius_PCL
+  volume:=:       110568.
+  _FillValue:=:   -9999
+  valid_range:=:       0   10000
+  long_name:=:
+Cloud Particle Effective Radius two-channel retrieval using band 7(2.1um) and either band 1(0.65um), 2(0.86um), or 5(1.2um) (specified in Quality_Assurance_1km)from points identified as either partly cloudy from 250m cloud mask test or 1km cloud edges
+  units:=:micron
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+variable:=:/Cloud_Effective_Radius_16
+  volume:=:       110568.
+  _FillValue:=:   -9999
+  valid_range:=:       0   10000
+  long_name:=:
+Cloud Particle Effective Radius two-channel retrieval using band 6(1.6um) and either band 1(0.65um), 2(0.86um), or 5(1.2um)  (specified in Quality_Assurance_1km)from best points: not failed in any way, not marked for clear sky restoral
+  units:=:micron
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+variable:=:/Cloud_Effective_Radius_16_PCL
+  volume:=:       110568.
+  _FillValue:=:   -9999
+  valid_range:=:       0   10000
+  long_name:=:
+Cloud Particle Effective Radius two-channel retrieval using band 6(1.6um) and either band 1(0.65um), 2(0.86um), or 5(1.2um)  (specified in Quality_Assurance_1km)from points identified as either partly cloudy from 250m cloud mask test or 1km cloud edges
+  units:=:micron
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+variable:=:/Cloud_Effective_Radius_37
+  volume:=:       110568.
+  _FillValue:=:   -9999
+  valid_range:=:       0   10000
+  long_name:=:
+Cloud Particle Effective Radius two-channel retrieval using band 20(3.7um) and either band 1(0.65um), 2(0.86um), or 5(1.2um) (specified in Quality_Assurance_1km)from best points: not failed in any way, not marked for clear sky restoral
+  units:=:micron
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+variable:=:/Cloud_Effective_Radius_37_PCL
+  volume:=:       110568.
+  _FillValue:=:   -9999
+  valid_range:=:       0   10000
+  long_name:=:
+Cloud Particle Effective Radius two-channel retrieval using band 20(3.7um) and either band 1(0.65um), 2(0.86um), or 5(1.2um) (specified in Quality_Assurance_1km)from points identified as either partly cloudy from 250m cloud mask test or 1km cloud edges
+  units:=:micron
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+variable:=:/Cloud_Effective_Radius_Uncertainty_16
+  volume:=:       110568.
+  _FillValue:=:   -9999
+  valid_range:=:       0   20000
+  long_name:=:
+Cloud Effective Particle Radius (from band 6(1.6um) Relative Uncertainty (Percent)from both best points and points identified as cloud edge at 1km resolution or partly cloudy at 250m
+  units:=:percent
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+variable:=:/Cloud_Effective_Radius_Uncertainty_37
+  volume:=:       110568.
+  _FillValue:=:   -9999
+  valid_range:=:       0   20000
+  long_name:=:
+Cloud Effective Particle Radius  (from band 20(3.7um)) Relative Uncertainty (Percent)from both best points and points identified as cloud edge at 1km resolution or partly cloudy at 250m
+  units:=:percent
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+variable:=:/Cloud_Water_Path_PCL
+  volume:=:       110568.
+  _FillValue:=:   -9999
+  valid_range:=:       0   10000
+  long_name:=:
+Column Water Path two-channel retrieval using band 7(2.1um) and either band 1(0.65um), 2(0.86um), or 5(1.2um) (specified in Quality_Assurance_1km)from points identified as either partly cloudy from 250m cloud mask test or 1km cloud edges
+  units:=:g/m^2
+  scale_factor:=:       1.0000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+variable:=:/Cloud_Water_Path_16
+  volume:=:       110568.
+  _FillValue:=:   -9999
+  valid_range:=:       0   10000
+  long_name:=:
+Column Water Path two-channel retrieval using band 6(1.6um) and either band 1(0.65um), 2(0.86um), or 5(1.2um) (specified in Quality_Assurance_1km)from best points: not failed in any way, not marked for clear sky restoral
+  units:=:g/m^2
+  scale_factor:=:       1.0000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+variable:=:/Cloud_Water_Path_16_PCL
+  volume:=:       110568.
+  _FillValue:=:   -9999
+  valid_range:=:       0   10000
+  long_name:=:
+Column Water Path two-channel retrieval using band 6(1.6um) and either band 1(0.65um), 2(0.86um), or 5(1.2um) (specified in Quality_Assurance_1km)from points identified as either partly cloudy from 250m cloud mask test or 1km cloud edges
+  units:=:g/m^2
+  scale_factor:=:       1.0000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+variable:=:/Cloud_Water_Path_37
+  volume:=:       110568.
+  _FillValue:=:   -9999
+  valid_range:=:       0   10000
+  long_name:=:
+Column Water Path two-channel retrieval using band 20(3.7um) and either band 1(0.65um), 2(0.86um), or 5(1.2um) (specified in Quality_Assurance_1km)from best points: not failed in any way, not marked for clear sky restoral
+  units:=:g/m^2
+  scale_factor:=:       1.0000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+variable:=:/Cloud_Water_Path_37_PCL
+  volume:=:       110568.
+  _FillValue:=:   -9999
+  valid_range:=:       0   10000
+  long_name:=:
+Column Water Path two-channel retrieval using band 20(3.7um) and either band 1(0.65um), 2(0.86um), or 5(1.2um) (specified in Quality_Assurance_1km)from points identified as either partly cloudy from 250m cloud mask test or 1km cloud edges
+  units:=:g/m^2
+  scale_factor:=:       1.0000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+variable:=:/Cloud_Water_Path_Uncertainty_16
+  volume:=:       110568.
+  _FillValue:=:   -9999
+  valid_range:=:       0   20000
+  long_name:=:
+Cloud Water Path Relative Uncertainty (Percent)from both best points and points identified as cloud edge at 1km resolution or partly cloudy at 250m using the VNSWIR-1.6um retrieval
+  units:=:percent
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+variable:=:/Cloud_Water_Path_Uncertainty_37
+  volume:=:       110568.
+  _FillValue:=:   -9999
+  valid_range:=:       0   20000
+  long_name:=:
+Cloud Water Path Relative Uncertainty (Percent)from both best points and points identified as cloud edge at 1km resolution or partly cloudy at 250m using the VNSWIR-3.7um retrieval
+  units:=:percent
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+variable:=:/Cloud_Top_Pressure_1km
+  volume:=:       110568.
+  _FillValue:=:    -999
+  valid_range:=:      10   11000
+  long_name:=:
+Cloud Top Pressure at 1-km resolution from LEOCAT, Cloud Top Pressure Level rounded to nearest 5 mb
+  units:=:hPa
+  scale_factor:=:      0.10000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+variable:=:/Cloud_Top_Temperature_1km
+  volume:=:       110568.
+  _FillValue:=:    -999
+  valid_range:=:       0   20000
+  long_name:=:
+Cloud Top Temperature at 1-km resolution from LEOCAT, Temperature from Ancillary Data at Retrieved Cloud Top Pressure Level
+  units:=:K
+  scale_factor:=:    0.0099999998
+  add_offset:=:      -15000.000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+variable:=:/Cloud_Top_Height_1km
+  volume:=:       110568.
+  _FillValue:=:    -999
+  valid_range:=:       0   18000
+  long_name:=:
+Cloud Top Height at 1-km resolution from LEOCAT, Geopotential Height at Retrieved Cloud Top Pressure Level rounded to nearest 50 m
+  units:=:meters
+  scale_factor:=:       1.0000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+variable:=:/Surface_Temperature_1km
+  volume:=:       110568.
+  _FillValue:=:    -999
+  valid_range:=:       0   20000
+  long_name:=:
+Surface Temperature for Each 1-km MODIS Pixel Interplated from Ancillary Data
+  units:=:K
+  scale_factor:=:    0.0099999998
+  add_offset:=:      -15000.000
+  Parameter_Type:=:Non MODIS Input
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+variable:=:/OS_Top_Flag_1km
+  volume:=:       110568.
+  _FillValue:=: 127
+  valid_range:=:   0   2
+  long_name:=:
+Upper Tropospheric/Lower Stratospheric (UTLS) Cloud Flag at 1-km  resolution - valid from -50 to +50 Degrees Latitude
+  units:=:none
+  scale_factor:=:       1.0000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External geolocation arrays
+  description:=:
+\n                                                                                  
+                                                                                    
+ The values in this SDS indicate the following:                                     
+ 0 -- stratospheric cloud test not performed                                        
+ 1 -- stratospheric cloud not indicated                                             
+ 2 -- stratospheric cloud indicated (BTD35-33 > 0.5K)                               
+
+variable:=:/Cloud_Mask_SPI
+  volume:=:       221136.
+  _FillValue:=:   -9999
+  valid_range:=:       0   20000
+  long_name:=:
+Dispersion in bands 1 (plane 1) and 2 (plane 2) from 250m reflectance  statistics of cloud mask
+  units:=:percent
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+variable:=:/Cloud_Multi_Layer_Flag
+  volume:=:       110568.
+  _FillValue:=:   0
+  valid_range:=:   0   9
+  long_name:=:Cloud Multi Layer Identification From MODIS Shortwave Observations
+  units:=:none
+  scale_factor:=:       1.0000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  description:=:
+\n                                                                                  
+                                                                                    
+ Flag for multi-layer multi-phase cloud situations. Values 2 through 9              
+ indicate the success of various multi-layer cloud tests. Value of 0                
+ indicates no retrieval, value of 1 indicates single layer cloud. The               
+ other values are of increasing confidence level.                                   
+
+variable:=:/Cloud_Phase_Infrared_1km
+  volume:=:       110568.
+  _FillValue:=: 127
+  valid_range:=:   0   6
+  long_name:=:
+Cloud Phase at 1-km resolution from 8.5- 11 um BTDs and cloud emissivity ratios (12/11, 8.5/11, and 7.2/11 um)
+  units:=:none
+  scale_factor:=:       1.0000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External geolocation arrays
+  description:=:
+\n                                                                                  
+                                                                                    
+ The values in this SDS indicate the following cloud phase:                         
+ 0 -- cloud free                                                                    
+ 1 -- water cloud                                                                   
+ 2 -- ice cloud                                                                     
+ 3 -- mixed phase cloud                                                             
+ 6 -- undetermined phase                                                            
+
+variable:=:/Cloud_Top_Height
+  volume:=:       110568.
+  _FillValue:=:  -32767
+  valid_range:=:       0   18000
+  long_name:=:
+Geopotential Height at Retrieved Cloud Top Pressure Level (rounded to nearest 50 m)
+  units:=:meters
+  scale_factor:=:       1.0000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           3        2038           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:Internal geolocation arrays
+variable:=:/Cloud_Height_Method
+  volume:=:       110568.
+  _FillValue:=: 127
+  valid_range:=:   1   6
+  long_name:=:Index Indicating MODIS Bands Used for Cloud Top Pressure Retrieval
+  units:=:none
+  scale_factor:=:       1.0000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           3        2038           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:Internal geolocation arrays
+  description:=:
+\n                                                                                  
+                                                                                    
+ The values in this SDS are set to mean the following:                              
+ 1 -- CO2-slicing retrieval, bands 36/35                                            
+ 2 -- CO2-slicing retrieval, bands 35/34                                            
+ 3 -- CO2-slicing retrieval, bands 35/33                                            
+ 4 -- CO2-slicing retrieval, bands 34/33                                            
+ 6 -- IR-window retrieval, band 31                                                  
+
+variable:=:/Infrared_obs_minus_calc
+  volume:=:       552840.
+  _FillValue:=:  -32768
+  valid_range:=:   -2000    2000
+  long_name:=:Spectral Cloud Forcing (cloud minus clear radiance)
+  units:=:Watts/meter2/steradian/micron
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           3        2038           5
+  Cell_Across_Swath_Sampling:=:           3        1348           5
+  Geolocation_Pointer:=:Internal geolocation arrays
+  description:=:
+\n                                                                                  
+                                                                                    
+ Spectral cloud forcing, cloudy-clear radiance, each channel in order:              
+ 36, 35, 34, 33 and 31 for Band_Forcing dimension reference                         
+
+variable:=:/Cloud_Optical_Thickness_1621_PCL
+  volume:=:       110568.
+  _FillValue:=:   -9999
+  valid_range:=:       0   10000
+  long_name:=:
+Cloud Optical Thickness two-channel retrieval using band 7(2.1um) and band 6(1.6um)from points identified as either partly cloudy from 250m cloud mask test or 1km cloud edges
+  units:=:none
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+variable:=:/Cloud_Effective_Radius_1621_PCL
+  volume:=:       110568.
+  _FillValue:=:   -9999
+  valid_range:=:       0   10000
+  long_name:=:
+Cloud Particle Effective Radius two-channel retrieval using band 7(2.1um) and band 6(1.6um)from points identified as either partly cloudy from 250m cloud mask test or 1km cloud edges
+  units:=:micron
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+variable:=:/Cloud_Water_Path_1621_PCL
+  volume:=:       110568.
+  _FillValue:=:   -9999
+  valid_range:=:       0   10000
+  long_name:=:
+Column Water Path two-channel retrieval using band 7(2.1um) and band 6(1.6um)from points identified as either partly cloudy from 250m cloud mask test or 1km cloud edges
+  units:=:g/m^2
+  scale_factor:=:       1.0000000
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+variable:=:/Retrieval_Failure_Metric
+  volume:=:       331704.
+  _FillValue:=:   -9999
+  valid_range:=:       0   20000
+  long_name:=:
+Retrievals and other information for points that failed to retrievevia standard solution logic for retrieval using band 7 and either band 1, 2, or 5 (specified in Quality_Assurance_1km)
+  units:=:by plane in order: 1-none, 2-micron, 3-percent
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  description:=:
+\n                                                                                  
+                                                                                    
+ The individual planes in this SDS are set to contain the following:                
+ 1 -- Cloud Optical Thickness                                                       
+ 2 -- Cloud Effective Radius                                                        
+ 3 -- Relative distance of failed retrieval from the library space as               
+      percentage of reflectance                                                     
+
+variable:=:/Retrieval_Failure_Metric_16
+  volume:=:       331704.
+  _FillValue:=:   -9999
+  valid_range:=:       0   20000
+  long_name:=:
+Retrievals and other information for points that failed to retrievevia standard solution logic for retrieval using band 6 and either band 1, 2, or 5 (specified in Quality_Assurance_1km)
+  units:=:by plane in order: 1-none, 2-micron, 3-percent
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  description:=:
+\n                                                                                  
+                                                                                    
+ The individual planes in this SDS are set to contain the following:                
+ 1 -- Cloud Optical Thickness                                                       
+ 2 -- Cloud Effective Radius                                                        
+ 3 -- Relative distance of failed retrieval from the library space as               
+      percentage of reflectance                                                     
+
+variable:=:/Retrieval_Failure_Metric_37
+  volume:=:       331704.
+  _FillValue:=:   -9999
+  valid_range:=:       0   20000
+  long_name:=:
+Retrievals and other information for points that failed to retrievevia standard solution logic for retrieval using band 20 and either band 1, 2, or 5 (specified in Quality_Assurance_1km)
+  units:=:by plane in order: 1-none, 2-micron, 3-percent
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  description:=:
+\n                                                                                  
+                                                                                    
+ The individual planes in this SDS are set to contain the following:                
+ 1 -- Cloud Optical Thickness                                                       
+ 2 -- Cloud Effective Radius                                                        
+ 3 -- Relative distance of failed retrieval from the library space as               
+      percentage of reflectance                                                     
+
+variable:=:/Retrieval_Failure_Metric_1621
+  volume:=:       331704.
+  _FillValue:=:   -9999
+  valid_range:=:       0   20000
+  long_name:=:
+Retrievals and other information for points that failed to retrievevia standard solution logic for retrieval using band 6 and band 7
+  units:=:by plane in order: 1-none, 2-micron, 3-percent
+  scale_factor:=:    0.0099999998
+  add_offset:=:      0.00000000
+  Parameter_Type:=:Output
+  Cell_Along_Swath_Sampling:=:           4        2039           5
+  Cell_Across_Swath_Sampling:=:           3        1353           5
+  Geolocation_Pointer:=:External MODIS geolocation product
+  description:=:
+\n                                                                                  
+                                                                                    
+ The individual planes in this SDS are set to contain the following:                
+ 1 -- Cloud Optical Thickness                                                       
+ 2 -- Cloud Effective Radius                                                        
+ 3 -- Relative distance of failed retrieval from the library space as               
+      percentage of reflectance                                                     
+
