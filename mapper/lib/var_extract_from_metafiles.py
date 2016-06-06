@@ -2,7 +2,7 @@
 # @Author: Ritesh Pradhan
 # @Date:   2016-06-06 11:21:30
 # @Last Modified by:   Ritesh Pradhan
-# @Last Modified time: 2016-06-06 15:10:40
+# @Last Modified time: 2016-06-06 15:26:32
 
 
 """
@@ -115,9 +115,8 @@ def main():
 			"variable_list": variable_dict
 		}
 		variable_detail_list.append(each_var_dict)
-		if count >= 4:
-			break
-		# break
+		# if count >= 4:
+		# 	break
 
 	with open(outfile, "w") as variable_write:
 		json.dump(variable_detail_list, variable_write, indent=4)
