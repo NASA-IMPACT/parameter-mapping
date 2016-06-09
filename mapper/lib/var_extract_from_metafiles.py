@@ -2,7 +2,7 @@
 # @Author: Ritesh Pradhan
 # @Date:   2016-06-06 11:21:30
 # @Last Modified by:   Ritesh Pradhan
-# @Last Modified time: 2016-06-06 15:26:32
+# @Last Modified time: 2016-06-09 12:02:15
 
 
 """
@@ -69,6 +69,7 @@ def main():
 		dataset_id = get_dataset_id_from_filename(file)[:-len(".metadata.txt")]
 		unique_name = sanitize(dataset_id)
 		variable_dict = dict()
+		ways = dict()
 		print ". ", count; count += 1
 		with open(file) as file_read:
 			metadata = file_read.read()
@@ -87,7 +88,7 @@ def main():
 					variable = get_gcmd_keyword(standard_name)
 					if variable is not None and variable != "":
 						variable_dict[variable_name] = variable
-						# print "std_name"
+						ways[variable_name] = 1
 						continue
 
 				units_start_idx = meta_var.find("units")
@@ -98,6 +99,7 @@ def main():
 					variable = get_gcmd_keyword_from_units(units)
 					if variable is not None and variable != "":
 						variable_dict[variable_name] = variable
+						ways[variable_name] = 2
 						# variable_list.append(variable)
 						# print "units"
 						continue
@@ -110,9 +112,10 @@ def main():
 				# print "all"
 
 		each_var_dict = {
-			"dataset_id" : dataset_id,
+			"meta_filename" : dataset_id,
 			"unique_name" : unique_name,
-			"variable_list": variable_dict
+			"variable_list": variable_dict,
+			"ways": ways
 		}
 		variable_detail_list.append(each_var_dict)
 		# if count >= 4:

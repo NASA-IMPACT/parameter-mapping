@@ -65,6 +65,13 @@
 					{% set outerLoopIndex = loop.index %}
 					<ul class="list-group" id="vkv-{{outerLoopIndex}}" style="background: #E6E6FA;">
 						<div class="keyword-inline-variable">{{v}}</div>  <span class="badge">{{ks['mapped']|length}}</span>
+						{% if 'ways' in maps %}
+							{% if maps.ways[v] == 1 %}
+								<span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
+							{% elif maps.ways[v] == 2 %}
+								<span class="glyphicon glyphicon-flag" aria-hidden="true"></span>
+							{% endif %}
+						{% endif %}
 						{% for k, i in ks['mapped'] %}
 							<li class="list-group-item" id="vkv-innerlist-{{outerLoopIndex}}-{{loop.index}}">
 								{{ k }} : {{ i }}

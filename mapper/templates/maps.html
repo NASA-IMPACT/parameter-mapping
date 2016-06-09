@@ -60,7 +60,7 @@
 				<h2>Variable Map</h2>
 				<div class="div-list-group" style="height:500px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px;">
 					{% for v, ks in maps['vk'].iteritems() %}
-						<h5>{{v}} <span class="badge">{{ks|length}}</span></h5>
+						<h5>{{v}} <span class="badge">{{ks|length}}</span> <h6>this</h6> </h5>
 						{% set outerLoopIndex = loop.index %}
 						<ul class="list-group" id="vkv-{{outerLoopIndex}}">
 						<select>

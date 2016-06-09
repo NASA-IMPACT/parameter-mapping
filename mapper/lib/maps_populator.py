@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 # @Author: ritesh
 # @Date:   2016-01-14 10:35:45
-# @Last Modified by:   ritesh
-# @Last Modified time: 2016-01-26 16:05:31
+# @Last Modified by:   Ritesh Pradhan
+# @Last Modified time: 2016-06-09 12:07:20
 
 """From the list of keyword in ks db collection
 	and list of variable in vs db collection
@@ -63,9 +63,10 @@ def kv_generator(keywords, variables):
 		mapped = dict()
 		ranked = dict()
 		keyword_parts = set(split_into_lemmas(keyword))
-		for variable in variables:
-			variable_parts = get_variable_parts(variable)
-			print keyword, keyword_parts, variable_parts
+		# for variable in variables:	# variables as list
+		for variable, variable_detail in variables.iteritems():	#variables as dict
+			variable_parts = get_variable_parts(variable + " " +variable_detail)
+			# print keyword, keyword_parts, variable_parts
 			rank = len(keyword_parts & variable_parts)
 			if rank <= 0:
 				ranked[variable.replace(".", "_")] = rank
@@ -77,16 +78,17 @@ def kv_generator(keywords, variables):
 	return kv
 
 def vk_generator(variables, keywords):
-	print "In vk generator"
+	# print "In vk generator"
 	vk = dict()
-	for variable in variables:
+	# for variable in variables:	# variables as list
+	for variable, variable_detail in variables.iteritems():	#variables as dict
 		vkd = dict()
 		mapped = dict()
 		ranked = dict()
-		variable_parts = get_variable_parts(variable)
+		variable_parts = get_variable_parts(variable + " " + variable_detail)
 		for keyword in keywords:
 			keyword_parts = set(split_into_lemmas(keyword))
-			print variable, variable_parts, keyword_parts
+			# print variable, variable_parts, keyword_parts
 			rank = len(keyword_parts & variable_parts)
 			if rank <= 0:
 				ranked[keyword.replace(".", "_")] = rank
@@ -130,11 +132,11 @@ def vk_generator(variables, keywords):
 def doc_generator(variables, keywords):
 	kv = kv_generator(keywords, variables)
 	print "--- Printing kv generated ---"
-	print kv
+	# print kv
 
 	vk = vk_generator(variables, keywords)
 	print "--- Printing vk generated ---"
-	print vk
+	# print vk
 
 	return kv, vk
 
@@ -143,16 +145,19 @@ def populate(to_map_colls):
 		print "Updating %s Collection" %(coll)
 		ks_find = db.ks.find_one({"unique_name": coll}, {"keyword_list":1, "dataset_id": 1, "_id": 0})
 		vs_find = db.vs.find_one({"unique_name": coll}, {"variable_list":1, "dataset_id": 1, "_id": 0})
-		variables = vs_find["variable_list"]
-		keywords = ks_find["keyword_list"]
-		dataset_id = ks_find["dataset_id"]
-		print variables
-		print keywords
-		kv, vk = doc_generator(variables, keywords)
-		doc = {"unique_name": coll, "kv": kv, "vk": vk, "dataset_id": dataset_id}
-		result = db.ms.insert_one(doc)
-		if result:
-			print "Successfully Inserted '%s' collection maps" %(coll)
+		if vs_find is None:
+			print "No %s in vs..." %(coll)
+		else:
+			variables = vs_find["variable_list"]
+			keywords = ks_find["keyword_list"]
+			dataset_id = ks_find["dataset_id"]
+			# print variables
+			# print keywords
+			kv, vk = doc_generator(variables, keywords)
+			doc = {"unique_name": coll, "kv": kv, "vk": vk, "dataset_id": dataset_id}
+			result = db.ms.insert_one(doc)
+			if result:
+				print "Successfully Inserted '%s' collection maps" %(coll)
 
 def temp_sanitize_names():
 	keywords_docs = db.ks.find()
@@ -176,17 +181,20 @@ def main():
 	colls_in_vs = [v["unique_name"] for v in db.vs.find({}, {"unique_name":1, "_id": 0})]
 	colls_in_ms = [m["unique_name"] for m in db.ms.find({}, {"unique_name":1, "_id": 0})]
 
-	print colls_in_ks
-	print colls_in_vs
-	print colls_in_ms
+	# print colls_in_ks
+	# print colls_in_vs
+	# print colls_in_ms
 
-	print "diff in coll_ks and coll_vs", diff(colls_in_ks, colls_in_vs)
+	# print "diff in coll_ks and coll_vs", diff(colls_in_ks, colls_in_vs)
 	super_colls = colls_in_ks if len(set(colls_in_ks)) >= len(set(colls_in_vs)) else colls_in_vs
 	to_map_colls = diff(super_colls, colls_in_ms)
 	populate(to_map_colls)
-	print to_map_colls
-	print ACRONYMS
-	print DISCARDS
+	# print to_map_colls
+	# print ACRONYMS
+	# print DISCARDS
+	db.ms.create_index([("unique_name", 1)])
+
+	print "Job Completed.\n"
 
 if __name__ == '__main__':
 	main()
