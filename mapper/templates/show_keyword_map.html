@@ -58,18 +58,29 @@
 				<div class="div-inline"><h3>Parameter Map</h3></div>
 
 				<a href="/_edit_variable_map/{{ maps.unique_name }}" class="btn btn-info " role="button"> EDIT</a>
+
+				<div style="display: inline; background-color:#F99; width: 100%; height: 40px; border:thin solid black;">
+				<!-- <div class="div-inline"> -->
+				<b><span> <img alt="Key" src="{{ url_for('static', filename='img/icons/key-1.png') }}"" style="width:35px;height:35px;"">: gcmd_key  </span> </b>
+				&nbsp; &nbsp; &nbsp;
+				<b><span> <img alt="Key" src="{{ url_for('static', filename='img/icons/unit-4.png') }}"" style="width:25px;height:25px;""> : units </span></b>
+				</div>
 				<br><br>
 				<div class="div-list-group" style="height:600px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px;" name="div-test">
 				{% for v, ks in sorted_maps['vk'].iteritems() %}
 
 					{% set outerLoopIndex = loop.index %}
-					<ul class="list-group" id="vkv-{{outerLoopIndex}}" style="background: #E6E6FA;">
+					<!-- <ul class="list-group" id="vkv-{{outerLoopIndex}}" style="background: #E6E6FA;"> -->
+					<ul class="list-group" id="vkv-{{outerLoopIndex}}" style="background: #EEEEEE;">
 						<div class="keyword-inline-variable">{{v}}</div>  <span class="badge">{{ks['mapped']|length}}</span>
 						{% if 'ways' in maps %}
 							{% if maps.ways[v] == 1 %}
-								<span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
+								<!-- <span class="glyphicon glyphicon-tags" aria-hidden="true"></span> -->
+								<img alt="Key" src="{{ url_for('static', filename='img/icons/key-1.png') }}"" style="width:25px;height:25px;"">
+
 							{% elif maps.ways[v] == 2 %}
-								<span class="glyphicon glyphicon-flag" aria-hidden="true"></span>
+								<!-- <span class="glyphicon glyphicon-flag" aria-hidden="true"></span> -->
+								<img alt="Key" src="{{ url_for('static', filename='img/icons/unit-4.png') }}"" style="width:25px;height:25px;"">
 							{% endif %}
 						{% endif %}
 						{% for k, i in ks['mapped'] %}

@@ -3,7 +3,7 @@
 # @Author: ritesh
 # @Date:   2016-01-14 10:35:45
 # @Last Modified by:   Ritesh Pradhan
-# @Last Modified time: 2016-06-09 12:07:20
+# @Last Modified time: 2016-06-09 21:36:07
 
 """From the list of keyword in ks db collection
 	and list of variable in vs db collection
@@ -144,17 +144,18 @@ def populate(to_map_colls):
 	for coll in to_map_colls:
 		print "Updating %s Collection" %(coll)
 		ks_find = db.ks.find_one({"unique_name": coll}, {"keyword_list":1, "dataset_id": 1, "_id": 0})
-		vs_find = db.vs.find_one({"unique_name": coll}, {"variable_list":1, "dataset_id": 1, "_id": 0})
+		vs_find = db.vs.find_one({"unique_name": coll}, {"variable_list":1, "dataset_id": 1, "ways": 1, "_id": 0})
 		if vs_find is None:
 			print "No %s in vs..." %(coll)
 		else:
 			variables = vs_find["variable_list"]
 			keywords = ks_find["keyword_list"]
 			dataset_id = ks_find["dataset_id"]
+			ways = dict(vs_find["ways"])
 			# print variables
 			# print keywords
 			kv, vk = doc_generator(variables, keywords)
-			doc = {"unique_name": coll, "kv": kv, "vk": vk, "dataset_id": dataset_id}
+			doc = {"unique_name": coll, "kv": kv, "vk": vk, "dataset_id": dataset_id, "ways": ways}
 			result = db.ms.insert_one(doc)
 			if result:
 				print "Successfully Inserted '%s' collection maps" %(coll)

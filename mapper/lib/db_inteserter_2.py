@@ -2,7 +2,7 @@
 # @Author: Ritesh Pradhan
 # @Date:   2016-06-06 16:01:06
 # @Last Modified by:   Ritesh Pradhan
-# @Last Modified time: 2016-06-07 14:30:16
+# @Last Modified time: 2016-06-09 21:16:28
 
 """ Mongodb
     Database    :       mapper
@@ -49,7 +49,7 @@ def ks_insert():
 def main():
 	# dsu_insert()
 	vs_insert()
-	ks_insert()
+	# ks_insert()
 	print "Job Completed. \n"
 
 if __name__ == '__main__':
