@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 # @Author: ritesh
 # @Date:   2015-11-25 10:53:58
-# @Last Modified by:   ritesh
-# @Last Modified time: 2016-02-11 11:00:51
+# @Last Modified by:   Ritesh Pradhan
+# @Last Modified time: 2016-06-15 12:39:59
 
 from flask import Flask, render_template, request, jsonify, redirect, url_for, Response
 from werkzeug import secure_filename
@@ -188,6 +188,51 @@ def edit_variable_map(collection_name):
         sorted_maps=sorted_maps)
 
 
+@app.route('/_edit_cfu_map/<collection_name>', methods=['GET', 'POST'])
+def edit_cfu_map(collection_name):
+    errors = []
+    results = {"four": 4}
+    print collection_name
+    # collection_name = request.args.get('collection_name', 'ritesh', type=str)
+    # print "Collection clicked in the list iddds : ", collection_name
+    db = libmongo.get_db()
+    keywords = db.ks.find_one({"unique_name": collection_name}).get("keyword_list")
+    variables = db.vs.find_one({"unique_name": collection_name}).get("variable_list")
+    maps = db.ms.find_one({"unique_name": collection_name})
+    # print keywords, variables, maps
+
+    sorted_maps = dict()
+    sorted_maps["unique_name"] = collection_name
+    sorted_maps["kv"] = get_sorted_kv_map(maps)
+    sorted_maps["vk"] = get_sorted_vk_map(maps)
+
+    return render_template('edit_cfu_map.html', errors=errors, results=results, variables=variables, \
+        keywords=keywords, maps=maps, collections=collections, \
+        sorted_maps=sorted_maps)
+
+@app.route('/_edit_cfk_map/<collection_name>', methods=['GET', 'POST'])
+def edit_cfk_map(collection_name):
+    errors = []
+    results = {"four": 4}
+    print collection_name
+    # collection_name = request.args.get('collection_name', 'ritesh', type=str)
+    # print "Collection clicked in the list iddds : ", collection_name
+    db = libmongo.get_db()
+    keywords = db.ks.find_one({"unique_name": collection_name}).get("keyword_list")
+    variables = db.vs.find_one({"unique_name": collection_name}).get("variable_list")
+    maps = db.ms.find_one({"unique_name": collection_name})
+    # print keywords, variables, maps
+
+    sorted_maps = dict()
+    sorted_maps["unique_name"] = collection_name
+    sorted_maps["kv"] = get_sorted_kv_map(maps)
+    sorted_maps["vk"] = get_sorted_vk_map(maps)
+
+    return render_template('edit_cfk_map.html', errors=errors, results=results, variables=variables, \
+        keywords=keywords, maps=maps, collections=collections, \
+        sorted_maps=sorted_maps)
+
+
 @app.route('/_update_keyword_map/<collection_name>', methods=['GET', 'POST'])
 def update_keyword_map(collection_name):
     errors = []
@@ -297,6 +342,58 @@ def update_variable_map(collection_name):
         print "Successful  variable map update"
     return redirect(url_for("show_keyword_map", collection_name=collection_name))
     # return render_template('edit_keyword_map.html', errors=errors, results=results, variables=variables, keywords=keywords, maps=maps, collections=collections)
+
+
+@app.route('/_update_cfu_map/<collection_name>', methods=['GET', 'POST'])
+def update_cfu_map(collection_name):
+    errors = []
+    results = {"four": 4}
+    print collection_name
+    if request.method == 'POST':
+        # print list(request.form.keys())
+        db = libmongo.get_db()
+
+        cfu = dict()
+        for variable in request.form.keys():
+            keywords = request.form.getlist(variable)
+            keywords = list(set(keywords))
+            key = variable.split("-", 2)[-1]
+            print key, keywords
+            cfu[key] = list(keywords)
+
+        query = {"unique_name": collection_name}
+        update = {"$set": {"cfu": cfu}}
+        result = db.ms.update_one(query, update)
+        if result.matched_count == 1:
+            print "Successful cfu map update"
+        return redirect(url_for("show_keyword_map", collection_name=collection_name))
+
+
+@app.route('/_update_cfk_map/<collection_name>', methods=['GET', 'POST'])
+def update_cfk_map(collection_name):
+    errors = []
+    results = {"four": 4}
+    print collection_name
+    if request.method == 'POST':
+        # print list(request.form.keys())
+        db = libmongo.get_db()
+
+        cfk = dict()
+        for variable in request.form.keys():
+            keywords = request.form.getlist(variable)
+            keywords = list(set(keywords))
+            key = variable.split("-", 2)[-1]
+            print key, keywords
+            cfk[key] = list(keywords)
+
+
+        query = {"unique_name": collection_name}
+        update = {"$set": {"cfk": cfk}}
+        result = db.ms.update_one(query, update)
+        if result.matched_count == 1:
+            print "Successful cfk map update"
+        return redirect(url_for("show_keyword_map", collection_name=collection_name))
+
 
 
 @app.route('/', methods=['GET', 'POST'])

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}Maps for collection{% endblock %}
+
+{% block head %}
+	{{ super() }}
+{% endblock %}
+
+{% block content %}
+
+	<h3 align="center" style="background: #CCCCCC"> {{maps.dataset_id}}</h3>
+
+	<div class="row">
+			<div class="row" id="cfk-maps-box">
+				<h3>Edit GCMD keywords from CF variable</h3>
+
+				<form method="POST" action="/_update_cfk_map/{{ maps.unique_name }}" id="update_cfk_map">
+
+				<div class="div-list-group" style="height:500px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px;" name="div-test">
+					{% for v, gcmds in maps['cfk'].iteritems() %}
+
+						{% set outerLoopIndex = loop.index %}
+
+						<ul class="list-group" id="cfkEdit-{{outerLoopIndex}}">
+						<br>
+						<div class="keyword-inline-variable">{{v}}</div>
+						<!-- <input type="button" id="vkaddButtonEdit-{{outerLoopIndex}}-{{v}}" value="Assign New Keyword" type="button" class="btn btn-info" align="right" /> -->
+							{% for gcmd in gcmds %}
+								<li class="list-group-item" id="cfk-innerlistEdit-{{outerLoopIndex}}-{{loop.index}}">
+
+									<select name="cfkEdit-{{outerLoopIndex}}-{{v}}">
+
+							    		<option value="{{ gcmd }}" selected>{{ gcmd }} </option>
+
+									</select>
+
+
+									<input type="button" id="cfkremoveButtonEdit-{{outerLoopIndex}}-{{loop.index}}" value="Remove" class="btn btn-danger" />
+								</li>
+							{% endfor %}
+						</ul>
+					{% endfor %}
+				</div>
+				<br>
+				<input type="submit" value="Save" class="btn btn-success">
+				</form>
+
+
+
+			</div>
+		<!-- </div> -->
+	</div>
+
+		<br>
+
+
+{% endblock %}

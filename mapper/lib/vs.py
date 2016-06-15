@@ -2,7 +2,7 @@
 # @Author: Ritesh Pradhan
 # @Date:   2016-06-07 11:45:55
 # @Last Modified by:   Ritesh Pradhan
-# @Last Modified time: 2016-06-09 12:03:59
+# @Last Modified time: 2016-06-14 14:28:12
 
 
 dsu_file = "../../datasets_to_url.json"
@@ -28,12 +28,16 @@ def main():
 			if v["meta_filename"] in dsu["url"]:
 				variable_list = dict((sanitize(key), value) for (key, value) in v["variable_list"].items())
 				ways = dict((sanitize(key), value) for (key, value) in v["ways"].items())
+				cfk = dict((sanitize(key), list(set(value))) for (key, value) in v["cfk"].items())
+				cfu = dict((sanitize(key), list(set(value))) for (key, value) in v["cfu"].items())
 				each_vs = {
 					"dataset_id" : dsu["dataset_id"],
 					"unique_name" : sanitize(dsu["dataset_id"]),
 					"variable_list" : variable_list,
 					"url": dsu["url"],
-					"ways": ways
+					"ways": ways,
+					"cfk": cfk,
+					"cfu": cfu
 
 				}
 

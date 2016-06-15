@@ -1,8 +1,8 @@
 /*
 * @Author: ritesh
 * @Date:   2015-12-01 14:59:30
-* @Last Modified by:   ritesh
-* @Last Modified time: 2016-01-25 17:04:19
+* @Last Modified by:   Ritesh Pradhan
+* @Last Modified time: 2016-06-15 12:35:03
 */
 
 
@@ -152,6 +152,19 @@ $( document ).ready(function() {
     	$('#vkv-innerlist-'+num+'-'+inum).remove();
    	});
 
+
+   	// New cfu and cfk edits ---------------------
+   	$(document).on("click", '[id^=cfuremoveButtonEdit]' , function() {
+    	var id = event.target.id;
+		var [button, num, inum] = id.split("-", 3)
+    	$('#cfu-innerlistEdit-'+num+'-'+inum).remove();
+   	});
+
+   	$(document).on("click", '[id^=cfkremoveButtonEdit]' , function() {
+    	var id = event.target.id;
+		var [button, num, inum] = id.split("-", 3)
+    	$('#cfk-innerlistEdit-'+num+'-'+inum).remove();
+   	});
 
 	// Onclick li of ul
 	$('#keyword-list').on('click', 'li', function(event) {

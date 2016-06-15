@@ -8,9 +8,71 @@
 
 {% block content %}
 
-	<!-- <h1 align="center">Maps</h1> -->
 	<h3 align="center" style="background: #DDDDDD"> {{maps.dataset_id}}</h3>
 
+	<hr>
+<div class="container" style="border: 1.5px solid; border-radius: 10px; margin:0 5px 0 0; background: #EEE">
+<br>
+  <div class="row">
+    <div class="col-sm-5" style="height:300px;border: 0.5px solid; border-radius: 10px; margin:0 5px 0 3%; background: #FFF"">
+      <img alt="Key" src="{{ url_for('static', filename='img/icons/key-1.png') }}"" style="width:35px;height:35px;"">
+      <div class="div-inline"> <h5>GCMD Keywords from CF variable </h5> </div>
+      {% if maps['cfk']|length > 0 %} <a href="/_edit_cfk_map/{{ maps.unique_name }}" class="btn btn-info active" role="button">EDIT</a> {% endif %}
+      <hr style="border-bottom: 0px">
+
+      <div style="height:210px;overflow-y:scroll;border: 0px solid; border-radius: 10px; background: #FFF">
+      {% if maps['cfk']|length > 0 %}
+	      {% for v, gcmds in maps['cfk'].iteritems() %}
+	      	{% set outerLoopIndex = loop.index %}
+			<ul class="list-group" id="cfk-{{outerLoopIndex}}" style="background: #EEEEEE;">
+				<div class="keyword-inline-variable">{{v}}</div>  <span class="badge">{{gcmds|length}}</span>
+				{% for gcmd in gcmds %}
+					<li class="list-group-item" id="cfk-innerlist-{{outerLoopIndex}}-{{loop.index}}">
+						{{ gcmd }}
+					</li>
+				{% endfor %}
+			</ul>
+	      {% endfor %}
+	    {% else %}
+	    	<h5 style="color:red"> <li> No keys found.</li> </h5>
+	    {% endif %}
+
+    </div>
+    </div>
+    <!-- <div class="col-sm-5 col-sm-offset-1" style="height:200px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px; background: #FFF""> -->
+    <div class="col-sm-5 col-sm-offset-1" style="height:300px;border: 0.5px solid; border-radius: 10px; background: #FFF">
+      <img alt="Key" src="{{ url_for('static', filename='img/icons/unit-4.png') }}"" style="width:25px;height:25px;"">
+      <div class="div-inline"> <h5>GCMD Keywords from CF units </h5> </div>
+      {% if maps['cfu']|length > 0 %}<a href="/_edit_cfu_map/{{ maps.unique_name }}" class="btn btn-info active" role="button">EDIT</a>{% endif %}
+
+      <hr style="border-bottom: 0px">
+
+     <div style="height:210px;overflow-y:scroll;border: 0px solid; border-radius: 10px; background: #FFF">
+     {% if maps['cfu']|length > 0 %}
+      {% for v, gcmds in maps['cfu'].iteritems() %}
+      	<!-- <h6> {{ v }}  {{ gcmds }} </h6> -->
+
+      	{% set outerLoopIndex = loop.index %}
+		<!-- <ul class="list-group" id="vkv-{{outerLoopIndex}}" style="background: #E6E6FA;"> -->
+		<ul class="list-group" id="cfu-{{outerLoopIndex}}" style="background: #EEEEEE;">
+			<div class="keyword-inline-variable">{{v}}</div>  <span class="badge">{{gcmds|length}}</span>
+			{% for gcmd in gcmds %}
+				<li class="list-group-item" id="cfu-innerlist-{{outerLoopIndex}}-{{loop.index}}">
+					{{ gcmd }}
+				</li>
+			{% endfor %}
+		</ul>
+
+      	{% endfor %}
+      {% else %}
+	    	<h5 style="color:red"> <li> No keys found.</li> </h5>
+	   {% endif %}
+    </div>
+    </div>
+  </div>
+  <br>
+</div>
+<hr>
 	<div class="row">
 		<div class="col-sm-6" id="kv-maps">
 			<div class="row" id="kv-maps-box">
@@ -59,12 +121,11 @@
 
 				<a href="/_edit_variable_map/{{ maps.unique_name }}" class="btn btn-info " role="button"> EDIT</a>
 
-				<div style="display: inline; background-color:#F99; width: 100%; height: 40px; border:thin solid black;">
-				<!-- <div class="div-inline"> -->
+				<!-- <div style="display: inline; background-color:#F99; width: 100%; height: 40px; border:thin solid black;">
 				<b><span> <img alt="Key" src="{{ url_for('static', filename='img/icons/key-1.png') }}"" style="width:35px;height:35px;"">: gcmd_key  </span> </b>
 				&nbsp; &nbsp; &nbsp;
 				<b><span> <img alt="Key" src="{{ url_for('static', filename='img/icons/unit-4.png') }}"" style="width:25px;height:25px;""> : units </span></b>
-				</div>
+				</div> -->
 				<br><br>
 				<div class="div-list-group" style="height:600px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px;" name="div-test">
 				{% for v, ks in sorted_maps['vk'].iteritems() %}
