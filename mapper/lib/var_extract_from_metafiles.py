@@ -2,7 +2,7 @@
 # @Author: Ritesh Pradhan
 # @Date:   2016-06-06 11:21:30
 # @Last Modified by:   Ritesh Pradhan
-# @Last Modified time: 2016-06-13 15:14:11
+# @Last Modified time: 2016-06-16 15:13:52
 
 
 """
@@ -19,6 +19,7 @@ import json
 import glob
 import requests
 
+from acronyms import DISCARDS
 
 cf_units_file = "../../cf_units.json"
 cf_gcmd_file = "../../cf_gcmd_map.json"
@@ -105,37 +106,40 @@ def main():
 			for meta_var in meta_var_list:
 				variable_name = meta_var[4:meta_var.find("\n")].strip()
 
+				skip = True if skip_var in variable_name for skip_var in DISCARDS else False
 
-				standard_start_idx = meta_var.find("standard_name")
-				if standard_start_idx > 0:
-					standard_end_idx = meta_var.find("\n", standard_start_idx)
-					standard_name = meta_var[standard_start_idx+len("standard_name:=:"):standard_end_idx].strip()
-					""" look up at cf->gcmd mappind """
-					gcmd_list = get_gcmd_keyword_list(standard_name)
-					if gcmd_list is not None and len(gcmd_list) != 0:
-						cfk[variable_name] = list(gcmd_list)
-						ways[variable_name] = 1
-						continue
+				if not skip:
+					standard_start_idx = meta_var.find("standard_name")
+					if standard_start_idx > 0:
+						standard_end_idx = meta_var.find("\n", standard_start_idx)
+						standard_name = meta_var[standard_start_idx+len("standard_name:=:"):standard_end_idx].strip()
+						""" look up at cf->gcmd mappind """
+						gcmd_list = get_gcmd_keyword_list(standard_name)
+						if gcmd_list is not None and len(gcmd_list) != 0:
+							cfk[variable_name] = list(gcmd_list)
+							ways[variable_name] = 1
+							continue
 
-				units_start_idx = meta_var.find("units")
-				if units_start_idx > 0:
-					units_end_idx = meta_var.find("\n", units_start_idx)
-					units = meta_var[units_start_idx+len("units:=:"):units_end_idx].strip()
-					""" look up at cf->gcmd mappind """
-					gcmd_list = get_gcmd_keyword_list_from_units(units)
-					if gcmd_list is not None and len(gcmd_list) != 0:
-						cfu[variable_name] = list(gcmd_list)
-						ways[variable_name] = 2
-						# variable_list.append(variable)
-						# print "units"
-						continue
+					units_start_idx = meta_var.find("units")
+					if units_start_idx > 0:
+						units_end_idx = meta_var.find("\n", units_start_idx)
+						units = meta_var[units_start_idx+len("units:=:"):units_end_idx].strip()
+						""" look up at cf->gcmd mappind """
+						gcmd_list = get_gcmd_keyword_list_from_units(units)
+						if gcmd_list is not None and len(gcmd_list) != 0:
+							variable_name_with_unit = "%s (%s)" %(variable_name, units)
+							cfu[variable_name_with_unit] = list(gcmd_list)
+							ways[variable_name] = 2
+							# variable_list.append(variable)
+							# print "units"
+							continue
 
-				#take all as var
-				# meta_var = unicode(meta_var, 'utf-8')
-				variable = meta_var.decode("utf-8", "ignore").replace(":=:", " ").replace(":", " ").replace("/", " ").replace("\n", "").replace("\r", " ").strip()
-				variable_dict[variable_name] = variable
-				# variable_list.append(variable)
-				# print "all"
+					#take all as var
+					# meta_var = unicode(meta_var, 'utf-8')
+					variable = meta_var.decode("utf-8", "ignore").replace(":=:", " ").replace(":", " ").replace("/", " ").replace("\n", "").replace("\r", " ").strip()
+					variable_dict[variable_name] = variable
+					# variable_list.append(variable)
+					# print "all"
 
 		each_var_dict = {
 			"meta_filename" : dataset_id,
