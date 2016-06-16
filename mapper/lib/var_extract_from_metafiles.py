@@ -2,7 +2,7 @@
 # @Author: Ritesh Pradhan
 # @Date:   2016-06-06 11:21:30
 # @Last Modified by:   Ritesh Pradhan
-# @Last Modified time: 2016-06-16 15:13:52
+# @Last Modified time: 2016-06-16 15:31:34
 
 
 """
@@ -106,7 +106,11 @@ def main():
 			for meta_var in meta_var_list:
 				variable_name = meta_var[4:meta_var.find("\n")].strip()
 
-				skip = True if skip_var in variable_name for skip_var in DISCARDS else False
+				skip = False
+				for skip_var in DISCARDS:
+					if skip_var in variable_name:
+						skip = True
+						break
 
 				if not skip:
 					standard_start_idx = meta_var.find("standard_name")
