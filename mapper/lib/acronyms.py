@@ -3,7 +3,7 @@
 # @Author: ritesh
 # @Date:   2016-01-26 15:01:12
 # @Last Modified by:   Ritesh Pradhan
-# @Last Modified time: 2016-06-16 15:07:38
+# @Last Modified time: 2016-06-20 12:12:09
 
 ACRONYMS = dict(
 	res 			= "resolution",
@@ -29,4 +29,4 @@ ACRONYMS = dict(
 	li 				= "lightning_imaging"
 	)
 
-DISCARDS = ["lat", "lon", "latitude", "longitude", "rank", "total", "processing_flag", "k_index", "time", "flag", "quality"]
+DISCARDS = ["lat", "lon", "latitude", "longitude", "rank", "index", "time", "flag", "quality", "qual"]

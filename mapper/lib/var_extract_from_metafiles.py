@@ -2,7 +2,7 @@
 # @Author: Ritesh Pradhan
 # @Date:   2016-06-06 11:21:30
 # @Last Modified by:   Ritesh Pradhan
-# @Last Modified time: 2016-06-16 15:31:34
+# @Last Modified time: 2016-06-20 13:09:56
 
 
 """
@@ -108,7 +108,7 @@ def main():
 
 				skip = False
 				for skip_var in DISCARDS:
-					if skip_var in variable_name:
+					if skip_var in variable_name.lower():
 						skip = True
 						break
 

@@ -2,7 +2,7 @@
 # @Author: Ritesh Pradhan
 # @Date:   2016-06-07 11:45:55
 # @Last Modified by:   Ritesh Pradhan
-# @Last Modified time: 2016-06-14 14:28:12
+# @Last Modified time: 2016-06-20 14:43:16
 
 
 dsu_file = "../../datasets_to_url.json"
@@ -37,8 +37,8 @@ def main():
 					"url": dsu["url"],
 					"ways": ways,
 					"cfk": cfk,
-					"cfu": cfu
-
+					"cfu": cfu,
+					"all_vars": variable_list.keys() + cfk.keys() + cfu.keys()
 				}
 
 				vs.append(each_vs)
