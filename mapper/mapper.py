@@ -3,7 +3,7 @@
 # @Author: ritesh
 # @Date:   2015-11-25 10:53:58
 # @Last Modified by:   Ritesh Pradhan
-# @Last Modified time: 2016-06-15 12:39:59
+# @Last Modified time: 2016-06-21 16:27:04
 
 from flask import Flask, render_template, request, jsonify, redirect, url_for, Response
 from werkzeug import secure_filename
@@ -129,6 +129,10 @@ def show_keyword_map(collection_name):
     keywords = db.ks.find_one({"unique_name": collection_name}).get("keyword_list")
     variables = db.vs.find_one({"unique_name": collection_name}).get("variable_list")
     maps = db.ms.find_one({"unique_name": collection_name})
+    maps["mapped_keys"] =  list()
+    for kk in maps["cfk"].values():
+        maps["mapped_keys"] += kk
+
     # print keywords, variables, maps
     sorted_maps = dict()
     sorted_maps["unique_name"] = collection_name

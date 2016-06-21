@@ -8,70 +8,121 @@
 
 {% block content %}
 
-	<h3 align="center" style="background: #DDDDDD"> {{maps.dataset_id}}</h3>
+	<h3 align="center" style="background: #EEE"> {{maps.dataset_id}}</h3>
+	<hr>
+	<div class="container" id="keys-vars">
+	  	<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Info </button>
+	  	<div id="demo" class="collapse" style="border: 1.5px solid; border-radius: 10px; margin:0 5px 0 0; background: #EEE">
+		    <br>
+	    	<div class="row" >
+			    <div class="col-sm-5" style="height:280px;border: 0.5px solid; border-radius: 10px; margin:0 3px 0 4%; background: #FFF"">
+			      	<h5> Keywords</h5>
+			      	<hr style="border-bottom: 0px">
+			      	<div style="height:210px;overflow-y:scroll;border: 0px solid; border-radius: 10px; background: #FFF">
+				      	{% if maps['all_keys']|length > 0 %}
+					      	<ul class="list-group" id="cfk-{{outerLoopIndex}}" style="background: #EEEEEE;">
+					    	{% for k in maps['all_keys'] %}
+					      		{% set outerLoopIndex = loop.index %}
+								<li class="list-group-item">{{k}}</li>
+					      	{% endfor %}
+					      	</ul>
+					    {% else %}
+					    	<h5 style="color:red"> <li> No keys found.</li> </h5>
+					    {% endif %}
+				    </div>
+			    </div>
+			    <div class="col-sm-5 col-sm-offset-1" style="height:280px;border: 0.5px solid; border-radius: 10px; background: #FFF">
+			      	<h5> Variables </h5>
+			      	<hr style="border-bottom: 0px">
+			      	<div style="height:210px;overflow-y:scroll;border: 0px solid; border-radius: 10px; background: #FFF">
+				      	{% if maps['all_vars']|length > 0 %}
+					      	<ul class="list-group" id="cfk-{{outerLoopIndex}}" style="background: #EEEEEE;">
+					    	{% for v in maps['all_vars'] %}
+					      		{% set outerLoopIndex = loop.index %}
+								<li class="list-group-item">{{v}}</li>
+					      	{% endfor %}
+					      	</ul>
+					    {% else %}
+					    	<h5 style="color:red"> <li> No variables found.</li> </h5>
+					    {% endif %}
+				    </div>
+			    </div>
+			</div>
+			<br>
+	  	</div>
+	</div>
 
 	<hr>
-<div class="container" style="border: 1.5px solid; border-radius: 10px; margin:0 5px 0 0; background: #EEE">
-<br>
-  <div class="row">
-    <div class="col-sm-5" style="height:300px;border: 0.5px solid; border-radius: 10px; margin:0 5px 0 3%; background: #FFF"">
-      <img alt="Key" src="{{ url_for('static', filename='img/icons/key-1.png') }}"" style="width:35px;height:35px;"">
-      <div class="div-inline"> <h5>GCMD Keywords from CF variable </h5> </div>
-      {% if maps['cfk']|length > 0 %} <a href="/_edit_cfk_map/{{ maps.unique_name }}" class="btn btn-info active" role="button">EDIT</a> {% endif %}
-      <hr style="border-bottom: 0px">
 
-      <div style="height:210px;overflow-y:scroll;border: 0px solid; border-radius: 10px; background: #FFF">
-      {% if maps['cfk']|length > 0 %}
-	      {% for v, gcmds in maps['cfk'].iteritems() %}
-	      	{% set outerLoopIndex = loop.index %}
-			<ul class="list-group" id="cfk-{{outerLoopIndex}}" style="background: #EEEEEE;">
-				<div class="keyword-inline-variable">{{v}}</div>  <span class="badge">{{gcmds|length}}</span>
-				{% for gcmd in gcmds %}
-					<li class="list-group-item" id="cfk-innerlist-{{outerLoopIndex}}-{{loop.index}}">
-						{{ gcmd }}
-					</li>
-				{% endfor %}
-			</ul>
-	      {% endfor %}
-	    {% else %}
-	    	<h5 style="color:red"> <li> No keys found.</li> </h5>
-	    {% endif %}
+	<div class="container" id="cf-gcmd-units" style="border: 1.5px solid; border-radius: 10px; margin:0 5px 0 0; background: #EEE">
+	<br>
+		<div class="row">
+		    <div class="col-sm-5" style="height:300px;border: 0.5px solid; border-radius: 10px; margin:0 5px 0 3%; background: #FFF"">
+		      	<img alt="Key" src="{{ url_for('static', filename='img/icons/key-1.png') }}"" style="width:35px;height:35px;"">
+		      	<div class="div-inline"> <h5>GCMD Keywords from CF variable </h5> </div>
+		      	{% if maps['cfk']|length > 0 %} <a href="/_edit_cfk_map/{{ maps.unique_name }}" class="btn btn-info active" role="button">EDIT</a> {% endif %}
+		      	<hr style="border-bottom: 0px">
 
-    </div>
-    </div>
-    <!-- <div class="col-sm-5 col-sm-offset-1" style="height:200px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px; background: #FFF""> -->
-    <div class="col-sm-5 col-sm-offset-1" style="height:300px;border: 0.5px solid; border-radius: 10px; background: #FFF">
-      <img alt="Key" src="{{ url_for('static', filename='img/icons/unit-4.png') }}"" style="width:25px;height:25px;"">
-      <div class="div-inline"> <h5>GCMD Keywords from CF units </h5> </div>
-      {% if maps['cfu']|length > 0 %}<a href="/_edit_cfu_map/{{ maps.unique_name }}" class="btn btn-info active" role="button">EDIT</a>{% endif %}
+		      	<div style="height:210px;overflow-y:scroll;border: 0px solid; border-radius: 10px; background: #FFF">
+			      	{% if maps['cfk']|length > 0 %}
+				    	{% for v, gcmds in maps['cfk'].iteritems() %}
+				      		{% set outerLoopIndex = loop.index %}
+							<ul class="list-group" id="cfk-{{outerLoopIndex}}" style="background: #EEEEEE;">
+								<div class="keyword-inline-variable">{{v}}</div>
+								{% for gcmd in gcmds %}
+									<li class="list-group-item" id="cfk-innerlist-{{outerLoopIndex}}-{{loop.index}}">
+										{% if gcmd in maps['all_keys'] %}
+											<font color="green">{{ gcmd }}</font>
+										{% else %}
+											{{ gcmd }}
+										{% endif %}
+									</li>
+								{% endfor %}
+							</ul>
+				      	{% endfor %}
+				    {% else %}
+				    	<h5 style="color:red"> <li> No mapping found.</li> </h5>
+				    {% endif %}
+			    </div>
+		    </div>
+		    <!-- <div class="col-sm-5 col-sm-offset-1" style="height:200px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px; background: #FFF""> -->
+		    <div class="col-sm-5 col-sm-offset-1" style="height:300px;border: 0.5px solid; border-radius: 10px; background: #FFF">
+		      	<img alt="Key" src="{{ url_for('static', filename='img/icons/unit-4.png') }}"" style="width:25px;height:25px;"">
+		      	<div class="div-inline"> <h5>GCMD Keywords from CF units </h5> </div>
+		      	{% if maps['cfu']|length > 0 %}<a href="/_edit_cfu_map/{{ maps.unique_name }}" class="btn btn-info active" role="button">EDIT</a>{% endif %}
 
-      <hr style="border-bottom: 0px">
+		      	<hr style="border-bottom: 0px">
 
-     <div style="height:210px;overflow-y:scroll;border: 0px solid; border-radius: 10px; background: #FFF">
-     {% if maps['cfu']|length > 0 %}
-      {% for v, gcmds in maps['cfu'].iteritems() %}
-      	<!-- <h6> {{ v }}  {{ gcmds }} </h6> -->
+		    	<div style="height:210px;overflow-y:scroll;border: 0px solid; border-radius: 10px; background: #FFF">
+			    	{% if maps['cfu']|length > 0 %}
+			      		{% for v, gcmds in maps['cfu'].iteritems() %}
+					      	<!-- <h6> {{ v }}  {{ gcmds }} </h6> -->
 
-      	{% set outerLoopIndex = loop.index %}
-		<!-- <ul class="list-group" id="vkv-{{outerLoopIndex}}" style="background: #E6E6FA;"> -->
-		<ul class="list-group" id="cfu-{{outerLoopIndex}}" style="background: #EEEEEE;">
-			<div class="keyword-inline-variable">{{v}}</div>  <span class="badge">{{gcmds|length}}</span>
-			{% for gcmd in gcmds %}
-				<li class="list-group-item" id="cfu-innerlist-{{outerLoopIndex}}-{{loop.index}}">
-					{{ gcmd }}
-				</li>
-			{% endfor %}
-		</ul>
+					      	{% set outerLoopIndex = loop.index %}
+							<!-- <ul class="list-group" id="vkv-{{outerLoopIndex}}" style="background: #E6E6FA;"> -->
+							<ul class="list-group" id="cfu-{{outerLoopIndex}}" style="background: #EEEEEE;">
+								<div class="keyword-inline-variable">{{v}}</div>
+								{% for gcmd in gcmds %}
+									<li class="list-group-item" id="cfu-innerlist-{{outerLoopIndex}}-{{loop.index}}">
+										{% if gcmd in maps['all_keys'] %}
+												<font color="green">{{ gcmd }}</font>
+										{% else %}
+											{{ gcmd }}
+										{% endif %}
+									</li>
+								{% endfor %}
+							</ul>
 
-      	{% endfor %}
-      {% else %}
-	    	<h5 style="color:red"> <li> No keys found.</li> </h5>
-	   {% endif %}
-    </div>
-    </div>
-  </div>
-  <br>
-</div>
+				      	{% endfor %}
+					{% else %}
+				    	<h5 style="color:red"> <li> No mapping found.</li> </h5>
+				   	{% endif %}
+		    	</div>
+		    </div>
+		</div>
+	<br>
+	</div>
+
 <hr>
 	<div class="row">
 		<div class="col-sm-6" id="kv-maps">
@@ -81,37 +132,40 @@
 				<a href="/_edit_keyword_map/{{ maps.unique_name }}" class="btn btn-info active" role="button">EDIT</a>
 				<br><br>
 				<div class="div-list-group" style="height:600px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px; margin:0 5px 0 0;" name="div-test">
+
 				{% for k, vs in sorted_maps['kv'].iteritems() %}
 
 					{% set outerLoopIndex = loop.index %}
-					<ul class="list-group" id="kvk-{{outerLoopIndex}}" style="background:#E6E6FA;">
-						<div class="list-group-each-keyword">
-							<!-- {{k}} -->
-						{% set keyword_part_list = k.split('->') %}
-						{% for keyword_part in keyword_part_list %}
-							{% if loop.first %}
-								<div class="keyword-inline-first">{{keyword_part}}<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
-							{% elif loop.last %}
-								<div class="keyword-inline-last">{{keyword_part}}</div>
-							{% else %}
-								<div class="keyword-inline">{{keyword_part}}<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
-							{% endif %}
-						{% endfor %}
-						<span class="badge">{{vs['mapped']|length}}</span>
-						</div>
+					<!-- {{vs['mapped']|length}}, {{k}}, {{ maps['mapped_keys'] }} -->
+					{% if not (vs['mapped']|length == 0 and k in maps['mapped_keys']) %}
+						<ul class="list-group" id="kvk-{{outerLoopIndex}}" style="background:#E6E6FA;">
+							<div class="list-group-each-keyword">
+								<!-- {{k}} -->
+							{% set keyword_part_list = k.split('->') %}
+							{% for keyword_part in keyword_part_list %}
+								{% if loop.first %}
+									<div class="keyword-inline-first">{{keyword_part}}<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+								{% elif loop.last %}
+									<div class="keyword-inline-last">{{keyword_part}}</div>
+								{% else %}
+									<div class="keyword-inline">{{keyword_part}}<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+								{% endif %}
+							{% endfor %}
+							<span class="badge">{{vs['mapped']|length}}</span>
+							</div>
 
-						<!-- <h5 >{{k}} <span class="badge">{{vs['mapped']|length}}</span></h5> -->
-						{% for v, i in vs['mapped'] %}
-							<li class="list-group-item" id="kvk-innerlist-{{outerLoopIndex}}-{{loop.index}}">
-								{{ v }} : {{ i }}
-							</li>
-						{% endfor %}
-					</ul>
+							<!-- <h5 >{{k}} <span class="badge">{{vs['mapped']|length}}</span></h5> -->
+							{% for v, i in vs['mapped'] %}
+								<li class="list-group-item" id="kvk-innerlist-{{outerLoopIndex}}-{{loop.index}}">
+									{{ v }} : {{ i }}
+								</li>
+							{% endfor %}
+						</ul>
+					{% else %}
+						<!-- <h5 style="color:red"> <li></li> </h5> -->
+					{% endif %}
 				{% endfor %}
 				</div>
-
-
-
 			</div>
 		</div>
 
@@ -129,10 +183,11 @@
 				<br><br>
 				<div class="div-list-group" style="height:600px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px;" name="div-test">
 				{% for v, ks in sorted_maps['vk'].iteritems() %}
-
+					<!-- {{v}}, {{ks}} -->
 					{% set outerLoopIndex = loop.index %}
 					<!-- <ul class="list-group" id="vkv-{{outerLoopIndex}}" style="background: #E6E6FA;"> -->
-					<ul class="list-group" id="vkv-{{outerLoopIndex}}" style="background: #EEEEEE;">
+
+					<ul class="list-group" id="vkv-{{outerLoopIndex}}" style="background: #E6E6FA;">
 						<div class="keyword-inline-variable">{{v}}</div>  <span class="badge">{{ks['mapped']|length}}</span>
 						{% if 'ways' in maps %}
 							{% if maps.ways[v] == 1 %}
@@ -150,6 +205,7 @@
 							</li>
 						{% endfor %}
 					</ul>
+
 				{% endfor %}
 				</div>
 

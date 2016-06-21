@@ -3,7 +3,7 @@
 # @Author: ritesh
 # @Date:   2016-01-14 10:35:45
 # @Last Modified by:   Ritesh Pradhan
-# @Last Modified time: 2016-06-14 14:48:40
+# @Last Modified time: 2016-06-21 11:40:17
 
 """From the list of keyword in ks db collection
 	and list of variable in vs db collection
@@ -74,7 +74,7 @@ def kv_generator(keywords, variables):
 				mapped[variable.replace(".", "_")] = rank
 		kvd["mapped"] = mapped
 		kvd["ranked"] = ranked
-		kv[keyword.replace(".", "_")] = kvd
+		kv[keyword.replace(".", "_").title().replace("->", " > ").replace("_", " ")] = kvd
 	return kv
 
 def vk_generator(variables, keywords):
@@ -91,9 +91,9 @@ def vk_generator(variables, keywords):
 			# print variable, variable_parts, keyword_parts
 			rank = len(keyword_parts & variable_parts)
 			if rank <= 0:
-				ranked[keyword.replace(".", "_")] = rank
+				ranked[keyword.replace(".", "_").title().replace("->", " > ").replace("_", " ")] = rank
 			else:
-				mapped[keyword.replace(".", "_")] = rank
+				mapped[keyword.replace(".", "_").title().replace("->", " > ").replace("_", " ")] = rank
 		vkd["mapped"] = mapped
 		vkd["ranked"] = ranked
 		vk[variable.replace(".", "_")] = vkd
@@ -144,7 +144,7 @@ def populate(to_map_colls):
 	for coll in to_map_colls:
 		print "Updating %s Collection" %(coll)
 		ks_find = db.ks.find_one({"unique_name": coll}, {"keyword_list":1, "dataset_id": 1, "_id": 0})
-		vs_find = db.vs.find_one({"unique_name": coll}, {"variable_list":1, "dataset_id": 1, "ways": 1, "cfk": 1, "cfu": 1, "_id": 0})
+		vs_find = db.vs.find_one({"unique_name": coll}, {"variable_list":1, "dataset_id": 1, "ways": 1, "cfk": 1, "cfu": 1, "all_vars": 1, "_id": 0})
 		if vs_find is None:
 			print "No %s in vs..." %(coll)
 		else:
@@ -154,10 +154,16 @@ def populate(to_map_colls):
 			ways = dict(vs_find["ways"])
 			cfk = dict(vs_find["cfk"])
 			cfu = dict(vs_find["cfu"])
+			all_vars = list(vs_find["all_vars"])
 			# print variables
 			# print keywords
 			kv, vk = doc_generator(variables, keywords)
-			doc = {"unique_name": coll, "kv": kv, "vk": vk, "dataset_id": dataset_id, "ways": ways, "cfk": cfk, "cfu": cfu}
+			# print "this is kv ", kv
+			doc = {
+					"unique_name": coll, "kv": kv, "vk": vk, "dataset_id": dataset_id, \
+					"ways": ways, "cfk": cfk, "cfu": cfu, \
+					"all_vars": all_vars, "all_keys": [k.replace("_", " ") for k in kv.keys()]
+				}
 			result = db.ms.insert_one(doc)
 			if result:
 				print "Successfully Inserted '%s' collection maps" %(coll)

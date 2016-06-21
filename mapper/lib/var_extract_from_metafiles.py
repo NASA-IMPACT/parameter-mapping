@@ -2,7 +2,7 @@
 # @Author: Ritesh Pradhan
 # @Date:   2016-06-06 11:21:30
 # @Last Modified by:   Ritesh Pradhan
-# @Last Modified time: 2016-06-20 13:09:56
+# @Last Modified time: 2016-06-20 15:14:00
 
 
 """
@@ -109,6 +109,7 @@ def main():
 				skip = False
 				for skip_var in DISCARDS:
 					if skip_var in variable_name.lower():
+						# print "found: %s as %s" %(skip_var, variable_name)
 						skip = True
 						break
 
