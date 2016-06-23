@@ -2,14 +2,14 @@
 * @Author: ritesh
 * @Date:   2016-01-25 13:35:33
 * @Last Modified by:   Ritesh Pradhan
-* @Last Modified time: 2016-06-21 16:35:16
+* @Last Modified time: 2016-06-22 16:24:38
 */
 
 .keyword-inline-first {
 display: inline-block;
 /*border: 1px solid red;*/
 margin:0px 0px 0px 20px;
-background: 	#EEE;
+/*background: 	#EEE;*/
 color: #00008B;
 font-weight: bold;
 }
@@ -18,7 +18,7 @@ font-weight: bold;
 display: inline-block;
 /*border: 1px solid red;*/
 margin:0px;
-background: 	#EEE;
+/*background: 	#EEE;*/
 color: #00008B;
 font-weight: bold;
 }
@@ -36,7 +36,7 @@ font-weight: bold;
 display: inline-block;
 /*border: 1px solid red;*/
 margin:0px 0px 0px 20px;
-background: 	#EEE;
+/*background: 	#EEE;*/
 color: #00008B;
 font-weight: bold
 }
@@ -50,3 +50,29 @@ padding: 2px;
 font-size: 150%;
 font-weight: bold;
 }
+
+
+.truncate {
+  max-width: 95%;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*.truncate:hover {
+  overflow: visible;
+  max-width: 90%;
+}*/
+
+.truncate_k {
+  max-width: 95%;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/*.truncate_k:hover {
+	max-width: 85%;
+  	overflow: visible;
+}*/

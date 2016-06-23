@@ -8,7 +8,7 @@
 
 {% block content %}
 
-	<h3 align="center" style="background: #EEE"> {{maps.dataset_id}}</h3>
+	<h3 align="center" style="background: #FFF"> {{maps.dataset_id}}</h3>
 	<hr>
 	<div class="container" id="keys-vars">
 	  	<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Info </button>
@@ -16,7 +16,7 @@
 		    <br>
 	    	<div class="row" >
 			    <div class="col-sm-5" style="height:280px;border: 0.5px solid; border-radius: 10px; margin:0 3px 0 4%; background: #FFF"">
-			      	<h5> Keywords</h5>
+			      	<h5 align="center"> Keywords in Metadata </h5>
 			      	<hr style="border-bottom: 0px">
 			      	<div style="height:210px;overflow-y:scroll;border: 0px solid; border-radius: 10px; background: #FFF">
 				      	{% if maps['all_keys']|length > 0 %}
@@ -32,7 +32,7 @@
 				    </div>
 			    </div>
 			    <div class="col-sm-5 col-sm-offset-1" style="height:280px;border: 0.5px solid; border-radius: 10px; background: #FFF">
-			      	<h5> Variables </h5>
+			      	<h5 align="center"> Variables in sample granule </h5>
 			      	<hr style="border-bottom: 0px">
 			      	<div style="height:210px;overflow-y:scroll;border: 0px solid; border-radius: 10px; background: #FFF">
 				      	{% if maps['all_vars']|length > 0 %}
@@ -124,24 +124,30 @@
 	</div>
 
 <hr>
+<hr>
 	<div class="row">
+		<h4 align="center" style="background: #FFF; color:#0000A8"> Algorithm Based Mapping </h4>
 		<div class="col-sm-6" id="kv-maps">
 			<div class="row" id="kv-maps-box">
-				<div class="div-inline"><h3>Science Keyword Map</h3></div>
+				<div class="div-inline"><h4>Science Keyword</h4></div>
 
 				<a href="/_edit_keyword_map/{{ maps.unique_name }}" class="btn btn-info active" role="button">EDIT</a>
 				<br><br>
-				<div class="div-list-group" style="height:600px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px; margin:0 5px 0 0;" name="div-test">
+				<div class="div-list-group" style="height:600px;width:95%;overflow:scroll;border: 0.5px solid; border-radius: 10px; margin:0 5px 0 0;" name="div-test">
 
 				{% for k, vs in sorted_maps['kv'].iteritems() %}
 
 					{% set outerLoopIndex = loop.index %}
 					<!-- {{vs['mapped']|length}}, {{k}}, {{ maps['mapped_keys'] }} -->
 					{% if not (vs['mapped']|length == 0 and k in maps['mapped_keys']) %}
-						<ul class="list-group" id="kvk-{{outerLoopIndex}}" style="background:#E6E6FA;">
-							<div class="list-group-each-keyword">
+						<ul class="list-group" id="kvk-{{outerLoopIndex}}" style="background:#EEE;">
+							<!-- <div class="list-group-each-keyword"> -->
 								<!-- {{k}} -->
-							{% set keyword_part_list = k.split('->') %}
+							<div class="keyword-inline-first truncate_k " title="{{k}}">{{k}}<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> </div>
+							<p class="badge" style="float:right;">{{vs['mapped']|length}}</p>
+
+
+							<!-- {% set keyword_part_list = k.split('->') %}
 							{% for keyword_part in keyword_part_list %}
 								{% if loop.first %}
 									<div class="keyword-inline-first">{{keyword_part}}<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
@@ -150,9 +156,9 @@
 								{% else %}
 									<div class="keyword-inline">{{keyword_part}}<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
 								{% endif %}
-							{% endfor %}
-							<span class="badge">{{vs['mapped']|length}}</span>
-							</div>
+							{% endfor %} -->
+							<!-- <span class="badge">{{vs['mapped']|length}}</span>
+							</div> -->
 
 							<!-- <h5 >{{k}} <span class="badge">{{vs['mapped']|length}}</span></h5> -->
 							{% for v, i in vs['mapped'] %}
@@ -171,7 +177,7 @@
 
 		<div class="col-sm-6" id="vk-maps">
 			<div class="row" id="kv-maps-box">
-				<div class="div-inline"><h3>Parameter Map</h3></div>
+				<div class="div-inline"><h4>Variable</h4></div>
 
 				<a href="/_edit_variable_map/{{ maps.unique_name }}" class="btn btn-info " role="button"> EDIT</a>
 
@@ -181,14 +187,14 @@
 				<b><span> <img alt="Key" src="{{ url_for('static', filename='img/icons/unit-4.png') }}"" style="width:25px;height:25px;""> : units </span></b>
 				</div> -->
 				<br><br>
-				<div class="div-list-group" style="height:600px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px;" name="div-test">
+				<div class="div-list-group" style="height:600px;overflow:scroll;border: 0.5px solid; border-radius: 10px;" name="div-test">
 				{% for v, ks in sorted_maps['vk'].iteritems() %}
 					<!-- {{v}}, {{ks}} -->
 					{% set outerLoopIndex = loop.index %}
 					<!-- <ul class="list-group" id="vkv-{{outerLoopIndex}}" style="background: #E6E6FA;"> -->
 
-					<ul class="list-group" id="vkv-{{outerLoopIndex}}" style="background: #E6E6FA;">
-						<div class="keyword-inline-variable">{{v}}</div>  <span class="badge">{{ks['mapped']|length}}</span>
+					<ul class="list-group" id="vkv-{{outerLoopIndex}}" style="background: #EEE;">
+						 <div class="keyword-inline-variable truncate" title="{{v}}"">{{v}} </div> <p class="badge" style="float:right;">{{ks['mapped']|length}}</p>
 						{% if 'ways' in maps %}
 							{% if maps.ways[v] == 1 %}
 								<!-- <span class="glyphicon glyphicon-tags" aria-hidden="true"></span> -->
@@ -200,7 +206,7 @@
 							{% endif %}
 						{% endif %}
 						{% for k, i in ks['mapped'] %}
-							<li class="list-group-item" id="vkv-innerlist-{{outerLoopIndex}}-{{loop.index}}">
+							<li class="list-group-item" id="vkv-innerlist-{{outerLoopIndex}}-{{loop.index}}" width="80%">
 								{{ k }} : {{ i }}
 							</li>
 						{% endfor %}
