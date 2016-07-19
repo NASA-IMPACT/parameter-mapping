@@ -2,12 +2,210 @@
 * @Author: ritesh
 * @Date:   2015-12-01 14:59:30
 * @Last Modified by:   Ritesh Pradhan
-* @Last Modified time: 2016-06-15 12:35:03
+* @Last Modified time: 2016-07-13 22:58:34
 */
+
+// var mydata = [
+//                { id: "1", invdate: "2007-10-01", name: "test", note: "note", amount: "200.00", tax: "10.00", total: "210.00" },
+//                { id: "2", invdate: "2007-10-02", name: "test2", note: "note2", amount: "300.00", tax: "20.00", total: "320.00" },
+//                { id: "3", invdate: "2007-09-01", name: "test3", note: "note3", amount: "400.00", tax: "30.00", total: "430.00" },
+//                { id: "4", invdate: "2007-10-04", name: "test", note: "note", amount: "200.00", tax: "10.00", total: "210.00" },
+//                { id: "5", invdate: "2007-10-05", name: "test2", note: "note2", amount: "300.00", tax: "20.00", total: "320.00" },
+//                { id: "6", invdate: "2007-09-06", name: "test3", note: "note3", amount: "400.00", tax: "30.00", total: "430.00" },
+//                { id: "7", invdate: "2007-10-04", name: "test", note: "note", amount: "200.00", tax: "10.00", total: "210.00" },
+//                { id: "8", invdate: "2007-10-03", name: "test2", note: "note2", amount: "300.00", tax: "20.00", total: "320.00" },
+//                { id: "9", invdate: "2007-09-01", name: "test3", note: "note3", amount: "400.00", tax: "30.00", total: "430.00" }
+//         ];
 
 
 $( document ).ready(function() {
 	console.log("This is test log for jss");
+
+
+
+			var filter;
+   //          $("#jqGrid").jqGrid({
+
+   //              url: 'data.json',
+   //              mtype: "GET",
+   //              datatype: "json",
+			// 	colModel: [
+     //                {   label : "Order ID",
+					// 	//sorttype: 'integer',
+					// 	name: 'OrderID',
+					// 	key: true,
+					// 	width: 75 ,
+					// 	colmenu : true,
+					// 	searchoptions : {
+					// 		searchOperMenu : false,
+					// 		sopt : ['eq','gt','lt','ge','le']
+					// 	}
+					// },
+   //                  {
+			// 			label: "Customer ID",
+   //                      name: 'CustomerID',
+   //                      width: 150,
+			// 			hidedlg : true,
+   //                      // stype defines the search type control - in this case HTML select (dropdownlist)
+   //                      stype: "select",
+   //                      // searchoptions value - name values pairs for the dropdown - they will appear as options
+   //                      searchoptions: {
+			// 				value: " :[All];ALFKI:ALFKI;ANATR:ANATR;ANTON:ANTON;AROUT:AROUT;BERGS:BERGS;BLAUS:BLAUS;BLONP:BLONP;BOLID:BOLID;BONAP:BONAP;BOTTM:BOTTM;BSBEV:BSBEV;CACTU:CACTU;CENTC:CENTC;CHOPS:CHOPS;COMMI:COMMI;CONSH:CONSH;DRACD:DRACD;DUMON:DUMON;EASTC:EASTC;ERNSH:ERNSH;FAMIA:FAMIA;FOLIG:FOLIG;FOLKO:FOLKO;FRANK:FRANK;FRANR:FRANR;FRANS:FRANS;FURIB:FURIB;GALED:GALED;GODOS:GODOS;GOURL:GOURL;GREAL:GREAL;GROSR:GROSR;HANAR:HANAR;HILAA:HILAA;HUNGC:HUNGC;HUNGO:HUNGO;ISLAT:ISLAT;KOENE:KOENE;LACOR:LACOR;LAMAI:LAMAI;LAUGB:LAUGB;LAZYK:LAZYK;LEHMS:LEHMS;LETSS:LETSS;LILAS:LILAS;LINOD:LINOD;LONEP:LONEP;MAGAA:MAGAA;MAISD:MAISD;MEREP:MEREP;MORGK:MORGK;NORTS:NORTS;OCEAN:OCEAN;OLDWO:OLDWO;OTTIK:OTTIK;PERIC:PERIC;PICCO:PICCO;PRINI:PRINI;QUEDE:QUEDE;QUEEN:QUEEN;QUICK:QUICK;RANCH:RANCH;RATTC:RATTC;REGGC:REGGC;RICAR:RICAR;RICSU:RICSU;ROMEY:ROMEY;SANTG:SANTG;SAVEA:SAVEA;SEVES:SEVES;SIMOB:SIMOB;SPECD:SPECD;SPLIR:SPLIR;SUPRD:SUPRD;THEBI:THEBI;THECR:THECR;TOMSP:TOMSP;TORTU:TORTU;TRADH:TRADH;TRAIH:TRAIH;VAFFE:VAFFE;VICTE:VICTE;VINET:VINET;WANDK:WANDK;WARTH:WARTH;WELLI:WELLI;WHITC:WHITC;WILMK:WILMK;WOLZA:WOLZA"
+			// 			}
+   //                  },
+   //                  {
+			// 			label: "Order Date",
+   //                      name: 'OrderDate',
+   //                      width: 150,
+			// 			sorttype:'date',
+			// 			formatter: 'date',
+			// 			srcformat: 'Y-m-d',
+			// 			stype : 'text',
+			// 			newformat: 'n/j/Y',
+   //                      searchoptions: {
+   //                          // dataInit is the client-side event that fires upon initializing the toolbar search field for a column
+   //                          // use it to place a third party control to customize the toolbar
+   //                          dataInit: function (element) {
+   //                              $(element).datepicker({
+   //                                  id: 'orderDate_datePicker',
+   //                                  dateFormat: 'm/d/yy',
+   //                                  //minDate: new Date(2010, 0, 1),
+   //                                  maxDate: new Date(2020, 0, 1),
+   //                                  showOn: 'focus'
+   //                              });
+   //                          }
+
+   //                      }
+   //                  },
+   //                  {
+			// 			label : "Ship Name",
+   //                      name: 'ShipName',
+   //                      width: 150,
+       //                  searchoptions: {
+       //                      // dataInit is the client-side event that fires upon initializing the toolbar search field for a column
+       //                      // use it to place a third party control to customize the toolbar
+
+       //                      dataInit: function (element) {
+       //                          $(element).autocomplete({
+       //                              id: 'AutoComplete',
+       //                              source: function(request, response){
+							// 			this.xhr = $.ajax({
+							// 				url: 'http://trirand.com/blog/phpjqgrid/examples/jsonp/autocompletep.php?callback=?&acelem=ShipName',
+							// 				data: request,
+							// 				dataType: "jsonp",
+							// 				success: function( data ) {
+							// 					response( data );
+							// 				},
+							// 				error: function(model, response, options) {
+							// 					response([]);
+							// 				}
+							// 			});
+							// 		},
+       //                              autoFocus: true
+       //                          });
+       //                      },
+
+							// sopt : ['cn']
+       //                  }
+   //                  },
+   //                  {
+			// 			label: "Freight",
+			// 			sorttype: 'number',
+			// 			name: 'Freight',
+			// 			width: 150,
+			// 			sopt : ['eq']
+			// 		},
+   //              ],
+			// 	loadonce: true,
+			// 	viewrecords: true,
+   //              width: 780,
+   //              height: 250,
+   //              rowNum: 10,
+			// 	colMenu : true,
+			// 	shrinkToFit : false,
+   //              pager: "#jqGridPager"
+   //          });
+			// // activate the toolbar searching
+			// $('#jqGrid').jqGrid('navGrid',"#jqGridPager", {
+   //              search: false, // show search button on the toolbar
+   //              add: false,
+   //              edit: false,
+   //              del: false,
+   //              refresh: true
+   //          });
+			// var timer;
+			// $("#search_cells").on("keyup", function() {
+			// 	var self = this;
+			// 	if(timer) { clearTimeout(timer); }
+			// 	timer = setTimeout(function(){
+			// 		//timer = null;
+			// 		$("#jqGrid").jqGrid('filterInput', self.value);
+			// 	},0);
+			// });
+
+
+	$("#jqGrid").jqGrid({
+                datatype: "local",
+				data: mydata,
+                height: 350,
+				// width: 90%,
+				autowidth: true,
+                colModel: [
+                    { label: 'DAAC', name: 'daac', width: 75, },
+
+                    { label: 'Dataset Name', name: 'dataset_id', width: 500,},
+                    { label: 'Unique Dataset Name', name: 'unique_name', hidden:true, key:true, colmenu : true, formatter:'showlink', formatoptions:{baseLinkUrl:'someurl.php'}},
+
+                ],
+                viewrecords: true, // show the current page, data rang and total records on the toolbar
+                caption: "Datasets",
+                loadonce: true,
+                pager: "#jqGridPager"
+            });
+			// activate the toolbar searching
+			$('#jqGrid').jqGrid('navGrid',"#jqGridPager", {
+                search: false, // show search button on the toolbar
+                add: false,
+                edit: false,
+                del: false,
+                refresh: true
+            });
+			var timer;
+			$("#search_cells").on("keyup", function() {
+				var self = this;
+				if(timer) { clearTimeout(timer); }
+				timer = setTimeout(function(){
+					//timer = null;
+					$("#jqGrid").jqGrid('filterInput', self.value);
+				},0);
+			});
+
+	// function getSelectedRow() {
+ //            var grid = $("#jqGrid");
+ //            var rowKey = grid.jqGrid('getGridParam',"selrow");
+
+ //            if (rowKey)
+ //                alert("Selected row primary key is: " + rowKey);
+ //            else
+ //                alert("No rows are selected");
+ //        }
+
+ 		$('#jqGrid').on('click', 'tr', function(event) {
+		    event.preventDefault();
+		    var tr = $(this)[0];
+    		var trID = tr.id;
+    		// alert("trID=" + trID);
+			var currentLocation = window.location;
+    		window.location.href = currentLocation + "_show_keyword_map/" + trID;
+		});
+
+     //    $("#jqGrid tr").click(function(){
+     //    	var tr = $(this)[0];
+    	// 	var trID = tr.id;
+    	// 	alert("trID=" + trID);
+    	// 	// var currentLocation = window.location;
+    	// 	// window.location.href = currentLocation + "_show_keyword_map/" + trID;
+    	// });
 
 	// Onclick li of ul
 	// $('#collection-list').on('click', 'li', function(event) {
@@ -207,65 +405,15 @@ $( document ).ready(function() {
 			});
 		});
 
+	$("#map-button").on('click', function(event)
+	{
+		alert("this is alert from mapperjs");
+		$("div#content-to-hide").hide();
+    	$("div#loading-gif").show();
+
+
+    });
 
 	});
 
-	// DropZone Effects
-	Dropzone.autoDiscover = false;
-	var fileDropzone = new Dropzone("#file-dropzone",
-		{ /* options */
-			init: function()
-			{
-        		var $this = this;
-        		$("#data-dz-remove").click(function()
-        		{
-            		$this.removeAllFiles(true);
-        		});
-        	},
-			maxFiles:1,
-			uploadMultiple:false,
-			dictDefaultMessage: '<i class=\"glyphicon glyphicon-upload \" style=\"font-size: 2em; color:green\"></i><br> Drag a file here to upload, or click to select one',
-			// addRemoveLinks:true,
-			dictCancelUpload:"Cancel Upload Link",
-			dictCancelUploadConfirmation:"Cancel Upload",
-			dictRemoveFile:"Delete",
-			error:"Incorrect File Format"
-		}
-	);
-	fileDropzone.on('sending', function(file) {
-		/* Act on the event */
-		file.name = "test-name-this-is"
-	});
-
-	fileDropzone.on("addedfile", function(file) {
-  		// file.previewElement.addEventListener("click", function() { fileDropzone.removeFile(file); });
-  		removeButtonText = "<button class=\"btn btn-danger delete data-dz-remove btn-block\" ><i class=\"glyphicon glyphicon-trash\"></i><span>Delete</span></button>"
-  		// Create the remove button
-        var removeButton = Dropzone.createElement(removeButtonText);
-
-
-        // Capture the Dropzone instance as closure.
-        var _this = this;
-
-        // Listen to the click event
-        removeButton.addEventListener("click", function(e) {
-          // Make sure the button click doesn't submit the form:
-          e.preventDefault();
-          e.stopPropagation();
-
-          // Remove the file preview.
-          _this.removeFile(file);
-          // If you want to the delete the file on the server as well,
-          // you can do the AJAX request here.
-
-          //hide the shown map-button
-          $( "#map-button" ).hide( "fast" );
-        });
-
-        // Add the button to the file preview element.
-        file.previewElement.appendChild(removeButton);
-
-        // finally show the map-button
-        $( "#map-button" ).show( "fast" );
-	});
 });

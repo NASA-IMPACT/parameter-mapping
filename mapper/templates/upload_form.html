@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+
+{% block title %}Upload variable file{% endblock %}
+
+{% block head %}
+	{{ super() }}
+{% endblock %}
+
+{% block content %}
+	<div id="loading-show-div" align="center" style="background-color: #EEE; display: none;">
+		<br>
+		<h4 align="center"> Creating Map ... </h4>
+		<div class="row">
+			<div id="loading-gif" align="center"><img class="loading-image" src="{{ url_for('static', filename='img/loadingimage.gif') }}" alt="creating map. please wait ... "></div>
+		</div>
+		<hr>
+	</div>
+
+	<div id="content-to-hide">
+		<div class="row" id="user-panel" style="border: 0px; border-style: ridge groove inset">
+			<h3 align="center"> Upload Panel </h3>
+			<hr>
+			<!-- <form role="form" action="/" method="POST" enctype="multipart/form-data" >
+				<div class="form-group">
+					<input type="text" name="url" class="form-control" id="url-box" placeholder="Enter URL..." style="max-width: 100;">
+				</div>
+				<button type="submit" class="btn btn-default">Submit</button>
+			</form> -->
+			<br>
+
+			<form action="/upload" class="dropzone" id="file-dropzone">
+				<input type="file" name="files" style="display: none">
+			</form>
+			<br>
+
+			<button class="btn btn-info btn-block" id="map-button" style="display: none">MAP</button>
+		</div>
+	</div>
+
+	<div id="progress"></div>
+	<form id="form-button-map" action="/show_upload_map" style="display:none;">
+		<h4 align="center"> Map creation complete <div class="glyphicon glyphicon-ok " align="center" style="color:green;font-size: 1.5em;"></div> </h4>
+
+		<button type="submit" class="btn btn-info btn-block" id="show-upload-map-button">SHOW MAP</button>
+	</form>
+	<br>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script>
+        function start_long_task() {
+            // add task status elements
+            div = $('<div class="progress"><div></div><br><div>0%</div><div>...</div><div>&nbsp;</div></div><hr>');
+            $('#progress').append(div);
+            // create a progress bar
+            var nanobar = new Nanobar({
+                bg: '#00E',
+                target: div[0].childNodes[0]
+            });
+            // send ajax POST request to start background job
+            $.ajax({
+                type: 'POST',
+                url: '/generateuploadedmap',
+                success: function(data, status, request) {
+                    status_url = request.getResponseHeader('Location');
+                    update_progress(status_url, nanobar, div[0]);
+                },
+                error: function() {
+                    alert('Unexpected error');
+                }
+            });
+        }
+        function update_progress(status_url, nanobar, status_div) {
+            // send GET request to status URL
+            $.getJSON(status_url, function(data) {
+                // update UI
+                percent = parseInt(data['current'] * 100 / data['total']);
+                nanobar.go(percent);
+
+                $("#loading-show-div").show('fast');
+                $("#content-to-hide").hide('fast');
+
+                $(status_div.childNodes[1]).text(percent + '%');
+                $(status_div.childNodes[2]).text(data['status']);
+                if (data['state'] != 'PENDING' && data['state'] != 'PROGRESS') {
+                    if ('result' in data) {
+                        // show result
+                        $(status_div.childNodes[3]).text('Result: ' + data['result']);
+
+                        $("#loading-show-div").hide();
+                        $("#form-button-map").show();
+                    }
+                    else {
+                        // something unexpected happened
+                        $(status_div.childNodes[3]).text('Result: ' + data['state']);
+                    }
+                }
+                else {
+                    // rerun in 2 seconds
+                    setTimeout(function() {
+                        update_progress(status_url, nanobar, status_div);
+                    }, 2000);
+                }
+            });
+        }
+        $(function() {
+            $('#map-button').click( function(event) {
+            	event.preventDefault();
+            	$( this ).hide();
+            	start_long_task();
+            });
+        });
+    </script>
+
+
+
+
+{% endblock %}

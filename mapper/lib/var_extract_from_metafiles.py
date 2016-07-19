@@ -2,7 +2,7 @@
 # @Author: Ritesh Pradhan
 # @Date:   2016-06-06 11:21:30
 # @Last Modified by:   Ritesh Pradhan
-# @Last Modified time: 2016-06-20 15:14:00
+# @Last Modified time: 2016-07-14 23:28:56
 
 
 """
@@ -38,12 +38,20 @@ def get_dataset_id_from_filename(filename):
 	return filename.split("/")[-1]
 
 def get_gcmd_keyword_list(cf):
-	response = requests.get(cf_gcmd_base %(cf))
-	data = json.loads(response.text)
-	if not data:
-		return None
-	else:
-		return data
+	try:
+		response = requests.get(cf_gcmd_base %(cf))
+	except requests.exceptions.Timeout:
+		try:
+			response = requests.get(cf_gcmd_base %(cf))
+		except requests.exceptions.Timeout:
+			print "Timeout: ",  cf
+	finally:
+		data = json.loads(response.text)
+		if not data:
+			return None
+		else:
+			return data
+
 
 
 def get_gcmd_keyword_list_from_units(units):
@@ -54,10 +62,10 @@ def get_gcmd_keyword_list_from_units(units):
 	else:
 		data_list = list()
 		for cf_item in data:
-			gcmd_list = get_gcmd_keyword_list(cf_item["cf"])
+			gcmd_list = list(set(get_gcmd_keyword_list(cf_item["cf"])))
 			if gcmd_list is not None:
 				data_list.extend(gcmd_list)
-		return data_list
+		return list(set(data_list))
 
 
 def get_gcmd_keyword(cf):
@@ -141,7 +149,7 @@ def main():
 
 					#take all as var
 					# meta_var = unicode(meta_var, 'utf-8')
-					variable = meta_var.decode("utf-8", "ignore").replace(":=:", " ").replace(":", " ").replace("/", " ").replace("\n", "").replace("\r", " ").strip()
+					variable = meta_var.decode("utf-8", "ignore").replace(":=:", " ").replace(":", " ").replace("/", " ").replace("\n", " ").replace("\r", " ").strip()
 					variable_dict[variable_name] = variable
 					# variable_list.append(variable)
 					# print "all"

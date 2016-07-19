@@ -10,9 +10,22 @@
 
 	<h3 align="center" style="background: #FFF"> {{maps.dataset_id}}</h3>
 	<hr>
+
+	<div class="container" id="info">
+		<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">
+			<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Info
+		</button>
+		<div id="demo" class="collapse" style="border: 1.5px solid; border-radius: 10px; margin:0 5px 0 0; background: #EEE">
+		<ul>
+		<li> <strong  style="color:red"> Red Text </strong> : No data found. </li>
+		<li> <strong  style="color:green"> Green Text </strong> : Keywords mapped from this dataset.  </li>
+		</ul>
+		</div>
+	</div>
+	<hr>
 	<div class="container" id="keys-vars">
-	  	<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Info </button>
-	  	<div id="demo" class="collapse" style="border: 1.5px solid; border-radius: 10px; margin:0 5px 0 0; background: #EEE">
+	  	<!-- <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Info </button> -->
+	  	<div id="demo" class="collapse_not" style="border: 1.5px solid; border-radius: 10px; margin:0 5px 0 0; background: #EEE">
 		    <br>
 	    	<div class="row" >
 			    <div class="col-sm-5" style="height:280px;border: 0.5px solid; border-radius: 10px; margin:0 3px 0 4%; background: #FFF"">

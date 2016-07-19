@@ -7,8 +7,17 @@
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 		<!-- Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" type="text/css">
+
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/lib/dropzone/dropzone.css') }}" crossorigin="anonymous">
+
+	    <!-- <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='ritesh-jqGrid/css/jquery-ui.css') }}"/> -->
+	    <!-- The link to the CSS that the grid needs -->
+
+	    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='ritesh-jqGrid/css/ui.jqgrid.css') }}" type="text/css" >
+		<link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.10.3/themes/redmond/jquery-ui.css' />
+	    <meta charset="utf-8" />
+
 
 		<style>
 		.container {
@@ -18,52 +27,67 @@
 	</head>
 	<body>
 		<div class="container">
-			<div class="row" style="background: #EEE"><h2 align="center"> Data Variable Mapping Tool </h2> </div>
+			<a href="/" class="btn btn-info active disabled" role="button"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> HOME</a>
+			<a href="/upload_form" class="btn btn-info active" role="button"><span class="glyphicon glyphicon-upload" aria-hidden="true"></span> UPLOAD</a>
+			<hr>
+			<!-- <div class="row" style="background: #FFF"><h3 align="center"> Data Variable Mapping Tool </h3> </div> -->
+			<h3 align="center"> Data Variable Mapping Tool </h3>
+			<hr>
+
+	<style type="text/css">
+
+        /* set the size of the datepicker search control for Order Date*/
+        #ui-datepicker-div { font-size:11px; }
+
+        /* set the size of the autocomplete search control*/
+        .ui-menu-item {
+
+        }
+
+         .ui-autocomplete {
+            font-size: 15px;
+        }
+        .ui-jqgrid .ui-jqgrid-htable th {
+	    	height: 3em !important;
+		}
+		.ui-jqgrid tr.jqgrow td{
+		    height: 3em !important;
+		    font-size: 13px;
+		}
+
+    </style>
+	<label for="search_cells">
+		Search:
+	</label>
+	<input id="search_cells" class="form-control" name="search" placeholder="Search Here" autocomplete="off" autofocus="autofocus" type="search" value="{{ request.form.search}}">
+	<br>
+	<!-- <input id="search_cells" type="search"/> -->
+
+    <table id="jqGrid"></table>
+    <div id="jqGridPager"></div>
+
+    <br /><br />
+
+
+    <script type="text/javascript">
+    var mydata = {{mydata|safe}};
+    </script>
+
+
+
+    	<!--
 			<div class="row">
-
-				<!-- <div class="col-sm-5 col-sm-offset-1" id="keyword-variable-boxes"> -->
-					<div class="row" id="collection-box">
+				<div class="row" id="collection-box">
 					<h2>Datasets</h2>
-						<div class="div-list-group" style="height:500px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px;">
-							<ul class="list-group" id="collection-list">
-								{% for collection in collections %}
-									<!-- <li class="list-group-item">{{ collection.name }}</li> -->
-									<!-- <a href="/_show_map/{{ collection.name }}" class="list-group-item">{{ collection.name }}</a> -->
-									<a href="/_show_keyword_map/{{ collection.unique_name }}" class="list-group-item">{{ collection.dataset_id }}</a>
-								{% endfor %}
-							</ul>
-						</div>
-					<!-- </div> -->
-
-					<div class="row" id="keyword-box">
-						<!-- <h2>Keywords</h2>
-						<div class="div-list-group" style="height:500px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px;">
-							<ul class="list-group" id="keyword-list">
-								{% for keyword in keywords %}
-									<li class="list-group-item">{{ keyword }}</li>
-								{% endfor %}
-							</ul> -->
-							<!-- <a href="#" class="list-group-item active">JPT</a> -->
-						<!-- </div>
-						{% for error in errors %}
-							<h4>{{ error }}</h4>
-						{% endfor %}
-						<br> -->
+					<div class="div-list-group" style="height:500px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px;">
+						<ul class="list-group" id="collection-list">
+							{% for collection in collections %}
+								<a href="/_show_keyword_map/{{ collection.unique_name }}" class="list-group-item">{{ collection.dataset_id }}</a>
+							{% endfor %}
+						</ul>
 					</div>
 
-					<div class="row" id="variable-box">
-						<!-- <h2>Variables</h2>
-						<div class="div-list-group" style="height:500px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px;">
-							<ul class="list-group" id="variable-list">
-								{% for variable in variables %}
-									<li class="list-group-item">{{ variable }}</li>
-								{% endfor %}
-							</ul>
-						</div> -->
-					</div>
-				</div>
-
-				<!-- <div class="col-sm-5 col-sm-offset-1">
+				 <div class="col-sm-5 col-sm-offset-1">
 					<div class="row" id="user-panel" style="border: 0px; border-style: ridge groove inset">
 						<h3>Users Panel</h3>
 						<br>
@@ -109,8 +133,9 @@
 							</div>
 						{% endif %}
 					</div>
-				</div> -->
-			</div>
+				</div>
+			</div> -->
+
 		</div>
 		<br><br>
 		<!-- jQuery library -->
@@ -120,7 +145,17 @@
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"crossorigin="anonymous"></script>
 		<script type="text/javascript"  src="{{ url_for('static', filename='js/lib/dropzone/dropzone.js') }}" crossorigin="anonymous"> </script>
+
+		<!-- <script src="{{ url_for('static', filename='js/uploader.js') }}"></script> -->
 		<script src="{{ url_for('static', filename='js/mapper.js') }}"></script>
+
+	    <!-- We support more than 40 localizations -->
+	    <script type="text/ecmascript" src="{{ url_for('static', filename='ritesh-jqGrid/js/i18n/grid.locale-en.js') }}"></script>
+	    <!-- This is the Javascript file of jqGrid -->
+	    <script type="text/ecmascript" src="{{ url_for('static', filename='ritesh-jqGrid/js/jquery.jqGrid.min.js') }}" ></script>
+
+
+
 
 
 	</body>

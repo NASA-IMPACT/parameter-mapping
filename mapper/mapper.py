@@ -1,9 +1,8 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # @Author: ritesh
 # @Date:   2015-11-25 10:53:58
 # @Last Modified by:   Ritesh Pradhan
-# @Last Modified time: 2016-06-21 16:27:04
+# @Last Modified time: 2016-07-19 15:09:07
 
 from flask import Flask, render_template, request, jsonify, redirect, url_for, Response
 from werkzeug import secure_filename
@@ -13,16 +12,24 @@ from bson import json_util
 import time
 import operator
 from bson.objectid import ObjectId
+import time
+from celery import Celery
 
-# from lib import libmapper, airs, libmongo
-from lib import libmongo
+from lib import libmongo, libmapper
+
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 app = Flask(__name__)
 
-app.config['ALLOWED_EXTENSIONS'] = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'hdf'])
-UPLOAD_DIR = "uploads"
+app.config['ALLOWED_EXTENSIONS'] = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'hdf', 'hdf5'])
+app.config['CELERY_BROKER_URL'] = 'redis://localhost:6379/0'
+app.config['CELERY_RESULT_BACKEND'] = 'redis://localhost:6379/0'
 
+celery = Celery(app.name, broker=app.config['CELERY_BROKER_URL'])
+celery.conf.update(app.config)
+
+UPLOAD_DIR = "uploads"
+UPLOAD_JSON_DIR = "uploads_json"
 # keywords = airs.AIRS_KEYWORDS
 # variables = airs.AIRS_VARIABLES
 # lookup = airs.Lookup(airs.AIRS_MAP)
@@ -32,9 +39,22 @@ final_map = None
 uploaded_result = None
 collections = None
 
+
+@celery.task(bind=True)
+def generate_uploaded_map(self, uploaded_result):
+    """Background task that runs a long function with progress reports."""
+    final_map = libmapper.start_mapping(uploaded_result, url=False)
+    current = libmapper.get_celery_current()
+    total = libmapper.get_celery_total()
+    message = "%s variables of %s processed..." %(current, total)
+
+    self.update_state(state='PROGRESS', meta={'current': current, 'total': total, 'status': message})
+    time.sleep(0.1)
+    return {'current': 100, 'total': 100, 'status': 'Task completed!', 'result': 42}
+
 def allowed_file(filename):
     return '.' in filename and \
-           filename.rsplit('.', 1)[1] in app.config['ALLOWED_EXTENSIONS']
+           filename.rsplit('.', 1)[1].lower() in app.config['ALLOWED_EXTENSIONS']
 
 def delete_previous_uploads():
     del_dir = os.path.join(basedir, UPLOAD_DIR)
@@ -387,7 +407,7 @@ def update_cfk_map(collection_name):
             keywords = request.form.getlist(variable)
             keywords = list(set(keywords))
             key = variable.split("-", 2)[-1]
-            print key, keywords
+            # print key, keywords
             cfk[key] = list(keywords)
 
 
@@ -407,6 +427,7 @@ def index():
     results = {}
     # variables = ["these", "are", "dynamic", "variables", "for", "testing"]
     # keywords = ["these", "are", "dynamic", "keywords", "for", "testing"]
+
     if request.method == "POST":
         # get url that the user has entered
         try:
@@ -429,10 +450,29 @@ def index():
     try:
         db = libmongo.get_db()
         collections = db.ms.find()
+
+        #create searchable data
+        grid_data = list()
+        for collection in db.ms.find():
+            grid_data.append(dict(db.ks.find_one({"unique_name": collection['unique_name']}, {"_id":0, "unique_name": 1, "daac": 1, "dataset_id": 1})))
+
+        # grid_data = list(db.ks.find({}, {"_id":0, "unique_name": 1, "daac": 1, "dataset_id": 1}))
+        # grid_data = [data for data in grid_data_cursor]
+
     except Exception, e:
-        print "Db exception error"
-    return render_template('index.html', errors=errors, results=results, collections=collections)
+        print "Db exception error", e
+
+    return render_template('index.html', errors=errors, results=results, collections=collections, mydata=json.dumps(grid_data))
     # return render_template('index.html', errors=errors, results=results, variables=variables, keywords=keywords, collections=collections)
+
+
+
+
+@app.route('/upload_form', methods=['GET', 'POST'])
+def upload_form():
+    errors = []
+    results = {}
+    return render_template('upload_form.html', errors=errors, results=results)
 
 
 @app.route('/upload', methods=['GET', 'POST'])
@@ -440,23 +480,69 @@ def upload():
     global final_map, uploaded_result
     errors = []
     results = {}
-    # variables = ["these", "are", "dynamic", "variables", "for", "testing"]
-    # keywords = ["these", "are", "dynamic", "keywords", "for", "testing"]
     uploaded_result = upload_file(request)
     # print uploaded_result.get_data(as_text=True)
-    print uploaded_result.get('name', 'ritesh')
-    return render_template('index.html', errors=errors, results=results, variables=variables, keywords=keywords)
+    # print uploaded_result.get('name', 'ritesh')
+    return render_template('upload_form.html', errors=errors, results=results)
 
-# @app.route('/mapping', methods=['GET', 'POST'])
-# def mapping():
-#     print uploaded_result
-#     if request.method == "POST":
-#         print "This is POST request"
-#     if request.method == "GET":
-#         print "This is GET request"
-#         # Read the hdf file and start extracting variables
-#         final_map = libmapper.start_mapping(uploaded_result, url=False)
-#         print "Final map is : ", final_map
+
+@app.route('/generateuploadedmap', methods=['POST'])
+def generateuploadedmap():
+    task = generate_uploaded_map.apply_async([uploaded_result])
+    return jsonify({}), 202, {'Location': url_for('taskstatus', task_id=task.id)}
+
+@app.route('/status/<task_id>')
+def taskstatus(task_id):
+    task = generate_uploaded_map.AsyncResult(task_id)
+    if task.state == 'PENDING':
+        response = {
+            'state': task.state,
+            'current': 0,
+            'total': 1,
+            'status': 'Pending...'
+        }
+    elif task.state != 'FAILURE':
+        response = {
+            'state': task.state,
+            'current': task.info.get('current', 0),
+            'total': task.info.get('total', 1),
+            'status': task.info.get('status', '')
+        }
+        if 'result' in task.info:
+            response['result'] = task.info['result']
+    else:
+        # something went wrong in the background job
+        response = {
+            'state': task.state,
+            'current': 1,
+            'total': 1,
+            'status': str(task.info),  # this is the exception raised
+        }
+    return jsonify(response)
+
+
+@app.route('/mapping_var_file', methods=['GET', 'POST'])
+@app.route('/show_upload_map', methods=['GET', 'POST'])
+def show_upload_map():
+    errors = []
+    results = {}
+    print uploaded_result
+    if request.method == "POST":
+        print "This is POST request"
+    if request.method == "GET":
+        print "This is GET request"
+        # Read the hdf file and start extracting variables
+        uploaded_json_filepath = os.path.abspath(os.path.join(UPLOAD_JSON_DIR, uploaded_result["name"]))
+        with open(uploaded_json_filepath) as json_read:
+            final_map = json.load(json_read)
+        if not final_map:
+            errors.append("Cannot create map.")
+        else:
+            results["final_map"] = final_map
+            results["name"] = uploaded_result["name"]
+            results["all_vars"] = [k for k in final_map["cfk"]] + [k for k in final_map["cfu"]] + [k for k in final_map["cfdb"]]
+        # print "Final map is : ", final_map
+    return render_template('single_var_file_map.html', errors=errors, results=results)
 
 ###########################
 """REST API"""
@@ -564,4 +650,4 @@ def rest_service_keyword(db_table_name, id):
 #         return not_found()
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug = True)
+    app.run(host='0.0.0.0', debug = True, threaded=True)

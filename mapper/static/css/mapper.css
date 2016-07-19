@@ -2,7 +2,7 @@
 * @Author: ritesh
 * @Date:   2016-01-25 13:35:33
 * @Last Modified by:   Ritesh Pradhan
-* @Last Modified time: 2016-06-22 16:24:38
+* @Last Modified time: 2016-07-15 00:10:55
 */
 
 .keyword-inline-first {
@@ -53,7 +53,7 @@ font-weight: bold;
 
 
 .truncate {
-  max-width: 95%;
+  max-width: 90%;
   overflow: hidden;
   display: inline-block;
   text-overflow: ellipsis;
@@ -66,7 +66,7 @@ font-weight: bold;
 }*/
 
 .truncate_k {
-  max-width: 95%;
+  max-width: 90%;
   overflow: hidden;
   display: inline-block;
   text-overflow: ellipsis;
@@ -76,3 +76,25 @@ font-weight: bold;
 	max-width: 85%;
   	overflow: visible;
 }*/
+
+
+/*div#loading-gif {
+  width: 150px;
+  height: 150px;
+  top: 200px;
+  margin: auto;
+  position: fixed;
+  z-index: 1000;
+  align-content: center;
+  display: block;
+  background: url(../img/loadingimage.gif) no-repeat;
+  background-size: contain;
+  cursor: wait;
+  background-color:grey;
+}*/
+
+img.loading-image {
+  height: 100px;
+  width: 100px;
+  cursor: wait;
+}

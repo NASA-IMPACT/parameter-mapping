@@ -12,26 +12,44 @@
 			<link rel="stylesheet" href="{{ url_for('static', filename='css/mapper.css') }}">
 			<style>
 			.container {
-			max-width: 1000px;
+				max-width: 1000px;
 			}
 			</style>
+			<!-- <script type="text/javascript">// <![CDATA[
+        	//loading
+			function preleaving()
+			{
+				$("#loading-gif").show();
+				$("#content-to-hide").hide();
+				alert("this is ");
+
+	        }
+
+	        function preloader(){
+	            document.getElementById("loading-gif").style.display = "none";
+	            document.getElementById("content-to-hide").style.display = "block";
+	        }
+	        window.onload = preloader;
+	// ]]></script> -->
 			<title>{% block title %}{% endblock %} - Mapping</title>
 		{% endblock %}
 	</head>
 	<body>
 		<div id="content" class="container">
-		<a href="/" class="btn btn-primary" role="button" >HOME</a>
+		<a href="/" class="btn btn-info" role="button" ><span class="glyphicon glyphicon-home" aria-hidden="true"></span> HOME</a>
+		<a href="/upload_form" class="btn btn-info active" role="button"><span class="glyphicon glyphicon-upload" aria-hidden="true"></span> UPLOAD</a>
+
 		<hr>
 			{% block content %}
 			{% endblock %}
 
 			<br><br>
 
-		<div id="footer">
-			{% block footer %}
-				<p align="center"> &copy; Copyright 2016 by <a href="#">ITSC</a>. </p>
-			{% endblock %}
-		</div>
+			<div id="footer">
+				{% block footer %}
+					<p align="center"> &copy; Copyright 2016 by <a href="#">ITSC</a>. </p>
+				{% endblock %}
+			</div>
 		</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -40,7 +58,16 @@
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
 		<script type="text/javascript"  src="{{ url_for('static', filename='js/lib/dropzone/dropzone.js') }}" crossorigin="anonymous"> </script>
+
+		<script src="{{ url_for('static', filename='js/uploader.js') }}"></script>
 		<script src="{{ url_for('static', filename='js/mapper.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/nanobar.min.js') }}"></script>
+	    <!-- We support more than 40 localizations -->
+	    <script type="text/ecmascript" src="{{ url_for('static', filename='ritesh-jqGrid/js/i18n/grid.locale-en.js') }}"></script>
+	    <!-- This is the Javascript file of jqGrid -->
+	    <script type="text/ecmascript" src="{{ url_for('static', filename='ritesh-jqGrid/js/jquery.jqGrid.min.js') }}" ></script>
+
+
 
 	</body>
 </html>
