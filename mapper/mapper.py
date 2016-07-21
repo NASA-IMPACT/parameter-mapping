@@ -2,7 +2,7 @@
 # @Author: ritesh
 # @Date:   2015-11-25 10:53:58
 # @Last Modified by:   Ritesh Pradhan
-# @Last Modified time: 2016-07-19 15:09:07
+# @Last Modified time: 2016-07-21 15:39:32
 
 from flask import Flask, render_template, request, jsonify, redirect, url_for, Response
 from werkzeug import secure_filename
@@ -21,7 +21,7 @@ from lib import libmongo, libmapper
 basedir = os.path.abspath(os.path.dirname(__file__))
 app = Flask(__name__)
 
-app.config['ALLOWED_EXTENSIONS'] = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'hdf', 'hdf5'])
+app.config['ALLOWED_EXTENSIONS'] = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'hdf', 'hdf5', "nc", "nc4"])
 app.config['CELERY_BROKER_URL'] = 'redis://localhost:6379/0'
 app.config['CELERY_RESULT_BACKEND'] = 'redis://localhost:6379/0'
 
@@ -68,6 +68,7 @@ def delete_previous_uploads():
 def upload_file(request):
     if request.method == 'POST':
         files = request.files.getlist('file')
+        print files
         for f in files:
             if f and allowed_file(f.filename):
                 delete_previous_uploads()   # delete other files from uploads

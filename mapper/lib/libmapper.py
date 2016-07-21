@@ -3,7 +3,7 @@
 # @Author: ritesh
 # @Date:   2015-12-10 11:14:18
 # @Last Modified by:   Ritesh Pradhan
-# @Last Modified time: 2016-07-14 17:31:11
+# @Last Modified time: 2016-07-21 16:21:18
 
 """ Library file for handling the uploaded hdf file
 	Also works with the url
@@ -11,10 +11,13 @@
 
 import os
 import hdf5_reader
+import hdf4_reader
+import nc4_reader
 
 import libmongo
 import re
 import json
+import traceback
 
 import var_extract_from_metafiles
 from acronyms import ACRONYMS, DISCARDS
@@ -46,7 +49,7 @@ def get_celery_current():
 def get_celery_total():
 	return celery_total
 
-def get_map_from_uplaod(variables):
+def get_map_from_upload(variables):
 	global celery_current, celery_total
 	variable_map = dict()
 	cfk = dict()
@@ -68,7 +71,8 @@ def get_map_from_uplaod(variables):
 			var_standard_name = variables[variable_name].get("standard_name", None)
 			if var_standard_name is not None and var_standard_name is not "":
 				""" look up at cf->gcmd mapping """
-				gcmd_list = list(set(var_extract_from_metafiles.get_gcmd_keyword_list(var_standard_name)))
+				gcmd_list = var_extract_from_metafiles.get_gcmd_keyword_list(var_standard_name)
+				gcmd_list = list(set(gcmd_list)) if gcmd_list is not None else None
 				if gcmd_list is not None and len(gcmd_list) != 0:
 					cfk[variable_name] = list(gcmd_list)
 					continue
@@ -76,7 +80,8 @@ def get_map_from_uplaod(variables):
 			var_units = variables[variable_name].get("units", None)
 			if var_units is not None and var_units is not "":
 				""" look up at units->cf->gcmd mapping """
-				gcmd_list = list(set(var_extract_from_metafiles.get_gcmd_keyword_list_from_units(var_units)))
+				gcmd_list = var_extract_from_metafiles.get_gcmd_keyword_list_from_units(var_units)
+				gcmd_list = list(set(gcmd_list)) if gcmd_list is not None else None
 				if gcmd_list is not None and len(gcmd_list) != 0:
 					variable_name_with_unit = "%s (%s)" %(variable_name, var_units)
 					cfu[variable_name_with_unit] = list(gcmd_list)
@@ -94,7 +99,6 @@ def get_map_from_uplaod(variables):
 
 def start_mapping(upload_result, url=False):
 	print url
-
 	if not url:
 		print "processing the uploaded file result"
 		file_path = get_filepath(upload_result)
@@ -104,14 +108,15 @@ def start_mapping(upload_result, url=False):
 		"""open the hdf file for reading"""
 		#hdf5
 		try:
-			variables = hdf5_reader.get_variables(file_path)
-			variable_map = get_map_from_uplaod(variables)
-			with open(json_filepath, "w") as json_write:
-				json.dump(variable_map, json_write, indent=4)
-			return variable_map
-
+			variables = hdf5_reader.get_variables(file_path) or hdf4_reader.get_variables(file_path) or nc4_reader.get_variables(file_path)
+			if variables is not None:
+				variable_map = get_map_from_upload(variables)
+				with open(json_filepath, "w") as json_write:
+					json.dump(variable_map, json_write, indent=4)
+				return variable_map
 		except Exception, e:
 			print "Here is exception: (libmapper): ", e
+			# traceback.print_exc()
 			return
 	else:
 		print "Processing the url provided"

@@ -2,7 +2,7 @@
 * @Author: Ritesh Pradhan
 * @Date:   2016-07-12 12:39:55
 * @Last Modified by:   Ritesh Pradhan
-* @Last Modified time: 2016-07-18 15:58:38
+* @Last Modified time: 2016-07-21 15:36:56
 */
 
 // 'use strict';
@@ -54,7 +54,7 @@ $( document ).ready(function() {
         	maxFiles:1,
 			uploadMultiple:false,
 			// acceptedFiles: "image/png, application/x-netcdf, application/x-hdf;subtype=bag",
-			acceptedFiles: "application/x-netcdf, application/x-hdf;subtype=bag, .hdf5, .HDF5",
+			acceptedFiles: ".hdf5, .HDF5, .nc, .nc4",
 			// maxThumbnailFilesize: 100,
 			// maxFilesize: 100,
 			// thumbnailWidth: 150,

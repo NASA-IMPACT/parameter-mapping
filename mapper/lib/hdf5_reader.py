@@ -2,14 +2,11 @@
 # @Author: Ritesh Pradhan
 # @Date:   2016-07-13 11:41:39
 # @Last Modified by:   Ritesh Pradhan
-# @Last Modified time: 2016-07-13 21:32:50
-
-import os
+# @Last Modified time: 2016-07-21 16:24:12
 
 """ Library file for handling the uploaded hdf file
 """
 import os
-
 import h5py
 
 UPLOAD_DIR = "./uploads"
@@ -84,14 +81,15 @@ def get_variables(file_path):
 			var_items_dict = dict(var_items)
 			standard_name = var_items_dict.get("standard_name", None)
 			units = var_items_dict.get("units", None)
-			details = ' '.join( ["%s %s" %(k, v) for k,v in var_items_dict.iteritems()])
+			details = "%s %s" %(' '.join( ["%s %s" %(k, v) for k,v in var_items_dict.iteritems()]), var)
 			details = details.replace("\n", " ").replace("/", " ").replace(".", " ")
 			all_vars[sanitize(var)] = dict(standard_name=standard_name, units=units, details=details)
 
 		return all_vars
 	except Exception, e:
 		print e
-		raise
+		# raise
+		return
 
 
 def main():
