@@ -3,7 +3,7 @@
 # @Author: ritesh
 # @Date:   2016-01-26 15:01:12
 # @Last Modified by:   Ritesh Pradhan
-# @Last Modified time: 2016-06-20 12:12:09
+# @Last Modified time: 2016-08-24 01:37:34
 
 ACRONYMS = dict(
 	res 			= "resolution",
@@ -26,7 +26,14 @@ ACRONYMS = dict(
 	gp 				= "geopotential",
 	lis				= "lightning_imaging_sensor",
 	otd				= "optical_transient_detector",
-	li 				= "lightning_imaging"
+	li 				= "lightning_imaging",
+	precip			= "precipitation",
+	tot				= "total",
+	o2				= "molecular oxygen",
+	so4				= "sulfate",
+	dms				= "dimethyl sulfide",
+	so2				= "sulfur dioxide",
+	carbon 			= "carbonaceous"
 	)
 
 DISCARDS = ["lat", "lon", "latitude", "longitude", "rank", "index", "time", "flag", "quality", "qual"]

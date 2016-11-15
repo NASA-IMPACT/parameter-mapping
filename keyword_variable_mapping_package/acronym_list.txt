@@ -1,0 +1,21 @@
+res->resolution
+sst->sea surface temperature
+med->medium 
+temp->temperature
+cld->cloud
+pres->pressure
+rh->relative humidity
+relh->relative humidity
+PBL->Planetary Boundary Layer
+aod->aerosol optical depth
+aot->aerosol optical thickness
+10-m->surface
+2-m->surface
+precip->precipitation
+tot->total
+O2->MOLECULAR OXYGEN
+O3->OZONE
+SO4->sulfate
+DMS->Dimethyl sulfide
+SO2->sulfur dioxide
+carbon->carbonaceous

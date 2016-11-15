@@ -2,7 +2,7 @@
 # @Author: ritesh
 # @Date:   2015-11-25 10:53:58
 # @Last Modified by:   Ritesh Pradhan
-# @Last Modified time: 2016-07-21 15:39:32
+# @Last Modified time: 2016-08-25 01:38:09
 
 from flask import Flask, render_template, request, jsonify, redirect, url_for, Response
 from werkzeug import secure_filename
@@ -575,6 +575,62 @@ def not_found(error=None):
     resp = jsonify(message)
     resp.status_code = 404
     return resp
+
+@app.route('/service')
+def service_help():
+    result = {
+    "..url/service/keywords": "All keyword list with correspoind dataset",
+    "..url/service/variables": "All variable list with correspoind dataset",
+    "..url/service/maps": "All maps populated with keywords and variables with score",
+    "..url/service/<db_table_name>?dataset_id=something": "each dataset_id info (dataset_id with '_' doesn't work)",
+    "..url/service/search?unique_name=name_without_slash&dataset_id=something&variable=var1&keyword=key2": "search based on dataset, variable, keyword",
+    }
+    js = to_json(result)
+    resp = Response(js, status=200, mimetype='application/json')
+    return resp
+
+
+@app.route('/service/search', methods=['GET'])
+def search_service():
+    #search from ms(map) collection
+    try:
+        if request.method == "GET":
+            db = libmongo.get_db()
+            unique_name = request.args.get("unique_name")
+            dataset_id = request.args.get("dataset_id")
+            variable = request.args.get("variable")
+            keyword = request.args.get("keyword")
+
+            unique_name = unique_name if unique_name is not None else dataset_id
+
+            if not (unique_name or dataset_id or variable or keyword):
+                js = to_json({"search": "No search options provided", \
+                    "example": "..url/service/search?unique_name=name_without_slash&dataset_id=something&variable=var1&keyword=key2"})
+                resp = Response(js, status=200, mimetype='application/json')
+                return resp
+            else:
+                if unique_name:
+                    result = db.ms.find_one({"unique_name": unique_name})
+                    # result = get_map_result(result)
+                    if keyword:
+                        js = to_json({keyword: result["kv"][keyword]})
+                        resp = Response(js, status=200, mimetype='application/json')
+                        return resp
+                    elif variable:
+                        js = to_json({variable : result["vk"][variable]})
+                        resp = Response(js, status=200, mimetype='application/json')
+                        return resp
+                    else:
+                        js = to_json(get_map_result(result))
+                        resp = Response(js, status=200, mimetype='application/json')
+                        return resp
+                else:
+                    js = to_json({"search": "Missing dataset_id or unique_name"})
+                    resp = Response(js, status=200, mimetype='application/json')
+                    return resp
+    except Exception, e:
+        print (e)
+        return not_found()
 
 @app.route('/service/<db_table_name>', methods=['GET'])
 def rest_service(db_table_name):

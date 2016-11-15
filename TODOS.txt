@@ -1,0 +1,13 @@
+1.       A search box would be beneficial to help quickly find a dataset.
+2.       The ability to filter by DAAC would be beneficial to our CMR review task. ###
+3.       The ability to generate a spreadsheet or some other document by:
+	a.       Variable
+	b.      Dataset
+	c.       DAAC
+4.       Some explanatory text on the pages (for example, what the green text means, etc…) would be helpful.
+5.       I think the information provided under the ‘Info’ button should automatically display when opening the page (instead of having to push the button). I’m going to be viewing that information every time I look at a dataset.
+6.       There are most likely some GHRC datasets currently in the tool. If we could easily find them, we could incorporate the mapping tool into our process. This would allow us to provide more feedback to you about the tool.
+7.       For the algorithm:
+	a.       There is a need to identify the relationship between words like ‘water’ and ‘methane’ and chemical symbols such as H20 and CH4.
+8.       Lastly, the dataset ‘MODIS/Terra Temperature and Water Vapor Profiles 5-Min L2 Swath 5km V005’ missed the following relationship:
+	a.       Atmosphere > Atmospheric Chemistry/Oxygen Compounds > Ozone and Total_Ozone

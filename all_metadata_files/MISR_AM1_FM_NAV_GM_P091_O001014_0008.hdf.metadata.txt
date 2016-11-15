@@ -1,8 +1,0 @@
-variable:=:/PGE2_TIME_TABLE
-  volume:=:       23168.0
-variable:=:/PGE2_NAVIGATION_TABLE
-  volume:=:       37648.0
-  _FillValue:=:     -4.47559
-variable:=:/PGE2_NAVIGATION_QUAL
-  volume:=:       37648.0
-  _FillValue:=:  64

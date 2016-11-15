@@ -1,3 +1,0 @@
-C:\Users\xli\xli\PROJECTS\NASA_Dataset\nc4_files\oco2_LtCO2_140906_B7101Ar_150909171225s.nc4
-C:\Users\xli\xli\PROJECTS\NASA_Dataset\nc4_files\oco2_LtSIF_140906_B7101r_151103163916s.nc4
-C:\Users\xli\xli\PROJECTS\NASA_Dataset\nc4_files\prcp_1980.nc4
