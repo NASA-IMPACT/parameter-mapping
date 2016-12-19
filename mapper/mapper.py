@@ -8,8 +8,7 @@ from flask import Flask, render_template, request, jsonify, redirect, url_for, R
 from werkzeug import secure_filename
 import os
 import json
-# from bson import json_util
-import bson
+from bson import json_util
 import time
 import operator
 from bson.objectid import ObjectId
