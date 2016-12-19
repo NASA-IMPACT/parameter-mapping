@@ -5,32 +5,15 @@
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" media="screen"> -->
 			<!-- Latest compiled and minified CSS -->
-			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-			<!-- Optional theme -->
-			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
-			<link rel="stylesheet" href="{{ url_for('static', filename='css/lib/dropzone/dropzone.css') }}" crossorigin="anonymous">
+			<link rel="stylesheet" href="{{ url_for('static', filename='js/lib/node_modules/bootstrap/dist/css/bootstrap.min.css') }}" crossorigin="anonymous">
+			<link rel="stylesheet" href="{{ url_for('static', filename='js/lib/node_modules/dropzone/dist/min/dropzone.min.css') }}" crossorigin="anonymous">
+			<link rel="stylesheet" href="{{ url_for('static', filename='js/lib/node_modules/datatables.net-bs/css/dataTables.bootstrap.css') }}" crossorigin="anonymous">
 			<link rel="stylesheet" href="{{ url_for('static', filename='css/mapper.css') }}">
 			<style>
-			.container {
-				max-width: 1000px;
-			}
+				.container {
+					max-width: 1000px;
+				}
 			</style>
-			<!-- <script type="text/javascript">// <![CDATA[
-        	//loading
-			function preleaving()
-			{
-				$("#loading-gif").show();
-				$("#content-to-hide").hide();
-				alert("this is ");
-
-	        }
-
-	        function preloader(){
-	            document.getElementById("loading-gif").style.display = "none";
-	            document.getElementById("content-to-hide").style.display = "block";
-	        }
-	        window.onload = preloader;
-	// ]]></script> -->
 			<title>{% block title %}{% endblock %} - Mapping</title>
 		{% endblock %}
 	</head>
@@ -51,21 +34,13 @@
 				{% endblock %}
 			</div>
 		</div>
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
-
-		<script src="{{ url_for('static', filename='js/mapper.js') }}"></script>
-		<script src="{{ url_for('static', filename='js/nanobar.min.js') }}"></script>
-	    <!-- We support more than 40 localizations -->
-	    <script type="text/ecmascript" src="{{ url_for('static', filename='ritesh-jqGrid/js/i18n/grid.locale-en.js') }}"></script>
-	    <!-- This is the Javascript file of jqGrid -->
-	    <script type="text/ecmascript" src="{{ url_for('static', filename='ritesh-jqGrid/js/jquery.jqGrid.min.js') }}" ></script>
-
-
-
 	</body>
+	<script type="text/ecmascript" src="{{ url_for('static', filename='js/lib/node_modules/jquery/dist/jquery.min.js') }}"></script>
+	<script type="text/ecmascript" src="{{ url_for('static', filename='js/lib/node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+	<script type="text/javascript"  src="{{ url_for('static', filename='js/lib/node_modules/dropzone/dist/min/dropzone.min.js') }}" crossorigin="anonymous"> </script>
+  <script type="text/ecmascript" src="{{ url_for('static', filename='js/lib/node_modules/datatables/media/js/jquery.dataTables.min.js') }}"></script>
+  <script type="text/ecmascript" src="{{ url_for('static', filename='js/lib/node_modules/datatables-bootstrap3-plugin/media/js/datatables-bootstrap3.js') }}"></script>
+
+  <!-- <script src="{{ url_for('static', filename='js/uploader.js') }}"></script> -->
+	<script src="{{ url_for('static', filename='js/mapper.js') }}"></script>
 </html>
