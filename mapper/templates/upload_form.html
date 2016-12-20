@@ -6,6 +6,11 @@
 	{{ super() }}
 {% endblock %}
 
+{% block navbar %}
+  <li><a href="/">Home</a></li>
+  <li class='active'><a href="/upload_form">Upload</a></li>
+{% endblock %}
+
 {% block content %}
 	<div id="loading-show-div" align="center" style="background-color: #EEE; display: none;">
 		<br>

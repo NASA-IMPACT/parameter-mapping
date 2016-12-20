@@ -1,0 +1,12 @@
+{
+  "name": "parameter-mapping",
+  "version": "1.0.5",
+  "dependencies": {
+    "bootstrap": "3.3.7",
+    "jquery-file-upload": "4.0.5",
+    "datatables": "1.10.13",
+    "datatables.net-bs": "1.10.13",
+    "nanobar": "0.4.2",
+    "dropzone": "4.3.0"
+  }
+}

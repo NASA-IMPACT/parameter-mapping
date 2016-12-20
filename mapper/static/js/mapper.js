@@ -19,92 +19,28 @@
 
 
 $( document ).ready(function() {
-	console.log("This is test log for jss");
-
- 	// var myurl = window.location.href;
- 	// console.log(myurl);
  	if (window.location.pathname === "/")
  	{
  		var filter;
+    $('#datatable').DataTable({
+      'data': mydata,
+      'columns': [
+        { 'data': 'daac' },
+        { 'data': 'dataset_id' },
+        { 'data': 'unique_name' }
+      ]
+    });
 
-		$("#jqGrid").jqGrid({
-                datatype: "local",
-				data: mydata,
-                height: 350,
-				// width: 90%,
-				autowidth: true,
-                colModel: [
-                    { label: 'DAAC', name: 'daac', width: 75, },
-
-                    { label: 'Dataset Name', name: 'dataset_id', width: 500,},
-                    { label: 'Unique Dataset Name', name: 'unique_name', hidden:true, key:true, colmenu : true, formatter:'showlink', formatoptions:{baseLinkUrl:'someurl.php'}},
-
-                ],
-                viewrecords: true, // show the current page, data rang and total records on the toolbar
-                caption: "Datasets",
-                loadonce: true,
-                pager: "#jqGridPager"
-            });
-			// activate the toolbar searching
-			$('#jqGrid').jqGrid('navGrid',"#jqGridPager", {
-                search: false, // show search button on the toolbar
-                add: false,
-                edit: false,
-                del: false,
-                refresh: true
-            });
-			var timer;
-			$("#search_cells").on("keyup", function() {
-				var self = this;
-				if(timer) { clearTimeout(timer); }
-				timer = setTimeout(function(){
-					//timer = null;
-					$("#jqGrid").jqGrid('filterInput', self.value);
-				},0);
-			});
-
- 		$('#jqGrid').on('click', 'tr', function(event) {
-		    event.preventDefault();
-		    var tr = $(this)[0];
-    		var trID = tr.id;
-    		// alert("trID=" + trID);
-			var currentLocation = window.location;
-    		window.location.href = currentLocation + "_show_keyword_map/" + trID;
-		});
-
+    $('tbody tr', '#datatable').on('click', function() {
+      event.preventDefault();
+      var $td = $($('td', this)[2]);
+      var collection_name = $td.text();
+      window.location.href = window.location + "_show_keyword_map/" + collection_name;
+    });
  	}
 
-
-
-
-	// $('[id^=addButton]').click(function (event) {
-	// 	var id = event.target.id;
-	// 	var num = id.split("-", 2)[1]
-	// 	$('#kvk-'+num).append('<li>'+id+'</li>')
-	// 	$('#kvk-'+num).append('<li>'+num+'</li>')
-	// 	$('#kvk-'+num).append('<li>'+$('#kvk-'+num+ ' li').length+'</li>')
-	// 	var count = $('#kvk-'+num+ ' li').length + 1;
-	// 	while ($("#kvk-innerlist-"+num+"-"+count).length != 0) { count += 1;}
-
-	// 	var selectedVal = $('#kvk-'+num +' select').val();
-	// 	var newID = 'kvk-innerlist-'+num+'-'+count;
-	// 	var removeButtonHtml = '<input type="button" id="removeButton-'+num+'-'+count+'" value="Remove" />';
-	// 	var appendLi = '<li class="list-group-item" id="'+newID+'">'+selectedVal+count+removeButtonHtml+'</li>';
-	// 	$('#kvk-'+num).append(appendLi).listview('refresh');
-	// 	$('#kvk-'+num).append('<li class="list-group-item">'+selectedVal+count+'</li>')
-
-	// });
-
-	// var keyword_header =$('div.list-group-each-keyword').text().trim();
-	// console.log(keyword_header);
-	// key_arr = keyword_header.split('->');
-	// console.log(key_arr.length);
-	// $("div.list-group-each-keyword").html("<span>"+key_arr[0] + key_arr[1]+ "</span>" );
-
-
 	$(document).on("click", '[id^=kvaddButton]' , function() {
-    	// $(this).parent().remove();
-    	var id = event.target.id;
+  	var id = event.target.id;
 		var num = id.split("-", 2)[1]
 		var count = $('#kvk-'+num+ ' li').length + 1;
 		while ($("#kvk-innerlist-"+num+"-"+count).length != 0) { count += 1;}
@@ -116,9 +52,9 @@ $( document ).ready(function() {
    	});
 
 	$(document).on("click", '[id^=vkaddButtonEdit]' , function() {
-    	// $(this).parent().remove();
-    	var id = event.target.id;
-    	var id = id.replace(/->/g, '=>');
+  	// $(this).parent().remove();
+  	var id = event.target.id;
+  	var id = id.replace(/->/g, '=>');
 		var num = id.split("-", 2)[1]
 
 		var keyword = id.split("-", 3)[2]
@@ -139,9 +75,9 @@ $( document ).ready(function() {
    	});
 
 	$(document).on("click", '[id^=kvaddButtonEdit]' , function() {
-    	// $(this).parent().remove();
-    	var id = event.target.id;
-    	var id = id.replace(/->/g, '=>');
+  	// $(this).parent().remove();
+  	var id = event.target.id;
+  	var id = id.replace(/->/g, '=>');
 		var num = id.split("-", 2)[1]
 
 		var keyword = id.split("-", 3)[2]
@@ -162,7 +98,7 @@ $( document ).ready(function() {
    	});
 
 	$(document).on("click", '[id^=kvremoveButton]' , function() {
-    	var id = event.target.id;
+  	var id = event.target.id;
 		var [button, num, inum] = id.split("-", 3)
     	$('#kvk-innerlist-'+num+'-'+inum).remove();
    	});
@@ -179,9 +115,9 @@ $( document ).ready(function() {
    	});
 
 	$(document).on("click", '[id^=vkaddButton]' , function() {
-    	// $(this).parent().remove();
-    	console.log("Inside vkaddButton");
-    	var id = event.target.id;
+  	// $(this).parent().remove();
+  	console.log("Inside vkaddButton");
+  	var id = event.target.id;
 		var num = id.split("-", 2)[1]
 		var count = $('#vkv-'+num+ ' li').length + 1;
 		while ($("#vkv-innerlist-"+num+"-"+count).length != 0) { count += 1;}
