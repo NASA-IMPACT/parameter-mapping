@@ -31,7 +31,7 @@ $( document ).ready(function() {
       ]
     });
 
-    $('tbody tr', '#datatable').on('click', function() {
+    $(document).on('click', '#datatable > tbody > tr', function() {
       event.preventDefault();
       var $td = $($('td', this)[2]);
       var collection_name = $td.text();
