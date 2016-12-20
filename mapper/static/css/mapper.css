@@ -6,51 +6,50 @@
 */
 
 .keyword-inline-first {
-display: inline-block;
-/*border: 1px solid red;*/
-margin:0px 0px 0px 20px;
-/*background: 	#EEE;*/
-color: #00008B;
-font-weight: bold;
+  display: inline-block;
+  /*border: 1px solid red;*/
+  margin:0px 0px 0px 20px;
+  /*background: 	#EEE;*/
+  color: #00008B;
+  font-weight: bold;
 }
 
 .keyword-inline-last {
-display: inline-block;
-/*border: 1px solid red;*/
-margin:0px;
-/*background: 	#EEE;*/
-color: #00008B;
-font-weight: bold;
+  display: inline-block;
+  /*border: 1px solid red;*/
+  margin:0px;
+  /*background: 	#EEE;*/
+  color: #00008B;
+  font-weight: bold;
 }
 
 .keyword-inline {
-display: inline-block;
-/*border: 2px solid blue;*/
-margin:0px;
-background: 	#EEE;
-color: #00008B;
-font-weight: bold;
+  display: inline-block;
+  /*border: 2px solid blue;*/
+  margin:0px;
+  background: 	#EEE;
+  color: #00008B;
+  font-weight: bold;
 }
 
 .keyword-inline-variable {
-display: inline-block;
-/*border: 1px solid red;*/
-margin:0px 0px 0px 20px;
-/*background: 	#EEE;*/
-color: #00008B;
-font-weight: bold
+  display: inline-block;
+  /*border: 1px solid red;*/
+  margin:0px 0px 0px 20px;
+  /*background: 	#EEE;*/
+  color: #00008B;
+  font-weight: bold
 }
 
 .div-inline {
-display: inline-block;
-/*border: 2px solid blue;*/
-margin: 2px 15px 2px 2px;
-padding: 2px;
-/*background: #AFEEEE;*/
-font-size: 150%;
-font-weight: bold;
+  display: inline-block;
+  /*border: 2px solid blue;*/
+  margin: 2px 15px 2px 2px;
+  padding: 2px;
+  /*background: #AFEEEE;*/
+  font-size: 150%;
+  font-weight: bold;
 }
-
 
 .truncate {
   max-width: 90%;
@@ -60,11 +59,6 @@ font-weight: bold;
   white-space: nowrap;
 }
 
-/*.truncate:hover {
-  overflow: visible;
-  max-width: 90%;
-}*/
-
 .truncate_k {
   max-width: 90%;
   overflow: hidden;
@@ -72,29 +66,68 @@ font-weight: bold;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-/*.truncate_k:hover {
-	max-width: 85%;
-  	overflow: visible;
-}*/
-
-
-/*div#loading-gif {
-  width: 150px;
-  height: 150px;
-  top: 200px;
-  margin: auto;
-  position: fixed;
-  z-index: 1000;
-  align-content: center;
-  display: block;
-  background: url(../img/loadingimage.gif) no-repeat;
-  background-size: contain;
-  cursor: wait;
-  background-color:grey;
-}*/
 
 img.loading-image {
   height: 100px;
   width: 100px;
   cursor: wait;
+}
+
+body {
+  min-height: 100vh;
+  padding-top: 70px;
+}
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 60px 15px 0;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+/* set the size of the datepicker search control for Order Date*/
+#ui-datepicker-div {
+  font-size:11px;
+}
+
+.ui-autocomplete {
+  font-size: 15px;
+}
+
+.ui-jqgrid .ui-jqgrid-htable th {
+  height: 3em !important;
+}
+
+.ui-jqgrid tr.jqgrow td{
+  height: 3em !important;
+  font-size: 13px;
 }
