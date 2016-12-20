@@ -16,62 +16,50 @@
 		</style>
 	</head>
 	<body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Data Variable Mapping Tool</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class='active'><a href="/">Home</a></li>
+            <li><a href="/upload_form">Upload</a></li>
+
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
 		<div class="container">
-			<a href="/" class="btn btn-info active disabled" role="button"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> HOME</a>
-			<a href="/upload_form" class="btn btn-info active" role="button"><span class="glyphicon glyphicon-upload" aria-hidden="true"></span> UPLOAD</a>
-			<hr/>
-			<h3 align="center"> Data Variable Mapping Tool </h3>
-			<hr/>
-			<label for="search_cells">
-				Search:
-			</label>
-    	<input id="search_cells" class="form-control" name="search" placeholder="Search Here" autocomplete="off" autofocus="autofocus" type="search" value="{{ request.form.search}}">
-			<br>
-	<!-- <input id="search_cells" type="search"/> -->
+	    <table id="datatable" class='table table-striped table-bordered'>
+	    	<thead>
+	        <tr>
+	          <th>DAAC</th>
+	          <th>Dataset Name</th>
+	          <th>Unique Dataset Name</th>
+	        </tr>
+	    	</thead>
+	    </table>
+	  </div>
 
-    <table id="datatable" class='table table-striped table-bordered'>
-    	<thead>
-        <tr>
-          <th>Name</th>
-          <th>Position</th>
-          <th>Office</th>
-          <th>Age</th>
-          <th>Start date</th>
-          <th>Salary</th>
-        </tr>
-    	</thead>
-    </table>
-    <br /><br />
-		</div>
-		<br><br>
-		<div id="footer">
+	  <footer class="footer">
+      <div class="container">
+        <p class="text-muted"> &copy; Copyright 2016 by <a href="#">NASA/MSFC DSIG</a>. </p>
+      </div>
+    </footer>
+		<!-- <div id="footer">
 			{% block footer %}
-				<p align="center"> &copy; Copyright 2016 by <a href="#">NASA/MSFC DSIG</a>. </p>
+				<p align="center"></p>
 			{% endblock %}
-		</div>
+		</div> -->
 	</body>
-	<style type="text/css">
 
-	  /* set the size of the datepicker search control for Order Date*/
-	  #ui-datepicker-div { font-size:11px; }
-
-	  /* set the size of the autocomplete search control*/
-	  .ui-menu-item {
-
-	  }
-
-	  .ui-autocomplete {
-	      font-size: 15px;
-	  }
-	  .ui-jqgrid .ui-jqgrid-htable th {
-	    	height: 3em !important;
-		}
-		.ui-jqgrid tr.jqgrow td{
-		    height: 3em !important;
-		    font-size: 13px;
-		}
-
-	</style>
 	<script type="text/javascript">
     var mydata = {{mydata|safe}};
   </script>
