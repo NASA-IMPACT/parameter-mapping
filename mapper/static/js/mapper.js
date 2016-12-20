@@ -22,54 +22,24 @@ $( document ).ready(function() {
  	if (window.location.pathname === "/")
  	{
  		var filter;
-    $('#datatable').DataTable();
-		// $("#jqGrid").jqGrid({
-  //     datatype: "local",
-		// 	data: mydata,
-  //     height: 350,
-		// 	// width: 90%,
-		// 	autowidth: true,
-  //     colModel: [
-  //         { label: 'DAAC', name: 'daac', width: 75, },
+    $('#datatable').DataTable({
+      'data': mydata,
+      'columns': [
+        { 'data': 'daac' },
+        { 'data': 'dataset_id' },
+        { 'data': 'unique_name' }
+      ]
+    });
 
-  //         { label: 'Dataset Name', name: 'dataset_id', width: 500,},
-  //         { label: 'Unique Dataset Name', name: 'unique_name', hidden:true, key:true, colmenu : true, formatter:'showlink', formatoptions:{baseLinkUrl:'someurl.php'}}
-  //       ],
-  //       viewrecords: true, // show the current page, data rang and total records on the toolbar
-  //       caption: "Datasets",
-  //       loadonce: true,
-  //       pager: "#jqGridPager"
-  //     });
-		// 	// activate the toolbar searching
-		// 	$('#jqGrid').jqGrid('navGrid',"#jqGridPager", {
-  //               search: false, // show search button on the toolbar
-  //               add: false,
-  //               edit: false,
-  //               del: false,
-  //               refresh: true
-  //           });
-		// 	var timer;
-		// 	$("#search_cells").on("keyup", function() {
-		// 		var self = this;
-		// 		if(timer) { clearTimeout(timer); }
-		// 		timer = setTimeout(function(){
-		// 			//timer = null;
-		// 			$("#jqGrid").jqGrid('filterInput', self.value);
-		// 		},0);
-		// 	});
-
- 	// 	$('#jqGrid').on('click', 'tr', function(event) {
-		//     event.preventDefault();
-		//     var tr = $(this)[0];
-  //   		var trID = tr.id;
-  //   		// alert("trID=" + trID);
-		// 	var currentLocation = window.location;
-  //   		window.location.href = currentLocation + "_show_keyword_map/" + trID;
-		// });
+    $('tbody tr', '#datatable').on('click', function() {
+      event.preventDefault();
+      var $td = $($('td', this)[2]);
+      var collection_name = $td.text();
+      window.location.href = window.location + "_show_keyword_map/" + collection_name;
+    });
  	}
 
 	$(document).on("click", '[id^=kvaddButton]' , function() {
-    	// $(this).parent().remove();
   	var id = event.target.id;
 		var num = id.split("-", 2)[1]
 		var count = $('#kvk-'+num+ ' li').length + 1;
