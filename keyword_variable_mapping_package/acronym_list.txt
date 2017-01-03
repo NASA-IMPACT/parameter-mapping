@@ -1,6 +1,6 @@
 res->resolution
 sst->sea surface temperature
-med->medium 
+med->medium
 temp->temperature
 cld->cloud
 pres->pressure
@@ -19,3 +19,5 @@ SO4->sulfate
 DMS->Dimethyl sulfide
 SO2->sulfur dioxide
 carbon->carbonaceous
+swe->snow_water_equivalent
+si->sea_ice
