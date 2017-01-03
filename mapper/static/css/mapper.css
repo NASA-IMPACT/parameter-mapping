@@ -75,7 +75,7 @@ img.loading-image {
 
 body {
   min-height: 100vh;
-  padding-top: 70px;
+  padding-top: 5px;
 }
 
 
@@ -86,7 +86,7 @@ html {
 }
 
 .footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
@@ -100,7 +100,6 @@ html {
 
 body > .container {
   padding: 60px 15px 0;
-  margin-bottom: 5%;
 }
 .container .text-muted {
   margin: 20px 0;
