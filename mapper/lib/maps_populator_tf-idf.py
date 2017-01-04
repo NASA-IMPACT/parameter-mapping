@@ -250,13 +250,14 @@ def kv_generator(keywords, variables, score_matrix):
     mapped = dict()
     ranked = dict()
     for j, v_score in enumerate(score_matrix[i]):
-      if v_score > 0:
+      if v_score > 0.3:
         mapped[variable_names[j].replace(".", "_")] = "%.5f" %(v_score)
-      else:
-        ranked[variable_names[j].replace(".", "_")] = 0.0
+      # else:
+      #   ranked[variable_names[j].replace(".", "_")] = 0.0
     kvd["mapped"] = mapped
     kvd["ranked"] = ranked
-    kv[keyword.replace(".", "_").title().replace("->", " > ").replace("_", " ")] = kvd
+    if (len(kvd['mapped'].keys()) > 0 or len(kvd['ranked'].keys()) > 0):
+      kv[keyword.replace(".", "_").title().replace("->", " > ").replace("_", " ")] = kvd
   return kv
 
 def vk_generator(variables, keywords, score_matrix):
@@ -268,14 +269,15 @@ def vk_generator(variables, keywords, score_matrix):
     ranked = dict()
 
     for j in xrange(len(keywords)):
-      if score_matrix[j][i] > 0:
+      if score_matrix[j][i] > 0.3:
         mapped[keywords[j].replace(".", "_").title().replace("->", " > ").replace("_", " ")] = "%.5f" %(score_matrix[j][i])
-      else:
-        ranked[keywords[j].replace(".", "_").title().replace("->", " > ").replace("_", " ")] = 0.0
+      # else:
+      #   ranked[keywords[j].replace(".", "_").title().replace("->", " > ").replace("_", " ")] = 0.0
 
     vkd["mapped"] = mapped
     vkd["ranked"] = ranked
-    vk[variable.replace(".", "_")] = vkd
+    if (len(vkd['mapped'].keys()) > 0 or len(vkd['ranked'].keys()) > 0):
+      vk[variable.replace(".", "_")] = vkd
   return vk
 
 
@@ -295,14 +297,18 @@ def doc_generator(keywords, variables, score_matrix):
 def populate_tf_idf(to_map_colls):
   for coll in to_map_colls:
     print "Updating %s Collection" %(coll)
-    ks_find = db.ks.find_one({"unique_name": coll}, {"keyword_list":1, "dataset_id": 1, "_id": 0})
-    vs_find = db.vs.find_one({"unique_name": coll}, {"variable_list":1, "dataset_id": 1, "ways": 1, "cfk": 1, "cfu": 1, "all_vars": 1, "_id": 0})
+    ## for matching only specific datasets.
+    ks_find = db.ks.find_one({"unique_name": coll}, {"keyword_list":1, "dataset_id": 1, "_id": 0}) or {}
+    vs_find = db.vs.find_one({"unique_name": coll}, {"variable_list":1, "meta_filename": 1, "dataset_id": 1, "ways": 1, "cfk": 1, "cfu": 1, "all_vars": 1, "_id": 0})
     if vs_find is None:
       print "No %s in vs..." %(coll)
     else:
+      ## for matching across all datasets.
+      keywords = db.ks.find({}, {"keyword_list":1, "dataset_id": 1, "_id": 0})
+      keywords = [keyword for keyword_list in keywords for keyword in keyword_list['keyword_list']]
       variables = vs_find["variable_list"]
-      keywords = ks_find["keyword_list"]
-      dataset_id = ks_find["dataset_id"]
+      # keywords = # ks_find["keyword_list"]
+      dataset_id = ks_find.get('dataset_id', vs_find["meta_filename"])
       ways = dict(vs_find["ways"])
       cfk = dict(vs_find["cfk"])
       cfu = dict(vs_find["cfu"])
@@ -314,7 +320,6 @@ def populate_tf_idf(to_map_colls):
       # if len(keywords) <= 0:
       #   print "\tKeywords set empty. Mapping cannot be done."
       #   continue
-
       phrase_bag_k, word_bag_k = generate_bag_k(keywords)
       var_bag_v, descrip_v = generate_bag_v(variables)
 
@@ -349,7 +354,9 @@ def populate_tf_idf(to_map_colls):
 
 
 def main():
-  colls_in_ks = [k["unique_name"] for k in db.ks.find({}, {"unique_name":1, "_id": 0})]
+  ## Doing this because we want to match all vs we have.
+  #
+  colls_in_ks = [] #[k["unique_name"] for k in db.ks.find({}, {"unique_name":1, "_id": 0})]
   colls_in_vs = [v["unique_name"] for v in db.vs.find({}, {"unique_name":1, "_id": 0})]
   colls_in_ms = [m["unique_name"] for m in db.ms.find({}, {"unique_name":1, "_id": 0})]
 
