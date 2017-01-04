@@ -121,7 +121,8 @@ def show_map(collection_name):
     # collection_name = request.args.get('collection_name', 'ritesh', type=str)
     # print "Collection clicked in the list is : ", collection_name
     db = libmongo.get_db()
-    keywords = db.ks.find_one({"unique_name": collection_name}).get("keyword_list")
+    keywords = db.ks.find({}, {"keyword_list":1, "dataset_id": 1, "_id": 0})
+    keywords = [keyword for keyword_list in keywords for keyword in keyword_list['keyword_list']]
     variables = db.vs.find_one({"unique_name": collection_name}).get("variable_list")
     maps = db.ms.find_one({"unique_name": collection_name})
     # print keywords, variables, maps
@@ -147,7 +148,7 @@ def show_keyword_map(collection_name):
     # collection_name = request.args.get('collection_name', 'ritesh', type=str)
     # print "Collection clicked in the list iddds : ", collection_name
     db = libmongo.get_db()
-    keywords = db.ks.find_one({"unique_name": collection_name}).get("keyword_list")
+    # keywords = db.ks.find_one({"unique_name": collection_name}).get("keyword_list")
     variables = db.vs.find_one({"unique_name": collection_name}).get("variable_list")
     maps = db.ms.find_one({"unique_name": collection_name})
     maps["mapped_keys"] =  list()
@@ -163,7 +164,7 @@ def show_keyword_map(collection_name):
     # print sorted_maps
 
     return render_template('show_keyword_map.html', errors=errors, results=results, variables=variables, \
-        keywords=keywords, maps=maps, collections=collections, \
+        maps=maps, collections=collections, \
         sorted_maps=sorted_maps)
 
 
@@ -175,7 +176,6 @@ def edit_keyword_map(collection_name):
     # collection_name = request.args.get('collection_name', 'ritesh', type=str)
     # print "Collection clicked in the list iddds : ", collection_name
     db = libmongo.get_db()
-    keywords = db.ks.find_one({"unique_name": collection_name}).get("keyword_list")
     variables = db.vs.find_one({"unique_name": collection_name}).get("variable_list")
     maps = db.ms.find_one({"unique_name": collection_name})
     # print keywords, variables, maps
@@ -186,8 +186,7 @@ def edit_keyword_map(collection_name):
     sorted_maps["vk"] = get_sorted_vk_map(maps)
 
     return render_template('edit_keyword_map.html', errors=errors, results=results, variables=variables, \
-        keywords=keywords, maps=maps, collections=collections, \
-        sorted_maps=sorted_maps)
+        maps=maps, collections=collections, sorted_maps=sorted_maps)
 
 
 @app.route('/_edit_variable_map/<collection_name>', methods=['GET', 'POST'])
@@ -198,7 +197,9 @@ def edit_variable_map(collection_name):
     # collection_name = request.args.get('collection_name', 'ritesh', type=str)
     # print "Collection clicked in the list iddds : ", collection_name
     db = libmongo.get_db()
-    keywords = db.ks.find_one({"unique_name": collection_name}).get("keyword_list")
+    # keywords = # db.ks.find_one({"unique_name": collection_name}).get("keyword_list")
+    keywords = db.ks.find({}, {"keyword_list":1, "dataset_id": 1, "_id": 0})
+    keywords = [keyword for keyword_list in keywords for keyword in keyword_list['keyword_list']]
     variables = db.vs.find_one({"unique_name": collection_name}).get("variable_list")
     maps = db.ms.find_one({"unique_name": collection_name})
     # print keywords, variables, maps
@@ -221,7 +222,7 @@ def edit_cfu_map(collection_name):
     # collection_name = request.args.get('collection_name', 'ritesh', type=str)
     # print "Collection clicked in the list iddds : ", collection_name
     db = libmongo.get_db()
-    keywords = db.ks.find_one({"unique_name": collection_name}).get("keyword_list")
+    # keywords = db.ks.find_one({"unique_name": collection_name}).get("keyword_list")
     variables = db.vs.find_one({"unique_name": collection_name}).get("variable_list")
     maps = db.ms.find_one({"unique_name": collection_name})
     # print keywords, variables, maps
@@ -232,8 +233,7 @@ def edit_cfu_map(collection_name):
     sorted_maps["vk"] = get_sorted_vk_map(maps)
 
     return render_template('edit_cfu_map.html', errors=errors, results=results, variables=variables, \
-        keywords=keywords, maps=maps, collections=collections, \
-        sorted_maps=sorted_maps)
+        maps=maps, collections=collections, sorted_maps=sorted_maps)
 
 @app.route('/_edit_cfk_map/<collection_name>', methods=['GET', 'POST'])
 def edit_cfk_map(collection_name):
@@ -243,7 +243,7 @@ def edit_cfk_map(collection_name):
     # collection_name = request.args.get('collection_name', 'ritesh', type=str)
     # print "Collection clicked in the list iddds : ", collection_name
     db = libmongo.get_db()
-    keywords = db.ks.find_one({"unique_name": collection_name}).get("keyword_list")
+    # keywords = db.ks.find_one({"unique_name": collection_name}).get("keyword_list")
     variables = db.vs.find_one({"unique_name": collection_name}).get("variable_list")
     maps = db.ms.find_one({"unique_name": collection_name})
     # print keywords, variables, maps
@@ -254,8 +254,7 @@ def edit_cfk_map(collection_name):
     sorted_maps["vk"] = get_sorted_vk_map(maps)
 
     return render_template('edit_cfk_map.html', errors=errors, results=results, variables=variables, \
-        keywords=keywords, maps=maps, collections=collections, \
-        sorted_maps=sorted_maps)
+        maps=maps, collections=collections, sorted_maps=sorted_maps)
 
 
 @app.route('/_update_keyword_map/<collection_name>', methods=['GET', 'POST'])
@@ -286,7 +285,7 @@ def update_keyword_map(collection_name):
             ranked_d = dict()
             for variable in variables:
                 v, i = variable.split("-->",1)
-                mapped_d[v] = int(i)         #populate mapped new
+                mapped_d[v] = float(i)         #populate mapped new
                 new_mapped_kv_set.add(v)
 
             added_to_mapped = new_mapped_kv_set.difference(old_mapped_kv_set)
@@ -342,7 +341,7 @@ def update_variable_map(collection_name):
             ranked_d = dict()
             for keyword in keywords:
                 v, i = keyword.split("-->",1)
-                mapped_d[v] = int(i)         #populate mapped new
+                mapped_d[v] = float(i)         #populate mapped new
                 new_mapped_vk_set.add(v)
 
             added_to_mapped = new_mapped_vk_set.difference(old_mapped_vk_set)
@@ -350,7 +349,10 @@ def update_variable_map(collection_name):
 
             for am_key in added_to_mapped:
                 # del old_ranked_vk[am_key]       #remove from ranked
-                old_mapped_vk[am_key] = old_ranked_vk.pop(am_key)
+                if am_key in old_ranked_vk:
+                    old_mapped_vk[am_key] = old_ranked_vk.pop(am_key)
+                else:
+                    old_mapped_vk[am_key] = 0.0
             for ar_key in removed_from_mapped:
                 old_ranked_vk[ar_key] = old_mapped_vk.pop(ar_key)   #populate ranked map / add to ranked
 
@@ -455,7 +457,9 @@ def index():
         #create searchable data
         grid_data = list()
         for collection in db.ms.find():
-            grid_data.append(dict(db.ks.find_one({"unique_name": collection['unique_name']}, {"_id":0, "unique_name": 1, "daac": 1, "dataset_id": 1})))
+            data = db.ks.find_one({"unique_name": collection['unique_name']}, {"_id":0, "unique_name": 1, "daac": 1, "dataset_id": 1})
+            data = data or {"unique_name": collection['unique_name'], "dataset_id": collection['dataset_id'], 'daac': ''}
+            grid_data.append(data)
 
         # grid_data = list(db.ks.find({}, {"_id":0, "unique_name": 1, "daac": 1, "dataset_id": 1}))
         # grid_data = [data for data in grid_data_cursor]
