@@ -51,18 +51,8 @@
   font-weight: bold;
 }
 
-.truncate {
-  max-width: 90%;
+.truncate_k, .truncate {
   overflow: hidden;
-  display: inline-block;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.truncate_k {
-  max-width: 90%;
-  overflow: hidden;
-  display: inline-block;
   text-overflow: ellipsis;
   white-space: nowrap;
 }

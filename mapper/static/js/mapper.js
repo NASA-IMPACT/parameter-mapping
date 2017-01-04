@@ -39,6 +39,13 @@ $( document ).ready(function() {
     });
  	}
 
+  var content = ['<li><strong style="color:red"> Red Text </strong> : No data found. </li>',
+                 '<li> <strong style="color:green"> Green Text </strong> : Keywords mapped from this dataset.</li>'].join('');
+  $('#popover').popover({
+    content: content,
+    html: true
+  });
+
 	$(document).on("click", '[id^=kvaddButton]' , function() {
   	var id = event.target.id;
 		var num = id.split("-", 2)[1]
@@ -46,8 +53,8 @@ $( document ).ready(function() {
 		while ($("#kvk-innerlist-"+num+"-"+count).length != 0) { count += 1;}
 		var selectedVal = $('#kvk-'+num +' select').val();
 		var newID = 'kvk-innerlist-'+num+'-'+count;
-		var removeButtonHtml = '<input type="button" id="kvremoveButton-'+num+'-'+count+'" value="Remove" class="btn btn-danger" />';
-		var appendLi = '<li class="list-group-item" id="'+newID+'">'+selectedVal+count+removeButtonHtml+'</li>';
+		var removeButtonHtml = '<input type="button" id="kvremoveButton-'+num+'-'+count+'" value="x" class="btn btn-danger btn-xs" />';
+		var appendLi = '<a class="list-group-item" id="'+newID+'">'+selectedVal+count+removeButtonHtml+'</a>';
 		$('#kvk-'+num).append(appendLi);
    	});
 
@@ -69,8 +76,8 @@ $( document ).ready(function() {
 		var selectOption = $('div#select-option-'+num).html();
 		console.log(selectOption);
 		// $selectOption.attr('style', 'visilibility:visible');
-		var removeButtonHtml = '<input type="button" id="vkremoveButtonEdit-'+num+'-'+count+'" value="Remove" class="btn btn-danger" />';
-		var appendLi = '<li class="list-group-item" id="'+newID+'">'+selectOption+' '+removeButtonHtml+'</li>';
+		var removeButtonHtml = '<input type="button" id="vkremoveButtonEdit-'+num+'-'+count+'" value="x" class="btn btn-danger btn-xs" />';
+		var appendLi = '<a class="list-group-item" id="'+newID+'">'+selectOption+' '+removeButtonHtml+'</a>';
 		$('#vkvEdit-'+num).append(appendLi);
    	});
 
@@ -92,8 +99,8 @@ $( document ).ready(function() {
 		var selectOption = $('div#select-option-'+num).html();
 		console.log(selectOption);
 		// // $selectOption.attr('style', 'visilibility:visible');
-		var removeButtonHtml = '<input type="button" id="kvremoveButtonEdit-'+num+'-'+count+'" value="Remove" class="btn btn-danger" />';
-		var appendLi = '<li class="list-group-item" id="'+newID+'">'+selectOption+' '+removeButtonHtml+'</li>';
+		var removeButtonHtml = '<input type="button" id="kvremoveButtonEdit-'+num+'-'+count+'" value="x" class="btn btn-danger btn-xs" />';
+		var appendLi = '<a class="list-group-item" id="'+newID+'">'+selectOption+' '+removeButtonHtml+'</a>';
 		$('#kvkEdit-'+num).append(appendLi);
    	});
 
@@ -101,52 +108,51 @@ $( document ).ready(function() {
   	var id = event.target.id;
 		var [button, num, inum] = id.split("-", 3)
     	$('#kvk-innerlist-'+num+'-'+inum).remove();
-   	});
-   	$(document).on("click", '[id^=kvremoveButtonEdit]' , function() {
-    	var id = event.target.id;
-		var [button, num, inum] = id.split("-", 3)
-    	$('#kvk-innerlistEdit-'+num+'-'+inum).remove();
-   	});
+  });
 
-   	$(document).on("click", '[id^=vkremoveButtonEdit]' , function() {
-    	var id = event.target.id;
-		var [button, num, inum] = id.split("-", 3)
-    	$('#vkv-innerlistEdit-'+num+'-'+inum).remove();
-   	});
+ 	$(document).on("click", '[id^=kvremoveButtonEdit]' , function() {
+  	var id = event.target.id;
+	  var [button, num, inum] = id.split("-", 3)
+  	$('#kvk-innerlistEdit-'+num+'-'+inum).remove();
+ 	});
+
+ 	$(document).on("click", '[id^=vkremoveButtonEdit]' , function() {
+  	var id = event.target.id;
+	  var [button, num, inum] = id.split("-", 3)
+  	$('#vkv-innerlistEdit-'+num+'-'+inum).remove();
+ 	});
 
 	$(document).on("click", '[id^=vkaddButton]' , function() {
-  	// $(this).parent().remove();
-  	console.log("Inside vkaddButton");
   	var id = event.target.id;
 		var num = id.split("-", 2)[1]
 		var count = $('#vkv-'+num+ ' li').length + 1;
 		while ($("#vkv-innerlist-"+num+"-"+count).length != 0) { count += 1;}
 		var selectedVal = $('#vkv-'+num +' select').val();
 		var newID = 'vkv-innerlist-'+num+'-'+count;
-		var removeButtonHtml = '<input type="button" id="vkremoveButton-'+num+'-'+count+'" value="Remove" />';
-		var appendLi = '<li class="list-group-item" id="'+newID+'">'+selectedVal+count+removeButtonHtml+'</li>';
+		var removeButtonHtml = '<input type="button" id="vkremoveButton-'+num+'-'+count+'" value="x" class="btn btn-danger btn-xs"/>';
+		var appendLi = '<a class="list-group-item" id="'+newID+'">'+selectedVal+count+removeButtonHtml+'</a>';
 		$('#vkv-'+num).append(appendLi);
-   	});
+ 	});
 
-   	$(document).on("click", '[id^=vkremoveButton]' , function() {
-    	var id = event.target.id;
-		var [button, num, inum] = id.split("-", 3)
-    	$('#vkv-innerlist-'+num+'-'+inum).remove();
-   	});
+ 	$(document).on("click", '[id^=vkremoveButton]' , function() {
+  	var id = event.target.id;
+	  var [button, num, inum] = id.split("-", 3)
+  	$('#vkv-innerlist-'+num+'-'+inum).remove();
+ 	});
 
 
-   	// New cfu and cfk edits ---------------------
-   	$(document).on("click", '[id^=cfuremoveButtonEdit]' , function() {
-    	var id = event.target.id;
-		var [button, num, inum] = id.split("-", 3)
-    	$('#cfu-innerlistEdit-'+num+'-'+inum).remove();
-   	});
+ 	// New cfu and cfk edits ---------------------
+ 	$(document).on("click", '[id^=cfuremoveButtonEdit]' , function() {
+  	var id = event.target.id;
+	  var [button, num, inum] = id.split("-", 3)
+  	$('#cfu-innerlistEdit-'+num+'-'+inum).remove();
+ 	});
 
-   	$(document).on("click", '[id^=cfkremoveButtonEdit]' , function() {
-    	var id = event.target.id;
-		var [button, num, inum] = id.split("-", 3)
-    	$('#cfk-innerlistEdit-'+num+'-'+inum).remove();
-   	});
+ 	$(document).on("click", '[id^=cfkremoveButtonEdit]' , function() {
+  	var id = event.target.id;
+	  var [button, num, inum] = id.split("-", 3)
+  	$('#cfk-innerlistEdit-'+num+'-'+inum).remove();
+ 	});
 
 	// Onclick li of ul
 	$('#keyword-list').on('click', 'li', function(event) {
@@ -160,10 +166,10 @@ $( document ).ready(function() {
 		//get request from jquery
 		$(function() {
 			$.getJSON('/_show_it', {
-        	korv: korv,
-        	is_keyword: 1
-       		}, function(data) {
-        		$('#mapping #mapping-results').text(data.result);
+      	korv: korv,
+      	is_keyword: 1
+     		}, function(data) {
+      		$('#mapping #mapping-results').text(data.result);
 			});
 		});
 

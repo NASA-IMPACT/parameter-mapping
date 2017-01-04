@@ -7,64 +7,40 @@
 {% endblock %}
 
 {% block content %}
-
-	<h3 align="center" style="background: #CCCCCC"> {{maps.dataset_id}}</h3>
-
-	<!-- For generating hidden select options -->
-	 <!-- {% for v, ks in sorted_maps['vk'].iteritems() %}
-	{% set outerLoopIndex = loop.index %}
-	<div id="select-option-{{outerLoopIndex}}" style="visibility:hidden; display:none">
-		<select id="just_list_of_variables">
-			{% for keyword, i in ks['ranked'] %}
-    		<option value="{{keyword}}{{i}}">{{keyword}} : {{i}}</option>
-    		{% endfor %}
-		</select>
-	</div>
-	{% endfor %} -->
-
+	<h3 align="center"> {{maps.dataset_id}}</h3>
+	<hr/>
 	<div class="row">
-		<!-- <div class="col-sm-5 col-sm-offset-1" id="kv-maps"> -->
-			<div class="row" id="kv-maps-box">
-				<h3>Edit GCMD keywords from CF units</h3>
+		<div class="row" id="kv-maps-box">
+			<h4>Edit GCMD keywords from CF units</h4>
 
-				<form method="POST" action="/_update_cfu_map/{{ maps.unique_name }}" id="update_cfu_map">
+			<form method="POST" action="/_update_cfu_map/{{ maps.unique_name }}" id="update_cfu_map">
 
-				<div class="div-list-group" style="height:500px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px;" name="div-test">
-					{% for v, gcmds in maps['cfu'].iteritems() %}
+			<div class="div-list-group" style='height: 50vh; overflow: auto;'>
+				{% for v, gcmds in maps['cfu'].iteritems() %}
 
-						{% set outerLoopIndex = loop.index %}
+					{% set outerLoopIndex = loop.index %}
 
-						<ul class="list-group" id="cfuEdit-{{outerLoopIndex}}">
+					<div class="list-group" id="cfuEdit-{{outerLoopIndex}}">
 						<br>
-						<div class="keyword-inline-variable">{{v}}</div>
-						<!-- <input type="button" id="vkaddButtonEdit-{{outerLoopIndex}}-{{v}}" value="Assign New Keyword" type="button" class="btn btn-info" align="right" /> -->
-							{% for gcmd in gcmds %}
-								<li class="list-group-item" id="cfu-innerlistEdit-{{outerLoopIndex}}-{{loop.index}}">
-
-									<select name="cfuEdit-{{outerLoopIndex}}-{{v}}">
-
-							    		<option value="{{ gcmd }}" selected>{{ gcmd }} </option>
-
-									</select>
-
-
-									<input type="button" id="cfuremoveButtonEdit-{{outerLoopIndex}}-{{loop.index}}" value="Remove" class="btn btn-danger" />
-								</li>
-							{% endfor %}
-						</ul>
-					{% endfor %}
-				</div>
-				<br>
-				<input type="submit" value="Save" class="btn btn-success">
-				</form>
-
-
-
+						<a class="list-group-item active">{{v}}</a>
+						{% for gcmd in gcmds %}
+							<a class="list-group-item" id="cfu-innerlistEdit-{{outerLoopIndex}}-{{loop.index}}">
+								<select name="cfuEdit-{{outerLoopIndex}}-{{v}}">
+						    	<option value="{{ gcmd }}" selected>{{ gcmd }} </option>
+								</select>
+								<input type="button" id="cfuremoveButtonEdit-{{outerLoopIndex}}-{{loop.index}}" value="x" class="btn btn-xs btn-danger" />
+							</a>
+						{% endfor %}
+					</div>
+				{% endfor %}
 			</div>
-		<!-- </div> -->
+			<br/>
+			<input type="submit" value="Save" class="btn btn-success">
+			</form>
+		</div>
 	</div>
 
-		<br>
+	<br/>
 
 
 {% endblock %}

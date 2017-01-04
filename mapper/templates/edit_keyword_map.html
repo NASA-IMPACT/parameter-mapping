@@ -7,16 +7,8 @@
 {% endblock %}
 
 {% block content %}
-
-	<!-- <h2 align="center">Edit Maps</h2> -->
-	<h3 align="center" style="background: #FFF"> {{maps.dataset_id}}</h3>
-	<hr>
-	<!-- {% for mk, mv in maps.iteritems() %}
-		<h4>{{mk}}</h4>
-		<h4>{{mv}}</h4>
-	{% endfor %} -->
-
-	<!-- For generating hidden select options -->
+	<h3 align="center"> {{maps.dataset_id}}</h3>
+	<hr/>
 	{% for k, vs in sorted_maps['kv'].iteritems() %}
 	{% set outerLoopIndex = loop.index %}
 	<div id="select-option-{{outerLoopIndex}}" style="visibility:hidden; display:none">
@@ -29,61 +21,50 @@
 	{% endfor %}
 
 	<div class="row">
-		<!-- <div class="col-sm-5 col-sm-offset-1" id="kv-maps"> -->
-			<div class="row" id="kv-maps-box">
-				<h3>Edit Sceince Keyword Map</h3>
+		<div class="row" id="kv-maps-box">
+			<h4>Edit Sceince Keyword Map</h4>
+			<form method="POST" action="/_update_keyword_map/{{ maps.unique_name }}" id="update_keyword_map">
 
-				<form method="POST" action="/_update_keyword_map/{{ maps.unique_name }}" id="update_keyword_map">
-
-				<div class="div-list-group" style="height:500px;overflow-y:scroll;border: 0.5px solid; border-radius: 10px;" name="div-test">
+				<div class="div-list-group" style="min-height: 20vh; max-height: 50vh; overflow: auto;">
 					{% for k, vs in sorted_maps['kv'].iteritems() %}
-
 						{% set outerLoopIndex = loop.index %}
-
-						<ul class="list-group" id="kvkEdit-{{outerLoopIndex}}">
-						<br>
-						<div class="list-group-each-keyword">
-						<!-- {{k}} -->
-						{% set keyword_part_list = k.split('->') %}
-						{% for keyword_part in keyword_part_list %}
-							{% if loop.first %}
-								<div class="keyword-inline-first">{{keyword_part}}<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
-							{% elif loop.last %}
-								<div class="keyword-inline-last">{{keyword_part}}</div>
-							{% else %}
-								<div class="keyword-inline">{{keyword_part}}<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
-							{% endif %}
-						{% endfor %}
-						<input type="button" id="kvaddButtonEdit-{{outerLoopIndex}}-{{k}}" value="Assign New Variable" type="button" class="btn btn-info inline-button" align="right" />
-						</div>
+						<div class="list-group" id="kvkEdit-{{outerLoopIndex}}">
+							<br>
+							<div class="list-group-each-keyword">
+								{% set keyword_part_list = k.split('->') %}
+								{% for keyword_part in keyword_part_list %}
+									{% if loop.first %}
+										<a class="list-group-item active">{{keyword_part}} ></span>
+									{% elif loop.last %}
+										<a class="list-group-item active">{{keyword_part}}</span>
+									{% else %}
+										<a class="list-group-item active">{{keyword_part}} ></span>
+									{% endif %}
+								{% endfor %}
+									<input type="button" id="kvaddButtonEdit-{{outerLoopIndex}}-{{k}}" value="Assign New Variable" type="button" class="btn btn-success btn-sm" align="right" />
+								</a>
+							</div>
 							{% for v, i in vs['mapped'] %}
-								<li class="list-group-item" id="kvk-innerlistEdit-{{outerLoopIndex}}-{{loop.index}}">
+								<a class="list-group-item" id="kvk-innerlistEdit-{{outerLoopIndex}}-{{loop.index}}">
 									<select name="kvkEdit-{{outerLoopIndex}}-{{k}}">
 										{% for variable in variables %}
-										{% if v == variable %}
-							    		<option value="{{variable}}-->{{i}}" selected>{{variable}} : {{i}}</option>
+											{% if v == variable %}
+							    			<option value="{{variable}}-->{{i}}" selected>{{variable}} : {{i}}</option>
 							    		{% else %}
-							    		<option value="{{variable}}-->{{i}}">{{variable}} : {{i}}</option>
+							    			<option value="{{variable}}-->{{i}}">{{variable}} : {{i}}</option>
 							    		{% endif %}
-							    		{% endfor %}
+							    	{% endfor %}
 									</select> <!-- {{ v }} -->
-									<input type="button" id="kvremoveButtonEdit-{{outerLoopIndex}}-{{loop.index}}" value="Remove" class="btn btn-danger" />
-								</li>
+									<input type="button" id="kvremoveButtonEdit-{{outerLoopIndex}}-{{loop.index}}" value="x" class="btn btn-xs btn-danger" />
+								</a>
 							{% endfor %}
-						</ul>
+						</div>
 					{% endfor %}
 				</div>
 				<br>
 				<input type="submit" value="Save" class="btn btn-success">
-				</form>
-
-
-
-			</div>
-		<!-- </div> -->
+			</form>
+		</div>
 	</div>
-
-		<br>
-
-
+	<br/>
 {% endblock %}
