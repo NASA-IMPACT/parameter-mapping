@@ -5,6 +5,15 @@
 * @Last Modified time: 2016-07-15 00:10:55
 */
 
+.header-components {
+  width: auto;
+  display: inline-table;
+}
+
+.panel-heading {
+  margin: 0;
+}
+
 .keyword-inline-first {
   display: inline-block;
   /*border: 1px solid red;*/

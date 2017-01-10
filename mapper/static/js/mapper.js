@@ -31,7 +31,7 @@ $( document ).ready(function() {
       ]
     });
 
-    $(document).on('click', '#datatable > tbody > tr', function() {
+    $(document).on('click', '#datatable > tbody > tr', function(event) {
       event.preventDefault();
       var $td = $($('td', this)[2]);
       var collection_name = $td.text();
@@ -44,6 +44,22 @@ $( document ).ready(function() {
   $('#popover').popover({
     content: content,
     html: true
+  });
+
+  $('.panel-body').not('.active').hide();
+
+  $(document).on('click', '.panel-heading', function() {
+    var $clickedElem = $(this);
+    var $body = $clickedElem.siblings('.panel-body');
+    if($body.hasClass('active')) {
+      $body.removeClass('active');
+      $body.hide('slow');
+    }
+    else {
+      $body.addClass('active');
+      $body.show('slow');
+    }
+
   });
 
 	$(document).on("click", '[id^=kvaddButton]' , function() {
