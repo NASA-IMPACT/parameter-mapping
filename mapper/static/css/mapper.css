@@ -12,6 +12,11 @@
 
 .panel-heading {
   margin: 0;
+  cursor:pointer;
+}
+
+#datatable tbody tr {
+  cursor:pointer;
 }
 
 .keyword-inline-first {

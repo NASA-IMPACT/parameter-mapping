@@ -250,10 +250,11 @@ def kv_generator(keywords, variables, score_matrix):
     mapped = dict()
     ranked = dict()
     for j, v_score in enumerate(score_matrix[i]):
+      print "v_score:", v_score
       if v_score > 0.3:
         mapped[variable_names[j].replace(".", "_")] = "%.5f" %(v_score)
-      # else:
-      #   ranked[variable_names[j].replace(".", "_")] = 0.0
+      elif v_score > 0.1:
+        ranked[variable_names[j].replace(".", "_")] = v_score
     kvd["mapped"] = mapped
     kvd["ranked"] = ranked
     if (len(kvd['mapped'].keys()) > 0 or len(kvd['ranked'].keys()) > 0):
@@ -271,8 +272,8 @@ def vk_generator(variables, keywords, score_matrix):
     for j in xrange(len(keywords)):
       if score_matrix[j][i] > 0.3:
         mapped[keywords[j].replace(".", "_").title().replace("->", " > ").replace("_", " ")] = "%.5f" %(score_matrix[j][i])
-      # else:
-      #   ranked[keywords[j].replace(".", "_").title().replace("->", " > ").replace("_", " ")] = 0.0
+      elif score_matrix[j][i] > 0.1:
+        ranked[keywords[j].replace(".", "_").title().replace("->", " > ").replace("_", " ")] = "%.5f" %(score_matrix[j][i])
 
     vkd["mapped"] = mapped
     vkd["ranked"] = ranked
@@ -307,7 +308,9 @@ def populate_tf_idf(to_map_colls):
       keywords = db.ks.find({}, {"keyword_list":1, "dataset_id": 1, "_id": 0})
       keywords = [keyword for keyword_list in keywords for keyword in keyword_list['keyword_list']]
       variables = vs_find["variable_list"]
-      # keywords = # ks_find["keyword_list"]
+      # keywords = ks_find["keyword_list"]
+      print 'keywords:', keywords
+      print 'variables:', variables
       dataset_id = ks_find.get('dataset_id', vs_find["meta_filename"])
       ways = dict(vs_find["ways"])
       cfk = dict(vs_find["cfk"])
@@ -336,18 +339,18 @@ def populate_tf_idf(to_map_colls):
         phrase_bag_k, word_bag_k, var_bag_v, descrip_v, \
         idf_phrase_varname, idf_phrase_vardescrip, idf_word_varname, idf_word_vardescrip)
 
-      # print score_matrix
+      print score_matrix
 
       kv, vk = doc_generator(keywords, variables, score_matrix)
-      # print "this is kv ", kv
+      print "this is kv ", kv
       doc = {
           "unique_name": coll, "kv": kv, "vk": vk, "dataset_id": dataset_id, \
           "ways": ways, "cfk": cfk, "cfu": cfu, \
-          "all_vars": all_vars, "all_keys": [k.replace("_", " ") for k in kv.keys()]
+          "all_vars": all_vars, "all_keys": keywords
         }
       # print doco
       # break
-      result = db.ms.insert_one(doc)
+      result = db.rms.insert_one(doc)
       if result:
         print "Successfully Inserted '%s' collection maps" %(coll)
 
@@ -358,7 +361,7 @@ def main():
   #
   colls_in_ks = [] #[k["unique_name"] for k in db.ks.find({}, {"unique_name":1, "_id": 0})]
   colls_in_vs = [v["unique_name"] for v in db.vs.find({}, {"unique_name":1, "_id": 0})]
-  colls_in_ms = [m["unique_name"] for m in db.ms.find({}, {"unique_name":1, "_id": 0})]
+  colls_in_ms = [m["unique_name"] for m in db.rms.find({}, {"unique_name":1, "_id": 0})]
 
   super_colls = colls_in_ks if len(set(colls_in_ks)) >= len(set(colls_in_vs)) else colls_in_vs
   to_map_colls = diff(super_colls, colls_in_ms)
@@ -367,14 +370,14 @@ def main():
   # print len(super_colls), len(to_map_colls)
   # to_map_colls = ["ADVANCED MICROWAVE SOUNDING UNIT-A (AMSU-A) SWATH FROM NOAA-15 V1"]
   # to_map_colls = ["MOPITT Gridded Monthly CO Retrievals (Thermal Infrared Radiances) V006"]
-  # to_map_colls = ['AMSR-E_Aqua Daily L3 Global Snow Water Equivalent EASE-Grids V002']
+  # to_map_colls = ['RSS SSM_I OCEAN PRODUCT GRIDS 3-DAY AVERAGE FROM DMSP F13 NETCDF V7']
   populate_tf_idf(to_map_colls)
 
   # print "This: ", "GHRSST Level 2P European Medspiration TMI SST:1" in colls_in_ks
   # print "This: ", "GHRSST Level 2P European Medspiration TMI SST:1" in colls_in_vs
   # print "This: ", "GHRSST Level 2P European Medspiration TMI SST:1" in to_map_colls
 
-  db.ms.create_index([("unique_name", 1)])
+  db.rms.create_index([("unique_name", 1)])
   print "Job Completed.\n"
 
 if __name__ == '__main__':

@@ -159,6 +159,7 @@ def show_keyword_map(collection_name):
     for kk in maps["cfk"].values():
         maps["mapped_keys"] += kk
 
+    rmaps["mapped_keys"] =  list()
     for kk in rmaps["cfk"].values():
         rmaps["mapped_keys"] += kk
 

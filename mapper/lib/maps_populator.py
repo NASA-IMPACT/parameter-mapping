@@ -99,36 +99,6 @@ def vk_generator(variables, keywords):
 		vk[variable.replace(".", "_")] = vkd
 	return vk
 
-# def kv_generator(keywords, variables):
-# 	kv = dict()
-# 	for keyword in keywords:
-# 		kvl = list()
-# 		keyword_parts = set(split_into_lemmas(keyword))
-# 		for variable in variables:
-# 			variable_parts = set(split_into_lemmas(variable))
-# 			print keyword, keyword_parts, variable_parts
-# 			rank = len(keyword_parts & variable_parts)
-# 			if rank >= 1:
-# 				kvl.append(variable)
-# 		kv[keyword.replace(".", "_")] = kvl
-# 	return kv
-
-# def vk_generator(variables, keywords):
-# 	print "In vk generator"
-# 	vk = dict()
-# 	for variable in variables:
-# 		vkl = list()
-# 		variable_parts = set(split_into_lemmas(variable))
-# 		for keyword in keywords:
-# 			keyword_parts = set(split_into_lemmas(keyword))
-# 			print variable, variable_parts, keyword_parts
-# 			rank = len(keyword_parts & variable_parts)
-# 			if rank >= 1:
-# 				vkl.append(keyword)
-# 		vk[variable.replace(".", "_")] = vkl
-# 	return vk
-
-
 def doc_generator(variables, keywords):
 	kv = kv_generator(keywords, variables)
 	print "--- Printing kv generated ---"
@@ -137,7 +107,6 @@ def doc_generator(variables, keywords):
 	vk = vk_generator(variables, keywords)
 	print "--- Printing vk generated ---"
 	# print vk
-
 	return kv, vk
 
 def populate(to_map_colls):
