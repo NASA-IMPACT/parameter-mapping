@@ -15,8 +15,16 @@
   cursor:pointer;
 }
 
+#popover {
+  margin-top: 10px;
+}
+
 #datatable tbody tr {
   cursor:pointer;
+}
+
+table {
+  width: auto !important;
 }
 
 .keyword-inline-first {

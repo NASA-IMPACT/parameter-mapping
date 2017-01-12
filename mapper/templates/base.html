@@ -7,11 +7,6 @@
 			<link rel="stylesheet" href="{{ url_for('static', filename='js/lib/node_modules/dropzone/dist/min/dropzone.min.css') }}" crossorigin="anonymous">
 			<link rel="stylesheet" href="{{ url_for('static', filename='js/lib/node_modules/datatables.net-bs/css/dataTables.bootstrap.css') }}" crossorigin="anonymous">
 			<link rel="stylesheet" href="{{ url_for('static', filename='css/mapper.css') }}">
-			<style>
-				.container {
-					max-width: 1000px;
-				}
-			</style>
 			<title>{% block title %}{% endblock %} - Mapping</title>
 		{% endblock %}
 	</head>
@@ -27,7 +22,7 @@
           </button>
           <a class="navbar-brand" href="/">Data Variable Mapping Tool</a>
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
+        <div id="navbar" class="collapse navbar-collapse pull-left">
           <ul class="nav navbar-nav">
           	{% block navbar %}
 	            <li><a href="/">Home</a></li>
@@ -36,6 +31,8 @@
 	          {% endblock %}
           </ul>
         </div>
+        {% block info %}
+        {% endblock %}
       </div>
     </nav>
 		<div id="content" class="container">
