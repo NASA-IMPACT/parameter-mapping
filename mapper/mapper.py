@@ -23,6 +23,7 @@ app = Flask(__name__)
 
 app.config['ALLOWED_EXTENSIONS'] = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'hdf', 'hdf5', "nc", "nc4"])
 app.config['CELERY_BROKER_URL'] = 'redis://localhost:6379/0'
+app.config['BROKER_TRANSPORT'] = 'redis'
 app.config['CELERY_RESULT_BACKEND'] = 'redis://localhost:6379/0'
 
 celery = Celery(app.name, broker=app.config['CELERY_BROKER_URL'])

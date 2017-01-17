@@ -5,142 +5,150 @@
 {% block head %}
 	{{ super() }}
 {% endblock %}
-
-{% block content %}
-<h3 align="center"> {{results.name}}</h3>
-<hr>
-<div class="container" id="info">
-	<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">
+{% block navbar %}
+  <li><a href="/">Home</a></li>
+  <li><a href="/upload_form">Upload</a></li>
+  <li class='active'><a href="#">Details</a></li>
+{% endblock %}
+{% block info %}
+	<button type="button" id='popover' class="btn btn-info pull-right" data-placement="left" data-toggle="popover" data-trigger="focus" title="Popover title">
 		<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Info
 	</button>
-	<div id="demo" class="collapse" style="border: 1.5px solid; border-radius: 10px; margin:0 5px 0 0; background: #EEE">
-		<ul>
-			<li> <strong  style="color:red"> Red Text </strong> : No data found. </li>
-			<!-- <li> <strong  style="color:green"> Green Text </strong> : Keywords mapped from this dataset.  </li> -->
-		</ul>
+{% endblock %}
+{% block content %}
+	<div class='row'>
+		<h3 align="center"> {{results.name}}</h3>
 	</div>
-</div>
-<hr>
-<div class="container" id="all-vars">
-  	<div id="demo" class="collapse_not" style="border: 1.5px solid; border-radius: 10px; margin:0 5px 0 0; background: #EEE">
-	    <br>
-    	<div class="row" >
-		    <div class="col-sm-11" style="height:280px;border: 0.5px solid; border-radius: 10px; margin:0 3px 0 4%; background: #FFF"">
-		      	<h5 align="center"> Variables in Uploaded File </h5>
-		      	<hr style="border-bottom: 0px">
-		      	<div style="height:210px;overflow-y:scroll;border: 0px solid; border-radius: 10px; background: #FFF">
-			      	{% if results.all_vars|length > 0 %}
-				      	<ul class="list-group" id="cfu-{{outerLoopIndex}}" style="background: #EEEEEE;">
-				    	{% for k in results.all_vars %}
-				      		{% set outerLoopIndex = loop.index %}
-							<li class="list-group-item">{{k}}</li>
-				      	{% endfor %}
-				      	</ul>
-				    {% else %}
-				    	<h5 style="color:red"> <li> No keys found.</li> </h5>
-				    {% endif %}
+	<div class='panel panel-default'>
+		<div class='panel panel-heading' align='center'> <h4>Keywords and Variables </h4><sub>(click to expand)</sub> </div>
+		<div class='panel-body active' id="keys-vars" style='min-height: 200px;'>
+	  	<div class="collapse_not">
+	  		<br>
+	    	<div class="row" >
+			    <div class="col-md-12">
+			    	<div class='panel panel-default'>
+			    		<div align="center" class='panel panel-heading' style='margin: 0;'>
+			    			<h4> Variables in Uploaded File </h4>
+			    	  </div>
+			      	<div style="max-height: 500px; overflow: auto;">
+				      	{% if results.all_vars|length > 0 %}
+				      		<div class="list-group">
+				      			{% for k in results.all_vars %}
+					      			{% set outerLoopIndex = loop.index %}
+					      			{% set k = k.title().replace('-', '').replace('>', ' > ') %}
+					      			<a href="#" class="list-group-item truncate_k" title="{{k}}">
+									    	{{k}}
+									  	</a>
+					      		{% endfor %}
+
+									</div>
+								{% else %}
+						    	<h5 style="color:red" align='center'> No keys found. </h5>
+						    {% endif %}
+			      	</div>
+			    	</div>
 			    </div>
-		    </div>
-		</div>
-		<br>
-  	</div>
-</div>
-<hr>
-<div class="container" id="cf-gcmd-units" style="border: 1.5px solid; border-radius: 10px; margin:0 5px 0 0; background: #EEE">
-	<br>
-	<div class="row">
-	    <div class="col-sm-5" style="height:300px;border: 0.5px solid; border-radius: 10px; margin:0 5px 0 3%; background: #FFF"">
-	      	<img alt="Key" src="{{ url_for('static', filename='img/icons/key-1.png') }}"" style="width:35px;height:35px;"">
-	      	<div class="div-inline"> <h5>GCMD Keywords from CF variable </h5> </div>
-	      	<!-- {% if results.final_map['cfk']|length > 0 %}
-	      		<a href="/_edit_cfk_map/{{ results.final_map.unique_name }}" class="btn btn-info active" role="button">EDIT</a>
-	      	{% endif %} -->
-      		<hr style="border-bottom: 0px">
-	      	<div style="height:210px;overflow-y:scroll;border: 0px solid; border-radius: 10px; background: #FFF">
-		      	{% if results.final_map['cfk']|length > 0 %}
-			    	{% for v, gcmds in results.final_map['cfk'].iteritems() %}
-			      		{% set outerLoopIndex = loop.index %}
-						<ul class="list-group" id="cfk-{{outerLoopIndex}}" style="background: #EEEEEE;">
-							<div class="keyword-inline-variable">{{v}}</div>
-							{% for gcmd in gcmds %}
-								<li class="list-group-item" id="cfk-innerlist-{{outerLoopIndex}}-{{loop.index}}">
-									{{ gcmd }}
-								</li>
-							{% endfor %}
-						</ul>
-			      	{% endfor %}
-			    {% else %}
-			    	<h5 style="color:red"> <li> No mapping found.</li> </h5>
-			    {% endif %}
-		    </div>
-	    </div>
-	    <div class="col-sm-5 col-sm-offset-1" style="height:300px;border: 0.5px solid; border-radius: 10px; background: #FFF">
-	      	<img alt="Key" src="{{ url_for('static', filename='img/icons/unit-4.png') }}"" style="width:25px;height:25px;"">
-	      	<div class="div-inline"> <h5>GCMD Keywords from CF units </h5> </div>
-	      	<!-- {% if results.final_map['cfu']|length > 0 %}
-		      	<a href="/_edit_cfu_map/{{ results.final_map.unique_name }}" class="btn btn-info active" role="button">EDIT</a>
-	      	{% endif %} -->
-	      	<hr style="border-bottom: 0px">
-	    	<div style="height:210px;overflow-y:scroll;border: 0px solid; border-radius: 10px; background: #FFF">
-		    	{% if results.final_map['cfu']|length > 0 %}
-		      		{% for v, gcmds in results.final_map['cfu'].iteritems() %}
-				      	{% set outerLoopIndex = loop.index %}
-						<ul class="list-group" id="cfu-{{outerLoopIndex}}" style="background: #EEEEEE;">
-							<div class="keyword-inline-variable">{{v}}</div>
-							{% for gcmd in gcmds %}
-								<li class="list-group-item" id="cfu-innerlist-{{outerLoopIndex}}-{{loop.index}}">
-									{{ gcmd }}
-								</li>
-							{% endfor %}
-						</ul>
-			      	{% endfor %}
-				{% else %}
-			    	<h5 style="color:red"> <li> No mapping found.</li> </h5>
-			   	{% endif %}
-	    	</div>
-	    </div>
+				</div>
+	  	</div>
+	  </div>
 	</div>
-	<br>
-</div>
 
+	<div class='panel panel-default'>
+		<div class='panel panel-heading' align='center'>
+			<h4>GCMD Keywords from CF variables and Units</h4>
+			<sub>(click to expand)</sub>
+		</div>
+		<div class='panel-body' id="cf-gcmd-units" style="min-height: 200px;" hidden='hidden'>
+			<div class="row">
+		    <div class="col-md-6" style="">
+		    	<div class='panel panel-default'>
+		    		<div class='panel panel-heading' style='margin: 0;' align='center'>
+		    			<i class='glyphicon glyphicon-asterisk header-components'></i>
+		    			<h4 class='header-components'>GCMD Keywords from CF variable</h4>
+		    		</div>
 
-<hr>
-<hr>
-<div class="row">
-	<h4 align="center" style="background: #FFF; color:#0000A8"> Database Based Mapping </h4>
-	<div class="col-sm-12" id="vk-maps">
-		<div class="row" id="kv-maps-box">
-			<div class="div-inline"><h4>Variables</h4></div>
-			<br>
-			<div class="div-list-group" style="height:600px;overflow:scroll;border: 0.5px solid; border-radius: 10px;" name="div-test">
-			{% for v, ks in results.final_map['cfdb'].iteritems() %}
-				{% set outerLoopIndex = loop.index %}
-				<ul class="list-group" id="vkv-{{outerLoopIndex}}" style="background: #EEE;">
-					 <div class="keyword-inline-variable truncate" title="{{v}}"">{{v}} </div>
-					 <p class="badge" style="float:right;">{{ks|length}}</p>
-					{% for k, i in ks.iteritems() %}
-						<li class="list-group-item" id="vkv-innerlist-{{outerLoopIndex}}-{{loop.index}}" width="80%">
-							{{ k }} : {{ i }}
-						</li>
-					{% endfor %}
-				</ul>
-			{% endfor %}
+			    	<div style="max-height: 500px; overflow: auto;">
+			      	{% if results.final_map['cfk']|length > 0 %}
+					    	{% for v, gcmds in results.final_map['cfk'].iteritems() %}
+					        {% set outerLoopIndex = loop.index %}
+									<div class="list-group" id="cfk-{{outerLoopIndex}}">
+										<a class="list-group-item active">{{v}}</a>
+										{% for gcmd in gcmds %}
+											<a class="list-group-item" id="cfk-innerlist-{{outerLoopIndex}}-{{loop.index}}">
+												{{ gcmd }}
+											</a>
+										{% endfor %}
+									</div>
+				      	{% endfor %}
+				    	{% else %}
+				    		<h5 style="color:red" align='center'> No mapping found. </h5>
+				    	{% endif %}
+			    	</div>
+		    	</div>
+		  	</div>
+		    <div class="col-md-6">
+		    	<div class='panel panel-default'>
+		    		<div class='panel panel-heading' align='center'>
+		    			<i class='glyphicon glyphicon-dashboard header-components'></i>
+		    			<h4 class='header-components'>GCMD Keywords from CF units </h4>
+		    		</div>
+		    		<div style="max-height: 500px; overflow: auto;">
+				    	{% if results.final_map['cfu']|length > 0 %}
+				      	{% for v, gcmds in results.final_map['cfu'].iteritems() %}
+						    	{% set outerLoopIndex = loop.index %}
+									<div class="list-group" id="cfu-{{outerLoopIndex}}">
+										<a class="list-group-item active">{{v}}</a>
+										{% for gcmd in gcmds %}
+											<a class="list-group-item" id="cfu-innerlist-{{outerLoopIndex}}-{{loop.index}}">
+												{{ gcmd }}
+											</a>
+										{% endfor %}
+									</div>
+					      {% endfor %}
+							{% else %}
+					    	<h5 style="color:red" align='center'> No mapping found. </h5>
+					   	{% endif %}
+			    	</div>
+		    	</div>
+		    </div>
 			</div>
 		</div>
 	</div>
 
-</div>
-
-
-
-
-
+	<div class='panel panel-default'>
+		<div class='panel panel-heading' align="center">
+			<h4> Database Based Mapping </h4>
+			<sub>(click to expand)</sub>
+		</div>
+		<div class='panel-body' id="cf-gcmd-units" style="min-height: 200px;" hidden='hidden'>
+			<div class="row">
+				<div class="col-md-12" id="kv-maps">
+					<div class='panel panel-default'>
+						<div class='panel panel-heading'>
+							<h4>Variables</h4>
+						</div>
+						<div class="div-list-group" style="max-height: 500px; overflow: auto;">
+							{% for v, ks in results.final_map['cfdb'].iteritems() %}
+								{% set outerLoopIndex = loop.index %}
+								<div class="list-group" id="kvk-{{outerLoopIndex}}">
+									<a class="list-group-item active truncate " title="{{v}}"">
+										{{v}}
+										<p class="badge" style="float:right;">{{ks|length}}</p>
+									</a>
+									{% for k, i in ks.iteritems() %}
+										<a class="list-group-item" id="kvk-innerlist-{{outerLoopIndex}}-{{loop.index}}">
+											{{ k }} : {{ i }}
+										</a>
+									{% endfor %}
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 <!-- <div id="loading-gif"></div>
 <div id="content-to-hide"> this is single var file map </div>
 <div class="row">{{results|tojson}}</div> -->
-
-
-
-
-
 {% endblock %}
