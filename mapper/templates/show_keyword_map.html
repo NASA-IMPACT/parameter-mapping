@@ -3,7 +3,7 @@
 {% block title %}Maps for collection{% endblock %}
 
 {% block head %}
-	{{ super() }}
+  {{ super() }}
 {% endblock %}
 {% block navbar %}
   <li><a href="/">Home</a></li>
@@ -11,280 +11,285 @@
   <li class='active'><a href="#">Details</a></li>
 {% endblock %}
 {% block info %}
-	<button type="button" id='popover' class="btn btn-info pull-right" data-placement="left" data-toggle="popover" data-trigger="focus" title="Popover title">
-		<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Info
-	</button>
+  <button type="button" id='popover' class="btn btn-info pull-right" data-placement="left" data-toggle="popover" data-trigger="focus" title="Popover title">
+    <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Info
+  </button>
 {% endblock %}
 {% block content %}
-	<div class='row'>
-		<h3 align="center"> {{maps.dataset_id}}</h3>
-	</div>
+  <div class='row'>
+    <h3 align="center"> {{maps.dataset_id}}</h3>
+  </div>
 
-	<hr/>
+  <hr/>
 
-	<div class='panel panel-default'>
-		<div class='panel panel-heading' align='center'> <h4>Keywords and Variables </h4><sub>(click to expand)</sub> </div>
-		<div class='panel-body active' id="keys-vars" style='min-height: 200px;'>
-	  	<div class="collapse_not">
-		    <br>
-	    	<div class="row" >
-			    <div class="col-md-6">
-			    	<div class='panel panel-default'>
-			    		<div align="center" class='panel panel-heading' style='margin: 0;'>
-			    			<h4>Keywords in Metadata </h4>
-			    	  </div>
-			      	<div style="max-height: 500px; overflow: auto;">
-				      	{% if maps['all_keys']|length > 0 %}
-				      		<div class="list-group">
-				      			{% for k in maps['all_keys'] %}
-					      			{% set outerLoopIndex = loop.index %}
-					      			{% set k = k.title().replace('-', '').replace('>', ' > ') %}
-					      			<a href="#" class="list-group-item truncate_k" title="{{k}}">
-									    	{{k}}
-									  	</a>
-					      		{% endfor %}
+  <div class='panel panel-default'>
+    <div class='panel panel-heading' align='center'> <h4>Keywords and Variables </h4><sub>(click to expand)</sub> </div>
+    <div class='panel-body active' id="keys-vars" style='min-height: 200px;'>
+      <div class="collapse_not">
+        <br>
+        <div class="row" >
+          <div class="col-md-6">
+            <div class='panel panel-default'>
+              <div align="center" class='panel panel-heading' style='margin: 0;'>
+                <h4>Keywords in Metadata </h4>
+              </div>
+              <div style="max-height: 500px; overflow: auto;">
+                {% if maps['all_keys']|length > 0 %}
+                  <div class="list-group">
+                    {% for k in maps['all_keys'] %}
+                      {% set outerLoopIndex = loop.index %}
+                      {% set k = k.title().replace('-', '').replace('>', ' > ') %}
+                      <a href="#" class="list-group-item truncate_k" title="{{k}}">
+                        {{k}}
+                      </a>
+                    {% endfor %}
 
-									</div>
-								{% else %}
-						    	<h5 style="color:red" align='center'> No keys found. </h5>
-						    {% endif %}
-			      	</div>
-			    	</div>
-			    </div>
-			    <div class="col-md-6">
-			    	<div class='panel panel-default'>
-			    		<div align="center" class='panel panel-heading' style='margin: 0;'> <h4>Variables in sample granule</h4> </div>
-				      <div style="max-height: 500px; overflow: auto;">
-				      	{% if variables|length > 0 %}
-				      		<div class="list-group" id="cfk-{{outerLoopIndex}}">
-				      			{% for v, d in variables.iteritems() %}
-							      	{% set outerLoopIndex = loop.index %}
-					      			<a href="#" class="list-group-item">
-									    	{{v}}
-									  	</a>
-					      		{% endfor %}
-									</div>
-								{% else %}
-						    	<h5 style="color:red" align='center'> No variables found. </h5>
-						    {% endif %}
-			      	</div>
-			    	</div>
+                  </div>
+                {% else %}
+                  <h5 style="color:red" align='center'> No keys found. </h5>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class='panel panel-default'>
+              <div align="center" class='panel panel-heading' style='margin: 0;'> <h4>Variables in sample granule</h4> </div>
+              <div style="max-height: 500px; overflow: auto;">
+                {% if variables|length > 0 %}
+                  <div class="list-group" id="cfk-{{outerLoopIndex}}">
+                    {% for v, d in variables.iteritems() %}
+                      {% set outerLoopIndex = loop.index %}
+                      <a href="#" class="list-group-item">
+                        {{v}}
+                      </a>
+                    {% endfor %}
+                  </div>
+                {% else %}
+                  <h5 style="color:red" align='center'> No variables found. </h5>
+                {% endif %}
+              </div>
+            </div>
 
-			    </div>
-				</div>
-			</div>
-		</div>
-	</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-	<div class='panel panel-default'>
-		<div class='panel panel-heading' align='center'>
-			<h4>GCMD Keywords from CF variables and Units</h4>
-			<sub>(click to expand)</sub>
-		</div>
-		<div class='panel-body' id="cf-gcmd-units" style="min-height: 200px;" hidden='hidden'>
-			<div class="row">
-		    <div class="col-md-6" style="">
-		    	<div class='panel panel-default'>
-		    		<div class='panel panel-heading' style='margin: 0;' align='center'>
-		    			<i class='glyphicon glyphicon-asterisk header-components'></i>
-		    			<h4 class='header-components'>GCMD Keywords from CF variable</h4>
-		    			{% if maps['cfk']|length > 0 %}
-				    		<a href="/_edit_cfk_map/{{ maps.unique_name }}" class="btn btn-primary pull-right header-components" role="button">Edit</a>
-				      {% endif %}
-		    		</div>
+  <div class='panel panel-default'>
+    <div class='panel panel-heading' align='center'>
+      <h4>GCMD Keywords from CF variables and Units</h4>
+      <sub>(click to expand)</sub>
+    </div>
+    <div class='panel-body' id="cf-gcmd-units" style="min-height: 200px;" hidden='hidden'>
+      <div class="row">
+        <div class="col-md-6" style="">
+          <div class='panel panel-default'>
+            <div class='panel panel-heading' style='margin: 0;' align='center'>
+              <i class='glyphicon glyphicon-asterisk header-components'></i>
+              <h4 class='header-components'>GCMD Keywords from CF variable</h4>
+              {% if maps['cfk']|length > 0 %}
+                <a href="/_edit_cfk_map/{{ maps.unique_name }}" class="btn btn-primary pull-right header-components" role="button">Edit</a>
+              {% endif %}
+            </div>
 
-			    	<div style="max-height: 500px; overflow: auto;">
-			      	{% if maps['cfk']|length > 0 %}
-					    	{% for v, gcmds in maps['cfk'].iteritems() %}
-					        {% set outerLoopIndex = loop.index %}
-									<div class="list-group" id="cfk-{{outerLoopIndex}}">
-										<a class="list-group-item active">{{v}}</a>
-										{% for gcmd in gcmds %}
-											<a class="list-group-item" id="cfk-innerlist-{{outerLoopIndex}}-{{loop.index}}">
-												{% if gcmd in maps['all_keys'] %}
-													<font color="green">{{ gcmd }}</font>
-												{% else %}
-													{{ gcmd }}
-												{% endif %}
-											</a>
-										{% endfor %}
-									</div>
-				      	{% endfor %}
-				    	{% else %}
-				    		<h5 style="color:red" align='center'> No mapping found. </h5>
-				    	{% endif %}
-			    	</div>
-		    	</div>
-		  	</div>
-		    <div class="col-md-6">
-		    	<div class='panel panel-default'>
-		    		<div class='panel panel-heading' align='center'>
-		    			<i class='glyphicon glyphicon-dashboard header-components'></i>
-		    			<h4 class='header-components'>GCMD Keywords from CF units </h4>
-		    			{% if maps['cfu']|length > 0 %}
-				      	<a href="/_edit_cfu_map/{{ maps.unique_name }}" class="btn btn-primary pull-right header-components" role="button">Edit</a>
-				      {% endif %}
-		    		</div>
-		    		<div style="max-height: 500px; overflow: auto;">
-				    	{% if maps['cfu']|length > 0 %}
-				      	{% for v, gcmds in maps['cfu'].iteritems() %}
-						    	{% set outerLoopIndex = loop.index %}
-									<div class="list-group" id="cfu-{{outerLoopIndex}}">
-										<a class="list-group-item active">{{v}}</a>
-										{% for gcmd in gcmds %}
-											<a class="list-group-item" id="cfu-innerlist-{{outerLoopIndex}}-{{loop.index}}">
-												{% if gcmd in maps['all_keys'] %}
-													<font color="green">{{ gcmd }}</font>
-												{% else %}
-													{{ gcmd }}
-												{% endif %}
-											</a>
-										{% endfor %}
-									</div>
+            <div style="max-height: 500px; overflow: auto;">
+              {% if maps['cfk']|length > 0 %}
+                {% for v, gcmds in maps['cfk'].iteritems() %}
+                  {% set outerLoopIndex = loop.index %}
+                  <div class="list-group" id="cfk-{{outerLoopIndex}}">
+                    <a class="list-group-item active">{{v}}</a>
+                    {% for gcmd in gcmds %}
+                      <a class="list-group-item" id="cfk-innerlist-{{outerLoopIndex}}-{{loop.index}}">
+                        {% if gcmd in maps['all_keys'] %}
+                          <font color="green">{{ gcmd }}</font>
+                        {% else %}
+                          {{ gcmd }}
+                        {% endif %}
+                      </a>
+                    {% endfor %}
+                  </div>
+                {% endfor %}
+              {% else %}
+                <h5 style="color:red" align='center'> No mapping found. </h5>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class='panel panel-default'>
+            <div class='panel panel-heading' align='center'>
+              <i class='glyphicon glyphicon-dashboard header-components'></i>
+              <h4 class='header-components'>GCMD Keywords from CF units </h4>
+              {% if maps['cfu']|length > 0 %}
+                <a href="/_edit_cfu_map/{{ maps.unique_name }}" class="btn btn-primary pull-right header-components" role="button">Edit</a>
+              {% endif %}
+            </div>
+            <div style="max-height: 500px; overflow: auto;">
+              {% if maps['cfu']|length > 0 %}
+                {% for v, gcmds in maps['cfu'].iteritems() %}
+                  {% set outerLoopIndex = loop.index %}
+                  <div class="list-group" id="cfu-{{outerLoopIndex}}">
+                    <a class="list-group-item active">{{v}}</a>
+                    {% for gcmd in gcmds %}
+                      <a class="list-group-item" id="cfu-innerlist-{{outerLoopIndex}}-{{loop.index}}">
+                        {% if gcmd in maps['all_keys'] %}
+                          <font color="green">{{ gcmd }}</font>
+                        {% else %}
+                          {{ gcmd }}
+                        {% endif %}
+                      </a>
+                    {% endfor %}
+                  </div>
 
-					      {% endfor %}
-							{% else %}
-					    	<h5 style="color:red" align='center'> No mapping found. </h5>
-					   	{% endif %}
-			    	</div>
-		    	</div>
-		    </div>
-			</div>
-		</div>
-	</div>
+                {% endfor %}
+              {% else %}
+                <h5 style="color:red" align='center'> No mapping found. </h5>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-	<div class='panel panel-default'>
-		<div class='panel panel-heading' align="center">
-			<h4> Mapping Scores for Existing Science Keywords and Variables </h4>
-			<sub>(click to expand)</sub>
-		</div>
-		<div class='panel-body' id="cf-gcmd-units" style="min-height: 200px;" hidden='hidden'>
-			<div class="row">
-				<div class="col-md-6" id="kv-maps">
-					<div class='panel panel-default'>
-						<div class='panel panel-heading'>
-							<h4 class='header-components'>Science Keyword</h4>
-							<a href="/_edit_keyword_map/{{ maps.unique_name }}" class="btn btn-primary pull-right header-components" role="button">Edit</a>
-						</div>
-						<div class="div-list-group" style="max-height: 500px; overflow: auto;">
-							{% for k, vs in sorted_maps['kv'].iteritems() %}
-								{% set outerLoopIndex = loop.index %}
-								{% if not (vs['mapped']|length == 0 and k in maps['mapped_keys']) %}
-									<div class="list-group" id="kvk-{{outerLoopIndex}}">
-										<a class="list-group-item active truncate_k " title="{{k}}">
-											{{k}}
-											<p class="badge" style="float:right;">{{vs['mapped']|length}}</p>
-										</a>
-										{% for v, i in vs['mapped'] %}
-											<a class="list-group-item" id="kvk-innerlist-{{outerLoopIndex}}-{{loop.index}}">
-												{{ v }} : {{ i }}
-											</a>
-										{% endfor %}
-									</div>
-								{% else %}
-									<h5 style="color:red"> No mappings found. </h5>
-								{% endif %}
-							{% endfor %}
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6" id="vk-maps">
-					<div class='panel panel-default'>
-						<div class='panel panel-heading'>
-							<h4 class='header-components'>Variable</h4>
-							<a href="/_edit_variable_map/{{ maps.unique_name }}" class="btn btn-primary pull-right header-components" role="button"> Edit</a>
-						</div>
-						<div class="div-list-group" style="max-height: 500px; overflow: auto;">
-							{% for v, ks in sorted_maps['vk'].iteritems() %}
-								{% set outerLoopIndex = loop.index %}
+  <div class='panel panel-default'>
+    <div class='panel panel-heading' align="center">
+      <h4> Mapping Scores for Existing Science Keywords and Variables </h4>
+      <sub>(click to expand)</sub>
+    </div>
+    <div class='panel-body' id="cf-gcmd-units" style="min-height: 200px;" hidden='hidden'>
+      <div class="row">
+        <div class="col-md-6" id="kv-maps">
+          <div class='panel panel-default'>
+            <div class='panel panel-heading'>
+              <h4 class='header-components'>Science Keyword</h4>
+              <a href="/_edit_keyword_map/{{ maps.unique_name }}" class="btn btn-primary pull-right header-components" role="button">Edit</a>
+            </div>
+            <div class="div-list-group" style="max-height: 500px; overflow: auto;">
+              {% for k, vs in sorted_maps['kv'].iteritems() %}
+                {% set outerLoopIndex = loop.index %}
+                {% if not (vs['mapped']|length == 0 and k in maps['mapped_keys']) %}
+                  <div class="list-group" id="kvk-{{outerLoopIndex}}">
+                    <a class="list-group-item active truncate_k " title="{{k}}">
+                      {{k}}
+                      <p class="badge" style="float:right;">{{vs['mapped']|length}}</p>
+                    </a>
+                    {% for v, i in vs['mapped'] %}
+                      <a class="list-group-item" id="kvk-innerlist-{{outerLoopIndex}}-{{loop.index}}">
+                        {{ v }} : {{ i }}
+                      </a>
+                    {% endfor %}
+                  </div>
+                {% else %}
+                  <h5 style="color:red"> No mappings found. </h5>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" id="vk-maps">
+          <div class='panel panel-default'>
+            <div class='panel panel-heading'>
+              <h4 class='header-components'>Variable</h4>
+              <a href="/_edit_variable_map/{{ maps.unique_name }}" class="btn btn-primary pull-right header-components" role="button"> Edit</a>
+            </div>
+            <div class="div-list-group" style="max-height: 500px; overflow: auto;">
+              {% for v, ks in sorted_maps['vk'].iteritems() %}
+                {% set outerLoopIndex = loop.index %}
 
-								<div class="list-group" id="vkv-{{outerLoopIndex}}">
-									 <a class="list-group-item active truncate" title="{{v}}"">
-									 	 {{v}}
-									 	 <p class="badge" style="float: right;">{{ks['mapped']|length}}</p>
-									 </a>
-									{% if 'ways' in maps %}
-										{% if maps.ways[v] == 1 %}
-											<i class='glyphicon glyphicon-asterisk'></i>
-										{% elif maps.ways[v] == 2 %}
-											<i class='glyphicon glyphicon-dashboard'></i>
-										{% endif %}
-									{% endif %}
-									{% for k, i in ks['mapped'] %}
-										<a class="list-group-item" id="vkv-innerlist-{{outerLoopIndex}}-{{loop.index}}">
-											{{ k }} : {{ i }}
-										</a>
-									{% endfor %}
-								</div>
-							{% endfor %}
-						</div>
-					</div>
+                <div class="list-group" id="vkv-{{outerLoopIndex}}">
+                   <a class="list-group-item active truncate" title="{{v}}"">
+                     {{v}}
+                     <p class="badge" style="float: right;">{{ks['mapped']|length}}</p>
+                   </a>
+                  {% if 'ways' in maps %}
+                    {% if maps.ways[v] == 1 %}
+                      <i class='glyphicon glyphicon-asterisk'></i>
+                    {% elif maps.ways[v] == 2 %}
+                      <i class='glyphicon glyphicon-dashboard'></i>
+                    {% endif %}
+                  {% endif %}
+                  {% for k, i in ks['mapped'] %}
+                    <a class="list-group-item" id="vkv-innerlist-{{outerLoopIndex}}-{{loop.index}}">
+                      {{ k }} : {{ i }}
+                    </a>
+                  {% endfor %}
+                </div>
+              {% endfor %}
+            </div>
+          </div>
 
-				</div>
-			</div>
-		</div>
-	</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-	<div class='panel panel-default'>
-		<div class='panel panel-heading' align="center">
-			<h4> Other Suggested Science Keywords for Existing Variables (Threshold: 0.3) </h4>
-			<sub>(click to expand)</sub>
-		</div>
-		<div class='panel-body' id="cf-all-units" style="min-height: 200px;" hidden='hidden'>
-			<div class="row">
-				<div class="col-md-6" id="kv-rmaps">
-					<div class='panel panel-default'>
-						<div class='panel panel-heading'>
-							<h4>Science Keyword</h4>
-						</div>
-						<div class="div-list-group" style="max-height: 500px; overflow: auto;">
-							{% for k, vs in sorted_rmaps['kv'].iteritems() %}
-								{% set outerLoopIndex = loop.index %}
-								{% if not (vs['mapped']|length == 0 and k in maps['mapped_keys']) %}
-									<div class="list-group" id="rkvk-{{outerLoopIndex}}">
-										<a class="list-group-item active truncate_k " title="{{k}}">
-											{{k}}
-											<p class="badge" style="float:right;">{{vs['mapped']|length}}</p>
-										</a>
-										{% for v, i in vs['mapped'] %}
-											<a class="list-group-item" id="rkvk-innerlist-{{outerLoopIndex}}-{{loop.index}}">
-												{{ v }} : {{ i }}
-											</a>
-										{% endfor %}
-									</div>
-								{% else %}
-									<h5 style="color:red"> No mappings found. </h5>
-								{% endif %}
-							{% endfor %}
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6" id="vk-rmaps">
-					<div class='panel panel-default'>
-						<div class='panel panel-heading'>
-							<h4>Variable</h4>
-						</div>
-						<div class="div-list-group" style="max-height: 500px; overflow: auto;">
-							{% for v, ks in sorted_rmaps['vk'].iteritems() %}
-								{% set outerLoopIndex = loop.index %}
+  <div class='panel panel-default'>
+    <div class='panel panel-heading' align="center">
+      <h4> Other Suggested Science Keywords for Existing Variables (Threshold: 0.3) </h4>
+      <sub>(click to expand)</sub>
+    </div>
+    <div class='panel-body' id="cf-all-units" style="min-height: 200px;" hidden='hidden'>
+      <div class="row">
+        <div class="col-md-6" id="kv-rmaps">
+          <div class='panel panel-default'>
+            <div class='panel panel-heading'>
+              <h4>Science Keyword</h4>
+            </div>
+            <div class="div-list-group" style="max-height: 500px; overflow: auto;">
+              {% for k, vs in sorted_rmaps['kv'].iteritems() %}
+                {% set outerLoopIndex = loop.index %}
+                {% set mapped_length = vs['mapped']|length %}
+                {% if not (mapped_length == 0 and k in maps['mapped_keys']) %}
+                  {% if not mapped_length == 0 %}
+                    <div class="list-group" id="rkvk-{{outerLoopIndex}}">
+                      <a class="list-group-item active truncate_k " title="{{k}}">
+                        {{k}}
+                        <p class="badge" style="float:right;">{{mapped_length}}</p>
+                      </a>
+                      {% for v, i in vs['mapped'] %}
+                        <a class="list-group-item" id="rkvk-innerlist-{{outerLoopIndex}}-{{loop.index}}">
+                          {{ v }} : {{ i }}
+                        </a>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                {% else %}
+                  <h5 style="color:red"> No mappings found. </h5>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" id="vk-rmaps">
+          <div class='panel panel-default'>
+            <div class='panel panel-heading'>
+              <h4>Variable</h4>
+            </div>
+            <div class="div-list-group" style="max-height: 500px; overflow: auto;">
+              {% for v, ks in sorted_rmaps['vk'].iteritems() %}
+                {% set outerLoopIndex = loop.index %}
+                {% set mapped_length = ks['mapped']|length %}
+                {% if not mapped_length == 0 %}
+                  <div class="list-group" id="rvkv-{{outerLoopIndex}}">
+                    <a class="list-group-item active truncate" title="{{v}}"">
+                      {{v}}
+                      <p class="badge" style="float: right;">{{mapped_length}}</p>
+                    </a>
+                    {% for k, i in ks['mapped'] %}
+                      <a class="list-group-item" id="rvkv-innerlist-{{outerLoopIndex}}-{{loop.index}}">
+                        {{ k }} : {{ i }}
+                      </a>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
 
-								<div class="list-group" id="rvkv-{{outerLoopIndex}}">
-									<a class="list-group-item active truncate" title="{{v}}"">
-									  {{v}}
-									  <p class="badge" style="float: right;">{{ks['mapped']|length}}</p>
-									</a>
-									{% for k, i in ks['mapped'] %}
-										<a class="list-group-item" id="rvkv-innerlist-{{outerLoopIndex}}-{{loop.index}}">
-											{{ k }} : {{ i }}
-										</a>
-									{% endfor %}
-								</div>
-							{% endfor %}
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</div>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}
